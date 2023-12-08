@@ -32,8 +32,9 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency 'rspec', '~> 3.6', '>= 3.6.0'
 
-  s.files         = `find *`.split("\n").uniq.sort.select { |f| !f.empty? }
-  s.test_files    = `find spec/*`.split("\n")
+  s.files         = Dir[File.join("lib", "**", "*.rb")] +
+                    Dir["{*.gemspec,Gemfile,Rakefile,README.*,LICENSE*}"]
+  s.test_files    = Dir[File.join("spec", "**", "*")]
   s.executables   = []
   s.require_paths = ["lib"]
 end
