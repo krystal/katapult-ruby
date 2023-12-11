@@ -34,7 +34,6 @@ Gem::Specification.new do |s|
 
   s.files         = Dir[File.join("lib", "**", "*.rb")] +
                     Dir["{*.gemspec,Gemfile,Rakefile,README.*,LICENSE*}"]
-  s.test_files    = Dir[File.join("spec", "**", "*")]
   s.executables   = []
   s.require_paths = ["lib"]
 end

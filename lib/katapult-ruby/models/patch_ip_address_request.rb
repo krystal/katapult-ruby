@@ -17,10 +17,13 @@ module KatapultAPI
   class PatchIpAddressRequest
     attr_accessor :ip_address
 
+    # Whether or not to set this address as a VIP
     attr_accessor :vip
 
+    # The label to give this address if setting it as a VIP
     attr_accessor :label
 
+    # The reverse DNS to set for this IP address
     attr_accessor :reverse_dns
 
     # Attribute mapping from ruby-style variable name to JSON key.

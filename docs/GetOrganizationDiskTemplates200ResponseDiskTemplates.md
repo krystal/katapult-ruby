@@ -9,8 +9,8 @@
 | **description** | **String** |  | [optional] |
 | **permalink** | **String** |  | [optional] |
 | **universal** | **Boolean** |  | [optional] |
-| **latest_version** | [**GetOrganizationDiskTemplates200ResponseDiskTemplatesLatestVersion**](GetOrganizationDiskTemplates200ResponseDiskTemplatesLatestVersion.md) |  | [optional] |
-| **operating_system** | [**GetOrganizationDiskTemplates200ResponseDiskTemplatesOperatingSystem**](GetOrganizationDiskTemplates200ResponseDiskTemplatesOperatingSystem.md) |  | [optional] |
+| **latest_version** | [**GetOrganizationDiskTemplatesPartLatestVersion**](GetOrganizationDiskTemplatesPartLatestVersion.md) |  | [optional] |
+| **operating_system** | [**GetOrganizationDiskTemplatesPartOperatingSystem**](GetOrganizationDiskTemplatesPartOperatingSystem.md) |  | [optional] |
 
 ## Example
 

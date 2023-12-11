@@ -5,7 +5,7 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **pagination** | [**PaginationObject**](PaginationObject.md) |  |  |
-| **disk_templates** | [**Array&lt;GetOrganizationDiskTemplates200ResponseDiskTemplates&gt;**](GetOrganizationDiskTemplates200ResponseDiskTemplates.md) |  |  |
+| **disk_templates** | [**Array&lt;GetOrganizationDiskTemplates200ResponseDiskTemplates&gt;**](GetOrganizationDiskTemplates200ResponseDiskTemplates.md) | The list of disk templates |  |
 
 ## Example
 

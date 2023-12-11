@@ -111,7 +111,7 @@ module KatapultAPI
         :'listen_port' => :'Integer',
         :'protocol' => :'LoadBalancerRuleProtocolEnum',
         :'proxy_protocol' => :'Boolean',
-        :'certificates' => :'Array<PatchLoadBalancersRulesLoadBalancerRule200ResponseLoadBalancerRuleCertificates>',
+        :'certificates' => :'Array<PatchLoadBalancersRulesLoadBalancerRulePartCertificates>',
         :'backend_ssl' => :'Boolean',
         :'passthrough_ssl' => :'Boolean',
         :'check_enabled' => :'Boolean',
@@ -122,7 +122,7 @@ module KatapultAPI
         :'check_rise' => :'Integer',
         :'check_timeout' => :'Integer',
         :'check_http_statuses' => :'LoadBalancerRuleHTTPStatusesEnum',
-        :'load_balancer' => :'PatchLoadBalancersRulesLoadBalancerRule200ResponseLoadBalancerRuleLoadBalancer'
+        :'load_balancer' => :'PatchLoadBalancersRulesLoadBalancerRulePartLoadBalancer'
       }
     end
 

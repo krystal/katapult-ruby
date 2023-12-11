@@ -7,7 +7,7 @@
 | **id** | **String** |  | [optional] |
 | **url** | **String** |  | [optional] |
 | **expires_at** | **Integer** |  | [optional] |
-| **virtual_machine** | [**PostVirtualMachineConsoleSessions201ResponseConsoleSessionVirtualMachine**](PostVirtualMachineConsoleSessions201ResponseConsoleSessionVirtualMachine.md) |  | [optional] |
+| **virtual_machine** | [**PostVirtualMachineConsoleSessionsPartVirtualMachine**](PostVirtualMachineConsoleSessionsPartVirtualMachine.md) |  | [optional] |
 
 ## Example
 

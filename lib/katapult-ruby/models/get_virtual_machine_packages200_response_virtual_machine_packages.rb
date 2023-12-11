@@ -86,7 +86,7 @@ module KatapultAPI
         :'memory_in_gb' => :'Integer',
         :'storage_in_gb' => :'Integer',
         :'privacy' => :'PrivacyTypesEnum',
-        :'icon' => :'GetVirtualMachinePackages200ResponseVirtualMachinePackagesIcon'
+        :'icon' => :'GetVirtualMachinePackagesPartIcon'
       }
     end
 

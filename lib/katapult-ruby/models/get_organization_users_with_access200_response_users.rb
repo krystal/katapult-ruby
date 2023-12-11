@@ -32,7 +32,7 @@ module KatapultAPI
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'user' => :'GetOrganizationUsersWithAccess200ResponseUsersUser'
+        :'user' => :'GetOrganizationUsersWithAccessPartUser'
       }
     end
 

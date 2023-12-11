@@ -15,6 +15,7 @@ require 'time'
 
 module KatapultAPI
   class PermissionDenied
+    # Additional information regarding the reason why permission was denied
     attr_accessor :details
 
     # Attribute mapping from ruby-style variable name to JSON key.

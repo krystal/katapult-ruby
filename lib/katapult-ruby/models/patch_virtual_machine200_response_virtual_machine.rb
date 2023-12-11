@@ -119,18 +119,18 @@ module KatapultAPI
         :'created_at' => :'Integer',
         :'initial_root_password' => :'String',
         :'state' => :'VirtualMachineStateEnum',
-        :'zone' => :'PatchVirtualMachine200ResponseVirtualMachineZone',
-        :'organization' => :'PatchVirtualMachine200ResponseVirtualMachineOrganization',
-        :'group' => :'PatchVirtualMachine200ResponseVirtualMachineGroup',
-        :'package' => :'PatchVirtualMachine200ResponseVirtualMachinePackage',
-        :'attached_iso' => :'PatchVirtualMachine200ResponseVirtualMachineAttachedISO',
+        :'zone' => :'PatchVirtualMachinePartZone',
+        :'organization' => :'PatchVirtualMachinePartOrganization',
+        :'group' => :'PatchVirtualMachinePartGroup',
+        :'package' => :'PatchVirtualMachinePartPackage',
+        :'attached_iso' => :'PatchVirtualMachinePartAttachedISO',
         :'memory_in_gb' => :'Integer',
         :'cpu_cores' => :'Integer',
-        :'gpu_type' => :'PatchVirtualMachine200ResponseVirtualMachineGPUType',
-        :'gpus' => :'Array<PatchVirtualMachine200ResponseVirtualMachineGPUs>',
-        :'tags' => :'Array<PatchVirtualMachine200ResponseVirtualMachineTags>',
+        :'gpu_type' => :'PatchVirtualMachinePartGPUType',
+        :'gpus' => :'Array<PatchVirtualMachinePartGPUs>',
+        :'tags' => :'Array<PatchVirtualMachinePartTags>',
         :'tag_names' => :'Array<String>',
-        :'ip_addresses' => :'Array<PatchVirtualMachine200ResponseVirtualMachineIPAddresses>'
+        :'ip_addresses' => :'Array<PatchVirtualMachinePartIPAddresses>'
       }
     end
 

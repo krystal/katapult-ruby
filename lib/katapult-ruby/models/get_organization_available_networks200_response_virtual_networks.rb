@@ -40,7 +40,7 @@ module KatapultAPI
       {
         :'id' => :'String',
         :'name' => :'String',
-        :'data_center' => :'GetOrganizationAvailableNetworks200ResponseVirtualNetworksDataCenter'
+        :'data_center' => :'GetOrganizationAvailableNetworksPartDataCenter'
       }
     end
 

@@ -5,7 +5,7 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **pagination** | [**PaginationObject**](PaginationObject.md) |  |  |
-| **currencies** | [**Array&lt;GetCurrencies200ResponseCurrencies&gt;**](GetCurrencies200ResponseCurrencies.md) |  |  |
+| **currencies** | [**Array&lt;GetCurrencies200ResponseCurrencies&gt;**](GetCurrencies200ResponseCurrencies.md) | The list of currencies |  |
 
 ## Example
 

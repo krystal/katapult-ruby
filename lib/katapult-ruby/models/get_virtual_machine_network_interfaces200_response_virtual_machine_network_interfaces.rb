@@ -43,8 +43,8 @@ module KatapultAPI
       {
         :'id' => :'String',
         :'name' => :'String',
-        :'network' => :'GetVirtualMachineNetworkInterfaces200ResponseVirtualMachineNetworkInterfacesNetwork',
-        :'ip_addresses' => :'Array<GetVirtualMachineNetworkInterfaces200ResponseVirtualMachineNetworkInterfacesIPAddresses>'
+        :'network' => :'GetVirtualMachineNetworkInterfacesPartNetwork',
+        :'ip_addresses' => :'Array<GetVirtualMachineNetworkInterfacesPartIPAddresses>'
       }
     end
 

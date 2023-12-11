@@ -10,7 +10,7 @@
 | **listen_port** | **Integer** |  | [optional] |
 | **protocol** | [**LoadBalancerRuleProtocolEnum**](LoadBalancerRuleProtocolEnum.md) |  | [optional] |
 | **proxy_protocol** | **Boolean** |  | [optional] |
-| **certificates** | [**Array&lt;PatchLoadBalancersRulesLoadBalancerRule200ResponseLoadBalancerRuleCertificates&gt;**](PatchLoadBalancersRulesLoadBalancerRule200ResponseLoadBalancerRuleCertificates.md) |  | [optional] |
+| **certificates** | [**Array&lt;PatchLoadBalancersRulesLoadBalancerRulePartCertificates&gt;**](PatchLoadBalancersRulesLoadBalancerRulePartCertificates.md) |  | [optional] |
 | **backend_ssl** | **Boolean** |  | [optional] |
 | **passthrough_ssl** | **Boolean** |  | [optional] |
 | **check_enabled** | **Boolean** |  | [optional] |
@@ -21,7 +21,7 @@
 | **check_rise** | **Integer** |  | [optional] |
 | **check_timeout** | **Integer** |  | [optional] |
 | **check_http_statuses** | [**LoadBalancerRuleHTTPStatusesEnum**](LoadBalancerRuleHTTPStatusesEnum.md) |  | [optional] |
-| **load_balancer** | [**PatchLoadBalancersRulesLoadBalancerRule200ResponseLoadBalancerRuleLoadBalancer**](PatchLoadBalancersRulesLoadBalancerRule200ResponseLoadBalancerRuleLoadBalancer.md) |  | [optional] |
+| **load_balancer** | [**PatchLoadBalancersRulesLoadBalancerRulePartLoadBalancer**](PatchLoadBalancersRulesLoadBalancerRulePartLoadBalancer.md) |  | [optional] |
 
 ## Example
 

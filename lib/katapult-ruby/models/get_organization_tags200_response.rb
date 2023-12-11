@@ -17,6 +17,7 @@ module KatapultAPI
   class GetOrganizationTags200Response
     attr_accessor :pagination
 
+    # The details for the tags on the organization
     attr_accessor :tags
 
     # Attribute mapping from ruby-style variable name to JSON key.

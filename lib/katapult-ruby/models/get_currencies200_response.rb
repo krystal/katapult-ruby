@@ -17,6 +17,7 @@ module KatapultAPI
   class GetCurrencies200Response
     attr_accessor :pagination
 
+    # The list of currencies
     attr_accessor :currencies
 
     # Attribute mapping from ruby-style variable name to JSON key.

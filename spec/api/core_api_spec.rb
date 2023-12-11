@@ -165,7 +165,7 @@ describe 'CoreApi' do
   # unit tests for delete_tag
   # @param [Hash] opts the optional parameters
   # @option opts [DeleteTagRequest] :delete_tag_request 
-  # @return [PostOrganizationTags200Response]
+  # @return [DeleteTag200Response]
   describe 'delete_tag test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
@@ -195,7 +195,7 @@ describe 'CoreApi' do
   # unit tests for delete_virtual_machine_group
   # @param [Hash] opts the optional parameters
   # @option opts [DeleteVirtualMachineGroupRequest] :delete_virtual_machine_group_request 
-  # @return [PostOrganizationVirtualMachineGroups200Response]
+  # @return [DeleteVirtualMachineGroup200Response]
   describe 'delete_virtual_machine_group test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
@@ -225,9 +225,9 @@ describe 'CoreApi' do
 
   # unit tests for get_country
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :country_id All &#39;country[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [String] :country_iso_code2 All &#39;country[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [String] :country_iso_code3 All &#39;country[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :country_id The country to return. All &#39;country[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :country_iso_code2 The country to return. All &#39;country[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :country_iso_code3 The country to return. All &#39;country[]&#39; params are mutually exclusive, only one can be provided.
   # @return [GetCountry200Response]
   describe 'get_country test' do
     it 'should work' do
@@ -237,9 +237,9 @@ describe 'CoreApi' do
 
   # unit tests for get_country_country_states
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :country_id All &#39;country[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [String] :country_iso_code2 All &#39;country[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [String] :country_iso_code3 All &#39;country[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :country_id The country to return states for. All &#39;country[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :country_iso_code2 The country to return states for. All &#39;country[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :country_iso_code3 The country to return states for. All &#39;country[]&#39; params are mutually exclusive, only one can be provided.
   # @option opts [Integer] :page 
   # @option opts [Integer] :per_page 
   # @return [GetCountryCountryStates200Response]
@@ -251,7 +251,7 @@ describe 'CoreApi' do
 
   # unit tests for get_country_state
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :country_state_id All &#39;country_state[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :country_state_id The country state to return. All &#39;country_state[]&#39; params are mutually exclusive, only one can be provided.
   # @return [GetCountryState200Response]
   describe 'get_country_state test' do
     it 'should work' do
@@ -272,8 +272,8 @@ describe 'CoreApi' do
 
   # unit tests for get_currency
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :currency_id All &#39;currency[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [String] :currency_iso_code All &#39;currency[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :currency_id The currency to return. All &#39;currency[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :currency_iso_code The currency to return. All &#39;currency[]&#39; params are mutually exclusive, only one can be provided.
   # @return [GetCurrency200Response]
   describe 'get_currency test' do
     it 'should work' do
@@ -305,8 +305,8 @@ describe 'CoreApi' do
 
   # unit tests for get_data_center_gpu_types
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :data_center_id All &#39;data_center[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [String] :data_center_permalink All &#39;data_center[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :data_center_id The data center to list GPU types for. All &#39;data_center[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :data_center_permalink The data center to list GPU types for. All &#39;data_center[]&#39; params are mutually exclusive, only one can be provided.
   # @option opts [Integer] :page 
   # @option opts [Integer] :per_page 
   # @return [GetDataCenterGpuTypes200Response]
@@ -327,7 +327,7 @@ describe 'CoreApi' do
 
   # unit tests for get_disk
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :disk_id All &#39;disk[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :disk_id The disk to return. All &#39;disk[]&#39; params are mutually exclusive, only one can be provided.
   # @return [GetDisk200Response]
   describe 'get_disk test' do
     it 'should work' do
@@ -337,7 +337,7 @@ describe 'CoreApi' do
 
   # unit tests for get_disk_backup_policy
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :disk_backup_policy_id All &#39;disk_backup_policy[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :disk_backup_policy_id The disk backup policy to get information for. All &#39;disk_backup_policy[]&#39; params are mutually exclusive, only one can be provided.
   # @return [GetDiskBackupPolicy200Response]
   describe 'get_disk_backup_policy test' do
     it 'should work' do
@@ -347,7 +347,7 @@ describe 'CoreApi' do
 
   # unit tests for get_disk_disk_backup_policies
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :disk_id All &#39;disk[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :disk_id The disk to return disk backup policies for. All &#39;disk[]&#39; params are mutually exclusive, only one can be provided.
   # @option opts [Integer] :page 
   # @option opts [Integer] :per_page 
   # @return [GetDiskDiskBackupPolicies200Response]
@@ -359,8 +359,8 @@ describe 'CoreApi' do
 
   # unit tests for get_disk_template
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :disk_template_id All &#39;disk_template[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [String] :disk_template_permalink All &#39;disk_template[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :disk_template_id The disk template to return. All &#39;disk_template[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :disk_template_permalink The disk template to return. All &#39;disk_template[]&#39; params are mutually exclusive, only one can be provided.
   # @return [GetDiskTemplate200Response]
   describe 'get_disk_template test' do
     it 'should work' do
@@ -370,7 +370,7 @@ describe 'CoreApi' do
 
   # unit tests for get_disk_template_version
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :disk_template_version_id All &#39;disk_template_version[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :disk_template_version_id The disk template version to return. All &#39;disk_template_version[]&#39; params are mutually exclusive, only one can be provided.
   # @return [GetDiskTemplateVersion200Response]
   describe 'get_disk_template_version test' do
     it 'should work' do
@@ -380,7 +380,7 @@ describe 'CoreApi' do
 
   # unit tests for get_disk_template_version_spec
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :disk_template_version_id All &#39;disk_template_version[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :disk_template_version_id The disk template version to return. All &#39;disk_template_version[]&#39; params are mutually exclusive, only one can be provided.
   # @return [GetDiskTemplateVersionSpec200Response]
   describe 'get_disk_template_version_spec test' do
     it 'should work' do
@@ -390,8 +390,8 @@ describe 'CoreApi' do
 
   # unit tests for get_disk_template_versions
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :disk_template_id All &#39;disk_template[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [String] :disk_template_permalink All &#39;disk_template[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :disk_template_id The disk template to return the versions for. All &#39;disk_template[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :disk_template_permalink The disk template to return the versions for. All &#39;disk_template[]&#39; params are mutually exclusive, only one can be provided.
   # @option opts [Integer] :page 
   # @option opts [Integer] :per_page 
   # @return [GetDiskTemplateVersions200Response]
@@ -404,7 +404,7 @@ describe 'CoreApi' do
   # unit tests for get_dns_record
   # @param [Hash] opts the optional parameters
   # @option opts [String] :dns_record_id All &#39;dns_record[]&#39; params are mutually exclusive, only one can be provided.
-  # @return [PostDnsZoneRecords200Response]
+  # @return [GetDnsRecord200Response]
   describe 'get_dns_record test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
@@ -413,7 +413,7 @@ describe 'CoreApi' do
 
   # unit tests for get_dns_records_dns_record
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :dns_record_id All &#39;dns_record[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :dns_record_id The DNS record to return information for. All &#39;dns_record[]&#39; params are mutually exclusive, only one can be provided.
   # @return [GetDnsRecordsDnsRecord200Response]
   describe 'get_dns_records_dns_record test' do
     it 'should work' do
@@ -425,7 +425,7 @@ describe 'CoreApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :dns_zone_id All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
   # @option opts [String] :dns_zone_name All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
-  # @return [GetDnsZonesDnsZone200Response]
+  # @return [GetDnsZone200Response]
   describe 'get_dns_zone test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
@@ -445,8 +445,8 @@ describe 'CoreApi' do
 
   # unit tests for get_dns_zones_dns_zone
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :dns_zone_id All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [String] :dns_zone_name All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :dns_zone_id The DNS zone to return information for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :dns_zone_name The DNS zone to return information for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
   # @return [GetDnsZonesDnsZone200Response]
   describe 'get_dns_zones_dns_zone test' do
     it 'should work' do
@@ -456,8 +456,8 @@ describe 'CoreApi' do
 
   # unit tests for get_dns_zones_dns_zone_records
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :dns_zone_id All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [String] :dns_zone_name All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :dns_zone_id The DNS zone to find all DNS records for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :dns_zone_name The DNS zone to find all DNS records for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
   # @return [GetDnsZonesDnsZoneRecords200Response]
   describe 'get_dns_zones_dns_zone_records test' do
     it 'should work' do
@@ -467,8 +467,8 @@ describe 'CoreApi' do
 
   # unit tests for get_dns_zones_dns_zone_verification_details
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :dns_zone_id All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [String] :dns_zone_name All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :dns_zone_id The DNS zone to get verification details for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :dns_zone_name The DNS zone to get verification details for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
   # @return [GetDnsZonesDnsZoneVerificationDetails200Response]
   describe 'get_dns_zones_dns_zone_verification_details test' do
     it 'should work' do
@@ -478,7 +478,7 @@ describe 'CoreApi' do
 
   # unit tests for get_file_storage_volume
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :file_storage_volume_id All &#39;file_storage_volume[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :file_storage_volume_id The file storage volume to return. All &#39;file_storage_volume[]&#39; params are mutually exclusive, only one can be provided.
   # @return [GetFileStorageVolume200Response]
   describe 'get_file_storage_volume test' do
     it 'should work' do
@@ -510,8 +510,8 @@ describe 'CoreApi' do
 
   # unit tests for get_ip_address
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :ip_address_id All &#39;ip_address[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [String] :ip_address_address All &#39;ip_address[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :ip_address_id The IP address to find. All &#39;ip_address[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :ip_address_address The IP address to find. All &#39;ip_address[]&#39; params are mutually exclusive, only one can be provided.
   # @return [GetIpAddress200Response]
   describe 'get_ip_address test' do
     it 'should work' do
@@ -521,8 +521,8 @@ describe 'CoreApi' do
 
   # unit tests for get_load_balancer
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :load_balancer_id All &#39;load_balancer[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [String] :load_balancer_api_reference All &#39;load_balancer[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :load_balancer_id The load balancer to return the details for. All &#39;load_balancer[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :load_balancer_api_reference The load balancer to return the details for. All &#39;load_balancer[]&#39; params are mutually exclusive, only one can be provided.
   # @return [GetLoadBalancer200Response]
   describe 'get_load_balancer test' do
     it 'should work' do
@@ -532,8 +532,8 @@ describe 'CoreApi' do
 
   # unit tests for get_load_balancer_rules
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :load_balancer_id All &#39;load_balancer[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [String] :load_balancer_api_reference All &#39;load_balancer[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :load_balancer_id The load balancer to return all load rules for. All &#39;load_balancer[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :load_balancer_api_reference The load balancer to return all load rules for. All &#39;load_balancer[]&#39; params are mutually exclusive, only one can be provided.
   # @option opts [Integer] :page 
   # @option opts [Integer] :per_page 
   # @return [GetLoadBalancerRules200Response]
@@ -545,7 +545,7 @@ describe 'CoreApi' do
 
   # unit tests for get_load_balancers_rules_load_balancer_rule
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :load_balancer_rule_id All &#39;load_balancer_rule[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :load_balancer_rule_id The load balancer rule to return the details for. All &#39;load_balancer_rule[]&#39; params are mutually exclusive, only one can be provided.
   # @return [GetLoadBalancersRulesLoadBalancerRule200Response]
   describe 'get_load_balancers_rules_load_balancer_rule test' do
     it 'should work' do
@@ -555,8 +555,8 @@ describe 'CoreApi' do
 
   # unit tests for get_network
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :network_id All &#39;network[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [String] :network_permalink All &#39;network[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :network_id The network to return. All &#39;network[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :network_permalink The network to return. All &#39;network[]&#39; params are mutually exclusive, only one can be provided.
   # @return [GetNetwork200Response]
   describe 'get_network test' do
     it 'should work' do
@@ -566,7 +566,7 @@ describe 'CoreApi' do
 
   # unit tests for get_operating_system
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :operating_system_id All &#39;operating_system[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :operating_system_id The operating system to return. All &#39;operating_system[]&#39; params are mutually exclusive, only one can be provided.
   # @return [GetOperatingSystem200Response]
   describe 'get_operating_system test' do
     it 'should work' do
@@ -622,8 +622,8 @@ describe 'CoreApi' do
 
   # unit tests for get_organization_disk_backup_policies
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :organization_id The organization to return disk backup policies for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :organization_sub_domain The organization to return disk backup policies for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
   # @option opts [Integer] :page 
   # @option opts [Integer] :per_page 
   # @return [GetOrganizationDiskBackupPolicies200Response]
@@ -635,10 +635,10 @@ describe 'CoreApi' do
 
   # unit tests for get_organization_disk_templates
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [Boolean] :include_universal 
-  # @option opts [String] :operating_system_id All &#39;operating_system[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :organization_id The organization to find disk templates for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :organization_sub_domain The organization to find disk templates for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [Boolean] :include_universal Whether or not to include universal templates
+  # @option opts [String] :operating_system_id An operating system to use to filter disk templates. All &#39;operating_system[]&#39; params are mutually exclusive, only one can be provided.
   # @option opts [Integer] :page 
   # @option opts [Integer] :per_page 
   # @return [GetOrganizationDiskTemplates200Response]
@@ -650,8 +650,8 @@ describe 'CoreApi' do
 
   # unit tests for get_organization_disks
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :organization_id The organization to find disks for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :organization_sub_domain The organization to find disks for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
   # @option opts [Integer] :page 
   # @option opts [Integer] :per_page 
   # @return [GetOrganizationDisks200Response]
@@ -663,8 +663,8 @@ describe 'CoreApi' do
 
   # unit tests for get_organization_dns_zones
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :organization_id The organization to return DNS zones for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :organization_sub_domain The organization to return DNS zones for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
   # @option opts [Integer] :page 
   # @option opts [Integer] :per_page 
   # @return [GetOrganizationDnsZones200Response]
@@ -687,8 +687,8 @@ describe 'CoreApi' do
 
   # unit tests for get_organization_file_storage_volumes
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :organization_id The organization to return all file storage volumes for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :organization_sub_domain The organization to return all file storage volumes for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
   # @option opts [Integer] :page 
   # @option opts [Integer] :per_page 
   # @return [GetOrganizationFileStorageVolumes200Response]
@@ -700,9 +700,9 @@ describe 'CoreApi' do
 
   # unit tests for get_organization_ip_addresses
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [Boolean] :allocated 
+  # @option opts [String] :organization_id The organization to use when looking up IP addresses. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :organization_sub_domain The organization to use when looking up IP addresses. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [Boolean] :allocated If true, only return allocated IP addresss. If false, only return unallocated IP addresses.
   # @option opts [Integer] :page 
   # @option opts [Integer] :per_page 
   # @return [GetOrganizationIpAddresses200Response]
@@ -714,8 +714,8 @@ describe 'CoreApi' do
 
   # unit tests for get_organization_load_balancers
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :organization_id The organization to return all load balancers for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :organization_sub_domain The organization to return all load balancers for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
   # @option opts [Integer] :page 
   # @option opts [Integer] :per_page 
   # @return [GetOrganizationLoadBalancers200Response]
@@ -740,8 +740,8 @@ describe 'CoreApi' do
 
   # unit tests for get_organization_network_speed_profiles
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :organization_id The organization to use when looking up network speed profiles. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :organization_sub_domain The organization to use when looking up network speed profiles. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
   # @option opts [Integer] :page 
   # @option opts [Integer] :per_page 
   # @return [GetOrganizationNetworkSpeedProfiles200Response]
@@ -753,8 +753,8 @@ describe 'CoreApi' do
 
   # unit tests for get_organization_security_groups
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :organization_id The organization to return all security groups for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :organization_sub_domain The organization to return all security groups for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
   # @option opts [Integer] :page 
   # @option opts [Integer] :per_page 
   # @return [GetOrganizationSecurityGroups200Response]
@@ -766,8 +766,8 @@ describe 'CoreApi' do
 
   # unit tests for get_organization_ssh_keys
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :organization_id The organization to list SSH keys for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :organization_sub_domain The organization to list SSH keys for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
   # @option opts [Integer] :page 
   # @option opts [Integer] :per_page 
   # @return [GetOrganizationSshKeys200Response]
@@ -779,8 +779,8 @@ describe 'CoreApi' do
 
   # unit tests for get_organization_tags
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :organization_id The organization to list the tags for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :organization_sub_domain The organization to list the tags for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
   # @option opts [Integer] :page 
   # @option opts [Integer] :per_page 
   # @return [GetOrganizationTags200Response]
@@ -792,8 +792,8 @@ describe 'CoreApi' do
 
   # unit tests for get_organization_trash_objects
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :organization_id The organization to find all trash objects for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :organization_sub_domain The organization to find all trash objects for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
   # @option opts [Integer] :page 
   # @option opts [Integer] :per_page 
   # @return [GetOrganizationTrashObjects200Response]
@@ -818,8 +818,8 @@ describe 'CoreApi' do
 
   # unit tests for get_organization_virtual_machine_groups
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :organization_id The organization to return groups for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :organization_sub_domain The organization to return groups for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
   # @return [GetOrganizationVirtualMachineGroups200Response]
   describe 'get_organization_virtual_machine_groups test' do
     it 'should work' do
@@ -864,8 +864,8 @@ describe 'CoreApi' do
 
   # unit tests for get_security_group
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :security_group_id All &#39;security_group[]&#39; params are mutually exclusive, only one can be provided.
-  # @return [PostOrganizationSecurityGroups200Response]
+  # @option opts [String] :security_group_id The security group to return the details for. All &#39;security_group[]&#39; params are mutually exclusive, only one can be provided.
+  # @return [GetSecurityGroup200Response]
   describe 'get_security_group test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
@@ -874,7 +874,7 @@ describe 'CoreApi' do
 
   # unit tests for get_security_group_rules
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :security_group_id All &#39;security_group[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :security_group_id The security group to return all load rules for. All &#39;security_group[]&#39; params are mutually exclusive, only one can be provided.
   # @option opts [Integer] :page 
   # @option opts [Integer] :per_page 
   # @return [GetSecurityGroupRules200Response]
@@ -886,7 +886,7 @@ describe 'CoreApi' do
 
   # unit tests for get_security_groups_rules_security_group_rule
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :security_group_rule_id All &#39;security_group_rule[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :security_group_rule_id The security group rule to return the details for. All &#39;security_group_rule[]&#39; params are mutually exclusive, only one can be provided.
   # @return [GetSecurityGroupsRulesSecurityGroupRule200Response]
   describe 'get_security_groups_rules_security_group_rule test' do
     it 'should work' do
@@ -896,8 +896,8 @@ describe 'CoreApi' do
 
   # unit tests for get_tag
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :tag_id All &#39;tag[]&#39; params are mutually exclusive, only one can be provided.
-  # @return [PostOrganizationTags200Response]
+  # @option opts [String] :tag_id The tag to load the details for. All &#39;tag[]&#39; params are mutually exclusive, only one can be provided.
+  # @return [GetTag200Response]
   describe 'get_tag test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
@@ -916,8 +916,8 @@ describe 'CoreApi' do
 
   # unit tests for get_trash_object
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :trash_object_id All &#39;trash_object[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [String] :trash_object_object_id All &#39;trash_object[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :trash_object_id The trash object to find. All &#39;trash_object[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :trash_object_object_id The trash object to find. All &#39;trash_object[]&#39; params are mutually exclusive, only one can be provided.
   # @return [GetTrashObject200Response]
   describe 'get_trash_object test' do
     it 'should work' do
@@ -947,9 +947,9 @@ describe 'CoreApi' do
 
   # unit tests for get_virtual_machine_disk_backup_policies
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :virtual_machine_id All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [String] :virtual_machine_fqdn All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [Boolean] :include_disks 
+  # @option opts [String] :virtual_machine_id The virtual machine to return disk backup policies for. All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :virtual_machine_fqdn The virtual machine to return disk backup policies for. All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [Boolean] :include_disks If true, the returned list will include backup policies owned by disks assigned to this virtual machine in addition to those that belong to the whole virtual machine
   # @option opts [Integer] :page 
   # @option opts [Integer] :per_page 
   # @return [GetVirtualMachineDiskBackupPolicies200Response]
@@ -961,8 +961,8 @@ describe 'CoreApi' do
 
   # unit tests for get_virtual_machine_disks
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :virtual_machine_id All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [String] :virtual_machine_fqdn All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :virtual_machine_id The virtual machine to find disks for. All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :virtual_machine_fqdn The virtual machine to find disks for. All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
   # @option opts [Integer] :page 
   # @option opts [Integer] :per_page 
   # @return [GetVirtualMachineDisks200Response]
@@ -974,8 +974,8 @@ describe 'CoreApi' do
 
   # unit tests for get_virtual_machine_group
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :virtual_machine_group_id All &#39;virtual_machine_group[]&#39; params are mutually exclusive, only one can be provided.
-  # @return [PostOrganizationVirtualMachineGroups200Response]
+  # @option opts [String] :virtual_machine_group_id The virtual machine group to retrieve. All &#39;virtual_machine_group[]&#39; params are mutually exclusive, only one can be provided.
+  # @return [GetVirtualMachineGroup200Response]
   describe 'get_virtual_machine_group test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
@@ -984,10 +984,10 @@ describe 'CoreApi' do
 
   # unit tests for get_virtual_machine_network_interface
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :virtual_machine_id All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [String] :virtual_machine_fqdn All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [String] :network_id All &#39;network[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [String] :network_permalink All &#39;network[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :virtual_machine_id The virtual machine to find the network interface for. All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :virtual_machine_fqdn The virtual machine to find the network interface for. All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :network_id The network to find the network interface for. All &#39;network[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :network_permalink The network to find the network interface for. All &#39;network[]&#39; params are mutually exclusive, only one can be provided.
   # @return [GetVirtualMachineNetworkInterface200Response]
   describe 'get_virtual_machine_network_interface test' do
     it 'should work' do
@@ -996,9 +996,9 @@ describe 'CoreApi' do
   end
 
   # unit tests for get_virtual_machine_network_interface_available_ips_address_version
-  # @param address_version 
+  # @param address_version The IP address version to return results for
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :virtual_machine_network_interface_id All &#39;virtual_machine_network_interface[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :virtual_machine_network_interface_id The network interface to get IP addresses for. All &#39;virtual_machine_network_interface[]&#39; params are mutually exclusive, only one can be provided.
   # @return [GetVirtualMachineNetworkInterfaceAvailableIpsAddressVersion200Response]
   describe 'get_virtual_machine_network_interface_available_ips_address_version test' do
     it 'should work' do
@@ -1008,22 +1008,12 @@ describe 'CoreApi' do
 
   # unit tests for get_virtual_machine_network_interfaces
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :virtual_machine_id All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [String] :virtual_machine_fqdn All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :virtual_machine_id The virtual machine to show network interfaces for. All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :virtual_machine_fqdn The virtual machine to show network interfaces for. All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
   # @option opts [Integer] :page 
   # @option opts [Integer] :per_page 
   # @return [GetVirtualMachineNetworkInterfaces200Response]
   describe 'get_virtual_machine_network_interfaces test' do
-    it 'should work' do
-      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
-    end
-  end
-
-  # unit tests for get_virtual_machine_network_interfaces_virtual_machine_network_interface
-  # @param [Hash] opts the optional parameters
-  # @option opts [String] :virtual_machine_network_interface_id All &#39;virtual_machine_network_interface[]&#39; params are mutually exclusive, only one can be provided.
-  # @return [GetVirtualMachineNetworkInterfacesVirtualMachineNetworkInterface200Response]
-  describe 'get_virtual_machine_network_interfaces_virtual_machine_network_interface test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
     end
@@ -1042,8 +1032,8 @@ describe 'CoreApi' do
 
   # unit tests for get_virtual_machine_packages
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :organization_id Provide an organization to only show packages available to the given organization (otherwise only public packages will be displayed). All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :organization_sub_domain Provide an organization to only show packages available to the given organization (otherwise only public packages will be displayed). All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
   # @option opts [Integer] :page 
   # @option opts [Integer] :per_page 
   # @return [GetVirtualMachinePackages200Response]
@@ -1063,10 +1053,20 @@ describe 'CoreApi' do
     end
   end
 
+  # unit tests for get_vmnivmni
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :virtual_machine_network_interface_id The network interface to show the information for. All &#39;virtual_machine_network_interface[]&#39; params are mutually exclusive, only one can be provided.
+  # @return [GetVMNIVMNI200Response]
+  describe 'get_vmnivmni test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
   # unit tests for get_zone
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :zone_id All &#39;zone[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [String] :zone_permalink All &#39;zone[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :zone_id The zone to find. All &#39;zone[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :zone_permalink The zone to find. All &#39;zone[]&#39; params are mutually exclusive, only one can be provided.
   # @return [GetZone200Response]
   describe 'get_zone test' do
     it 'should work' do
@@ -1096,7 +1096,7 @@ describe 'CoreApi' do
   # unit tests for patch_dns_record
   # @param [Hash] opts the optional parameters
   # @option opts [PatchDnsRecordRequest] :patch_dns_record_request 
-  # @return [PostDnsZoneRecords200Response]
+  # @return [PatchDnsRecord200Response]
   describe 'patch_dns_record test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
@@ -1116,7 +1116,7 @@ describe 'CoreApi' do
   # unit tests for patch_dns_zone
   # @param [Hash] opts the optional parameters
   # @option opts [PatchDnsZoneRequest] :patch_dns_zone_request 
-  # @return [GetDnsZonesDnsZone200Response]
+  # @return [GetDnsZone200Response]
   describe 'patch_dns_zone test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
@@ -1136,7 +1136,7 @@ describe 'CoreApi' do
   # unit tests for patch_ip_address
   # @param [Hash] opts the optional parameters
   # @option opts [PatchIpAddressRequest] :patch_ip_address_request 
-  # @return [PostVirtualMachineAllocateIp200Response]
+  # @return [PatchIpAddress200Response]
   describe 'patch_ip_address test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
@@ -1166,7 +1166,7 @@ describe 'CoreApi' do
   # unit tests for patch_security_group
   # @param [Hash] opts the optional parameters
   # @option opts [PatchSecurityGroupRequest] :patch_security_group_request 
-  # @return [PostOrganizationSecurityGroups200Response]
+  # @return [PatchSecurityGroup200Response]
   describe 'patch_security_group test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
@@ -1186,7 +1186,7 @@ describe 'CoreApi' do
   # unit tests for patch_tag
   # @param [Hash] opts the optional parameters
   # @option opts [PatchTagRequest] :patch_tag_request 
-  # @return [PostOrganizationTags200Response]
+  # @return [PatchTag200Response]
   describe 'patch_tag test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
@@ -1206,7 +1206,7 @@ describe 'CoreApi' do
   # unit tests for patch_virtual_machine_group
   # @param [Hash] opts the optional parameters
   # @option opts [PatchVirtualMachineGroupRequest] :patch_virtual_machine_group_request 
-  # @return [PostOrganizationVirtualMachineGroups200Response]
+  # @return [PatchVirtualMachineGroup200Response]
   describe 'patch_virtual_machine_group test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
@@ -1216,7 +1216,7 @@ describe 'CoreApi' do
   # unit tests for patch_virtual_machine_network_interface_update_speed_profile
   # @param [Hash] opts the optional parameters
   # @option opts [PatchVirtualMachineNetworkInterfaceUpdateSpeedProfileRequest] :patch_virtual_machine_network_interface_update_speed_profile_request 
-  # @return [PutVirtualMachinePackage200Response]
+  # @return [PatchVirtualMachineNetworkInterfaceUpdateSpeedProfile200Response]
   describe 'patch_virtual_machine_network_interface_update_speed_profile test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
@@ -1246,7 +1246,7 @@ describe 'CoreApi' do
   # unit tests for post_dns_zone_verify
   # @param [Hash] opts the optional parameters
   # @option opts [DeleteDnsZonesDnsZoneRequest] :delete_dns_zones_dns_zone_request 
-  # @return [GetDnsZonesDnsZone200Response]
+  # @return [GetDnsZone200Response]
   describe 'post_dns_zone_verify test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
@@ -1276,7 +1276,7 @@ describe 'CoreApi' do
   # unit tests for post_dns_zones_dns_zone_verify
   # @param [Hash] opts the optional parameters
   # @option opts [DeleteDnsZonesDnsZoneRequest] :delete_dns_zones_dns_zone_request 
-  # @return [GetDnsZonesDnsZone200Response]
+  # @return [PostDnsZonesDnsZoneVerify200Response]
   describe 'post_dns_zones_dns_zone_verify test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/

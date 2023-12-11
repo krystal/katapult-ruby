@@ -55,8 +55,8 @@ module KatapultAPI
         :'description' => :'String',
         :'permalink' => :'String',
         :'universal' => :'Boolean',
-        :'latest_version' => :'GetDiskTemplate200ResponseDiskTemplateLatestVersion',
-        :'operating_system' => :'GetDiskTemplate200ResponseDiskTemplateOperatingSystem'
+        :'latest_version' => :'GetDiskTemplatePartLatestVersion',
+        :'operating_system' => :'GetDiskTemplatePartOperatingSystem'
       }
     end
 

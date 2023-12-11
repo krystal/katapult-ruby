@@ -17,6 +17,7 @@ module KatapultAPI
   class GetCountries200Response
     attr_accessor :pagination
 
+    # The list of countries
     attr_accessor :countries
 
     # Attribute mapping from ruby-style variable name to JSON key.

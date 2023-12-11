@@ -9,7 +9,7 @@
 | **destination_port** | **Integer** |  | [optional] |
 | **listen_port** | **Integer** |  | [optional] |
 | **protocol** | [**LoadBalancerRuleProtocolEnum**](LoadBalancerRuleProtocolEnum.md) |  | [optional] |
-| **certificates** | [**Array&lt;GetLoadBalancerRules200ResponseLoadBalancerRulesCertificates&gt;**](GetLoadBalancerRules200ResponseLoadBalancerRulesCertificates.md) |  | [optional] |
+| **certificates** | [**Array&lt;GetLoadBalancerRulesPartCertificates&gt;**](GetLoadBalancerRulesPartCertificates.md) |  | [optional] |
 | **check_enabled** | **Boolean** |  | [optional] |
 
 ## Example

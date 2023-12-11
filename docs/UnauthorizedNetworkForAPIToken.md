@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **ip_address** | **String** |  | [optional] |
+| **ip_address** | **String** | The IP address the request was received from | [optional] |
 
 ## Example
 

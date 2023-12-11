@@ -15,14 +15,19 @@ require 'time'
 
 module KatapultAPI
   class PaginationObject
+    # The current page
     attr_accessor :current_page
 
+    # The total number of pages
     attr_accessor :total_pages
 
+    # The total number of items across all pages
     attr_accessor :total
 
+    # The number of items per page
     attr_accessor :per_page
 
+    # Is this a large set and therefore the total number of records cannot be returned?
     attr_accessor :large_set
 
     # Attribute mapping from ruby-style variable name to JSON key.

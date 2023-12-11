@@ -17,6 +17,7 @@ module KatapultAPI
   class GetOrganizationDisks200Response
     attr_accessor :pagination
 
+    # The list of disks
     attr_accessor :disk
 
     # Attribute mapping from ruby-style variable name to JSON key.

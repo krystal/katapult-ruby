@@ -25,8 +25,10 @@ module KatapultAPI
 
     attr_accessor :state
 
+    # The NFS location of where to mount the volume from.
     attr_accessor :nfs_location
 
+    # The size of the volume in bytes.
     attr_accessor :size
 
     class EnumAttributeValidator
@@ -74,7 +76,7 @@ module KatapultAPI
       {
         :'id' => :'String',
         :'name' => :'String',
-        :'data_center' => :'PostOrganizationFileStorageVolumes201ResponseFileStorageVolumeDataCenter',
+        :'data_center' => :'PostOrganizationFileStorageVolumesPartDataCenter',
         :'associations' => :'Array<String>',
         :'state' => :'FileStorageVolumeStateEnum',
         :'nfs_location' => :'String',

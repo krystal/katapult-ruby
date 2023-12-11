@@ -15,6 +15,7 @@ require 'time'
 
 module KatapultAPI
   class RateLimitReached
+    # The total number of requests per minute that are permitted
     attr_accessor :total_permitted
 
     # Attribute mapping from ruby-style variable name to JSON key.

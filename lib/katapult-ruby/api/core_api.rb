@@ -801,7 +801,7 @@ module KatapultAPI
 
     # @param [Hash] opts the optional parameters
     # @option opts [DeleteTagRequest] :delete_tag_request 
-    # @return [PostOrganizationTags200Response]
+    # @return [DeleteTag200Response]
     def delete_tag(opts = {})
       data, _status_code, _headers = delete_tag_with_http_info(opts)
       data
@@ -809,7 +809,7 @@ module KatapultAPI
 
     # @param [Hash] opts the optional parameters
     # @option opts [DeleteTagRequest] :delete_tag_request 
-    # @return [Array<(PostOrganizationTags200Response, Integer, Hash)>] PostOrganizationTags200Response data, response status code and response headers
+    # @return [Array<(DeleteTag200Response, Integer, Hash)>] DeleteTag200Response data, response status code and response headers
     def delete_tag_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: CoreApi.delete_tag ...'
@@ -837,7 +837,7 @@ module KatapultAPI
       post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'delete_tag_request'])
 
       # return_type
-      return_type = opts[:debug_return_type] || 'PostOrganizationTags200Response'
+      return_type = opts[:debug_return_type] || 'DeleteTag200Response'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['Authenticator']
@@ -981,7 +981,7 @@ module KatapultAPI
 
     # @param [Hash] opts the optional parameters
     # @option opts [DeleteVirtualMachineGroupRequest] :delete_virtual_machine_group_request 
-    # @return [PostOrganizationVirtualMachineGroups200Response]
+    # @return [DeleteVirtualMachineGroup200Response]
     def delete_virtual_machine_group(opts = {})
       data, _status_code, _headers = delete_virtual_machine_group_with_http_info(opts)
       data
@@ -989,7 +989,7 @@ module KatapultAPI
 
     # @param [Hash] opts the optional parameters
     # @option opts [DeleteVirtualMachineGroupRequest] :delete_virtual_machine_group_request 
-    # @return [Array<(PostOrganizationVirtualMachineGroups200Response, Integer, Hash)>] PostOrganizationVirtualMachineGroups200Response data, response status code and response headers
+    # @return [Array<(DeleteVirtualMachineGroup200Response, Integer, Hash)>] DeleteVirtualMachineGroup200Response data, response status code and response headers
     def delete_virtual_machine_group_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: CoreApi.delete_virtual_machine_group ...'
@@ -1017,7 +1017,7 @@ module KatapultAPI
       post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'delete_virtual_machine_group_request'])
 
       # return_type
-      return_type = opts[:debug_return_type] || 'PostOrganizationVirtualMachineGroups200Response'
+      return_type = opts[:debug_return_type] || 'DeleteVirtualMachineGroup200Response'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['Authenticator']
@@ -1155,9 +1155,9 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :country_id All &#39;country[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :country_iso_code2 All &#39;country[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :country_iso_code3 All &#39;country[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :country_id The country to return. All &#39;country[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :country_iso_code2 The country to return. All &#39;country[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :country_iso_code3 The country to return. All &#39;country[]&#39; params are mutually exclusive, only one can be provided.
     # @return [GetCountry200Response]
     def get_country(opts = {})
       data, _status_code, _headers = get_country_with_http_info(opts)
@@ -1165,9 +1165,9 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :country_id All &#39;country[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :country_iso_code2 All &#39;country[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :country_iso_code3 All &#39;country[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :country_id The country to return. All &#39;country[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :country_iso_code2 The country to return. All &#39;country[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :country_iso_code3 The country to return. All &#39;country[]&#39; params are mutually exclusive, only one can be provided.
     # @return [Array<(GetCountry200Response, Integer, Hash)>] GetCountry200Response data, response status code and response headers
     def get_country_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -1217,9 +1217,9 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :country_id All &#39;country[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :country_iso_code2 All &#39;country[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :country_iso_code3 All &#39;country[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :country_id The country to return states for. All &#39;country[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :country_iso_code2 The country to return states for. All &#39;country[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :country_iso_code3 The country to return states for. All &#39;country[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [GetCountryCountryStates200Response]
@@ -1229,9 +1229,9 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :country_id All &#39;country[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :country_iso_code2 All &#39;country[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :country_iso_code3 All &#39;country[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :country_id The country to return states for. All &#39;country[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :country_iso_code2 The country to return states for. All &#39;country[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :country_iso_code3 The country to return states for. All &#39;country[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [Array<(GetCountryCountryStates200Response, Integer, Hash)>] GetCountryCountryStates200Response data, response status code and response headers
@@ -1285,7 +1285,7 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :country_state_id All &#39;country_state[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :country_state_id The country state to return. All &#39;country_state[]&#39; params are mutually exclusive, only one can be provided.
     # @return [GetCountryState200Response]
     def get_country_state(opts = {})
       data, _status_code, _headers = get_country_state_with_http_info(opts)
@@ -1293,7 +1293,7 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :country_state_id All &#39;country_state[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :country_state_id The country state to return. All &#39;country_state[]&#39; params are mutually exclusive, only one can be provided.
     # @return [Array<(GetCountryState200Response, Integer, Hash)>] GetCountryState200Response data, response status code and response headers
     def get_country_state_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -1400,8 +1400,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :currency_id All &#39;currency[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :currency_iso_code All &#39;currency[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :currency_id The currency to return. All &#39;currency[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :currency_iso_code The currency to return. All &#39;currency[]&#39; params are mutually exclusive, only one can be provided.
     # @return [GetCurrency200Response]
     def get_currency(opts = {})
       data, _status_code, _headers = get_currency_with_http_info(opts)
@@ -1409,8 +1409,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :currency_id All &#39;currency[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :currency_iso_code All &#39;currency[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :currency_id The currency to return. All &#39;currency[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :currency_iso_code The currency to return. All &#39;currency[]&#39; params are mutually exclusive, only one can be provided.
     # @return [Array<(GetCurrency200Response, Integer, Hash)>] GetCurrency200Response data, response status code and response headers
     def get_currency_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -1577,8 +1577,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :data_center_id All &#39;data_center[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :data_center_permalink All &#39;data_center[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :data_center_id The data center to list GPU types for. All &#39;data_center[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :data_center_permalink The data center to list GPU types for. All &#39;data_center[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [GetDataCenterGpuTypes200Response]
@@ -1588,8 +1588,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :data_center_id All &#39;data_center[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :data_center_permalink All &#39;data_center[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :data_center_id The data center to list GPU types for. All &#39;data_center[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :data_center_permalink The data center to list GPU types for. All &#39;data_center[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [Array<(GetDataCenterGpuTypes200Response, Integer, Hash)>] GetDataCenterGpuTypes200Response data, response status code and response headers
@@ -1695,7 +1695,7 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :disk_id All &#39;disk[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :disk_id The disk to return. All &#39;disk[]&#39; params are mutually exclusive, only one can be provided.
     # @return [GetDisk200Response]
     def get_disk(opts = {})
       data, _status_code, _headers = get_disk_with_http_info(opts)
@@ -1703,7 +1703,7 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :disk_id All &#39;disk[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :disk_id The disk to return. All &#39;disk[]&#39; params are mutually exclusive, only one can be provided.
     # @return [Array<(GetDisk200Response, Integer, Hash)>] GetDisk200Response data, response status code and response headers
     def get_disk_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -1751,7 +1751,7 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :disk_backup_policy_id All &#39;disk_backup_policy[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :disk_backup_policy_id The disk backup policy to get information for. All &#39;disk_backup_policy[]&#39; params are mutually exclusive, only one can be provided.
     # @return [GetDiskBackupPolicy200Response]
     def get_disk_backup_policy(opts = {})
       data, _status_code, _headers = get_disk_backup_policy_with_http_info(opts)
@@ -1759,7 +1759,7 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :disk_backup_policy_id All &#39;disk_backup_policy[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :disk_backup_policy_id The disk backup policy to get information for. All &#39;disk_backup_policy[]&#39; params are mutually exclusive, only one can be provided.
     # @return [Array<(GetDiskBackupPolicy200Response, Integer, Hash)>] GetDiskBackupPolicy200Response data, response status code and response headers
     def get_disk_backup_policy_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -1807,7 +1807,7 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :disk_id All &#39;disk[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :disk_id The disk to return disk backup policies for. All &#39;disk[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [GetDiskDiskBackupPolicies200Response]
@@ -1817,7 +1817,7 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :disk_id All &#39;disk[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :disk_id The disk to return disk backup policies for. All &#39;disk[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [Array<(GetDiskDiskBackupPolicies200Response, Integer, Hash)>] GetDiskDiskBackupPolicies200Response data, response status code and response headers
@@ -1869,8 +1869,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :disk_template_id All &#39;disk_template[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :disk_template_permalink All &#39;disk_template[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :disk_template_id The disk template to return. All &#39;disk_template[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :disk_template_permalink The disk template to return. All &#39;disk_template[]&#39; params are mutually exclusive, only one can be provided.
     # @return [GetDiskTemplate200Response]
     def get_disk_template(opts = {})
       data, _status_code, _headers = get_disk_template_with_http_info(opts)
@@ -1878,8 +1878,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :disk_template_id All &#39;disk_template[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :disk_template_permalink All &#39;disk_template[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :disk_template_id The disk template to return. All &#39;disk_template[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :disk_template_permalink The disk template to return. All &#39;disk_template[]&#39; params are mutually exclusive, only one can be provided.
     # @return [Array<(GetDiskTemplate200Response, Integer, Hash)>] GetDiskTemplate200Response data, response status code and response headers
     def get_disk_template_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -1928,7 +1928,7 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :disk_template_version_id All &#39;disk_template_version[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :disk_template_version_id The disk template version to return. All &#39;disk_template_version[]&#39; params are mutually exclusive, only one can be provided.
     # @return [GetDiskTemplateVersion200Response]
     def get_disk_template_version(opts = {})
       data, _status_code, _headers = get_disk_template_version_with_http_info(opts)
@@ -1936,7 +1936,7 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :disk_template_version_id All &#39;disk_template_version[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :disk_template_version_id The disk template version to return. All &#39;disk_template_version[]&#39; params are mutually exclusive, only one can be provided.
     # @return [Array<(GetDiskTemplateVersion200Response, Integer, Hash)>] GetDiskTemplateVersion200Response data, response status code and response headers
     def get_disk_template_version_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -1984,7 +1984,7 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :disk_template_version_id All &#39;disk_template_version[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :disk_template_version_id The disk template version to return. All &#39;disk_template_version[]&#39; params are mutually exclusive, only one can be provided.
     # @return [GetDiskTemplateVersionSpec200Response]
     def get_disk_template_version_spec(opts = {})
       data, _status_code, _headers = get_disk_template_version_spec_with_http_info(opts)
@@ -1992,7 +1992,7 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :disk_template_version_id All &#39;disk_template_version[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :disk_template_version_id The disk template version to return. All &#39;disk_template_version[]&#39; params are mutually exclusive, only one can be provided.
     # @return [Array<(GetDiskTemplateVersionSpec200Response, Integer, Hash)>] GetDiskTemplateVersionSpec200Response data, response status code and response headers
     def get_disk_template_version_spec_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -2040,8 +2040,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :disk_template_id All &#39;disk_template[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :disk_template_permalink All &#39;disk_template[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :disk_template_id The disk template to return the versions for. All &#39;disk_template[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :disk_template_permalink The disk template to return the versions for. All &#39;disk_template[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [GetDiskTemplateVersions200Response]
@@ -2051,8 +2051,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :disk_template_id All &#39;disk_template[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :disk_template_permalink All &#39;disk_template[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :disk_template_id The disk template to return the versions for. All &#39;disk_template[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :disk_template_permalink The disk template to return the versions for. All &#39;disk_template[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [Array<(GetDiskTemplateVersions200Response, Integer, Hash)>] GetDiskTemplateVersions200Response data, response status code and response headers
@@ -2106,7 +2106,7 @@ module KatapultAPI
 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :dns_record_id All &#39;dns_record[]&#39; params are mutually exclusive, only one can be provided.
-    # @return [PostDnsZoneRecords200Response]
+    # @return [GetDnsRecord200Response]
     def get_dns_record(opts = {})
       data, _status_code, _headers = get_dns_record_with_http_info(opts)
       data
@@ -2114,7 +2114,7 @@ module KatapultAPI
 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :dns_record_id All &#39;dns_record[]&#39; params are mutually exclusive, only one can be provided.
-    # @return [Array<(PostDnsZoneRecords200Response, Integer, Hash)>] PostDnsZoneRecords200Response data, response status code and response headers
+    # @return [Array<(GetDnsRecord200Response, Integer, Hash)>] GetDnsRecord200Response data, response status code and response headers
     def get_dns_record_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: CoreApi.get_dns_record ...'
@@ -2138,7 +2138,7 @@ module KatapultAPI
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'PostDnsZoneRecords200Response'
+      return_type = opts[:debug_return_type] || 'GetDnsRecord200Response'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['Authenticator']
@@ -2161,7 +2161,7 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :dns_record_id All &#39;dns_record[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :dns_record_id The DNS record to return information for. All &#39;dns_record[]&#39; params are mutually exclusive, only one can be provided.
     # @return [GetDnsRecordsDnsRecord200Response]
     def get_dns_records_dns_record(opts = {})
       data, _status_code, _headers = get_dns_records_dns_record_with_http_info(opts)
@@ -2169,7 +2169,7 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :dns_record_id All &#39;dns_record[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :dns_record_id The DNS record to return information for. All &#39;dns_record[]&#39; params are mutually exclusive, only one can be provided.
     # @return [Array<(GetDnsRecordsDnsRecord200Response, Integer, Hash)>] GetDnsRecordsDnsRecord200Response data, response status code and response headers
     def get_dns_records_dns_record_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -2219,7 +2219,7 @@ module KatapultAPI
     # @param [Hash] opts the optional parameters
     # @option opts [String] :dns_zone_id All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [String] :dns_zone_name All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
-    # @return [GetDnsZonesDnsZone200Response]
+    # @return [GetDnsZone200Response]
     def get_dns_zone(opts = {})
       data, _status_code, _headers = get_dns_zone_with_http_info(opts)
       data
@@ -2228,7 +2228,7 @@ module KatapultAPI
     # @param [Hash] opts the optional parameters
     # @option opts [String] :dns_zone_id All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [String] :dns_zone_name All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
-    # @return [Array<(GetDnsZonesDnsZone200Response, Integer, Hash)>] GetDnsZonesDnsZone200Response data, response status code and response headers
+    # @return [Array<(GetDnsZone200Response, Integer, Hash)>] GetDnsZone200Response data, response status code and response headers
     def get_dns_zone_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: CoreApi.get_dns_zone ...'
@@ -2253,7 +2253,7 @@ module KatapultAPI
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'GetDnsZonesDnsZone200Response'
+      return_type = opts[:debug_return_type] || 'GetDnsZone200Response'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['Authenticator']
@@ -2335,8 +2335,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :dns_zone_id All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :dns_zone_name All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :dns_zone_id The DNS zone to return information for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :dns_zone_name The DNS zone to return information for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
     # @return [GetDnsZonesDnsZone200Response]
     def get_dns_zones_dns_zone(opts = {})
       data, _status_code, _headers = get_dns_zones_dns_zone_with_http_info(opts)
@@ -2344,8 +2344,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :dns_zone_id All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :dns_zone_name All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :dns_zone_id The DNS zone to return information for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :dns_zone_name The DNS zone to return information for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
     # @return [Array<(GetDnsZonesDnsZone200Response, Integer, Hash)>] GetDnsZonesDnsZone200Response data, response status code and response headers
     def get_dns_zones_dns_zone_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -2394,8 +2394,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :dns_zone_id All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :dns_zone_name All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :dns_zone_id The DNS zone to find all DNS records for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :dns_zone_name The DNS zone to find all DNS records for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
     # @return [GetDnsZonesDnsZoneRecords200Response]
     def get_dns_zones_dns_zone_records(opts = {})
       data, _status_code, _headers = get_dns_zones_dns_zone_records_with_http_info(opts)
@@ -2403,8 +2403,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :dns_zone_id All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :dns_zone_name All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :dns_zone_id The DNS zone to find all DNS records for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :dns_zone_name The DNS zone to find all DNS records for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
     # @return [Array<(GetDnsZonesDnsZoneRecords200Response, Integer, Hash)>] GetDnsZonesDnsZoneRecords200Response data, response status code and response headers
     def get_dns_zones_dns_zone_records_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -2453,8 +2453,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :dns_zone_id All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :dns_zone_name All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :dns_zone_id The DNS zone to get verification details for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :dns_zone_name The DNS zone to get verification details for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
     # @return [GetDnsZonesDnsZoneVerificationDetails200Response]
     def get_dns_zones_dns_zone_verification_details(opts = {})
       data, _status_code, _headers = get_dns_zones_dns_zone_verification_details_with_http_info(opts)
@@ -2462,8 +2462,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :dns_zone_id All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :dns_zone_name All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :dns_zone_id The DNS zone to get verification details for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :dns_zone_name The DNS zone to get verification details for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
     # @return [Array<(GetDnsZonesDnsZoneVerificationDetails200Response, Integer, Hash)>] GetDnsZonesDnsZoneVerificationDetails200Response data, response status code and response headers
     def get_dns_zones_dns_zone_verification_details_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -2512,7 +2512,7 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :file_storage_volume_id All &#39;file_storage_volume[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :file_storage_volume_id The file storage volume to return. All &#39;file_storage_volume[]&#39; params are mutually exclusive, only one can be provided.
     # @return [GetFileStorageVolume200Response]
     def get_file_storage_volume(opts = {})
       data, _status_code, _headers = get_file_storage_volume_with_http_info(opts)
@@ -2520,7 +2520,7 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :file_storage_volume_id All &#39;file_storage_volume[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :file_storage_volume_id The file storage volume to return. All &#39;file_storage_volume[]&#39; params are mutually exclusive, only one can be provided.
     # @return [Array<(GetFileStorageVolume200Response, Integer, Hash)>] GetFileStorageVolume200Response data, response status code and response headers
     def get_file_storage_volume_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -2686,8 +2686,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :ip_address_id All &#39;ip_address[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :ip_address_address All &#39;ip_address[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :ip_address_id The IP address to find. All &#39;ip_address[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :ip_address_address The IP address to find. All &#39;ip_address[]&#39; params are mutually exclusive, only one can be provided.
     # @return [GetIpAddress200Response]
     def get_ip_address(opts = {})
       data, _status_code, _headers = get_ip_address_with_http_info(opts)
@@ -2695,8 +2695,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :ip_address_id All &#39;ip_address[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :ip_address_address All &#39;ip_address[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :ip_address_id The IP address to find. All &#39;ip_address[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :ip_address_address The IP address to find. All &#39;ip_address[]&#39; params are mutually exclusive, only one can be provided.
     # @return [Array<(GetIpAddress200Response, Integer, Hash)>] GetIpAddress200Response data, response status code and response headers
     def get_ip_address_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -2745,8 +2745,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :load_balancer_id All &#39;load_balancer[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :load_balancer_api_reference All &#39;load_balancer[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :load_balancer_id The load balancer to return the details for. All &#39;load_balancer[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :load_balancer_api_reference The load balancer to return the details for. All &#39;load_balancer[]&#39; params are mutually exclusive, only one can be provided.
     # @return [GetLoadBalancer200Response]
     def get_load_balancer(opts = {})
       data, _status_code, _headers = get_load_balancer_with_http_info(opts)
@@ -2754,8 +2754,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :load_balancer_id All &#39;load_balancer[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :load_balancer_api_reference All &#39;load_balancer[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :load_balancer_id The load balancer to return the details for. All &#39;load_balancer[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :load_balancer_api_reference The load balancer to return the details for. All &#39;load_balancer[]&#39; params are mutually exclusive, only one can be provided.
     # @return [Array<(GetLoadBalancer200Response, Integer, Hash)>] GetLoadBalancer200Response data, response status code and response headers
     def get_load_balancer_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -2804,8 +2804,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :load_balancer_id All &#39;load_balancer[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :load_balancer_api_reference All &#39;load_balancer[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :load_balancer_id The load balancer to return all load rules for. All &#39;load_balancer[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :load_balancer_api_reference The load balancer to return all load rules for. All &#39;load_balancer[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [GetLoadBalancerRules200Response]
@@ -2815,8 +2815,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :load_balancer_id All &#39;load_balancer[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :load_balancer_api_reference All &#39;load_balancer[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :load_balancer_id The load balancer to return all load rules for. All &#39;load_balancer[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :load_balancer_api_reference The load balancer to return all load rules for. All &#39;load_balancer[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [Array<(GetLoadBalancerRules200Response, Integer, Hash)>] GetLoadBalancerRules200Response data, response status code and response headers
@@ -2869,7 +2869,7 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :load_balancer_rule_id All &#39;load_balancer_rule[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :load_balancer_rule_id The load balancer rule to return the details for. All &#39;load_balancer_rule[]&#39; params are mutually exclusive, only one can be provided.
     # @return [GetLoadBalancersRulesLoadBalancerRule200Response]
     def get_load_balancers_rules_load_balancer_rule(opts = {})
       data, _status_code, _headers = get_load_balancers_rules_load_balancer_rule_with_http_info(opts)
@@ -2877,7 +2877,7 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :load_balancer_rule_id All &#39;load_balancer_rule[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :load_balancer_rule_id The load balancer rule to return the details for. All &#39;load_balancer_rule[]&#39; params are mutually exclusive, only one can be provided.
     # @return [Array<(GetLoadBalancersRulesLoadBalancerRule200Response, Integer, Hash)>] GetLoadBalancersRulesLoadBalancerRule200Response data, response status code and response headers
     def get_load_balancers_rules_load_balancer_rule_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -2925,8 +2925,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :network_id All &#39;network[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :network_permalink All &#39;network[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :network_id The network to return. All &#39;network[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :network_permalink The network to return. All &#39;network[]&#39; params are mutually exclusive, only one can be provided.
     # @return [GetNetwork200Response]
     def get_network(opts = {})
       data, _status_code, _headers = get_network_with_http_info(opts)
@@ -2934,8 +2934,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :network_id All &#39;network[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :network_permalink All &#39;network[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :network_id The network to return. All &#39;network[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :network_permalink The network to return. All &#39;network[]&#39; params are mutually exclusive, only one can be provided.
     # @return [Array<(GetNetwork200Response, Integer, Hash)>] GetNetwork200Response data, response status code and response headers
     def get_network_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -2984,7 +2984,7 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :operating_system_id All &#39;operating_system[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :operating_system_id The operating system to return. All &#39;operating_system[]&#39; params are mutually exclusive, only one can be provided.
     # @return [GetOperatingSystem200Response]
     def get_operating_system(opts = {})
       data, _status_code, _headers = get_operating_system_with_http_info(opts)
@@ -2992,7 +2992,7 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :operating_system_id All &#39;operating_system[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :operating_system_id The operating system to return. All &#39;operating_system[]&#39; params are mutually exclusive, only one can be provided.
     # @return [Array<(GetOperatingSystem200Response, Integer, Hash)>] GetOperatingSystem200Response data, response status code and response headers
     def get_operating_system_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -3282,8 +3282,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_id The organization to return disk backup policies for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_sub_domain The organization to return disk backup policies for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [GetOrganizationDiskBackupPolicies200Response]
@@ -3293,8 +3293,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_id The organization to return disk backup policies for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_sub_domain The organization to return disk backup policies for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [Array<(GetOrganizationDiskBackupPolicies200Response, Integer, Hash)>] GetOrganizationDiskBackupPolicies200Response data, response status code and response headers
@@ -3347,10 +3347,10 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [Boolean] :include_universal 
-    # @option opts [String] :operating_system_id All &#39;operating_system[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_id The organization to find disk templates for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_sub_domain The organization to find disk templates for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [Boolean] :include_universal Whether or not to include universal templates
+    # @option opts [String] :operating_system_id An operating system to use to filter disk templates. All &#39;operating_system[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [GetOrganizationDiskTemplates200Response]
@@ -3360,10 +3360,10 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [Boolean] :include_universal 
-    # @option opts [String] :operating_system_id All &#39;operating_system[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_id The organization to find disk templates for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_sub_domain The organization to find disk templates for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [Boolean] :include_universal Whether or not to include universal templates
+    # @option opts [String] :operating_system_id An operating system to use to filter disk templates. All &#39;operating_system[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [Array<(GetOrganizationDiskTemplates200Response, Integer, Hash)>] GetOrganizationDiskTemplates200Response data, response status code and response headers
@@ -3418,8 +3418,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_id The organization to find disks for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_sub_domain The organization to find disks for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [GetOrganizationDisks200Response]
@@ -3429,8 +3429,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_id The organization to find disks for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_sub_domain The organization to find disks for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [Array<(GetOrganizationDisks200Response, Integer, Hash)>] GetOrganizationDisks200Response data, response status code and response headers
@@ -3483,8 +3483,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_id The organization to return DNS zones for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_sub_domain The organization to return DNS zones for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [GetOrganizationDnsZones200Response]
@@ -3494,8 +3494,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_id The organization to return DNS zones for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_sub_domain The organization to return DNS zones for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [Array<(GetOrganizationDnsZones200Response, Integer, Hash)>] GetOrganizationDnsZones200Response data, response status code and response headers
@@ -3607,8 +3607,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_id The organization to return all file storage volumes for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_sub_domain The organization to return all file storage volumes for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [GetOrganizationFileStorageVolumes200Response]
@@ -3618,8 +3618,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_id The organization to return all file storage volumes for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_sub_domain The organization to return all file storage volumes for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [Array<(GetOrganizationFileStorageVolumes200Response, Integer, Hash)>] GetOrganizationFileStorageVolumes200Response data, response status code and response headers
@@ -3672,9 +3672,9 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [Boolean] :allocated 
+    # @option opts [String] :organization_id The organization to use when looking up IP addresses. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_sub_domain The organization to use when looking up IP addresses. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [Boolean] :allocated If true, only return allocated IP addresss. If false, only return unallocated IP addresses.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [GetOrganizationIpAddresses200Response]
@@ -3684,9 +3684,9 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [Boolean] :allocated 
+    # @option opts [String] :organization_id The organization to use when looking up IP addresses. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_sub_domain The organization to use when looking up IP addresses. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [Boolean] :allocated If true, only return allocated IP addresss. If false, only return unallocated IP addresses.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [Array<(GetOrganizationIpAddresses200Response, Integer, Hash)>] GetOrganizationIpAddresses200Response data, response status code and response headers
@@ -3740,8 +3740,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_id The organization to return all load balancers for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_sub_domain The organization to return all load balancers for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [GetOrganizationLoadBalancers200Response]
@@ -3751,8 +3751,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_id The organization to return all load balancers for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_sub_domain The organization to return all load balancers for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [Array<(GetOrganizationLoadBalancers200Response, Integer, Hash)>] GetOrganizationLoadBalancers200Response data, response status code and response headers
@@ -3870,8 +3870,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_id The organization to use when looking up network speed profiles. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_sub_domain The organization to use when looking up network speed profiles. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [GetOrganizationNetworkSpeedProfiles200Response]
@@ -3881,8 +3881,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_id The organization to use when looking up network speed profiles. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_sub_domain The organization to use when looking up network speed profiles. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [Array<(GetOrganizationNetworkSpeedProfiles200Response, Integer, Hash)>] GetOrganizationNetworkSpeedProfiles200Response data, response status code and response headers
@@ -3935,8 +3935,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_id The organization to return all security groups for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_sub_domain The organization to return all security groups for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [GetOrganizationSecurityGroups200Response]
@@ -3946,8 +3946,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_id The organization to return all security groups for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_sub_domain The organization to return all security groups for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [Array<(GetOrganizationSecurityGroups200Response, Integer, Hash)>] GetOrganizationSecurityGroups200Response data, response status code and response headers
@@ -4000,8 +4000,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_id The organization to list SSH keys for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_sub_domain The organization to list SSH keys for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [GetOrganizationSshKeys200Response]
@@ -4011,8 +4011,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_id The organization to list SSH keys for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_sub_domain The organization to list SSH keys for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [Array<(GetOrganizationSshKeys200Response, Integer, Hash)>] GetOrganizationSshKeys200Response data, response status code and response headers
@@ -4065,8 +4065,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_id The organization to list the tags for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_sub_domain The organization to list the tags for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [GetOrganizationTags200Response]
@@ -4076,8 +4076,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_id The organization to list the tags for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_sub_domain The organization to list the tags for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [Array<(GetOrganizationTags200Response, Integer, Hash)>] GetOrganizationTags200Response data, response status code and response headers
@@ -4130,8 +4130,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_id The organization to find all trash objects for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_sub_domain The organization to find all trash objects for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [GetOrganizationTrashObjects200Response]
@@ -4141,8 +4141,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_id The organization to find all trash objects for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_sub_domain The organization to find all trash objects for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [Array<(GetOrganizationTrashObjects200Response, Integer, Hash)>] GetOrganizationTrashObjects200Response data, response status code and response headers
@@ -4260,8 +4260,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_id The organization to return groups for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_sub_domain The organization to return groups for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
     # @return [GetOrganizationVirtualMachineGroups200Response]
     def get_organization_virtual_machine_groups(opts = {})
       data, _status_code, _headers = get_organization_virtual_machine_groups_with_http_info(opts)
@@ -4269,8 +4269,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_id The organization to return groups for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_sub_domain The organization to return groups for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
     # @return [Array<(GetOrganizationVirtualMachineGroups200Response, Integer, Hash)>] GetOrganizationVirtualMachineGroups200Response data, response status code and response headers
     def get_organization_virtual_machine_groups_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -4502,16 +4502,16 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :security_group_id All &#39;security_group[]&#39; params are mutually exclusive, only one can be provided.
-    # @return [PostOrganizationSecurityGroups200Response]
+    # @option opts [String] :security_group_id The security group to return the details for. All &#39;security_group[]&#39; params are mutually exclusive, only one can be provided.
+    # @return [GetSecurityGroup200Response]
     def get_security_group(opts = {})
       data, _status_code, _headers = get_security_group_with_http_info(opts)
       data
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :security_group_id All &#39;security_group[]&#39; params are mutually exclusive, only one can be provided.
-    # @return [Array<(PostOrganizationSecurityGroups200Response, Integer, Hash)>] PostOrganizationSecurityGroups200Response data, response status code and response headers
+    # @option opts [String] :security_group_id The security group to return the details for. All &#39;security_group[]&#39; params are mutually exclusive, only one can be provided.
+    # @return [Array<(GetSecurityGroup200Response, Integer, Hash)>] GetSecurityGroup200Response data, response status code and response headers
     def get_security_group_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: CoreApi.get_security_group ...'
@@ -4535,7 +4535,7 @@ module KatapultAPI
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'PostOrganizationSecurityGroups200Response'
+      return_type = opts[:debug_return_type] || 'GetSecurityGroup200Response'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['Authenticator']
@@ -4558,7 +4558,7 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :security_group_id All &#39;security_group[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :security_group_id The security group to return all load rules for. All &#39;security_group[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [GetSecurityGroupRules200Response]
@@ -4568,7 +4568,7 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :security_group_id All &#39;security_group[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :security_group_id The security group to return all load rules for. All &#39;security_group[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [Array<(GetSecurityGroupRules200Response, Integer, Hash)>] GetSecurityGroupRules200Response data, response status code and response headers
@@ -4620,7 +4620,7 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :security_group_rule_id All &#39;security_group_rule[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :security_group_rule_id The security group rule to return the details for. All &#39;security_group_rule[]&#39; params are mutually exclusive, only one can be provided.
     # @return [GetSecurityGroupsRulesSecurityGroupRule200Response]
     def get_security_groups_rules_security_group_rule(opts = {})
       data, _status_code, _headers = get_security_groups_rules_security_group_rule_with_http_info(opts)
@@ -4628,7 +4628,7 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :security_group_rule_id All &#39;security_group_rule[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :security_group_rule_id The security group rule to return the details for. All &#39;security_group_rule[]&#39; params are mutually exclusive, only one can be provided.
     # @return [Array<(GetSecurityGroupsRulesSecurityGroupRule200Response, Integer, Hash)>] GetSecurityGroupsRulesSecurityGroupRule200Response data, response status code and response headers
     def get_security_groups_rules_security_group_rule_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -4676,16 +4676,16 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :tag_id All &#39;tag[]&#39; params are mutually exclusive, only one can be provided.
-    # @return [PostOrganizationTags200Response]
+    # @option opts [String] :tag_id The tag to load the details for. All &#39;tag[]&#39; params are mutually exclusive, only one can be provided.
+    # @return [GetTag200Response]
     def get_tag(opts = {})
       data, _status_code, _headers = get_tag_with_http_info(opts)
       data
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :tag_id All &#39;tag[]&#39; params are mutually exclusive, only one can be provided.
-    # @return [Array<(PostOrganizationTags200Response, Integer, Hash)>] PostOrganizationTags200Response data, response status code and response headers
+    # @option opts [String] :tag_id The tag to load the details for. All &#39;tag[]&#39; params are mutually exclusive, only one can be provided.
+    # @return [Array<(GetTag200Response, Integer, Hash)>] GetTag200Response data, response status code and response headers
     def get_tag_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: CoreApi.get_tag ...'
@@ -4709,7 +4709,7 @@ module KatapultAPI
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'PostOrganizationTags200Response'
+      return_type = opts[:debug_return_type] || 'GetTag200Response'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['Authenticator']
@@ -4788,8 +4788,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :trash_object_id All &#39;trash_object[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :trash_object_object_id All &#39;trash_object[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :trash_object_id The trash object to find. All &#39;trash_object[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :trash_object_object_id The trash object to find. All &#39;trash_object[]&#39; params are mutually exclusive, only one can be provided.
     # @return [GetTrashObject200Response]
     def get_trash_object(opts = {})
       data, _status_code, _headers = get_trash_object_with_http_info(opts)
@@ -4797,8 +4797,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :trash_object_id All &#39;trash_object[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :trash_object_object_id All &#39;trash_object[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :trash_object_id The trash object to find. All &#39;trash_object[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :trash_object_object_id The trash object to find. All &#39;trash_object[]&#39; params are mutually exclusive, only one can be provided.
     # @return [Array<(GetTrashObject200Response, Integer, Hash)>] GetTrashObject200Response data, response status code and response headers
     def get_trash_object_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -4959,9 +4959,9 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :virtual_machine_id All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :virtual_machine_fqdn All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [Boolean] :include_disks 
+    # @option opts [String] :virtual_machine_id The virtual machine to return disk backup policies for. All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :virtual_machine_fqdn The virtual machine to return disk backup policies for. All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [Boolean] :include_disks If true, the returned list will include backup policies owned by disks assigned to this virtual machine in addition to those that belong to the whole virtual machine
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [GetVirtualMachineDiskBackupPolicies200Response]
@@ -4971,9 +4971,9 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :virtual_machine_id All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :virtual_machine_fqdn All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [Boolean] :include_disks 
+    # @option opts [String] :virtual_machine_id The virtual machine to return disk backup policies for. All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :virtual_machine_fqdn The virtual machine to return disk backup policies for. All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [Boolean] :include_disks If true, the returned list will include backup policies owned by disks assigned to this virtual machine in addition to those that belong to the whole virtual machine
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [Array<(GetVirtualMachineDiskBackupPolicies200Response, Integer, Hash)>] GetVirtualMachineDiskBackupPolicies200Response data, response status code and response headers
@@ -5027,8 +5027,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :virtual_machine_id All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :virtual_machine_fqdn All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :virtual_machine_id The virtual machine to find disks for. All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :virtual_machine_fqdn The virtual machine to find disks for. All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [GetVirtualMachineDisks200Response]
@@ -5038,8 +5038,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :virtual_machine_id All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :virtual_machine_fqdn All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :virtual_machine_id The virtual machine to find disks for. All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :virtual_machine_fqdn The virtual machine to find disks for. All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [Array<(GetVirtualMachineDisks200Response, Integer, Hash)>] GetVirtualMachineDisks200Response data, response status code and response headers
@@ -5092,16 +5092,16 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :virtual_machine_group_id All &#39;virtual_machine_group[]&#39; params are mutually exclusive, only one can be provided.
-    # @return [PostOrganizationVirtualMachineGroups200Response]
+    # @option opts [String] :virtual_machine_group_id The virtual machine group to retrieve. All &#39;virtual_machine_group[]&#39; params are mutually exclusive, only one can be provided.
+    # @return [GetVirtualMachineGroup200Response]
     def get_virtual_machine_group(opts = {})
       data, _status_code, _headers = get_virtual_machine_group_with_http_info(opts)
       data
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :virtual_machine_group_id All &#39;virtual_machine_group[]&#39; params are mutually exclusive, only one can be provided.
-    # @return [Array<(PostOrganizationVirtualMachineGroups200Response, Integer, Hash)>] PostOrganizationVirtualMachineGroups200Response data, response status code and response headers
+    # @option opts [String] :virtual_machine_group_id The virtual machine group to retrieve. All &#39;virtual_machine_group[]&#39; params are mutually exclusive, only one can be provided.
+    # @return [Array<(GetVirtualMachineGroup200Response, Integer, Hash)>] GetVirtualMachineGroup200Response data, response status code and response headers
     def get_virtual_machine_group_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: CoreApi.get_virtual_machine_group ...'
@@ -5125,7 +5125,7 @@ module KatapultAPI
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'PostOrganizationVirtualMachineGroups200Response'
+      return_type = opts[:debug_return_type] || 'GetVirtualMachineGroup200Response'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['Authenticator']
@@ -5148,10 +5148,10 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :virtual_machine_id All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :virtual_machine_fqdn All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :network_id All &#39;network[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :network_permalink All &#39;network[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :virtual_machine_id The virtual machine to find the network interface for. All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :virtual_machine_fqdn The virtual machine to find the network interface for. All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :network_id The network to find the network interface for. All &#39;network[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :network_permalink The network to find the network interface for. All &#39;network[]&#39; params are mutually exclusive, only one can be provided.
     # @return [GetVirtualMachineNetworkInterface200Response]
     def get_virtual_machine_network_interface(opts = {})
       data, _status_code, _headers = get_virtual_machine_network_interface_with_http_info(opts)
@@ -5159,10 +5159,10 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :virtual_machine_id All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :virtual_machine_fqdn All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :network_id All &#39;network[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :network_permalink All &#39;network[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :virtual_machine_id The virtual machine to find the network interface for. All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :virtual_machine_fqdn The virtual machine to find the network interface for. All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :network_id The network to find the network interface for. All &#39;network[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :network_permalink The network to find the network interface for. All &#39;network[]&#39; params are mutually exclusive, only one can be provided.
     # @return [Array<(GetVirtualMachineNetworkInterface200Response, Integer, Hash)>] GetVirtualMachineNetworkInterface200Response data, response status code and response headers
     def get_virtual_machine_network_interface_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -5212,18 +5212,18 @@ module KatapultAPI
       return data, status_code, headers
     end
 
-    # @param address_version [IPAddressVersionEnum] 
+    # @param address_version [IPAddressVersionEnum] The IP address version to return results for
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :virtual_machine_network_interface_id All &#39;virtual_machine_network_interface[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :virtual_machine_network_interface_id The network interface to get IP addresses for. All &#39;virtual_machine_network_interface[]&#39; params are mutually exclusive, only one can be provided.
     # @return [GetVirtualMachineNetworkInterfaceAvailableIpsAddressVersion200Response]
     def get_virtual_machine_network_interface_available_ips_address_version(address_version, opts = {})
       data, _status_code, _headers = get_virtual_machine_network_interface_available_ips_address_version_with_http_info(address_version, opts)
       data
     end
 
-    # @param address_version [IPAddressVersionEnum] 
+    # @param address_version [IPAddressVersionEnum] The IP address version to return results for
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :virtual_machine_network_interface_id All &#39;virtual_machine_network_interface[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :virtual_machine_network_interface_id The network interface to get IP addresses for. All &#39;virtual_machine_network_interface[]&#39; params are mutually exclusive, only one can be provided.
     # @return [Array<(GetVirtualMachineNetworkInterfaceAvailableIpsAddressVersion200Response, Integer, Hash)>] GetVirtualMachineNetworkInterfaceAvailableIpsAddressVersion200Response data, response status code and response headers
     def get_virtual_machine_network_interface_available_ips_address_version_with_http_info(address_version, opts = {})
       if @api_client.config.debugging
@@ -5276,8 +5276,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :virtual_machine_id All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :virtual_machine_fqdn All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :virtual_machine_id The virtual machine to show network interfaces for. All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :virtual_machine_fqdn The virtual machine to show network interfaces for. All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [GetVirtualMachineNetworkInterfaces200Response]
@@ -5287,8 +5287,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :virtual_machine_id All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :virtual_machine_fqdn All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :virtual_machine_id The virtual machine to show network interfaces for. All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :virtual_machine_fqdn The virtual machine to show network interfaces for. All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [Array<(GetVirtualMachineNetworkInterfaces200Response, Integer, Hash)>] GetVirtualMachineNetworkInterfaces200Response data, response status code and response headers
@@ -5336,62 +5336,6 @@ module KatapultAPI
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CoreApi#get_virtual_machine_network_interfaces\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :virtual_machine_network_interface_id All &#39;virtual_machine_network_interface[]&#39; params are mutually exclusive, only one can be provided.
-    # @return [GetVirtualMachineNetworkInterfacesVirtualMachineNetworkInterface200Response]
-    def get_virtual_machine_network_interfaces_virtual_machine_network_interface(opts = {})
-      data, _status_code, _headers = get_virtual_machine_network_interfaces_virtual_machine_network_interface_with_http_info(opts)
-      data
-    end
-
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :virtual_machine_network_interface_id All &#39;virtual_machine_network_interface[]&#39; params are mutually exclusive, only one can be provided.
-    # @return [Array<(GetVirtualMachineNetworkInterfacesVirtualMachineNetworkInterface200Response, Integer, Hash)>] GetVirtualMachineNetworkInterfacesVirtualMachineNetworkInterface200Response data, response status code and response headers
-    def get_virtual_machine_network_interfaces_virtual_machine_network_interface_with_http_info(opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: CoreApi.get_virtual_machine_network_interfaces_virtual_machine_network_interface ...'
-      end
-      # resource path
-      local_var_path = '/virtual_machine_network_interfaces/:virtual_machine_network_interface'
-
-      # query parameters
-      query_params = opts[:query_params] || {}
-      query_params[:'virtual_machine_network_interface[id]'] = opts[:'virtual_machine_network_interface_id'] if !opts[:'virtual_machine_network_interface_id'].nil?
-
-      # header parameters
-      header_params = opts[:header_params] || {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-
-      # form parameters
-      form_params = opts[:form_params] || {}
-
-      # http body (model)
-      post_body = opts[:debug_body]
-
-      # return_type
-      return_type = opts[:debug_return_type] || 'GetVirtualMachineNetworkInterfacesVirtualMachineNetworkInterface200Response'
-
-      # auth_names
-      auth_names = opts[:debug_auth_names] || ['Authenticator']
-
-      new_options = opts.merge(
-        :operation => :"CoreApi.get_virtual_machine_network_interfaces_virtual_machine_network_interface",
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => return_type
-      )
-
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CoreApi#get_virtual_machine_network_interfaces_virtual_machine_network_interface\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -5456,8 +5400,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_id Provide an organization to only show packages available to the given organization (otherwise only public packages will be displayed). All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_sub_domain Provide an organization to only show packages available to the given organization (otherwise only public packages will be displayed). All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [GetVirtualMachinePackages200Response]
@@ -5467,8 +5411,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_id Provide an organization to only show packages available to the given organization (otherwise only public packages will be displayed). All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_sub_domain Provide an organization to only show packages available to the given organization (otherwise only public packages will be displayed). All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [Array<(GetVirtualMachinePackages200Response, Integer, Hash)>] GetVirtualMachinePackages200Response data, response status code and response headers
@@ -5577,8 +5521,64 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :zone_id All &#39;zone[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :zone_permalink All &#39;zone[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :virtual_machine_network_interface_id The network interface to show the information for. All &#39;virtual_machine_network_interface[]&#39; params are mutually exclusive, only one can be provided.
+    # @return [GetVMNIVMNI200Response]
+    def get_vmnivmni(opts = {})
+      data, _status_code, _headers = get_vmnivmni_with_http_info(opts)
+      data
+    end
+
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :virtual_machine_network_interface_id The network interface to show the information for. All &#39;virtual_machine_network_interface[]&#39; params are mutually exclusive, only one can be provided.
+    # @return [Array<(GetVMNIVMNI200Response, Integer, Hash)>] GetVMNIVMNI200Response data, response status code and response headers
+    def get_vmnivmni_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CoreApi.get_vmnivmni ...'
+      end
+      # resource path
+      local_var_path = '/virtual_machine_network_interfaces/:virtual_machine_network_interface'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+      query_params[:'virtual_machine_network_interface[id]'] = opts[:'virtual_machine_network_interface_id'] if !opts[:'virtual_machine_network_interface_id'].nil?
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'GetVMNIVMNI200Response'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || ['Authenticator']
+
+      new_options = opts.merge(
+        :operation => :"CoreApi.get_vmnivmni",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CoreApi#get_vmnivmni\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :zone_id The zone to find. All &#39;zone[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :zone_permalink The zone to find. All &#39;zone[]&#39; params are mutually exclusive, only one can be provided.
     # @return [GetZone200Response]
     def get_zone(opts = {})
       data, _status_code, _headers = get_zone_with_http_info(opts)
@@ -5586,8 +5586,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :zone_id All &#39;zone[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :zone_permalink All &#39;zone[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :zone_id The zone to find. All &#39;zone[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :zone_permalink The zone to find. All &#39;zone[]&#39; params are mutually exclusive, only one can be provided.
     # @return [Array<(GetZone200Response, Integer, Hash)>] GetZone200Response data, response status code and response headers
     def get_zone_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -5750,7 +5750,7 @@ module KatapultAPI
 
     # @param [Hash] opts the optional parameters
     # @option opts [PatchDnsRecordRequest] :patch_dns_record_request 
-    # @return [PostDnsZoneRecords200Response]
+    # @return [PatchDnsRecord200Response]
     def patch_dns_record(opts = {})
       data, _status_code, _headers = patch_dns_record_with_http_info(opts)
       data
@@ -5758,7 +5758,7 @@ module KatapultAPI
 
     # @param [Hash] opts the optional parameters
     # @option opts [PatchDnsRecordRequest] :patch_dns_record_request 
-    # @return [Array<(PostDnsZoneRecords200Response, Integer, Hash)>] PostDnsZoneRecords200Response data, response status code and response headers
+    # @return [Array<(PatchDnsRecord200Response, Integer, Hash)>] PatchDnsRecord200Response data, response status code and response headers
     def patch_dns_record_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: CoreApi.patch_dns_record ...'
@@ -5786,7 +5786,7 @@ module KatapultAPI
       post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'patch_dns_record_request'])
 
       # return_type
-      return_type = opts[:debug_return_type] || 'PostDnsZoneRecords200Response'
+      return_type = opts[:debug_return_type] || 'PatchDnsRecord200Response'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['Authenticator']
@@ -5870,7 +5870,7 @@ module KatapultAPI
 
     # @param [Hash] opts the optional parameters
     # @option opts [PatchDnsZoneRequest] :patch_dns_zone_request 
-    # @return [GetDnsZonesDnsZone200Response]
+    # @return [GetDnsZone200Response]
     def patch_dns_zone(opts = {})
       data, _status_code, _headers = patch_dns_zone_with_http_info(opts)
       data
@@ -5878,7 +5878,7 @@ module KatapultAPI
 
     # @param [Hash] opts the optional parameters
     # @option opts [PatchDnsZoneRequest] :patch_dns_zone_request 
-    # @return [Array<(GetDnsZonesDnsZone200Response, Integer, Hash)>] GetDnsZonesDnsZone200Response data, response status code and response headers
+    # @return [Array<(GetDnsZone200Response, Integer, Hash)>] GetDnsZone200Response data, response status code and response headers
     def patch_dns_zone_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: CoreApi.patch_dns_zone ...'
@@ -5906,7 +5906,7 @@ module KatapultAPI
       post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'patch_dns_zone_request'])
 
       # return_type
-      return_type = opts[:debug_return_type] || 'GetDnsZonesDnsZone200Response'
+      return_type = opts[:debug_return_type] || 'GetDnsZone200Response'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['Authenticator']
@@ -5990,7 +5990,7 @@ module KatapultAPI
 
     # @param [Hash] opts the optional parameters
     # @option opts [PatchIpAddressRequest] :patch_ip_address_request 
-    # @return [PostVirtualMachineAllocateIp200Response]
+    # @return [PatchIpAddress200Response]
     def patch_ip_address(opts = {})
       data, _status_code, _headers = patch_ip_address_with_http_info(opts)
       data
@@ -5998,7 +5998,7 @@ module KatapultAPI
 
     # @param [Hash] opts the optional parameters
     # @option opts [PatchIpAddressRequest] :patch_ip_address_request 
-    # @return [Array<(PostVirtualMachineAllocateIp200Response, Integer, Hash)>] PostVirtualMachineAllocateIp200Response data, response status code and response headers
+    # @return [Array<(PatchIpAddress200Response, Integer, Hash)>] PatchIpAddress200Response data, response status code and response headers
     def patch_ip_address_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: CoreApi.patch_ip_address ...'
@@ -6026,7 +6026,7 @@ module KatapultAPI
       post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'patch_ip_address_request'])
 
       # return_type
-      return_type = opts[:debug_return_type] || 'PostVirtualMachineAllocateIp200Response'
+      return_type = opts[:debug_return_type] || 'PatchIpAddress200Response'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['Authenticator']
@@ -6170,7 +6170,7 @@ module KatapultAPI
 
     # @param [Hash] opts the optional parameters
     # @option opts [PatchSecurityGroupRequest] :patch_security_group_request 
-    # @return [PostOrganizationSecurityGroups200Response]
+    # @return [PatchSecurityGroup200Response]
     def patch_security_group(opts = {})
       data, _status_code, _headers = patch_security_group_with_http_info(opts)
       data
@@ -6178,7 +6178,7 @@ module KatapultAPI
 
     # @param [Hash] opts the optional parameters
     # @option opts [PatchSecurityGroupRequest] :patch_security_group_request 
-    # @return [Array<(PostOrganizationSecurityGroups200Response, Integer, Hash)>] PostOrganizationSecurityGroups200Response data, response status code and response headers
+    # @return [Array<(PatchSecurityGroup200Response, Integer, Hash)>] PatchSecurityGroup200Response data, response status code and response headers
     def patch_security_group_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: CoreApi.patch_security_group ...'
@@ -6206,7 +6206,7 @@ module KatapultAPI
       post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'patch_security_group_request'])
 
       # return_type
-      return_type = opts[:debug_return_type] || 'PostOrganizationSecurityGroups200Response'
+      return_type = opts[:debug_return_type] || 'PatchSecurityGroup200Response'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['Authenticator']
@@ -6290,7 +6290,7 @@ module KatapultAPI
 
     # @param [Hash] opts the optional parameters
     # @option opts [PatchTagRequest] :patch_tag_request 
-    # @return [PostOrganizationTags200Response]
+    # @return [PatchTag200Response]
     def patch_tag(opts = {})
       data, _status_code, _headers = patch_tag_with_http_info(opts)
       data
@@ -6298,7 +6298,7 @@ module KatapultAPI
 
     # @param [Hash] opts the optional parameters
     # @option opts [PatchTagRequest] :patch_tag_request 
-    # @return [Array<(PostOrganizationTags200Response, Integer, Hash)>] PostOrganizationTags200Response data, response status code and response headers
+    # @return [Array<(PatchTag200Response, Integer, Hash)>] PatchTag200Response data, response status code and response headers
     def patch_tag_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: CoreApi.patch_tag ...'
@@ -6326,7 +6326,7 @@ module KatapultAPI
       post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'patch_tag_request'])
 
       # return_type
-      return_type = opts[:debug_return_type] || 'PostOrganizationTags200Response'
+      return_type = opts[:debug_return_type] || 'PatchTag200Response'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['Authenticator']
@@ -6410,7 +6410,7 @@ module KatapultAPI
 
     # @param [Hash] opts the optional parameters
     # @option opts [PatchVirtualMachineGroupRequest] :patch_virtual_machine_group_request 
-    # @return [PostOrganizationVirtualMachineGroups200Response]
+    # @return [PatchVirtualMachineGroup200Response]
     def patch_virtual_machine_group(opts = {})
       data, _status_code, _headers = patch_virtual_machine_group_with_http_info(opts)
       data
@@ -6418,7 +6418,7 @@ module KatapultAPI
 
     # @param [Hash] opts the optional parameters
     # @option opts [PatchVirtualMachineGroupRequest] :patch_virtual_machine_group_request 
-    # @return [Array<(PostOrganizationVirtualMachineGroups200Response, Integer, Hash)>] PostOrganizationVirtualMachineGroups200Response data, response status code and response headers
+    # @return [Array<(PatchVirtualMachineGroup200Response, Integer, Hash)>] PatchVirtualMachineGroup200Response data, response status code and response headers
     def patch_virtual_machine_group_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: CoreApi.patch_virtual_machine_group ...'
@@ -6446,7 +6446,7 @@ module KatapultAPI
       post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'patch_virtual_machine_group_request'])
 
       # return_type
-      return_type = opts[:debug_return_type] || 'PostOrganizationVirtualMachineGroups200Response'
+      return_type = opts[:debug_return_type] || 'PatchVirtualMachineGroup200Response'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['Authenticator']
@@ -6470,7 +6470,7 @@ module KatapultAPI
 
     # @param [Hash] opts the optional parameters
     # @option opts [PatchVirtualMachineNetworkInterfaceUpdateSpeedProfileRequest] :patch_virtual_machine_network_interface_update_speed_profile_request 
-    # @return [PutVirtualMachinePackage200Response]
+    # @return [PatchVirtualMachineNetworkInterfaceUpdateSpeedProfile200Response]
     def patch_virtual_machine_network_interface_update_speed_profile(opts = {})
       data, _status_code, _headers = patch_virtual_machine_network_interface_update_speed_profile_with_http_info(opts)
       data
@@ -6478,7 +6478,7 @@ module KatapultAPI
 
     # @param [Hash] opts the optional parameters
     # @option opts [PatchVirtualMachineNetworkInterfaceUpdateSpeedProfileRequest] :patch_virtual_machine_network_interface_update_speed_profile_request 
-    # @return [Array<(PutVirtualMachinePackage200Response, Integer, Hash)>] PutVirtualMachinePackage200Response data, response status code and response headers
+    # @return [Array<(PatchVirtualMachineNetworkInterfaceUpdateSpeedProfile200Response, Integer, Hash)>] PatchVirtualMachineNetworkInterfaceUpdateSpeedProfile200Response data, response status code and response headers
     def patch_virtual_machine_network_interface_update_speed_profile_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: CoreApi.patch_virtual_machine_network_interface_update_speed_profile ...'
@@ -6506,7 +6506,7 @@ module KatapultAPI
       post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'patch_virtual_machine_network_interface_update_speed_profile_request'])
 
       # return_type
-      return_type = opts[:debug_return_type] || 'PutVirtualMachinePackage200Response'
+      return_type = opts[:debug_return_type] || 'PatchVirtualMachineNetworkInterfaceUpdateSpeedProfile200Response'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['Authenticator']
@@ -6650,7 +6650,7 @@ module KatapultAPI
 
     # @param [Hash] opts the optional parameters
     # @option opts [DeleteDnsZonesDnsZoneRequest] :delete_dns_zones_dns_zone_request 
-    # @return [GetDnsZonesDnsZone200Response]
+    # @return [GetDnsZone200Response]
     def post_dns_zone_verify(opts = {})
       data, _status_code, _headers = post_dns_zone_verify_with_http_info(opts)
       data
@@ -6658,7 +6658,7 @@ module KatapultAPI
 
     # @param [Hash] opts the optional parameters
     # @option opts [DeleteDnsZonesDnsZoneRequest] :delete_dns_zones_dns_zone_request 
-    # @return [Array<(GetDnsZonesDnsZone200Response, Integer, Hash)>] GetDnsZonesDnsZone200Response data, response status code and response headers
+    # @return [Array<(GetDnsZone200Response, Integer, Hash)>] GetDnsZone200Response data, response status code and response headers
     def post_dns_zone_verify_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: CoreApi.post_dns_zone_verify ...'
@@ -6686,7 +6686,7 @@ module KatapultAPI
       post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'delete_dns_zones_dns_zone_request'])
 
       # return_type
-      return_type = opts[:debug_return_type] || 'GetDnsZonesDnsZone200Response'
+      return_type = opts[:debug_return_type] || 'GetDnsZone200Response'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['Authenticator']
@@ -6830,7 +6830,7 @@ module KatapultAPI
 
     # @param [Hash] opts the optional parameters
     # @option opts [DeleteDnsZonesDnsZoneRequest] :delete_dns_zones_dns_zone_request 
-    # @return [GetDnsZonesDnsZone200Response]
+    # @return [PostDnsZonesDnsZoneVerify200Response]
     def post_dns_zones_dns_zone_verify(opts = {})
       data, _status_code, _headers = post_dns_zones_dns_zone_verify_with_http_info(opts)
       data
@@ -6838,7 +6838,7 @@ module KatapultAPI
 
     # @param [Hash] opts the optional parameters
     # @option opts [DeleteDnsZonesDnsZoneRequest] :delete_dns_zones_dns_zone_request 
-    # @return [Array<(GetDnsZonesDnsZone200Response, Integer, Hash)>] GetDnsZonesDnsZone200Response data, response status code and response headers
+    # @return [Array<(PostDnsZonesDnsZoneVerify200Response, Integer, Hash)>] PostDnsZonesDnsZoneVerify200Response data, response status code and response headers
     def post_dns_zones_dns_zone_verify_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: CoreApi.post_dns_zones_dns_zone_verify ...'
@@ -6866,7 +6866,7 @@ module KatapultAPI
       post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'delete_dns_zones_dns_zone_request'])
 
       # return_type
-      return_type = opts[:debug_return_type] || 'GetDnsZonesDnsZone200Response'
+      return_type = opts[:debug_return_type] || 'PostDnsZonesDnsZoneVerify200Response'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['Authenticator']

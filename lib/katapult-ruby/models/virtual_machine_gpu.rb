@@ -15,12 +15,14 @@ require 'time'
 
 module KatapultAPI
   class VirtualMachineGPU
+    # Unique ID for this GPU. Not available when status is \"detached\".
     attr_accessor :id
 
     attr_accessor :status
 
     attr_accessor :pending_action
 
+    # When pending action is \"attach\", this indicates if there is a GPU of the relevant type available.
     attr_accessor :available
 
     attr_accessor :type

@@ -17,6 +17,7 @@ module KatapultAPI
   class GetLoadBalancerRules200Response
     attr_accessor :pagination
 
+    # The load balancer rules for this load balancer
     attr_accessor :load_balancer_rules
 
     # Attribute mapping from ruby-style variable name to JSON key.

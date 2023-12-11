@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **name** | **String** |  | [optional] |
+| **name** | **String** | Unique name to help identify the volume. | [optional] |
 | **data_center** | [**DataCenterLookup**](DataCenterLookup.md) |  | [optional] |
 | **associations** | **Array&lt;String&gt;** |  | [optional] |
 

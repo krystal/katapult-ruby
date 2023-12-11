@@ -6,7 +6,7 @@
 | ---- | ---- | ----------- | ----- |
 | **disk_template** | [**GetDiskTemplateVersions200ResponseDiskTemplate**](GetDiskTemplateVersions200ResponseDiskTemplate.md) |  |  |
 | **pagination** | [**PaginationObject**](PaginationObject.md) |  |  |
-| **disk_template_versions** | [**Array&lt;GetDiskTemplateVersions200ResponseDiskTemplateVersions&gt;**](GetDiskTemplateVersions200ResponseDiskTemplateVersions.md) |  |  |
+| **disk_template_versions** | [**Array&lt;GetDiskTemplateVersions200ResponseDiskTemplateVersions&gt;**](GetDiskTemplateVersions200ResponseDiskTemplateVersions.md) | The disk template versions for the provided template |  |
 
 ## Example
 

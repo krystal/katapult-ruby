@@ -19,6 +19,7 @@ module KatapultAPI
 
     attr_accessor :pagination
 
+    # The disk template versions for the provided template
     attr_accessor :disk_template_versions
 
     # Attribute mapping from ruby-style variable name to JSON key.

@@ -15,6 +15,7 @@ require 'time'
 
 module KatapultAPI
   class InvalidSpecXML
+    # A textual description of the errors with the provided XML
     attr_accessor :errors
 
     # Attribute mapping from ruby-style variable name to JSON key.

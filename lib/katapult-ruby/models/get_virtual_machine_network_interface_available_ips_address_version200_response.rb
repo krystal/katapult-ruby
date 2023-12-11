@@ -15,6 +15,7 @@ require 'time'
 
 module KatapultAPI
   class GetVirtualMachineNetworkInterfaceAvailableIpsAddressVersion200Response
+    # The IP addresses available for this network interface
     attr_accessor :ip_addresses
 
     # Attribute mapping from ruby-style variable name to JSON key.

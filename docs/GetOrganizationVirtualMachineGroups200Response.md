@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **virtual_machine_groups** | [**Array&lt;VirtualMachineGroup&gt;**](VirtualMachineGroup.md) |  |  |
+| **virtual_machine_groups** | [**Array&lt;VirtualMachineGroup&gt;**](VirtualMachineGroup.md) | The virtual machine groups for the provided organization |  |
 
 ## Example
 

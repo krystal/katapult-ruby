@@ -7,7 +7,7 @@
 | **id** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
 | **permalink** | **String** |  | [optional] |
-| **data_center** | [**GetZones200ResponseZonesDataCenter**](GetZones200ResponseZonesDataCenter.md) |  | [optional] |
+| **data_center** | [**GetZonesPartDataCenter**](GetZonesPartDataCenter.md) |  | [optional] |
 
 ## Example
 

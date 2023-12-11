@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **ip_addresses** | [**Array&lt;IPAddress&gt;**](IPAddress.md) |  |  |
+| **ip_addresses** | [**Array&lt;IPAddress&gt;**](IPAddress.md) | The IP addresses available for this network interface |  |
 
 ## Example
 

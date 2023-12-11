@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **details** | **String** |  | [optional] |
+| **details** | **String** | Additional information regarding the reason why permission was denied | [optional] |
 
 ## Example
 

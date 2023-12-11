@@ -88,9 +88,9 @@ module KatapultAPI
         :'state' => :'DiskStateEnum',
         :'created_at' => :'Integer',
         :'storage_speed' => :'StorageSpeedEnum',
-        :'io_profile' => :'GetDisk200ResponseDiskIOProfile',
-        :'virtual_machine_disk' => :'GetDisk200ResponseDiskVirtualMachineDisk',
-        :'installation' => :'GetDisk200ResponseDiskInstallation'
+        :'io_profile' => :'GetDiskPartIOProfile',
+        :'virtual_machine_disk' => :'GetDiskPartVirtualMachineDisk',
+        :'installation' => :'GetDiskPartInstallation'
       }
     end
 

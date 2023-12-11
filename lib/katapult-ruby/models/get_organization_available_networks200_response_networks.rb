@@ -44,7 +44,7 @@ module KatapultAPI
         :'id' => :'String',
         :'name' => :'String',
         :'permalink' => :'String',
-        :'data_center' => :'GetOrganizationAvailableNetworks200ResponseNetworksDataCenter'
+        :'data_center' => :'GetOrganizationAvailableNetworksPartDataCenter'
       }
     end
 

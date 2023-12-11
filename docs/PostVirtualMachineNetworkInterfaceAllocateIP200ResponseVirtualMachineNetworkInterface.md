@@ -5,12 +5,12 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **id** | **String** |  | [optional] |
-| **virtual_machine** | [**PostVirtualMachineNetworkInterfaceAllocateIP200ResponseVirtualMachineNetworkInterfaceVirtualMachine**](PostVirtualMachineNetworkInterfaceAllocateIP200ResponseVirtualMachineNetworkInterfaceVirtualMachine.md) |  | [optional] |
+| **virtual_machine** | [**PostVirtualMachineNetworkInterfaceAllocateIPPartVirtualMachine**](PostVirtualMachineNetworkInterfaceAllocateIPPartVirtualMachine.md) |  | [optional] |
 | **name** | **String** |  | [optional] |
-| **network** | [**PostVirtualMachineNetworkInterfaceAllocateIP200ResponseVirtualMachineNetworkInterfaceNetwork**](PostVirtualMachineNetworkInterfaceAllocateIP200ResponseVirtualMachineNetworkInterfaceNetwork.md) |  | [optional] |
+| **network** | [**PostVirtualMachineNetworkInterfaceAllocateIPPartNetwork**](PostVirtualMachineNetworkInterfaceAllocateIPPartNetwork.md) |  | [optional] |
 | **mac_address** | **String** |  | [optional] |
 | **state** | **String** |  | [optional] |
-| **ip_addresses** | [**Array&lt;PostVirtualMachineNetworkInterfaceAllocateIP200ResponseVirtualMachineNetworkInterfaceIPAddresses&gt;**](PostVirtualMachineNetworkInterfaceAllocateIP200ResponseVirtualMachineNetworkInterfaceIPAddresses.md) |  | [optional] |
+| **ip_addresses** | [**Array&lt;PostVirtualMachineNetworkInterfaceAllocateIPPartIPAddresses&gt;**](PostVirtualMachineNetworkInterfaceAllocateIPPartIPAddresses.md) |  | [optional] |
 
 ## Example
 

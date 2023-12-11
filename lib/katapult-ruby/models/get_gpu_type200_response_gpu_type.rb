@@ -56,7 +56,7 @@ module KatapultAPI
         :'memory_in_gb' => :'Integer',
         :'memory_type' => :'String',
         :'permalink' => :'String',
-        :'data_centers' => :'Array<GetGPUType200ResponseGPUTypeDataCenters>'
+        :'data_centers' => :'Array<GetGPUTypePartDataCenters>'
       }
     end
 

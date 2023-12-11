@@ -51,7 +51,7 @@ module KatapultAPI
         :'retention' => :'Integer',
         :'total_size' => :'Float',
         :'target' => :'DiskBackupPolicyTarget',
-        :'schedule' => :'GetDiskBackupPolicy200ResponseDiskBackupPolicySchedule',
+        :'schedule' => :'GetDiskBackupPolicyPartSchedule',
         :'auto_move_to_trash_at' => :'Integer'
       }
     end

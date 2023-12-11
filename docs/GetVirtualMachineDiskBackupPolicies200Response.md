@@ -5,7 +5,7 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **pagination** | [**PaginationObject**](PaginationObject.md) |  |  |
-| **disk_backup_policies** | [**Array&lt;GetVirtualMachineDiskBackupPolicies200ResponseDiskBackupPolicies&gt;**](GetVirtualMachineDiskBackupPolicies200ResponseDiskBackupPolicies.md) |  |  |
+| **disk_backup_policies** | [**Array&lt;GetVirtualMachineDiskBackupPolicies200ResponseDiskBackupPolicies&gt;**](GetVirtualMachineDiskBackupPolicies200ResponseDiskBackupPolicies.md) | The disk backup policies for the provided virtual machine |  |
 
 ## Example
 

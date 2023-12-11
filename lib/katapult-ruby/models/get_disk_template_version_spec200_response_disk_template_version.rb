@@ -48,7 +48,7 @@ module KatapultAPI
         :'number' => :'Integer',
         :'stable' => :'Boolean',
         :'size_in_gb' => :'Integer',
-        :'disk_template' => :'GetDiskTemplateVersionSpec200ResponseDiskTemplateVersionDiskTemplate'
+        :'disk_template' => :'GetDiskTemplateVersionSpecPartDiskTemplate'
       }
     end
 

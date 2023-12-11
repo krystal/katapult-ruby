@@ -7,7 +7,7 @@
 | **id** | **String** |  | [optional] |
 | **spec_xml** | **String** |  | [optional] |
 | **state** | [**VirtualMachineBuildStateEnum**](VirtualMachineBuildStateEnum.md) |  | [optional] |
-| **virtual_machine** | [**GetVirtualMachinesBuildsVirtualMachineBuild200ResponseVirtualMachineBuildVirtualMachine**](GetVirtualMachinesBuildsVirtualMachineBuild200ResponseVirtualMachineBuildVirtualMachine.md) |  | [optional] |
+| **virtual_machine** | [**GetVirtualMachinesBuildsVirtualMachineBuildPartVirtualMachine**](GetVirtualMachinesBuildsVirtualMachineBuildPartVirtualMachine.md) |  | [optional] |
 | **created_at** | **Integer** |  | [optional] |
 
 ## Example

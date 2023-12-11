@@ -5,7 +5,7 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **pagination** | [**PaginationObject**](PaginationObject.md) |  |  |
-| **disk_backup_policies** | [**Array&lt;GetOrganizationDiskBackupPolicies200ResponseDiskBackupPolicies&gt;**](GetOrganizationDiskBackupPolicies200ResponseDiskBackupPolicies.md) |  |  |
+| **disk_backup_policies** | [**Array&lt;GetOrganizationDiskBackupPolicies200ResponseDiskBackupPolicies&gt;**](GetOrganizationDiskBackupPolicies200ResponseDiskBackupPolicies.md) | The disk backup policies for the provided organization |  |
 
 ## Example
 

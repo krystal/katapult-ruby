@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **errors** | **String** |  | [optional] |
+| **errors** | **String** | A textual description of the errors with the provided XML | [optional] |
 
 ## Example
 

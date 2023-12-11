@@ -5,7 +5,7 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **pagination** | [**PaginationObject**](PaginationObject.md) |  |  |
-| **disk** | [**Array&lt;GetOrganizationDisks200ResponseDisk&gt;**](GetOrganizationDisks200ResponseDisk.md) |  |  |
+| **disk** | [**Array&lt;GetOrganizationDisks200ResponseDisk&gt;**](GetOrganizationDisks200ResponseDisk.md) | The list of disks |  |
 
 ## Example
 

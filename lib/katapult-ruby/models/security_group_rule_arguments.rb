@@ -22,6 +22,7 @@ module KatapultAPI
 
     attr_accessor :action
 
+    # Either single port (ie. 80), multi-port (ie. 80,443) or range (ie. 2000-3000).
     attr_accessor :ports
 
     attr_accessor :targets

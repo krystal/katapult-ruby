@@ -7,7 +7,7 @@
 | **id** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
 | **permalink** | **String** |  | [optional] |
-| **country** | [**GetDataCenter200ResponseDataCenterCountry**](GetDataCenter200ResponseDataCenterCountry.md) |  | [optional] |
+| **country** | [**GetDataCenterPartCountry**](GetDataCenterPartCountry.md) |  | [optional] |
 
 ## Example
 

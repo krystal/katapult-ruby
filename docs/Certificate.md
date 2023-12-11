@@ -14,7 +14,7 @@
 | **last_issued_at** | **Integer** |  | [optional] |
 | **issue_error** | **String** |  | [optional] |
 | **authorization_method** | **String** |  | [optional] |
-| **certificate_api_url** | **String** |  | [optional] |
+| **certificate_api_url** | **String** | This is the URL that can be used to access this certificate&#39;s details. through the certificate API (a different API to this one). If null, this means that it is no longer available. If that is the case, you can get a new URL by resetting the API token for this certificate. | [optional] |
 | **certificate** | **String** |  | [optional] |
 | **chain** | **String** |  | [optional] |
 | **private_key** | **String** |  | [optional] |

@@ -7,8 +7,8 @@
 | **organization** | [**OrganizationLookup**](OrganizationLookup.md) |  |  |
 | **network** | [**NetworkLookup**](NetworkLookup.md) |  |  |
 | **version** | [**IPAddressVersionEnum**](IPAddressVersionEnum.md) |  |  |
-| **vip** | **Boolean** |  | [optional] |
-| **label** | **String** |  | [optional] |
+| **vip** | **Boolean** | Whether or not to set this address as a VIP | [optional] |
+| **label** | **String** | The label to give this address if setting it as a VIP | [optional] |
 
 ## Example
 

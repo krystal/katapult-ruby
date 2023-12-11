@@ -44,7 +44,7 @@ module KatapultAPI
         :'id' => :'String',
         :'url' => :'String',
         :'expires_at' => :'Integer',
-        :'virtual_machine' => :'PostVirtualMachineConsoleSessions201ResponseConsoleSessionVirtualMachine'
+        :'virtual_machine' => :'PostVirtualMachineConsoleSessionsPartVirtualMachine'
       }
     end
 

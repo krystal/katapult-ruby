@@ -12,18 +12,18 @@
 | **created_at** | **Integer** |  | [optional] |
 | **initial_root_password** | **String** |  | [optional] |
 | **state** | [**VirtualMachineStateEnum**](VirtualMachineStateEnum.md) |  | [optional] |
-| **zone** | [**DeleteVirtualMachine200ResponseVirtualMachineZone**](DeleteVirtualMachine200ResponseVirtualMachineZone.md) |  | [optional] |
-| **organization** | [**DeleteVirtualMachine200ResponseVirtualMachineOrganization**](DeleteVirtualMachine200ResponseVirtualMachineOrganization.md) |  | [optional] |
-| **group** | [**DeleteVirtualMachine200ResponseVirtualMachineGroup**](DeleteVirtualMachine200ResponseVirtualMachineGroup.md) |  | [optional] |
-| **package** | [**DeleteVirtualMachine200ResponseVirtualMachinePackage**](DeleteVirtualMachine200ResponseVirtualMachinePackage.md) |  | [optional] |
-| **attached_iso** | [**DeleteVirtualMachine200ResponseVirtualMachineAttachedISO**](DeleteVirtualMachine200ResponseVirtualMachineAttachedISO.md) |  | [optional] |
+| **zone** | [**DeleteVirtualMachinePartZone**](DeleteVirtualMachinePartZone.md) |  | [optional] |
+| **organization** | [**DeleteVirtualMachinePartOrganization**](DeleteVirtualMachinePartOrganization.md) |  | [optional] |
+| **group** | [**DeleteVirtualMachinePartGroup**](DeleteVirtualMachinePartGroup.md) |  | [optional] |
+| **package** | [**DeleteVirtualMachinePartPackage**](DeleteVirtualMachinePartPackage.md) |  | [optional] |
+| **attached_iso** | [**DeleteVirtualMachinePartAttachedISO**](DeleteVirtualMachinePartAttachedISO.md) |  | [optional] |
 | **memory_in_gb** | **Integer** |  | [optional] |
 | **cpu_cores** | **Integer** |  | [optional] |
-| **gpu_type** | [**DeleteVirtualMachine200ResponseVirtualMachineGPUType**](DeleteVirtualMachine200ResponseVirtualMachineGPUType.md) |  | [optional] |
-| **gpus** | [**Array&lt;DeleteVirtualMachine200ResponseVirtualMachineGPUs&gt;**](DeleteVirtualMachine200ResponseVirtualMachineGPUs.md) |  | [optional] |
-| **tags** | [**Array&lt;DeleteVirtualMachine200ResponseVirtualMachineTags&gt;**](DeleteVirtualMachine200ResponseVirtualMachineTags.md) |  | [optional] |
+| **gpu_type** | [**DeleteVirtualMachinePartGPUType**](DeleteVirtualMachinePartGPUType.md) |  | [optional] |
+| **gpus** | [**Array&lt;DeleteVirtualMachinePartGPUs&gt;**](DeleteVirtualMachinePartGPUs.md) |  | [optional] |
+| **tags** | [**Array&lt;DeleteVirtualMachinePartTags&gt;**](DeleteVirtualMachinePartTags.md) |  | [optional] |
 | **tag_names** | **Array&lt;String&gt;** |  | [optional] |
-| **ip_addresses** | [**Array&lt;DeleteVirtualMachine200ResponseVirtualMachineIPAddresses&gt;**](DeleteVirtualMachine200ResponseVirtualMachineIPAddresses.md) |  | [optional] |
+| **ip_addresses** | [**Array&lt;DeleteVirtualMachinePartIPAddresses&gt;**](DeleteVirtualMachinePartIPAddresses.md) |  | [optional] |
 
 ## Example
 

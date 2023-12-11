@@ -98,9 +98,9 @@ module KatapultAPI
         :'postcode' => :'String',
         :'vat_number' => :'String',
         :'phone_number' => :'String',
-        :'currency' => :'PostOrganizationManaged201ResponseOrganizationCurrency',
-        :'country' => :'PostOrganizationManaged201ResponseOrganizationCountry',
-        :'country_state' => :'PostOrganizationManaged201ResponseOrganizationCountryState'
+        :'currency' => :'PostOrganizationManagedPartCurrency',
+        :'country' => :'PostOrganizationManagedPartCountry',
+        :'country_state' => :'PostOrganizationManagedPartCountryState'
       }
     end
 

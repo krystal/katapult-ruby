@@ -17,6 +17,7 @@ module KatapultAPI
   class GetOrganizationTrashObjects200Response
     attr_accessor :pagination
 
+    # The trash objects that belong to this organization
     attr_accessor :trash_objects
 
     # Attribute mapping from ruby-style variable name to JSON key.

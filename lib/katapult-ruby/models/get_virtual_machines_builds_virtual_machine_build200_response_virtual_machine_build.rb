@@ -69,7 +69,7 @@ module KatapultAPI
         :'id' => :'String',
         :'spec_xml' => :'String',
         :'state' => :'VirtualMachineBuildStateEnum',
-        :'virtual_machine' => :'GetVirtualMachinesBuildsVirtualMachineBuild200ResponseVirtualMachineBuildVirtualMachine',
+        :'virtual_machine' => :'GetVirtualMachinesBuildsVirtualMachineBuildPartVirtualMachine',
         :'created_at' => :'Integer'
       }
     end

@@ -10,7 +10,7 @@
 | **memory_in_gb** | **Integer** |  | [optional] |
 | **memory_type** | **String** |  | [optional] |
 | **permalink** | **String** |  | [optional] |
-| **data_centers** | [**Array&lt;GetGPUTypes200ResponseGPUTypesDataCenters&gt;**](GetGPUTypes200ResponseGPUTypesDataCenters.md) |  | [optional] |
+| **data_centers** | [**Array&lt;GetGPUTypesPartDataCenters&gt;**](GetGPUTypesPartDataCenters.md) |  | [optional] |
 
 ## Example
 

@@ -17,6 +17,7 @@ module KatapultAPI
   class GetOrganizationSecurityGroups200Response
     attr_accessor :pagination
 
+    # The security groups owned by this organization
     attr_accessor :security_groups
 
     # Attribute mapping from ruby-style variable name to JSON key.

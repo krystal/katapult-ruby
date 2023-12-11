@@ -63,7 +63,7 @@ module KatapultAPI
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'disk' => :'GetVirtualMachineDisks200ResponseDisksDisk',
+        :'disk' => :'GetVirtualMachineDisksPartDisk',
         :'attach_on_boot' => :'Boolean',
         :'boot' => :'Boolean',
         :'state' => :'VirtualMachineDiskAttachmentStateEnum'

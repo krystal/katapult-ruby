@@ -9,8 +9,8 @@
 | **description** | **String** |  | [optional] |
 | **permalink** | **String** |  | [optional] |
 | **universal** | **Boolean** |  | [optional] |
-| **latest_version** | [**GetDiskTemplate200ResponseDiskTemplateLatestVersion**](GetDiskTemplate200ResponseDiskTemplateLatestVersion.md) |  | [optional] |
-| **operating_system** | [**GetDiskTemplate200ResponseDiskTemplateOperatingSystem**](GetDiskTemplate200ResponseDiskTemplateOperatingSystem.md) |  | [optional] |
+| **latest_version** | [**GetDiskTemplatePartLatestVersion**](GetDiskTemplatePartLatestVersion.md) |  | [optional] |
+| **operating_system** | [**GetDiskTemplatePartOperatingSystem**](GetDiskTemplatePartOperatingSystem.md) |  | [optional] |
 
 ## Example
 

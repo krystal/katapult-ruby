@@ -5,7 +5,7 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **pagination** | [**PaginationObject**](PaginationObject.md) |  |  |
-| **security_groups** | [**Array&lt;SecurityGroup&gt;**](SecurityGroup.md) |  |  |
+| **security_groups** | [**Array&lt;SecurityGroup&gt;**](SecurityGroup.md) | The security groups owned by this organization |  |
 
 ## Example
 

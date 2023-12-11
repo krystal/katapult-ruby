@@ -5,7 +5,7 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **pagination** | [**PaginationObject**](PaginationObject.md) |  |  |
-| **countries** | [**Array&lt;GetCountries200ResponseCountries&gt;**](GetCountries200ResponseCountries.md) |  |  |
+| **countries** | [**Array&lt;GetCountries200ResponseCountries&gt;**](GetCountries200ResponseCountries.md) | The list of countries |  |
 
 ## Example
 

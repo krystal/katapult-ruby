@@ -77,7 +77,7 @@ module KatapultAPI
         :'destination_port' => :'Integer',
         :'listen_port' => :'Integer',
         :'protocol' => :'LoadBalancerRuleProtocolEnum',
-        :'certificates' => :'Array<GetLoadBalancerRules200ResponseLoadBalancerRulesCertificates>',
+        :'certificates' => :'Array<GetLoadBalancerRulesPartCertificates>',
         :'check_enabled' => :'Boolean'
       }
     end

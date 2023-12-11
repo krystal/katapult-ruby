@@ -7,7 +7,7 @@
 | **direction** | [**SecurityGroupRuleDirectionEnum**](SecurityGroupRuleDirectionEnum.md) |  | [optional] |
 | **protocol** | [**SecurityGroupRuleProtocolEnum**](SecurityGroupRuleProtocolEnum.md) |  | [optional] |
 | **action** | [**SecurityGroupRuleActionEnum**](SecurityGroupRuleActionEnum.md) |  | [optional] |
-| **ports** | **String** |  | [optional] |
+| **ports** | **String** | Either single port (ie. 80), multi-port (ie. 80,443) or range (ie. 2000-3000). | [optional] |
 | **targets** | **Array&lt;String&gt;** |  | [optional] |
 | **notes** | **String** |  | [optional] |
 

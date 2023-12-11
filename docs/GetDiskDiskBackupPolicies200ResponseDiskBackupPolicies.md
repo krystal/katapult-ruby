@@ -8,7 +8,7 @@
 | **retention** | **Integer** |  | [optional] |
 | **total_size** | **Float** |  | [optional] |
 | **target** | [**DiskBackupPolicyTarget**](DiskBackupPolicyTarget.md) |  | [optional] |
-| **schedule** | [**GetDiskDiskBackupPolicies200ResponseDiskBackupPoliciesSchedule**](GetDiskDiskBackupPolicies200ResponseDiskBackupPoliciesSchedule.md) |  | [optional] |
+| **schedule** | [**GetDiskDiskBackupPoliciesPartSchedule**](GetDiskDiskBackupPoliciesPartSchedule.md) |  | [optional] |
 
 ## Example
 

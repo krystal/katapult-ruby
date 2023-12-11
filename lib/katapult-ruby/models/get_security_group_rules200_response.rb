@@ -17,6 +17,7 @@ module KatapultAPI
   class GetSecurityGroupRules200Response
     attr_accessor :pagination
 
+    # The security group rules for this security group
     attr_accessor :security_group_rules
 
     # Attribute mapping from ruby-style variable name to JSON key.
