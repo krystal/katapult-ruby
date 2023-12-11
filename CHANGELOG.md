@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.3](https://github.com/krystal/katapult-ruby/compare/v0.0.2...v0.0.3) (2023-12-11)
+
+
+### Features
+
+* use shorter names for models ([#5](https://github.com/krystal/katapult-ruby/issues/5)) ([6bd12ce](https://github.com/krystal/katapult-ruby/commit/6bd12ce9d037b40e67cbbee3158bc90350f5e62b))
+
 ## [0.0.2](https://github.com/krystal/katapult-ruby/compare/v0.0.1...v0.0.2) (2023-12-08)
 
 
