@@ -15,6 +15,7 @@ require 'time'
 
 module KatapultAPI
   class UnauthorizedNetworkForAPIToken
+    # The IP address the request was received from
     attr_accessor :ip_address
 
     # Attribute mapping from ruby-style variable name to JSON key.

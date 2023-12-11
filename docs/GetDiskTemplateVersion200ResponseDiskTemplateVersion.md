@@ -8,7 +8,7 @@
 | **number** | **Integer** |  | [optional] |
 | **stable** | **Boolean** |  | [optional] |
 | **size_in_gb** | **Integer** |  | [optional] |
-| **disk_template** | [**GetDiskTemplateVersion200ResponseDiskTemplateVersionDiskTemplate**](GetDiskTemplateVersion200ResponseDiskTemplateVersionDiskTemplate.md) |  | [optional] |
+| **disk_template** | [**GetDiskTemplateVersionPartDiskTemplate**](GetDiskTemplateVersionPartDiskTemplate.md) |  | [optional] |
 
 ## Example
 

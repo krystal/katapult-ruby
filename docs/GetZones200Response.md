@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **zones** | [**Array&lt;GetZones200ResponseZones&gt;**](GetZones200ResponseZones.md) |  |  |
+| **zones** | [**Array&lt;GetZones200ResponseZones&gt;**](GetZones200ResponseZones.md) | The zones available to the current identity |  |
 
 ## Example
 

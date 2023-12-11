@@ -81,8 +81,8 @@ module KatapultAPI
         :'resource_type' => :'LoadBalancerResourceTypesEnum',
         :'resources' => :'Array<LoadBalancerResource>',
         :'resource_ids' => :'Array<String>',
-        :'ip_address' => :'Array<GetOrganizationLoadBalancers200ResponseLoadBalancersIPAddress>',
-        :'data_center' => :'GetOrganizationLoadBalancers200ResponseLoadBalancersDataCenter'
+        :'ip_address' => :'Array<GetOrganizationLoadBalancersPartIPAddress>',
+        :'data_center' => :'GetOrganizationLoadBalancersPartDataCenter'
       }
     end
 

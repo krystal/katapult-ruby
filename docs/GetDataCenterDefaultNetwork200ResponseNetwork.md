@@ -7,7 +7,7 @@
 | **id** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
 | **permalink** | **String** |  | [optional] |
-| **data_center** | [**GetDataCenterDefaultNetwork200ResponseNetworkDataCenter**](GetDataCenterDefaultNetwork200ResponseNetworkDataCenter.md) |  | [optional] |
+| **data_center** | [**GetDataCenterDefaultNetworkPartDataCenter**](GetDataCenterDefaultNetworkPartDataCenter.md) |  | [optional] |
 
 ## Example
 

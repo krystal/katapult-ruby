@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **total_permitted** | **Integer** |  | [optional] |
+| **total_permitted** | **Integer** | The total number of requests per minute that are permitted | [optional] |
 
 ## Example
 

@@ -12,18 +12,18 @@
 | **created_at** | **Integer** |  | [optional] |
 | **initial_root_password** | **String** |  | [optional] |
 | **state** | [**VirtualMachineStateEnum**](VirtualMachineStateEnum.md) |  | [optional] |
-| **zone** | [**GetVirtualMachine200ResponseVirtualMachineZone**](GetVirtualMachine200ResponseVirtualMachineZone.md) |  | [optional] |
-| **organization** | [**GetVirtualMachine200ResponseVirtualMachineOrganization**](GetVirtualMachine200ResponseVirtualMachineOrganization.md) |  | [optional] |
-| **group** | [**GetVirtualMachine200ResponseVirtualMachineGroup**](GetVirtualMachine200ResponseVirtualMachineGroup.md) |  | [optional] |
-| **package** | [**GetVirtualMachine200ResponseVirtualMachinePackage**](GetVirtualMachine200ResponseVirtualMachinePackage.md) |  | [optional] |
-| **attached_iso** | [**GetVirtualMachine200ResponseVirtualMachineAttachedISO**](GetVirtualMachine200ResponseVirtualMachineAttachedISO.md) |  | [optional] |
+| **zone** | [**GetVirtualMachinePartZone**](GetVirtualMachinePartZone.md) |  | [optional] |
+| **organization** | [**GetVirtualMachinePartOrganization**](GetVirtualMachinePartOrganization.md) |  | [optional] |
+| **group** | [**GetVirtualMachinePartGroup**](GetVirtualMachinePartGroup.md) |  | [optional] |
+| **package** | [**GetVirtualMachinePartPackage**](GetVirtualMachinePartPackage.md) |  | [optional] |
+| **attached_iso** | [**GetVirtualMachinePartAttachedISO**](GetVirtualMachinePartAttachedISO.md) |  | [optional] |
 | **memory_in_gb** | **Integer** |  | [optional] |
 | **cpu_cores** | **Integer** |  | [optional] |
-| **gpu_type** | [**GetVirtualMachine200ResponseVirtualMachineGPUType**](GetVirtualMachine200ResponseVirtualMachineGPUType.md) |  | [optional] |
-| **gpus** | [**Array&lt;GetVirtualMachine200ResponseVirtualMachineGPUs&gt;**](GetVirtualMachine200ResponseVirtualMachineGPUs.md) |  | [optional] |
-| **tags** | [**Array&lt;GetVirtualMachine200ResponseVirtualMachineTags&gt;**](GetVirtualMachine200ResponseVirtualMachineTags.md) |  | [optional] |
+| **gpu_type** | [**GetVirtualMachinePartGPUType**](GetVirtualMachinePartGPUType.md) |  | [optional] |
+| **gpus** | [**Array&lt;GetVirtualMachinePartGPUs&gt;**](GetVirtualMachinePartGPUs.md) |  | [optional] |
+| **tags** | [**Array&lt;GetVirtualMachinePartTags&gt;**](GetVirtualMachinePartTags.md) |  | [optional] |
 | **tag_names** | **Array&lt;String&gt;** |  | [optional] |
-| **ip_addresses** | [**Array&lt;GetVirtualMachine200ResponseVirtualMachineIPAddresses&gt;**](GetVirtualMachine200ResponseVirtualMachineIPAddresses.md) |  | [optional] |
+| **ip_addresses** | [**Array&lt;GetVirtualMachinePartIPAddresses&gt;**](GetVirtualMachinePartIPAddresses.md) |  | [optional] |
 
 ## Example
 

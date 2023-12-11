@@ -6,7 +6,7 @@
 | ---- | ---- | ----------- | ----- |
 | **id** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
-| **data_center** | [**GetOrganizationAvailableNetworks200ResponseVirtualNetworksDataCenter**](GetOrganizationAvailableNetworks200ResponseVirtualNetworksDataCenter.md) |  | [optional] |
+| **data_center** | [**GetOrganizationAvailableNetworksPartDataCenter**](GetOrganizationAvailableNetworksPartDataCenter.md) |  | [optional] |
 
 ## Example
 

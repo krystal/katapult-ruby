@@ -5,7 +5,7 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **pagination** | [**PaginationObject**](PaginationObject.md) |  |  |
-| **tags** | [**Array&lt;GetOrganizationTags200ResponseTags&gt;**](GetOrganizationTags200ResponseTags.md) |  |  |
+| **tags** | [**Array&lt;GetOrganizationTags200ResponseTags&gt;**](GetOrganizationTags200ResponseTags.md) | The details for the tags on the organization |  |
 
 ## Example
 

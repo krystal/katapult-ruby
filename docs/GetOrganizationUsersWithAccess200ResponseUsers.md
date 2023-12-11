@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **user** | [**GetOrganizationUsersWithAccess200ResponseUsersUser**](GetOrganizationUsersWithAccess200ResponseUsersUser.md) |  | [optional] |
+| **user** | [**GetOrganizationUsersWithAccessPartUser**](GetOrganizationUsersWithAccessPartUser.md) |  | [optional] |
 
 ## Example
 

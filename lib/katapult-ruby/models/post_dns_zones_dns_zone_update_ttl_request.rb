@@ -17,6 +17,7 @@ module KatapultAPI
   class PostDnsZonesDnsZoneUpdateTtlRequest
     attr_accessor :dns_zone
 
+    # The new TTL value for the DNS zone
     attr_accessor :ttl
 
     # Attribute mapping from ruby-style variable name to JSON key.

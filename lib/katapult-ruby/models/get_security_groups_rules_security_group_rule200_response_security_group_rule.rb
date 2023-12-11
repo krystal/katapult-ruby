@@ -76,7 +76,7 @@ module KatapultAPI
     def self.openapi_types
       {
         :'id' => :'String',
-        :'security_group' => :'GetSecurityGroupsRulesSecurityGroupRule200ResponseSecurityGroupRuleSecurityGroup',
+        :'security_group' => :'GetSecurityGroupsRulesSecurityGroupRulePartSecurityGroup',
         :'direction' => :'SecurityGroupRuleDirectionEnum',
         :'protocol' => :'SecurityGroupRuleProtocolEnum',
         :'action' => :'SecurityGroupRuleActionEnum',

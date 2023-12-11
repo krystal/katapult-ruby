@@ -5,7 +5,7 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **ip_address** | [**IPAddress**](IPAddress.md) |  |  |
-| **allocation** | [**GetIPAddress200ResponseAllocation**](GetIPAddress200ResponseAllocation.md) |  |  |
+| **allocation** | [**GetIpAddress200ResponseAllocation**](GetIpAddress200ResponseAllocation.md) |  |  |
 
 ## Example
 

@@ -17,6 +17,7 @@ module KatapultAPI
   class GetOrganizationDiskTemplates200Response
     attr_accessor :pagination
 
+    # The list of disk templates
     attr_accessor :disk_templates
 
     # Attribute mapping from ruby-style variable name to JSON key.

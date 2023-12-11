@@ -16,6 +16,7 @@ require 'time'
 module KatapultAPI
   # All 'properties[]' params are mutually exclusive, only one can be provided.
   class FileStorageVolumeArguments
+    # Unique name to help identify the volume.
     attr_accessor :name
 
     attr_accessor :data_center

@@ -51,12 +51,12 @@ module KatapultAPI
     def self.openapi_types
       {
         :'id' => :'String',
-        :'virtual_machine' => :'PostVirtualMachineNetworkInterfaceAllocateIP200ResponseVirtualMachineNetworkInterfaceVirtualMachine',
+        :'virtual_machine' => :'PostVirtualMachineNetworkInterfaceAllocateIPPartVirtualMachine',
         :'name' => :'String',
-        :'network' => :'PostVirtualMachineNetworkInterfaceAllocateIP200ResponseVirtualMachineNetworkInterfaceNetwork',
+        :'network' => :'PostVirtualMachineNetworkInterfaceAllocateIPPartNetwork',
         :'mac_address' => :'String',
         :'state' => :'String',
-        :'ip_addresses' => :'Array<PostVirtualMachineNetworkInterfaceAllocateIP200ResponseVirtualMachineNetworkInterfaceIPAddresses>'
+        :'ip_addresses' => :'Array<PostVirtualMachineNetworkInterfaceAllocateIPPartIPAddresses>'
       }
     end
 

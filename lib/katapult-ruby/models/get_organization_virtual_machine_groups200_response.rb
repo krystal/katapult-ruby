@@ -15,6 +15,7 @@ require 'time'
 
 module KatapultAPI
   class GetOrganizationVirtualMachineGroups200Response
+    # The virtual machine groups for the provided organization
     attr_accessor :virtual_machine_groups
 
     # Attribute mapping from ruby-style variable name to JSON key.

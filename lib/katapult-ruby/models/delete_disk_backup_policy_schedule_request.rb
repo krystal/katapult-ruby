@@ -17,6 +17,7 @@ module KatapultAPI
   class DeleteDiskBackupPolicyScheduleRequest
     attr_accessor :disk_backup_policy
 
+    # The time the disk backup policy will be moved to the trash automatically.
     attr_accessor :timestamp
 
     # Attribute mapping from ruby-style variable name to JSON key.

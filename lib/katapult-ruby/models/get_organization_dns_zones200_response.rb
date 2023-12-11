@@ -17,6 +17,7 @@ module KatapultAPI
   class GetOrganizationDnsZones200Response
     attr_accessor :pagination
 
+    # The DNS zones for the provided organization
     attr_accessor :dns_zones
 
     # Attribute mapping from ruby-style variable name to JSON key.

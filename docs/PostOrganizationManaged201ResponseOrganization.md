@@ -19,9 +19,9 @@
 | **postcode** | **String** |  | [optional] |
 | **vat_number** | **String** |  | [optional] |
 | **phone_number** | **String** |  | [optional] |
-| **currency** | [**PostOrganizationManaged201ResponseOrganizationCurrency**](PostOrganizationManaged201ResponseOrganizationCurrency.md) |  | [optional] |
-| **country** | [**PostOrganizationManaged201ResponseOrganizationCountry**](PostOrganizationManaged201ResponseOrganizationCountry.md) |  | [optional] |
-| **country_state** | [**PostOrganizationManaged201ResponseOrganizationCountryState**](PostOrganizationManaged201ResponseOrganizationCountryState.md) |  | [optional] |
+| **currency** | [**PostOrganizationManagedPartCurrency**](PostOrganizationManagedPartCurrency.md) |  | [optional] |
+| **country** | [**PostOrganizationManagedPartCountry**](PostOrganizationManagedPartCountry.md) |  | [optional] |
+| **country_state** | [**PostOrganizationManagedPartCountryState**](PostOrganizationManagedPartCountryState.md) |  | [optional] |
 
 ## Example
 

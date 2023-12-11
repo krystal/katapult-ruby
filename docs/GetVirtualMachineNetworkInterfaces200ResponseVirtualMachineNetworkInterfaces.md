@@ -6,8 +6,8 @@
 | ---- | ---- | ----------- | ----- |
 | **id** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
-| **network** | [**GetVirtualMachineNetworkInterfaces200ResponseVirtualMachineNetworkInterfacesNetwork**](GetVirtualMachineNetworkInterfaces200ResponseVirtualMachineNetworkInterfacesNetwork.md) |  | [optional] |
-| **ip_addresses** | [**Array&lt;GetVirtualMachineNetworkInterfaces200ResponseVirtualMachineNetworkInterfacesIPAddresses&gt;**](GetVirtualMachineNetworkInterfaces200ResponseVirtualMachineNetworkInterfacesIPAddresses.md) |  | [optional] |
+| **network** | [**GetVirtualMachineNetworkInterfacesPartNetwork**](GetVirtualMachineNetworkInterfacesPartNetwork.md) |  | [optional] |
+| **ip_addresses** | [**Array&lt;GetVirtualMachineNetworkInterfacesPartIPAddresses&gt;**](GetVirtualMachineNetworkInterfacesPartIPAddresses.md) |  | [optional] |
 
 ## Example
 

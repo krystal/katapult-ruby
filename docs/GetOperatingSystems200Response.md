@@ -5,7 +5,7 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **pagination** | [**PaginationObject**](PaginationObject.md) |  |  |
-| **operating_systems** | [**Array&lt;GetOperatingSystems200ResponseOperatingSystems&gt;**](GetOperatingSystems200ResponseOperatingSystems.md) |  |  |
+| **operating_systems** | [**Array&lt;GetOperatingSystems200ResponseOperatingSystems&gt;**](GetOperatingSystems200ResponseOperatingSystems.md) | The list of available operating systems |  |
 
 ## Example
 

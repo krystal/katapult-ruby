@@ -44,7 +44,7 @@ module KatapultAPI
         :'id' => :'String',
         :'name' => :'String',
         :'permalink' => :'String',
-        :'data_center' => :'GetDataCenterDefaultNetwork200ResponseNetworkDataCenter'
+        :'data_center' => :'GetDataCenterDefaultNetworkPartDataCenter'
       }
     end
 

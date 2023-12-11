@@ -44,7 +44,7 @@ module KatapultAPI
         :'id' => :'String',
         :'name' => :'String',
         :'permalink' => :'String',
-        :'data_center' => :'GetZones200ResponseZonesDataCenter'
+        :'data_center' => :'GetZonesPartDataCenter'
       }
     end
 

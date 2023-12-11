@@ -17,6 +17,7 @@ module KatapultAPI
   class GetOperatingSystems200Response
     attr_accessor :pagination
 
+    # The list of available operating systems
     attr_accessor :operating_systems
 
     # Attribute mapping from ruby-style variable name to JSON key.

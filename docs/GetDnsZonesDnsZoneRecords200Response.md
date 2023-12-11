@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **dns_records** | [**Array&lt;GetDNSZonesDNSZoneRecords200ResponseDNSRecords&gt;**](GetDNSZonesDNSZoneRecords200ResponseDNSRecords.md) |  |  |
+| **dns_records** | [**Array&lt;GetDNSZonesDNSZoneRecords200ResponseDNSRecords&gt;**](GetDNSZonesDNSZoneRecords200ResponseDNSRecords.md) | The DNS records that belong to this DNS zone |  |
 
 ## Example
 

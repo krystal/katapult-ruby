@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **disk** | [**GetVirtualMachineDisks200ResponseDisksDisk**](GetVirtualMachineDisks200ResponseDisksDisk.md) |  | [optional] |
+| **disk** | [**GetVirtualMachineDisksPartDisk**](GetVirtualMachineDisksPartDisk.md) |  | [optional] |
 | **attach_on_boot** | **Boolean** |  | [optional] |
 | **boot** | **Boolean** |  | [optional] |
 | **state** | [**VirtualMachineDiskAttachmentStateEnum**](VirtualMachineDiskAttachmentStateEnum.md) |  | [optional] |

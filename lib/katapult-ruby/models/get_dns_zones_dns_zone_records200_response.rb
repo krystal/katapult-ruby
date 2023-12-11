@@ -15,6 +15,7 @@ require 'time'
 
 module KatapultAPI
   class GetDnsZonesDnsZoneRecords200Response
+    # The DNS records that belong to this DNS zone
     attr_accessor :dns_records
 
     # Attribute mapping from ruby-style variable name to JSON key.

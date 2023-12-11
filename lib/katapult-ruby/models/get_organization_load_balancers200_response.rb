@@ -17,6 +17,7 @@ module KatapultAPI
   class GetOrganizationLoadBalancers200Response
     attr_accessor :pagination
 
+    # The load balancers owned by this organization
     attr_accessor :load_balancers
 
     # Attribute mapping from ruby-style variable name to JSON key.

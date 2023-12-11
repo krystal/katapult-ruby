@@ -6,11 +6,11 @@
 | ---- | ---- | ----------- | ----- |
 | **id** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
-| **data_center** | [**GetFileStorageVolume200ResponseFileStorageVolumeDataCenter**](GetFileStorageVolume200ResponseFileStorageVolumeDataCenter.md) |  | [optional] |
+| **data_center** | [**GetFileStorageVolumePartDataCenter**](GetFileStorageVolumePartDataCenter.md) |  | [optional] |
 | **associations** | **Array&lt;String&gt;** |  | [optional] |
 | **state** | [**FileStorageVolumeStateEnum**](FileStorageVolumeStateEnum.md) |  | [optional] |
-| **nfs_location** | **String** |  | [optional] |
-| **size** | **Integer** |  | [optional] |
+| **nfs_location** | **String** | The NFS location of where to mount the volume from. | [optional] |
+| **size** | **Integer** | The size of the volume in bytes. | [optional] |
 
 ## Example
 

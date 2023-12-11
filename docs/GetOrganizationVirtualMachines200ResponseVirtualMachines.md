@@ -9,10 +9,10 @@
 | **hostname** | **String** |  | [optional] |
 | **fqdn** | **String** |  | [optional] |
 | **created_at** | **Integer** |  | [optional] |
-| **zone** | [**GetOrganizationVirtualMachines200ResponseVirtualMachinesZone**](GetOrganizationVirtualMachines200ResponseVirtualMachinesZone.md) |  | [optional] |
-| **package** | [**GetOrganizationVirtualMachines200ResponseVirtualMachinesPackage**](GetOrganizationVirtualMachines200ResponseVirtualMachinesPackage.md) |  | [optional] |
-| **gpu_type** | [**GetOrganizationVirtualMachines200ResponseVirtualMachinesGPUType**](GetOrganizationVirtualMachines200ResponseVirtualMachinesGPUType.md) |  | [optional] |
-| **ip_addresses** | [**Array&lt;GetOrganizationVirtualMachines200ResponseVirtualMachinesIPAddresses&gt;**](GetOrganizationVirtualMachines200ResponseVirtualMachinesIPAddresses.md) |  | [optional] |
+| **zone** | [**GetOrganizationVirtualMachinesPartZone**](GetOrganizationVirtualMachinesPartZone.md) |  | [optional] |
+| **package** | [**GetOrganizationVirtualMachinesPartPackage**](GetOrganizationVirtualMachinesPartPackage.md) |  | [optional] |
+| **gpu_type** | [**GetOrganizationVirtualMachinesPartGPUType**](GetOrganizationVirtualMachinesPartGPUType.md) |  | [optional] |
+| **ip_addresses** | [**Array&lt;GetOrganizationVirtualMachinesPartIPAddresses&gt;**](GetOrganizationVirtualMachinesPartIPAddresses.md) |  | [optional] |
 
 ## Example
 

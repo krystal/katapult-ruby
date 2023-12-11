@@ -15,6 +15,7 @@ require 'time'
 
 module KatapultAPI
   class GetZones200Response
+    # The zones available to the current identity
     attr_accessor :zones
 
     # Attribute mapping from ruby-style variable name to JSON key.

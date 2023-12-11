@@ -36,13 +36,14 @@ module KatapultAPI
     def self.openapi_types
       {
         :'ip_address' => :'IPAddress',
-        :'allocation' => :'GetIPAddress200ResponseAllocation'
+        :'allocation' => :'GetIpAddress200ResponseAllocation'
       }
     end
 
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'allocation'
       ])
     end
 
@@ -83,10 +84,6 @@ module KatapultAPI
         invalid_properties.push('invalid value for "ip_address", ip_address cannot be nil.')
       end
 
-      if @allocation.nil?
-        invalid_properties.push('invalid value for "allocation", allocation cannot be nil.')
-      end
-
       invalid_properties
     end
 
@@ -95,7 +92,6 @@ module KatapultAPI
     def valid?
       warn '[DEPRECATED] the `valid?` method is obsolete'
       return false if @ip_address.nil?
-      return false if @allocation.nil?
       true
     end
 

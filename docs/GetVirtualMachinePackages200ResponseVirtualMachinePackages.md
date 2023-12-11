@@ -12,7 +12,7 @@
 | **memory_in_gb** | **Integer** |  | [optional] |
 | **storage_in_gb** | **Integer** |  | [optional] |
 | **privacy** | [**PrivacyTypesEnum**](PrivacyTypesEnum.md) |  | [optional] |
-| **icon** | [**GetVirtualMachinePackages200ResponseVirtualMachinePackagesIcon**](GetVirtualMachinePackages200ResponseVirtualMachinePackagesIcon.md) |  | [optional] |
+| **icon** | [**GetVirtualMachinePackagesPartIcon**](GetVirtualMachinePackagesPartIcon.md) |  | [optional] |
 
 ## Example
 

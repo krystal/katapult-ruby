@@ -99,13 +99,13 @@ module KatapultAPI
         :'resource_type' => :'LoadBalancerResourceTypesEnum',
         :'resources' => :'Array<LoadBalancerResource>',
         :'resource_ids' => :'Array<String>',
-        :'ip_address' => :'Array<PostOrganizationLoadBalancers200ResponseLoadBalancerIPAddress>',
+        :'ip_address' => :'Array<PostOrganizationLoadBalancersPartIPAddress>',
         :'https_redirect' => :'Boolean',
         :'backend_certificate' => :'String',
         :'backend_certificate_key' => :'String',
-        :'data_center' => :'PostOrganizationLoadBalancers200ResponseLoadBalancerDataCenter',
+        :'data_center' => :'PostOrganizationLoadBalancersPartDataCenter',
         :'enable_weighting' => :'Boolean',
-        :'weights' => :'Array<PostOrganizationLoadBalancers200ResponseLoadBalancerWeights>',
+        :'weights' => :'Array<PostOrganizationLoadBalancersPartWeights>',
         :'standby_vms' => :'Array<String>'
       }
     end

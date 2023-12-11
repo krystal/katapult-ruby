@@ -35,6 +35,7 @@ module KatapultAPI
 
     attr_accessor :authorization_method
 
+    # This is the URL that can be used to access this certificate's details. through the certificate API (a different API to this one). If null, this means that it is no longer available. If that is the case, you can get a new URL by resetting the API token for this certificate.
     attr_accessor :certificate_api_url
 
     attr_accessor :certificate

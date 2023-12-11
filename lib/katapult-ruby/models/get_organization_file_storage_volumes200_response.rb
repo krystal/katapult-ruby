@@ -17,6 +17,7 @@ module KatapultAPI
   class GetOrganizationFileStorageVolumes200Response
     attr_accessor :pagination
 
+    # A list of all file storage volumes for the given organization.
     attr_accessor :file_storage_volumes
 
     # Attribute mapping from ruby-style variable name to JSON key.

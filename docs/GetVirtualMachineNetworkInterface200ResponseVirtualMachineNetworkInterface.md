@@ -5,12 +5,12 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **id** | **String** |  | [optional] |
-| **virtual_machine** | [**GetVirtualMachineNetworkInterface200ResponseVirtualMachineNetworkInterfaceVirtualMachine**](GetVirtualMachineNetworkInterface200ResponseVirtualMachineNetworkInterfaceVirtualMachine.md) |  | [optional] |
+| **virtual_machine** | [**GetVirtualMachineNetworkInterfacePartVirtualMachine**](GetVirtualMachineNetworkInterfacePartVirtualMachine.md) |  | [optional] |
 | **name** | **String** |  | [optional] |
-| **network** | [**GetVirtualMachineNetworkInterface200ResponseVirtualMachineNetworkInterfaceNetwork**](GetVirtualMachineNetworkInterface200ResponseVirtualMachineNetworkInterfaceNetwork.md) |  | [optional] |
+| **network** | [**GetVirtualMachineNetworkInterfacePartNetwork**](GetVirtualMachineNetworkInterfacePartNetwork.md) |  | [optional] |
 | **mac_address** | **String** |  | [optional] |
 | **state** | **String** |  | [optional] |
-| **ip_addresses** | [**Array&lt;GetVirtualMachineNetworkInterface200ResponseVirtualMachineNetworkInterfaceIPAddresses&gt;**](GetVirtualMachineNetworkInterface200ResponseVirtualMachineNetworkInterfaceIPAddresses.md) |  | [optional] |
+| **ip_addresses** | [**Array&lt;GetVirtualMachineNetworkInterfacePartIPAddresses&gt;**](GetVirtualMachineNetworkInterfacePartIPAddresses.md) |  | [optional] |
 
 ## Example
 

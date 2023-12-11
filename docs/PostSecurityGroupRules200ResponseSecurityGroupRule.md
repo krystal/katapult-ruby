@@ -5,7 +5,7 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **id** | **String** |  | [optional] |
-| **security_group** | [**PostSecurityGroupRules200ResponseSecurityGroupRuleSecurityGroup**](PostSecurityGroupRules200ResponseSecurityGroupRuleSecurityGroup.md) |  | [optional] |
+| **security_group** | [**PostSecurityGroupRulesPartSecurityGroup**](PostSecurityGroupRulesPartSecurityGroup.md) |  | [optional] |
 | **direction** | [**SecurityGroupRuleDirectionEnum**](SecurityGroupRuleDirectionEnum.md) |  | [optional] |
 | **protocol** | [**SecurityGroupRuleProtocolEnum**](SecurityGroupRuleProtocolEnum.md) |  | [optional] |
 | **action** | [**SecurityGroupRuleActionEnum**](SecurityGroupRuleActionEnum.md) |  | [optional] |

@@ -11,9 +11,9 @@
 | **state** | [**DiskStateEnum**](DiskStateEnum.md) |  | [optional] |
 | **created_at** | **Integer** |  | [optional] |
 | **storage_speed** | [**StorageSpeedEnum**](StorageSpeedEnum.md) |  | [optional] |
-| **io_profile** | [**GetDisk200ResponseDiskIOProfile**](GetDisk200ResponseDiskIOProfile.md) |  | [optional] |
-| **virtual_machine_disk** | [**GetDisk200ResponseDiskVirtualMachineDisk**](GetDisk200ResponseDiskVirtualMachineDisk.md) |  | [optional] |
-| **installation** | [**GetDisk200ResponseDiskInstallation**](GetDisk200ResponseDiskInstallation.md) |  | [optional] |
+| **io_profile** | [**GetDiskPartIOProfile**](GetDiskPartIOProfile.md) |  | [optional] |
+| **virtual_machine_disk** | [**GetDiskPartVirtualMachineDisk**](GetDiskPartVirtualMachineDisk.md) |  | [optional] |
+| **installation** | [**GetDiskPartInstallation**](GetDiskPartInstallation.md) |  | [optional] |
 
 ## Example
 

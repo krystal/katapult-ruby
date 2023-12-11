@@ -17,6 +17,7 @@ module KatapultAPI
   class GetVirtualMachineNetworkInterfaces200Response
     attr_accessor :pagination
 
+    # The network interfaces for this virtual machine
     attr_accessor :virtual_machine_network_interfaces
 
     # Attribute mapping from ruby-style variable name to JSON key.

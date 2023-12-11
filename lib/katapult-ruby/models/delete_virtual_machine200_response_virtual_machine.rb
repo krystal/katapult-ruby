@@ -119,18 +119,18 @@ module KatapultAPI
         :'created_at' => :'Integer',
         :'initial_root_password' => :'String',
         :'state' => :'VirtualMachineStateEnum',
-        :'zone' => :'DeleteVirtualMachine200ResponseVirtualMachineZone',
-        :'organization' => :'DeleteVirtualMachine200ResponseVirtualMachineOrganization',
-        :'group' => :'DeleteVirtualMachine200ResponseVirtualMachineGroup',
-        :'package' => :'DeleteVirtualMachine200ResponseVirtualMachinePackage',
-        :'attached_iso' => :'DeleteVirtualMachine200ResponseVirtualMachineAttachedISO',
+        :'zone' => :'DeleteVirtualMachinePartZone',
+        :'organization' => :'DeleteVirtualMachinePartOrganization',
+        :'group' => :'DeleteVirtualMachinePartGroup',
+        :'package' => :'DeleteVirtualMachinePartPackage',
+        :'attached_iso' => :'DeleteVirtualMachinePartAttachedISO',
         :'memory_in_gb' => :'Integer',
         :'cpu_cores' => :'Integer',
-        :'gpu_type' => :'DeleteVirtualMachine200ResponseVirtualMachineGPUType',
-        :'gpus' => :'Array<DeleteVirtualMachine200ResponseVirtualMachineGPUs>',
-        :'tags' => :'Array<DeleteVirtualMachine200ResponseVirtualMachineTags>',
+        :'gpu_type' => :'DeleteVirtualMachinePartGPUType',
+        :'gpus' => :'Array<DeleteVirtualMachinePartGPUs>',
+        :'tags' => :'Array<DeleteVirtualMachinePartTags>',
         :'tag_names' => :'Array<String>',
-        :'ip_addresses' => :'Array<DeleteVirtualMachine200ResponseVirtualMachineIPAddresses>'
+        :'ip_addresses' => :'Array<DeleteVirtualMachinePartIPAddresses>'
       }
     end
 

@@ -5,7 +5,7 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **dns_zone** | [**DNSZoneLookup**](DNSZoneLookup.md) |  |  |
-| **ttl** | **Integer** |  |  |
+| **ttl** | **Integer** | The new TTL value for the DNS zone |  |
 
 ## Example
 

@@ -8,7 +8,7 @@
 | **retention** | **Integer** |  | [optional] |
 | **total_size** | **Float** |  | [optional] |
 | **target** | [**DiskBackupPolicyTarget**](DiskBackupPolicyTarget.md) |  | [optional] |
-| **schedule** | [**GetVirtualMachineDiskBackupPolicies200ResponseDiskBackupPoliciesSchedule**](GetVirtualMachineDiskBackupPolicies200ResponseDiskBackupPoliciesSchedule.md) |  | [optional] |
+| **schedule** | [**GetVirtualMachineDiskBackupPoliciesPartSchedule**](GetVirtualMachineDiskBackupPoliciesPartSchedule.md) |  | [optional] |
 
 ## Example
 

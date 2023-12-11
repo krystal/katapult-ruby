@@ -7,7 +7,7 @@
 | **id** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
 | **permalink** | **String** |  | [optional] |
-| **data_center** | [**GetOrganizationAvailableNetworks200ResponseNetworksDataCenter**](GetOrganizationAvailableNetworks200ResponseNetworksDataCenter.md) |  | [optional] |
+| **data_center** | [**GetOrganizationAvailableNetworksPartDataCenter**](GetOrganizationAvailableNetworksPartDataCenter.md) |  | [optional] |
 
 ## Example
 

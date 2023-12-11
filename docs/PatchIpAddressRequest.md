@@ -5,9 +5,9 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **ip_address** | [**IPAddressLookup**](IPAddressLookup.md) |  |  |
-| **vip** | **Boolean** |  | [optional] |
-| **label** | **String** |  | [optional] |
-| **reverse_dns** | **String** |  | [optional] |
+| **vip** | **Boolean** | Whether or not to set this address as a VIP | [optional] |
+| **label** | **String** | The label to give this address if setting it as a VIP | [optional] |
+| **reverse_dns** | **String** | The reverse DNS to set for this IP address | [optional] |
 
 ## Example
 

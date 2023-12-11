@@ -1,4 +1,4 @@
-# KatapultAPI::GetIPAddress200ResponseAllocation
+# KatapultAPI::GetIpAddress200ResponseAllocation
 
 ## Properties
 
@@ -12,7 +12,7 @@
 ```ruby
 require 'katapult-ruby'
 
-instance = KatapultAPI::GetIPAddress200ResponseAllocation.new(
+instance = KatapultAPI::GetIpAddress200ResponseAllocation.new(
   id: null,
   name: null
 )

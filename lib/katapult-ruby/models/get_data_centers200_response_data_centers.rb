@@ -44,7 +44,7 @@ module KatapultAPI
         :'id' => :'String',
         :'name' => :'String',
         :'permalink' => :'String',
-        :'country' => :'GetDataCenters200ResponseDataCentersCountry'
+        :'country' => :'GetDataCentersPartCountry'
       }
     end
 

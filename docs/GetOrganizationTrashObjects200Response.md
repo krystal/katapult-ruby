@@ -5,7 +5,7 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **pagination** | [**PaginationObject**](PaginationObject.md) |  |  |
-| **trash_objects** | [**Array&lt;TrashObject&gt;**](TrashObject.md) |  |  |
+| **trash_objects** | [**Array&lt;TrashObject&gt;**](TrashObject.md) | The trash objects that belong to this organization |  |
 
 ## Example
 

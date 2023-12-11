@@ -17,6 +17,7 @@ module KatapultAPI
   class GetOrganizationNetworkSpeedProfiles200Response
     attr_accessor :pagination
 
+    # The network speed profiles available to this organization
     attr_accessor :network_speed_profiles
 
     # Attribute mapping from ruby-style variable name to JSON key.

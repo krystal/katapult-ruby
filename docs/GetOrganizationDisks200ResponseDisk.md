@@ -9,7 +9,7 @@
 | **size_in_gb** | **Integer** |  | [optional] |
 | **wwn** | **String** |  | [optional] |
 | **state** | [**DiskStateEnum**](DiskStateEnum.md) |  | [optional] |
-| **virtual_machine_disk** | [**GetOrganizationDisks200ResponseDiskVirtualMachineDisk**](GetOrganizationDisks200ResponseDiskVirtualMachineDisk.md) |  | [optional] |
+| **virtual_machine_disk** | [**GetOrganizationDisksPartVirtualMachineDisk**](GetOrganizationDisksPartVirtualMachineDisk.md) |  | [optional] |
 
 ## Example
 

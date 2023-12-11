@@ -74,7 +74,7 @@ module KatapultAPI
         :'size_in_gb' => :'Integer',
         :'wwn' => :'String',
         :'state' => :'DiskStateEnum',
-        :'virtual_machine_disk' => :'GetOrganizationDisks200ResponseDiskVirtualMachineDisk'
+        :'virtual_machine_disk' => :'GetOrganizationDisksPartVirtualMachineDisk'
       }
     end
 

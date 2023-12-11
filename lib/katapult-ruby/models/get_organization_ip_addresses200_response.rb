@@ -17,6 +17,7 @@ module KatapultAPI
   class GetOrganizationIpAddresses200Response
     attr_accessor :pagination
 
+    # The IP addresses belonging to this organization
     attr_accessor :ip_addresses
 
     # Attribute mapping from ruby-style variable name to JSON key.

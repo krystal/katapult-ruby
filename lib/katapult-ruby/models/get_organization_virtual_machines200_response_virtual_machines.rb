@@ -61,10 +61,10 @@ module KatapultAPI
         :'hostname' => :'String',
         :'fqdn' => :'String',
         :'created_at' => :'Integer',
-        :'zone' => :'GetOrganizationVirtualMachines200ResponseVirtualMachinesZone',
-        :'package' => :'GetOrganizationVirtualMachines200ResponseVirtualMachinesPackage',
-        :'gpu_type' => :'GetOrganizationVirtualMachines200ResponseVirtualMachinesGPUType',
-        :'ip_addresses' => :'Array<GetOrganizationVirtualMachines200ResponseVirtualMachinesIPAddresses>'
+        :'zone' => :'GetOrganizationVirtualMachinesPartZone',
+        :'package' => :'GetOrganizationVirtualMachinesPartPackage',
+        :'gpu_type' => :'GetOrganizationVirtualMachinesPartGPUType',
+        :'ip_addresses' => :'Array<GetOrganizationVirtualMachinesPartIPAddresses>'
       }
     end
 

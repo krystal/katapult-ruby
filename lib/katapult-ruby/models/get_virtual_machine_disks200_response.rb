@@ -17,6 +17,7 @@ module KatapultAPI
   class GetVirtualMachineDisks200Response
     attr_accessor :pagination
 
+    # The list of disks
     attr_accessor :disks
 
     # Attribute mapping from ruby-style variable name to JSON key.

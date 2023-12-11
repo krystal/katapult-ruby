@@ -21,8 +21,10 @@ module KatapultAPI
 
     attr_accessor :version
 
+    # Whether or not to set this address as a VIP
     attr_accessor :vip
 
+    # The label to give this address if setting it as a VIP
     attr_accessor :label
 
     class EnumAttributeValidator

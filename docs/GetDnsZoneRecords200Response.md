@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **dns_records** | [**Array&lt;DNSRecord&gt;**](DNSRecord.md) |  |  |
+| **dns_records** | [**Array&lt;DNSRecord&gt;**](DNSRecord.md) | The DNS record for the provided zone |  |
 
 ## Example
 

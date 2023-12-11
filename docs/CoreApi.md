@@ -92,10 +92,10 @@ All URIs are relative to *http://katapult-api.localhost/core/v1*
 | [**get_virtual_machine_network_interface**](CoreApi.md#get_virtual_machine_network_interface) | **GET** /virtual_machines/:virtual_machine/networks/:network/interface |  |
 | [**get_virtual_machine_network_interface_available_ips_address_version**](CoreApi.md#get_virtual_machine_network_interface_available_ips_address_version) | **GET** /virtual_machine_network_interfaces/:virtual_machine_network_interface/available_ips/:address_version |  |
 | [**get_virtual_machine_network_interfaces**](CoreApi.md#get_virtual_machine_network_interfaces) | **GET** /virtual_machines/:virtual_machine/network_interfaces |  |
-| [**get_virtual_machine_network_interfaces_virtual_machine_network_interface**](CoreApi.md#get_virtual_machine_network_interfaces_virtual_machine_network_interface) | **GET** /virtual_machine_network_interfaces/:virtual_machine_network_interface |  |
 | [**get_virtual_machine_package**](CoreApi.md#get_virtual_machine_package) | **GET** /virtual_machine_packages/:virtual_machine_package |  |
 | [**get_virtual_machine_packages**](CoreApi.md#get_virtual_machine_packages) | **GET** /virtual_machine_packages |  |
 | [**get_virtual_machines_builds_virtual_machine_build**](CoreApi.md#get_virtual_machines_builds_virtual_machine_build) | **GET** /virtual_machines/builds/:virtual_machine_build |  |
+| [**get_vmnivmni**](CoreApi.md#get_vmnivmni) | **GET** /virtual_machine_network_interfaces/:virtual_machine_network_interface |  |
 | [**get_zone**](CoreApi.md#get_zone) | **GET** /zones/:zone |  |
 | [**get_zones**](CoreApi.md#get_zones) | **GET** /zones |  |
 | [**patch_disk_backup_policy**](CoreApi.md#patch_disk_backup_policy) | **PATCH** /disk_backup_policies/:disk_backup_policy |  |
@@ -1048,7 +1048,7 @@ end
 
 ## delete_tag
 
-> <PostOrganizationTags200Response> delete_tag(opts)
+> <DeleteTag200Response> delete_tag(opts)
 
 
 
@@ -1081,7 +1081,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<PostOrganizationTags200Response>, Integer, Hash)> delete_tag_with_http_info(opts)
+> <Array(<DeleteTag200Response>, Integer, Hash)> delete_tag_with_http_info(opts)
 
 ```ruby
 begin
@@ -1089,7 +1089,7 @@ begin
   data, status_code, headers = api_instance.delete_tag_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <PostOrganizationTags200Response>
+  p data # => <DeleteTag200Response>
 rescue KatapultAPI::ApiError => e
   puts "Error when calling CoreApi->delete_tag_with_http_info: #{e}"
 end
@@ -1103,7 +1103,7 @@ end
 
 ### Return type
 
-[**PostOrganizationTags200Response**](PostOrganizationTags200Response.md)
+[**DeleteTag200Response**](DeleteTag200Response.md)
 
 ### Authorization
 
@@ -1255,7 +1255,7 @@ end
 
 ## delete_virtual_machine_group
 
-> <PostOrganizationVirtualMachineGroups200Response> delete_virtual_machine_group(opts)
+> <DeleteVirtualMachineGroup200Response> delete_virtual_machine_group(opts)
 
 
 
@@ -1288,7 +1288,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<PostOrganizationVirtualMachineGroups200Response>, Integer, Hash)> delete_virtual_machine_group_with_http_info(opts)
+> <Array(<DeleteVirtualMachineGroup200Response>, Integer, Hash)> delete_virtual_machine_group_with_http_info(opts)
 
 ```ruby
 begin
@@ -1296,7 +1296,7 @@ begin
   data, status_code, headers = api_instance.delete_virtual_machine_group_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <PostOrganizationVirtualMachineGroups200Response>
+  p data # => <DeleteVirtualMachineGroup200Response>
 rescue KatapultAPI::ApiError => e
   puts "Error when calling CoreApi->delete_virtual_machine_group_with_http_info: #{e}"
 end
@@ -1310,7 +1310,7 @@ end
 
 ### Return type
 
-[**PostOrganizationVirtualMachineGroups200Response**](PostOrganizationVirtualMachineGroups200Response.md)
+[**DeleteVirtualMachineGroup200Response**](DeleteVirtualMachineGroup200Response.md)
 
 ### Authorization
 
@@ -1481,9 +1481,9 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  country_id: 'country_id_example', # String | All 'country[]' params are mutually exclusive, only one can be provided.
-  country_iso_code2: 'country_iso_code2_example', # String | All 'country[]' params are mutually exclusive, only one can be provided.
-  country_iso_code3: 'country_iso_code3_example' # String | All 'country[]' params are mutually exclusive, only one can be provided.
+  country_id: 'country_id_example', # String | The country to return. All 'country[]' params are mutually exclusive, only one can be provided.
+  country_iso_code2: 'country_iso_code2_example', # String | The country to return. All 'country[]' params are mutually exclusive, only one can be provided.
+  country_iso_code3: 'country_iso_code3_example' # String | The country to return. All 'country[]' params are mutually exclusive, only one can be provided.
 }
 
 begin
@@ -1517,9 +1517,9 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **country_id** | **String** | All &#39;country[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **country_iso_code2** | **String** | All &#39;country[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **country_iso_code3** | **String** | All &#39;country[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **country_id** | **String** | The country to return. All &#39;country[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **country_iso_code2** | **String** | The country to return. All &#39;country[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **country_iso_code3** | **String** | The country to return. All &#39;country[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 
 ### Return type
 
@@ -1554,9 +1554,9 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  country_id: 'country_id_example', # String | All 'country[]' params are mutually exclusive, only one can be provided.
-  country_iso_code2: 'country_iso_code2_example', # String | All 'country[]' params are mutually exclusive, only one can be provided.
-  country_iso_code3: 'country_iso_code3_example', # String | All 'country[]' params are mutually exclusive, only one can be provided.
+  country_id: 'country_id_example', # String | The country to return states for. All 'country[]' params are mutually exclusive, only one can be provided.
+  country_iso_code2: 'country_iso_code2_example', # String | The country to return states for. All 'country[]' params are mutually exclusive, only one can be provided.
+  country_iso_code3: 'country_iso_code3_example', # String | The country to return states for. All 'country[]' params are mutually exclusive, only one can be provided.
   page: 56, # Integer | 
   per_page: 56 # Integer | 
 }
@@ -1592,9 +1592,9 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **country_id** | **String** | All &#39;country[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **country_iso_code2** | **String** | All &#39;country[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **country_iso_code3** | **String** | All &#39;country[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **country_id** | **String** | The country to return states for. All &#39;country[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **country_iso_code2** | **String** | The country to return states for. All &#39;country[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **country_iso_code3** | **String** | The country to return states for. All &#39;country[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 | **page** | **Integer** |  | [optional] |
 | **per_page** | **Integer** |  | [optional] |
 
@@ -1631,7 +1631,7 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  country_state_id: 'country_state_id_example' # String | All 'country_state[]' params are mutually exclusive, only one can be provided.
+  country_state_id: 'country_state_id_example' # String | The country state to return. All 'country_state[]' params are mutually exclusive, only one can be provided.
 }
 
 begin
@@ -1665,7 +1665,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **country_state_id** | **String** | All &#39;country_state[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **country_state_id** | **String** | The country state to return. All &#39;country_state[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 
 ### Return type
 
@@ -1771,8 +1771,8 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  currency_id: 'currency_id_example', # String | All 'currency[]' params are mutually exclusive, only one can be provided.
-  currency_iso_code: 'currency_iso_code_example' # String | All 'currency[]' params are mutually exclusive, only one can be provided.
+  currency_id: 'currency_id_example', # String | The currency to return. All 'currency[]' params are mutually exclusive, only one can be provided.
+  currency_iso_code: 'currency_iso_code_example' # String | The currency to return. All 'currency[]' params are mutually exclusive, only one can be provided.
 }
 
 begin
@@ -1806,8 +1806,8 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **currency_id** | **String** | All &#39;currency[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **currency_iso_code** | **String** | All &#39;currency[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **currency_id** | **String** | The currency to return. All &#39;currency[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **currency_iso_code** | **String** | The currency to return. All &#39;currency[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 
 ### Return type
 
@@ -1984,8 +1984,8 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  data_center_id: 'data_center_id_example', # String | All 'data_center[]' params are mutually exclusive, only one can be provided.
-  data_center_permalink: 'data_center_permalink_example', # String | All 'data_center[]' params are mutually exclusive, only one can be provided.
+  data_center_id: 'data_center_id_example', # String | The data center to list GPU types for. All 'data_center[]' params are mutually exclusive, only one can be provided.
+  data_center_permalink: 'data_center_permalink_example', # String | The data center to list GPU types for. All 'data_center[]' params are mutually exclusive, only one can be provided.
   page: 56, # Integer | 
   per_page: 56 # Integer | 
 }
@@ -2021,8 +2021,8 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **data_center_id** | **String** | All &#39;data_center[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **data_center_permalink** | **String** | All &#39;data_center[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **data_center_id** | **String** | The data center to list GPU types for. All &#39;data_center[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **data_center_permalink** | **String** | The data center to list GPU types for. All &#39;data_center[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 | **page** | **Integer** |  | [optional] |
 | **per_page** | **Integer** |  | [optional] |
 
@@ -2123,7 +2123,7 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  disk_id: 'disk_id_example' # String | All 'disk[]' params are mutually exclusive, only one can be provided.
+  disk_id: 'disk_id_example' # String | The disk to return. All 'disk[]' params are mutually exclusive, only one can be provided.
 }
 
 begin
@@ -2157,7 +2157,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **disk_id** | **String** | All &#39;disk[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **disk_id** | **String** | The disk to return. All &#39;disk[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 
 ### Return type
 
@@ -2192,7 +2192,7 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  disk_backup_policy_id: 'disk_backup_policy_id_example' # String | All 'disk_backup_policy[]' params are mutually exclusive, only one can be provided.
+  disk_backup_policy_id: 'disk_backup_policy_id_example' # String | The disk backup policy to get information for. All 'disk_backup_policy[]' params are mutually exclusive, only one can be provided.
 }
 
 begin
@@ -2226,7 +2226,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **disk_backup_policy_id** | **String** | All &#39;disk_backup_policy[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **disk_backup_policy_id** | **String** | The disk backup policy to get information for. All &#39;disk_backup_policy[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 
 ### Return type
 
@@ -2261,7 +2261,7 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  disk_id: 'disk_id_example', # String | All 'disk[]' params are mutually exclusive, only one can be provided.
+  disk_id: 'disk_id_example', # String | The disk to return disk backup policies for. All 'disk[]' params are mutually exclusive, only one can be provided.
   page: 56, # Integer | 
   per_page: 56 # Integer | 
 }
@@ -2297,7 +2297,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **disk_id** | **String** | All &#39;disk[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **disk_id** | **String** | The disk to return disk backup policies for. All &#39;disk[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 | **page** | **Integer** |  | [optional] |
 | **per_page** | **Integer** |  | [optional] |
 
@@ -2334,8 +2334,8 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  disk_template_id: 'disk_template_id_example', # String | All 'disk_template[]' params are mutually exclusive, only one can be provided.
-  disk_template_permalink: 'disk_template_permalink_example' # String | All 'disk_template[]' params are mutually exclusive, only one can be provided.
+  disk_template_id: 'disk_template_id_example', # String | The disk template to return. All 'disk_template[]' params are mutually exclusive, only one can be provided.
+  disk_template_permalink: 'disk_template_permalink_example' # String | The disk template to return. All 'disk_template[]' params are mutually exclusive, only one can be provided.
 }
 
 begin
@@ -2369,8 +2369,8 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **disk_template_id** | **String** | All &#39;disk_template[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **disk_template_permalink** | **String** | All &#39;disk_template[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **disk_template_id** | **String** | The disk template to return. All &#39;disk_template[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **disk_template_permalink** | **String** | The disk template to return. All &#39;disk_template[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 
 ### Return type
 
@@ -2405,7 +2405,7 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  disk_template_version_id: 'disk_template_version_id_example' # String | All 'disk_template_version[]' params are mutually exclusive, only one can be provided.
+  disk_template_version_id: 'disk_template_version_id_example' # String | The disk template version to return. All 'disk_template_version[]' params are mutually exclusive, only one can be provided.
 }
 
 begin
@@ -2439,7 +2439,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **disk_template_version_id** | **String** | All &#39;disk_template_version[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **disk_template_version_id** | **String** | The disk template version to return. All &#39;disk_template_version[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 
 ### Return type
 
@@ -2474,7 +2474,7 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  disk_template_version_id: 'disk_template_version_id_example' # String | All 'disk_template_version[]' params are mutually exclusive, only one can be provided.
+  disk_template_version_id: 'disk_template_version_id_example' # String | The disk template version to return. All 'disk_template_version[]' params are mutually exclusive, only one can be provided.
 }
 
 begin
@@ -2508,7 +2508,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **disk_template_version_id** | **String** | All &#39;disk_template_version[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **disk_template_version_id** | **String** | The disk template version to return. All &#39;disk_template_version[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 
 ### Return type
 
@@ -2543,8 +2543,8 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  disk_template_id: 'disk_template_id_example', # String | All 'disk_template[]' params are mutually exclusive, only one can be provided.
-  disk_template_permalink: 'disk_template_permalink_example', # String | All 'disk_template[]' params are mutually exclusive, only one can be provided.
+  disk_template_id: 'disk_template_id_example', # String | The disk template to return the versions for. All 'disk_template[]' params are mutually exclusive, only one can be provided.
+  disk_template_permalink: 'disk_template_permalink_example', # String | The disk template to return the versions for. All 'disk_template[]' params are mutually exclusive, only one can be provided.
   page: 56, # Integer | 
   per_page: 56 # Integer | 
 }
@@ -2580,8 +2580,8 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **disk_template_id** | **String** | All &#39;disk_template[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **disk_template_permalink** | **String** | All &#39;disk_template[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **disk_template_id** | **String** | The disk template to return the versions for. All &#39;disk_template[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **disk_template_permalink** | **String** | The disk template to return the versions for. All &#39;disk_template[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 | **page** | **Integer** |  | [optional] |
 | **per_page** | **Integer** |  | [optional] |
 
@@ -2601,7 +2601,7 @@ end
 
 ## get_dns_record
 
-> <PostDnsZoneRecords200Response> get_dns_record(opts)
+> <GetDnsRecord200Response> get_dns_record(opts)
 
 
 
@@ -2634,7 +2634,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<PostDnsZoneRecords200Response>, Integer, Hash)> get_dns_record_with_http_info(opts)
+> <Array(<GetDnsRecord200Response>, Integer, Hash)> get_dns_record_with_http_info(opts)
 
 ```ruby
 begin
@@ -2642,7 +2642,7 @@ begin
   data, status_code, headers = api_instance.get_dns_record_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <PostDnsZoneRecords200Response>
+  p data # => <GetDnsRecord200Response>
 rescue KatapultAPI::ApiError => e
   puts "Error when calling CoreApi->get_dns_record_with_http_info: #{e}"
 end
@@ -2656,7 +2656,7 @@ end
 
 ### Return type
 
-[**PostDnsZoneRecords200Response**](PostDnsZoneRecords200Response.md)
+[**GetDnsRecord200Response**](GetDnsRecord200Response.md)
 
 ### Authorization
 
@@ -2687,7 +2687,7 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  dns_record_id: 'dns_record_id_example' # String | All 'dns_record[]' params are mutually exclusive, only one can be provided.
+  dns_record_id: 'dns_record_id_example' # String | The DNS record to return information for. All 'dns_record[]' params are mutually exclusive, only one can be provided.
 }
 
 begin
@@ -2721,7 +2721,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **dns_record_id** | **String** | All &#39;dns_record[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **dns_record_id** | **String** | The DNS record to return information for. All &#39;dns_record[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 
 ### Return type
 
@@ -2739,7 +2739,7 @@ end
 
 ## get_dns_zone
 
-> <GetDnsZonesDnsZone200Response> get_dns_zone(opts)
+> <GetDnsZone200Response> get_dns_zone(opts)
 
 
 
@@ -2773,7 +2773,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetDnsZonesDnsZone200Response>, Integer, Hash)> get_dns_zone_with_http_info(opts)
+> <Array(<GetDnsZone200Response>, Integer, Hash)> get_dns_zone_with_http_info(opts)
 
 ```ruby
 begin
@@ -2781,7 +2781,7 @@ begin
   data, status_code, headers = api_instance.get_dns_zone_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <GetDnsZonesDnsZone200Response>
+  p data # => <GetDnsZone200Response>
 rescue KatapultAPI::ApiError => e
   puts "Error when calling CoreApi->get_dns_zone_with_http_info: #{e}"
 end
@@ -2796,7 +2796,7 @@ end
 
 ### Return type
 
-[**GetDnsZonesDnsZone200Response**](GetDnsZonesDnsZone200Response.md)
+[**GetDnsZone200Response**](GetDnsZone200Response.md)
 
 ### Authorization
 
@@ -2898,8 +2898,8 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  dns_zone_id: 'dns_zone_id_example', # String | All 'dns_zone[]' params are mutually exclusive, only one can be provided.
-  dns_zone_name: 'dns_zone_name_example' # String | All 'dns_zone[]' params are mutually exclusive, only one can be provided.
+  dns_zone_id: 'dns_zone_id_example', # String | The DNS zone to return information for. All 'dns_zone[]' params are mutually exclusive, only one can be provided.
+  dns_zone_name: 'dns_zone_name_example' # String | The DNS zone to return information for. All 'dns_zone[]' params are mutually exclusive, only one can be provided.
 }
 
 begin
@@ -2933,8 +2933,8 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **dns_zone_id** | **String** | All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **dns_zone_name** | **String** | All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **dns_zone_id** | **String** | The DNS zone to return information for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **dns_zone_name** | **String** | The DNS zone to return information for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 
 ### Return type
 
@@ -2969,8 +2969,8 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  dns_zone_id: 'dns_zone_id_example', # String | All 'dns_zone[]' params are mutually exclusive, only one can be provided.
-  dns_zone_name: 'dns_zone_name_example' # String | All 'dns_zone[]' params are mutually exclusive, only one can be provided.
+  dns_zone_id: 'dns_zone_id_example', # String | The DNS zone to find all DNS records for. All 'dns_zone[]' params are mutually exclusive, only one can be provided.
+  dns_zone_name: 'dns_zone_name_example' # String | The DNS zone to find all DNS records for. All 'dns_zone[]' params are mutually exclusive, only one can be provided.
 }
 
 begin
@@ -3004,8 +3004,8 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **dns_zone_id** | **String** | All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **dns_zone_name** | **String** | All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **dns_zone_id** | **String** | The DNS zone to find all DNS records for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **dns_zone_name** | **String** | The DNS zone to find all DNS records for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 
 ### Return type
 
@@ -3040,8 +3040,8 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  dns_zone_id: 'dns_zone_id_example', # String | All 'dns_zone[]' params are mutually exclusive, only one can be provided.
-  dns_zone_name: 'dns_zone_name_example' # String | All 'dns_zone[]' params are mutually exclusive, only one can be provided.
+  dns_zone_id: 'dns_zone_id_example', # String | The DNS zone to get verification details for. All 'dns_zone[]' params are mutually exclusive, only one can be provided.
+  dns_zone_name: 'dns_zone_name_example' # String | The DNS zone to get verification details for. All 'dns_zone[]' params are mutually exclusive, only one can be provided.
 }
 
 begin
@@ -3075,8 +3075,8 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **dns_zone_id** | **String** | All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **dns_zone_name** | **String** | All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **dns_zone_id** | **String** | The DNS zone to get verification details for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **dns_zone_name** | **String** | The DNS zone to get verification details for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 
 ### Return type
 
@@ -3111,7 +3111,7 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  file_storage_volume_id: 'file_storage_volume_id_example' # String | All 'file_storage_volume[]' params are mutually exclusive, only one can be provided.
+  file_storage_volume_id: 'file_storage_volume_id_example' # String | The file storage volume to return. All 'file_storage_volume[]' params are mutually exclusive, only one can be provided.
 }
 
 begin
@@ -3145,7 +3145,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **file_storage_volume_id** | **String** | All &#39;file_storage_volume[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **file_storage_volume_id** | **String** | The file storage volume to return. All &#39;file_storage_volume[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 
 ### Return type
 
@@ -3322,8 +3322,8 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  ip_address_id: 'ip_address_id_example', # String | All 'ip_address[]' params are mutually exclusive, only one can be provided.
-  ip_address_address: 'ip_address_address_example' # String | All 'ip_address[]' params are mutually exclusive, only one can be provided.
+  ip_address_id: 'ip_address_id_example', # String | The IP address to find. All 'ip_address[]' params are mutually exclusive, only one can be provided.
+  ip_address_address: 'ip_address_address_example' # String | The IP address to find. All 'ip_address[]' params are mutually exclusive, only one can be provided.
 }
 
 begin
@@ -3357,8 +3357,8 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **ip_address_id** | **String** | All &#39;ip_address[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **ip_address_address** | **String** | All &#39;ip_address[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **ip_address_id** | **String** | The IP address to find. All &#39;ip_address[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **ip_address_address** | **String** | The IP address to find. All &#39;ip_address[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 
 ### Return type
 
@@ -3393,8 +3393,8 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  load_balancer_id: 'load_balancer_id_example', # String | All 'load_balancer[]' params are mutually exclusive, only one can be provided.
-  load_balancer_api_reference: 'load_balancer_api_reference_example' # String | All 'load_balancer[]' params are mutually exclusive, only one can be provided.
+  load_balancer_id: 'load_balancer_id_example', # String | The load balancer to return the details for. All 'load_balancer[]' params are mutually exclusive, only one can be provided.
+  load_balancer_api_reference: 'load_balancer_api_reference_example' # String | The load balancer to return the details for. All 'load_balancer[]' params are mutually exclusive, only one can be provided.
 }
 
 begin
@@ -3428,8 +3428,8 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **load_balancer_id** | **String** | All &#39;load_balancer[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **load_balancer_api_reference** | **String** | All &#39;load_balancer[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **load_balancer_id** | **String** | The load balancer to return the details for. All &#39;load_balancer[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **load_balancer_api_reference** | **String** | The load balancer to return the details for. All &#39;load_balancer[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 
 ### Return type
 
@@ -3464,8 +3464,8 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  load_balancer_id: 'load_balancer_id_example', # String | All 'load_balancer[]' params are mutually exclusive, only one can be provided.
-  load_balancer_api_reference: 'load_balancer_api_reference_example', # String | All 'load_balancer[]' params are mutually exclusive, only one can be provided.
+  load_balancer_id: 'load_balancer_id_example', # String | The load balancer to return all load rules for. All 'load_balancer[]' params are mutually exclusive, only one can be provided.
+  load_balancer_api_reference: 'load_balancer_api_reference_example', # String | The load balancer to return all load rules for. All 'load_balancer[]' params are mutually exclusive, only one can be provided.
   page: 56, # Integer | 
   per_page: 56 # Integer | 
 }
@@ -3501,8 +3501,8 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **load_balancer_id** | **String** | All &#39;load_balancer[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **load_balancer_api_reference** | **String** | All &#39;load_balancer[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **load_balancer_id** | **String** | The load balancer to return all load rules for. All &#39;load_balancer[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **load_balancer_api_reference** | **String** | The load balancer to return all load rules for. All &#39;load_balancer[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 | **page** | **Integer** |  | [optional] |
 | **per_page** | **Integer** |  | [optional] |
 
@@ -3539,7 +3539,7 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  load_balancer_rule_id: 'load_balancer_rule_id_example' # String | All 'load_balancer_rule[]' params are mutually exclusive, only one can be provided.
+  load_balancer_rule_id: 'load_balancer_rule_id_example' # String | The load balancer rule to return the details for. All 'load_balancer_rule[]' params are mutually exclusive, only one can be provided.
 }
 
 begin
@@ -3573,7 +3573,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **load_balancer_rule_id** | **String** | All &#39;load_balancer_rule[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **load_balancer_rule_id** | **String** | The load balancer rule to return the details for. All &#39;load_balancer_rule[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 
 ### Return type
 
@@ -3608,8 +3608,8 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  network_id: 'network_id_example', # String | All 'network[]' params are mutually exclusive, only one can be provided.
-  network_permalink: 'network_permalink_example' # String | All 'network[]' params are mutually exclusive, only one can be provided.
+  network_id: 'network_id_example', # String | The network to return. All 'network[]' params are mutually exclusive, only one can be provided.
+  network_permalink: 'network_permalink_example' # String | The network to return. All 'network[]' params are mutually exclusive, only one can be provided.
 }
 
 begin
@@ -3643,8 +3643,8 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **network_id** | **String** | All &#39;network[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **network_permalink** | **String** | All &#39;network[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **network_id** | **String** | The network to return. All &#39;network[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **network_permalink** | **String** | The network to return. All &#39;network[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 
 ### Return type
 
@@ -3679,7 +3679,7 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  operating_system_id: 'operating_system_id_example' # String | All 'operating_system[]' params are mutually exclusive, only one can be provided.
+  operating_system_id: 'operating_system_id_example' # String | The operating system to return. All 'operating_system[]' params are mutually exclusive, only one can be provided.
 }
 
 begin
@@ -3713,7 +3713,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **operating_system_id** | **String** | All &#39;operating_system[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **operating_system_id** | **String** | The operating system to return. All &#39;operating_system[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 
 ### Return type
 
@@ -4036,8 +4036,8 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  organization_id: 'organization_id_example', # String | All 'organization[]' params are mutually exclusive, only one can be provided.
-  organization_sub_domain: 'organization_sub_domain_example', # String | All 'organization[]' params are mutually exclusive, only one can be provided.
+  organization_id: 'organization_id_example', # String | The organization to return disk backup policies for. All 'organization[]' params are mutually exclusive, only one can be provided.
+  organization_sub_domain: 'organization_sub_domain_example', # String | The organization to return disk backup policies for. All 'organization[]' params are mutually exclusive, only one can be provided.
   page: 56, # Integer | 
   per_page: 56 # Integer | 
 }
@@ -4073,8 +4073,8 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **organization_id** | **String** | All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **organization_sub_domain** | **String** | All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **organization_id** | **String** | The organization to return disk backup policies for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **organization_sub_domain** | **String** | The organization to return disk backup policies for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 | **page** | **Integer** |  | [optional] |
 | **per_page** | **Integer** |  | [optional] |
 
@@ -4111,10 +4111,10 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  organization_id: 'organization_id_example', # String | All 'organization[]' params are mutually exclusive, only one can be provided.
-  organization_sub_domain: 'organization_sub_domain_example', # String | All 'organization[]' params are mutually exclusive, only one can be provided.
-  include_universal: true, # Boolean | 
-  operating_system_id: 'operating_system_id_example', # String | All 'operating_system[]' params are mutually exclusive, only one can be provided.
+  organization_id: 'organization_id_example', # String | The organization to find disk templates for. All 'organization[]' params are mutually exclusive, only one can be provided.
+  organization_sub_domain: 'organization_sub_domain_example', # String | The organization to find disk templates for. All 'organization[]' params are mutually exclusive, only one can be provided.
+  include_universal: true, # Boolean | Whether or not to include universal templates
+  operating_system_id: 'operating_system_id_example', # String | An operating system to use to filter disk templates. All 'operating_system[]' params are mutually exclusive, only one can be provided.
   page: 56, # Integer | 
   per_page: 56 # Integer | 
 }
@@ -4150,10 +4150,10 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **organization_id** | **String** | All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **organization_sub_domain** | **String** | All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **include_universal** | **Boolean** |  | [optional] |
-| **operating_system_id** | **String** | All &#39;operating_system[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **organization_id** | **String** | The organization to find disk templates for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **organization_sub_domain** | **String** | The organization to find disk templates for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **include_universal** | **Boolean** | Whether or not to include universal templates | [optional] |
+| **operating_system_id** | **String** | An operating system to use to filter disk templates. All &#39;operating_system[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 | **page** | **Integer** |  | [optional] |
 | **per_page** | **Integer** |  | [optional] |
 
@@ -4190,8 +4190,8 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  organization_id: 'organization_id_example', # String | All 'organization[]' params are mutually exclusive, only one can be provided.
-  organization_sub_domain: 'organization_sub_domain_example', # String | All 'organization[]' params are mutually exclusive, only one can be provided.
+  organization_id: 'organization_id_example', # String | The organization to find disks for. All 'organization[]' params are mutually exclusive, only one can be provided.
+  organization_sub_domain: 'organization_sub_domain_example', # String | The organization to find disks for. All 'organization[]' params are mutually exclusive, only one can be provided.
   page: 56, # Integer | 
   per_page: 56 # Integer | 
 }
@@ -4227,8 +4227,8 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **organization_id** | **String** | All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **organization_sub_domain** | **String** | All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **organization_id** | **String** | The organization to find disks for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **organization_sub_domain** | **String** | The organization to find disks for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 | **page** | **Integer** |  | [optional] |
 | **per_page** | **Integer** |  | [optional] |
 
@@ -4265,8 +4265,8 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  organization_id: 'organization_id_example', # String | All 'organization[]' params are mutually exclusive, only one can be provided.
-  organization_sub_domain: 'organization_sub_domain_example', # String | All 'organization[]' params are mutually exclusive, only one can be provided.
+  organization_id: 'organization_id_example', # String | The organization to return DNS zones for. All 'organization[]' params are mutually exclusive, only one can be provided.
+  organization_sub_domain: 'organization_sub_domain_example', # String | The organization to return DNS zones for. All 'organization[]' params are mutually exclusive, only one can be provided.
   page: 56, # Integer | 
   per_page: 56 # Integer | 
 }
@@ -4302,8 +4302,8 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **organization_id** | **String** | All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **organization_sub_domain** | **String** | All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **organization_id** | **String** | The organization to return DNS zones for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **organization_sub_domain** | **String** | The organization to return DNS zones for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 | **page** | **Integer** |  | [optional] |
 | **per_page** | **Integer** |  | [optional] |
 
@@ -4411,8 +4411,8 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  organization_id: 'organization_id_example', # String | All 'organization[]' params are mutually exclusive, only one can be provided.
-  organization_sub_domain: 'organization_sub_domain_example', # String | All 'organization[]' params are mutually exclusive, only one can be provided.
+  organization_id: 'organization_id_example', # String | The organization to return all file storage volumes for. All 'organization[]' params are mutually exclusive, only one can be provided.
+  organization_sub_domain: 'organization_sub_domain_example', # String | The organization to return all file storage volumes for. All 'organization[]' params are mutually exclusive, only one can be provided.
   page: 56, # Integer | 
   per_page: 56 # Integer | 
 }
@@ -4448,8 +4448,8 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **organization_id** | **String** | All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **organization_sub_domain** | **String** | All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **organization_id** | **String** | The organization to return all file storage volumes for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **organization_sub_domain** | **String** | The organization to return all file storage volumes for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 | **page** | **Integer** |  | [optional] |
 | **per_page** | **Integer** |  | [optional] |
 
@@ -4486,9 +4486,9 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  organization_id: 'organization_id_example', # String | All 'organization[]' params are mutually exclusive, only one can be provided.
-  organization_sub_domain: 'organization_sub_domain_example', # String | All 'organization[]' params are mutually exclusive, only one can be provided.
-  allocated: true, # Boolean | 
+  organization_id: 'organization_id_example', # String | The organization to use when looking up IP addresses. All 'organization[]' params are mutually exclusive, only one can be provided.
+  organization_sub_domain: 'organization_sub_domain_example', # String | The organization to use when looking up IP addresses. All 'organization[]' params are mutually exclusive, only one can be provided.
+  allocated: true, # Boolean | If true, only return allocated IP addresss. If false, only return unallocated IP addresses.
   page: 56, # Integer | 
   per_page: 56 # Integer | 
 }
@@ -4524,9 +4524,9 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **organization_id** | **String** | All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **organization_sub_domain** | **String** | All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **allocated** | **Boolean** |  | [optional] |
+| **organization_id** | **String** | The organization to use when looking up IP addresses. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **organization_sub_domain** | **String** | The organization to use when looking up IP addresses. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **allocated** | **Boolean** | If true, only return allocated IP addresss. If false, only return unallocated IP addresses. | [optional] |
 | **page** | **Integer** |  | [optional] |
 | **per_page** | **Integer** |  | [optional] |
 
@@ -4563,8 +4563,8 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  organization_id: 'organization_id_example', # String | All 'organization[]' params are mutually exclusive, only one can be provided.
-  organization_sub_domain: 'organization_sub_domain_example', # String | All 'organization[]' params are mutually exclusive, only one can be provided.
+  organization_id: 'organization_id_example', # String | The organization to return all load balancers for. All 'organization[]' params are mutually exclusive, only one can be provided.
+  organization_sub_domain: 'organization_sub_domain_example', # String | The organization to return all load balancers for. All 'organization[]' params are mutually exclusive, only one can be provided.
   page: 56, # Integer | 
   per_page: 56 # Integer | 
 }
@@ -4600,8 +4600,8 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **organization_id** | **String** | All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **organization_sub_domain** | **String** | All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **organization_id** | **String** | The organization to return all load balancers for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **organization_sub_domain** | **String** | The organization to return all load balancers for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 | **page** | **Integer** |  | [optional] |
 | **per_page** | **Integer** |  | [optional] |
 
@@ -4713,8 +4713,8 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  organization_id: 'organization_id_example', # String | All 'organization[]' params are mutually exclusive, only one can be provided.
-  organization_sub_domain: 'organization_sub_domain_example', # String | All 'organization[]' params are mutually exclusive, only one can be provided.
+  organization_id: 'organization_id_example', # String | The organization to use when looking up network speed profiles. All 'organization[]' params are mutually exclusive, only one can be provided.
+  organization_sub_domain: 'organization_sub_domain_example', # String | The organization to use when looking up network speed profiles. All 'organization[]' params are mutually exclusive, only one can be provided.
   page: 56, # Integer | 
   per_page: 56 # Integer | 
 }
@@ -4750,8 +4750,8 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **organization_id** | **String** | All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **organization_sub_domain** | **String** | All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **organization_id** | **String** | The organization to use when looking up network speed profiles. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **organization_sub_domain** | **String** | The organization to use when looking up network speed profiles. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 | **page** | **Integer** |  | [optional] |
 | **per_page** | **Integer** |  | [optional] |
 
@@ -4788,8 +4788,8 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  organization_id: 'organization_id_example', # String | All 'organization[]' params are mutually exclusive, only one can be provided.
-  organization_sub_domain: 'organization_sub_domain_example', # String | All 'organization[]' params are mutually exclusive, only one can be provided.
+  organization_id: 'organization_id_example', # String | The organization to return all security groups for. All 'organization[]' params are mutually exclusive, only one can be provided.
+  organization_sub_domain: 'organization_sub_domain_example', # String | The organization to return all security groups for. All 'organization[]' params are mutually exclusive, only one can be provided.
   page: 56, # Integer | 
   per_page: 56 # Integer | 
 }
@@ -4825,8 +4825,8 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **organization_id** | **String** | All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **organization_sub_domain** | **String** | All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **organization_id** | **String** | The organization to return all security groups for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **organization_sub_domain** | **String** | The organization to return all security groups for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 | **page** | **Integer** |  | [optional] |
 | **per_page** | **Integer** |  | [optional] |
 
@@ -4863,8 +4863,8 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  organization_id: 'organization_id_example', # String | All 'organization[]' params are mutually exclusive, only one can be provided.
-  organization_sub_domain: 'organization_sub_domain_example', # String | All 'organization[]' params are mutually exclusive, only one can be provided.
+  organization_id: 'organization_id_example', # String | The organization to list SSH keys for. All 'organization[]' params are mutually exclusive, only one can be provided.
+  organization_sub_domain: 'organization_sub_domain_example', # String | The organization to list SSH keys for. All 'organization[]' params are mutually exclusive, only one can be provided.
   page: 56, # Integer | 
   per_page: 56 # Integer | 
 }
@@ -4900,8 +4900,8 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **organization_id** | **String** | All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **organization_sub_domain** | **String** | All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **organization_id** | **String** | The organization to list SSH keys for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **organization_sub_domain** | **String** | The organization to list SSH keys for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 | **page** | **Integer** |  | [optional] |
 | **per_page** | **Integer** |  | [optional] |
 
@@ -4938,8 +4938,8 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  organization_id: 'organization_id_example', # String | All 'organization[]' params are mutually exclusive, only one can be provided.
-  organization_sub_domain: 'organization_sub_domain_example', # String | All 'organization[]' params are mutually exclusive, only one can be provided.
+  organization_id: 'organization_id_example', # String | The organization to list the tags for. All 'organization[]' params are mutually exclusive, only one can be provided.
+  organization_sub_domain: 'organization_sub_domain_example', # String | The organization to list the tags for. All 'organization[]' params are mutually exclusive, only one can be provided.
   page: 56, # Integer | 
   per_page: 56 # Integer | 
 }
@@ -4975,8 +4975,8 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **organization_id** | **String** | All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **organization_sub_domain** | **String** | All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **organization_id** | **String** | The organization to list the tags for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **organization_sub_domain** | **String** | The organization to list the tags for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 | **page** | **Integer** |  | [optional] |
 | **per_page** | **Integer** |  | [optional] |
 
@@ -5013,8 +5013,8 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  organization_id: 'organization_id_example', # String | All 'organization[]' params are mutually exclusive, only one can be provided.
-  organization_sub_domain: 'organization_sub_domain_example', # String | All 'organization[]' params are mutually exclusive, only one can be provided.
+  organization_id: 'organization_id_example', # String | The organization to find all trash objects for. All 'organization[]' params are mutually exclusive, only one can be provided.
+  organization_sub_domain: 'organization_sub_domain_example', # String | The organization to find all trash objects for. All 'organization[]' params are mutually exclusive, only one can be provided.
   page: 56, # Integer | 
   per_page: 56 # Integer | 
 }
@@ -5050,8 +5050,8 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **organization_id** | **String** | All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **organization_sub_domain** | **String** | All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **organization_id** | **String** | The organization to find all trash objects for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **organization_sub_domain** | **String** | The organization to find all trash objects for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 | **page** | **Integer** |  | [optional] |
 | **per_page** | **Integer** |  | [optional] |
 
@@ -5163,8 +5163,8 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  organization_id: 'organization_id_example', # String | All 'organization[]' params are mutually exclusive, only one can be provided.
-  organization_sub_domain: 'organization_sub_domain_example' # String | All 'organization[]' params are mutually exclusive, only one can be provided.
+  organization_id: 'organization_id_example', # String | The organization to return groups for. All 'organization[]' params are mutually exclusive, only one can be provided.
+  organization_sub_domain: 'organization_sub_domain_example' # String | The organization to return groups for. All 'organization[]' params are mutually exclusive, only one can be provided.
 }
 
 begin
@@ -5198,8 +5198,8 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **organization_id** | **String** | All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **organization_sub_domain** | **String** | All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **organization_id** | **String** | The organization to return groups for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **organization_sub_domain** | **String** | The organization to return groups for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 
 ### Return type
 
@@ -5431,7 +5431,7 @@ end
 
 ## get_security_group
 
-> <PostOrganizationSecurityGroups200Response> get_security_group(opts)
+> <GetSecurityGroup200Response> get_security_group(opts)
 
 
 
@@ -5448,7 +5448,7 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  security_group_id: 'security_group_id_example' # String | All 'security_group[]' params are mutually exclusive, only one can be provided.
+  security_group_id: 'security_group_id_example' # String | The security group to return the details for. All 'security_group[]' params are mutually exclusive, only one can be provided.
 }
 
 begin
@@ -5464,7 +5464,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<PostOrganizationSecurityGroups200Response>, Integer, Hash)> get_security_group_with_http_info(opts)
+> <Array(<GetSecurityGroup200Response>, Integer, Hash)> get_security_group_with_http_info(opts)
 
 ```ruby
 begin
@@ -5472,7 +5472,7 @@ begin
   data, status_code, headers = api_instance.get_security_group_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <PostOrganizationSecurityGroups200Response>
+  p data # => <GetSecurityGroup200Response>
 rescue KatapultAPI::ApiError => e
   puts "Error when calling CoreApi->get_security_group_with_http_info: #{e}"
 end
@@ -5482,11 +5482,11 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **security_group_id** | **String** | All &#39;security_group[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **security_group_id** | **String** | The security group to return the details for. All &#39;security_group[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 
 ### Return type
 
-[**PostOrganizationSecurityGroups200Response**](PostOrganizationSecurityGroups200Response.md)
+[**GetSecurityGroup200Response**](GetSecurityGroup200Response.md)
 
 ### Authorization
 
@@ -5517,7 +5517,7 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  security_group_id: 'security_group_id_example', # String | All 'security_group[]' params are mutually exclusive, only one can be provided.
+  security_group_id: 'security_group_id_example', # String | The security group to return all load rules for. All 'security_group[]' params are mutually exclusive, only one can be provided.
   page: 56, # Integer | 
   per_page: 56 # Integer | 
 }
@@ -5553,7 +5553,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **security_group_id** | **String** | All &#39;security_group[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **security_group_id** | **String** | The security group to return all load rules for. All &#39;security_group[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 | **page** | **Integer** |  | [optional] |
 | **per_page** | **Integer** |  | [optional] |
 
@@ -5590,7 +5590,7 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  security_group_rule_id: 'security_group_rule_id_example' # String | All 'security_group_rule[]' params are mutually exclusive, only one can be provided.
+  security_group_rule_id: 'security_group_rule_id_example' # String | The security group rule to return the details for. All 'security_group_rule[]' params are mutually exclusive, only one can be provided.
 }
 
 begin
@@ -5624,7 +5624,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **security_group_rule_id** | **String** | All &#39;security_group_rule[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **security_group_rule_id** | **String** | The security group rule to return the details for. All &#39;security_group_rule[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 
 ### Return type
 
@@ -5642,7 +5642,7 @@ end
 
 ## get_tag
 
-> <PostOrganizationTags200Response> get_tag(opts)
+> <GetTag200Response> get_tag(opts)
 
 
 
@@ -5659,7 +5659,7 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  tag_id: 'tag_id_example' # String | All 'tag[]' params are mutually exclusive, only one can be provided.
+  tag_id: 'tag_id_example' # String | The tag to load the details for. All 'tag[]' params are mutually exclusive, only one can be provided.
 }
 
 begin
@@ -5675,7 +5675,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<PostOrganizationTags200Response>, Integer, Hash)> get_tag_with_http_info(opts)
+> <Array(<GetTag200Response>, Integer, Hash)> get_tag_with_http_info(opts)
 
 ```ruby
 begin
@@ -5683,7 +5683,7 @@ begin
   data, status_code, headers = api_instance.get_tag_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <PostOrganizationTags200Response>
+  p data # => <GetTag200Response>
 rescue KatapultAPI::ApiError => e
   puts "Error when calling CoreApi->get_tag_with_http_info: #{e}"
 end
@@ -5693,11 +5693,11 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **tag_id** | **String** | All &#39;tag[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **tag_id** | **String** | The tag to load the details for. All &#39;tag[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 
 ### Return type
 
-[**PostOrganizationTags200Response**](PostOrganizationTags200Response.md)
+[**GetTag200Response**](GetTag200Response.md)
 
 ### Authorization
 
@@ -5797,8 +5797,8 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  trash_object_id: 'trash_object_id_example', # String | All 'trash_object[]' params are mutually exclusive, only one can be provided.
-  trash_object_object_id: 'trash_object_object_id_example' # String | All 'trash_object[]' params are mutually exclusive, only one can be provided.
+  trash_object_id: 'trash_object_id_example', # String | The trash object to find. All 'trash_object[]' params are mutually exclusive, only one can be provided.
+  trash_object_object_id: 'trash_object_object_id_example' # String | The trash object to find. All 'trash_object[]' params are mutually exclusive, only one can be provided.
 }
 
 begin
@@ -5832,8 +5832,8 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **trash_object_id** | **String** | All &#39;trash_object[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **trash_object_object_id** | **String** | All &#39;trash_object[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **trash_object_id** | **String** | The trash object to find. All &#39;trash_object[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **trash_object_object_id** | **String** | The trash object to find. All &#39;trash_object[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 
 ### Return type
 
@@ -6003,9 +6003,9 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  virtual_machine_id: 'virtual_machine_id_example', # String | All 'virtual_machine[]' params are mutually exclusive, only one can be provided.
-  virtual_machine_fqdn: 'virtual_machine_fqdn_example', # String | All 'virtual_machine[]' params are mutually exclusive, only one can be provided.
-  include_disks: true, # Boolean | 
+  virtual_machine_id: 'virtual_machine_id_example', # String | The virtual machine to return disk backup policies for. All 'virtual_machine[]' params are mutually exclusive, only one can be provided.
+  virtual_machine_fqdn: 'virtual_machine_fqdn_example', # String | The virtual machine to return disk backup policies for. All 'virtual_machine[]' params are mutually exclusive, only one can be provided.
+  include_disks: true, # Boolean | If true, the returned list will include backup policies owned by disks assigned to this virtual machine in addition to those that belong to the whole virtual machine
   page: 56, # Integer | 
   per_page: 56 # Integer | 
 }
@@ -6041,9 +6041,9 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **virtual_machine_id** | **String** | All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **virtual_machine_fqdn** | **String** | All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **include_disks** | **Boolean** |  | [optional] |
+| **virtual_machine_id** | **String** | The virtual machine to return disk backup policies for. All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **virtual_machine_fqdn** | **String** | The virtual machine to return disk backup policies for. All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **include_disks** | **Boolean** | If true, the returned list will include backup policies owned by disks assigned to this virtual machine in addition to those that belong to the whole virtual machine | [optional] |
 | **page** | **Integer** |  | [optional] |
 | **per_page** | **Integer** |  | [optional] |
 
@@ -6080,8 +6080,8 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  virtual_machine_id: 'virtual_machine_id_example', # String | All 'virtual_machine[]' params are mutually exclusive, only one can be provided.
-  virtual_machine_fqdn: 'virtual_machine_fqdn_example', # String | All 'virtual_machine[]' params are mutually exclusive, only one can be provided.
+  virtual_machine_id: 'virtual_machine_id_example', # String | The virtual machine to find disks for. All 'virtual_machine[]' params are mutually exclusive, only one can be provided.
+  virtual_machine_fqdn: 'virtual_machine_fqdn_example', # String | The virtual machine to find disks for. All 'virtual_machine[]' params are mutually exclusive, only one can be provided.
   page: 56, # Integer | 
   per_page: 56 # Integer | 
 }
@@ -6117,8 +6117,8 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **virtual_machine_id** | **String** | All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **virtual_machine_fqdn** | **String** | All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **virtual_machine_id** | **String** | The virtual machine to find disks for. All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **virtual_machine_fqdn** | **String** | The virtual machine to find disks for. All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 | **page** | **Integer** |  | [optional] |
 | **per_page** | **Integer** |  | [optional] |
 
@@ -6138,7 +6138,7 @@ end
 
 ## get_virtual_machine_group
 
-> <PostOrganizationVirtualMachineGroups200Response> get_virtual_machine_group(opts)
+> <GetVirtualMachineGroup200Response> get_virtual_machine_group(opts)
 
 
 
@@ -6155,7 +6155,7 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  virtual_machine_group_id: 'virtual_machine_group_id_example' # String | All 'virtual_machine_group[]' params are mutually exclusive, only one can be provided.
+  virtual_machine_group_id: 'virtual_machine_group_id_example' # String | The virtual machine group to retrieve. All 'virtual_machine_group[]' params are mutually exclusive, only one can be provided.
 }
 
 begin
@@ -6171,7 +6171,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<PostOrganizationVirtualMachineGroups200Response>, Integer, Hash)> get_virtual_machine_group_with_http_info(opts)
+> <Array(<GetVirtualMachineGroup200Response>, Integer, Hash)> get_virtual_machine_group_with_http_info(opts)
 
 ```ruby
 begin
@@ -6179,7 +6179,7 @@ begin
   data, status_code, headers = api_instance.get_virtual_machine_group_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <PostOrganizationVirtualMachineGroups200Response>
+  p data # => <GetVirtualMachineGroup200Response>
 rescue KatapultAPI::ApiError => e
   puts "Error when calling CoreApi->get_virtual_machine_group_with_http_info: #{e}"
 end
@@ -6189,11 +6189,11 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **virtual_machine_group_id** | **String** | All &#39;virtual_machine_group[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **virtual_machine_group_id** | **String** | The virtual machine group to retrieve. All &#39;virtual_machine_group[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 
 ### Return type
 
-[**PostOrganizationVirtualMachineGroups200Response**](PostOrganizationVirtualMachineGroups200Response.md)
+[**GetVirtualMachineGroup200Response**](GetVirtualMachineGroup200Response.md)
 
 ### Authorization
 
@@ -6224,10 +6224,10 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  virtual_machine_id: 'virtual_machine_id_example', # String | All 'virtual_machine[]' params are mutually exclusive, only one can be provided.
-  virtual_machine_fqdn: 'virtual_machine_fqdn_example', # String | All 'virtual_machine[]' params are mutually exclusive, only one can be provided.
-  network_id: 'network_id_example', # String | All 'network[]' params are mutually exclusive, only one can be provided.
-  network_permalink: 'network_permalink_example' # String | All 'network[]' params are mutually exclusive, only one can be provided.
+  virtual_machine_id: 'virtual_machine_id_example', # String | The virtual machine to find the network interface for. All 'virtual_machine[]' params are mutually exclusive, only one can be provided.
+  virtual_machine_fqdn: 'virtual_machine_fqdn_example', # String | The virtual machine to find the network interface for. All 'virtual_machine[]' params are mutually exclusive, only one can be provided.
+  network_id: 'network_id_example', # String | The network to find the network interface for. All 'network[]' params are mutually exclusive, only one can be provided.
+  network_permalink: 'network_permalink_example' # String | The network to find the network interface for. All 'network[]' params are mutually exclusive, only one can be provided.
 }
 
 begin
@@ -6261,10 +6261,10 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **virtual_machine_id** | **String** | All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **virtual_machine_fqdn** | **String** | All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **network_id** | **String** | All &#39;network[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **network_permalink** | **String** | All &#39;network[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **virtual_machine_id** | **String** | The virtual machine to find the network interface for. All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **virtual_machine_fqdn** | **String** | The virtual machine to find the network interface for. All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **network_id** | **String** | The network to find the network interface for. All &#39;network[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **network_permalink** | **String** | The network to find the network interface for. All &#39;network[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 
 ### Return type
 
@@ -6298,9 +6298,9 @@ KatapultAPI.configure do |config|
 end
 
 api_instance = KatapultAPI::CoreApi.new
-address_version = KatapultAPI::IPAddressVersionEnum::IPV4 # IPAddressVersionEnum | 
+address_version = KatapultAPI::IPAddressVersionEnum::IPV4 # IPAddressVersionEnum | The IP address version to return results for
 opts = {
-  virtual_machine_network_interface_id: 'virtual_machine_network_interface_id_example' # String | All 'virtual_machine_network_interface[]' params are mutually exclusive, only one can be provided.
+  virtual_machine_network_interface_id: 'virtual_machine_network_interface_id_example' # String | The network interface to get IP addresses for. All 'virtual_machine_network_interface[]' params are mutually exclusive, only one can be provided.
 }
 
 begin
@@ -6334,8 +6334,8 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **address_version** | [**IPAddressVersionEnum**](.md) |  |  |
-| **virtual_machine_network_interface_id** | **String** | All &#39;virtual_machine_network_interface[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **address_version** | [**IPAddressVersionEnum**](.md) | The IP address version to return results for |  |
+| **virtual_machine_network_interface_id** | **String** | The network interface to get IP addresses for. All &#39;virtual_machine_network_interface[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 
 ### Return type
 
@@ -6370,8 +6370,8 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  virtual_machine_id: 'virtual_machine_id_example', # String | All 'virtual_machine[]' params are mutually exclusive, only one can be provided.
-  virtual_machine_fqdn: 'virtual_machine_fqdn_example', # String | All 'virtual_machine[]' params are mutually exclusive, only one can be provided.
+  virtual_machine_id: 'virtual_machine_id_example', # String | The virtual machine to show network interfaces for. All 'virtual_machine[]' params are mutually exclusive, only one can be provided.
+  virtual_machine_fqdn: 'virtual_machine_fqdn_example', # String | The virtual machine to show network interfaces for. All 'virtual_machine[]' params are mutually exclusive, only one can be provided.
   page: 56, # Integer | 
   per_page: 56 # Integer | 
 }
@@ -6407,83 +6407,14 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **virtual_machine_id** | **String** | All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **virtual_machine_fqdn** | **String** | All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **virtual_machine_id** | **String** | The virtual machine to show network interfaces for. All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **virtual_machine_fqdn** | **String** | The virtual machine to show network interfaces for. All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 | **page** | **Integer** |  | [optional] |
 | **per_page** | **Integer** |  | [optional] |
 
 ### Return type
 
 [**GetVirtualMachineNetworkInterfaces200Response**](GetVirtualMachineNetworkInterfaces200Response.md)
-
-### Authorization
-
-[Authenticator](../README.md#Authenticator)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## get_virtual_machine_network_interfaces_virtual_machine_network_interface
-
-> <GetVirtualMachineNetworkInterfacesVirtualMachineNetworkInterface200Response> get_virtual_machine_network_interfaces_virtual_machine_network_interface(opts)
-
-
-
-### Examples
-
-```ruby
-require 'time'
-require 'katapult-ruby'
-# setup authorization
-KatapultAPI.configure do |config|
-  # Configure Bearer authorization: Authenticator
-  config.access_token = 'YOUR_BEARER_TOKEN'
-end
-
-api_instance = KatapultAPI::CoreApi.new
-opts = {
-  virtual_machine_network_interface_id: 'virtual_machine_network_interface_id_example' # String | All 'virtual_machine_network_interface[]' params are mutually exclusive, only one can be provided.
-}
-
-begin
-  
-  result = api_instance.get_virtual_machine_network_interfaces_virtual_machine_network_interface(opts)
-  p result
-rescue KatapultAPI::ApiError => e
-  puts "Error when calling CoreApi->get_virtual_machine_network_interfaces_virtual_machine_network_interface: #{e}"
-end
-```
-
-#### Using the get_virtual_machine_network_interfaces_virtual_machine_network_interface_with_http_info variant
-
-This returns an Array which contains the response data, status code and headers.
-
-> <Array(<GetVirtualMachineNetworkInterfacesVirtualMachineNetworkInterface200Response>, Integer, Hash)> get_virtual_machine_network_interfaces_virtual_machine_network_interface_with_http_info(opts)
-
-```ruby
-begin
-  
-  data, status_code, headers = api_instance.get_virtual_machine_network_interfaces_virtual_machine_network_interface_with_http_info(opts)
-  p status_code # => 2xx
-  p headers # => { ... }
-  p data # => <GetVirtualMachineNetworkInterfacesVirtualMachineNetworkInterface200Response>
-rescue KatapultAPI::ApiError => e
-  puts "Error when calling CoreApi->get_virtual_machine_network_interfaces_virtual_machine_network_interface_with_http_info: #{e}"
-end
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **virtual_machine_network_interface_id** | **String** | All &#39;virtual_machine_network_interface[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-
-### Return type
-
-[**GetVirtualMachineNetworkInterfacesVirtualMachineNetworkInterface200Response**](GetVirtualMachineNetworkInterfacesVirtualMachineNetworkInterface200Response.md)
 
 ### Authorization
 
@@ -6585,8 +6516,8 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  organization_id: 'organization_id_example', # String | All 'organization[]' params are mutually exclusive, only one can be provided.
-  organization_sub_domain: 'organization_sub_domain_example', # String | All 'organization[]' params are mutually exclusive, only one can be provided.
+  organization_id: 'organization_id_example', # String | Provide an organization to only show packages available to the given organization (otherwise only public packages will be displayed). All 'organization[]' params are mutually exclusive, only one can be provided.
+  organization_sub_domain: 'organization_sub_domain_example', # String | Provide an organization to only show packages available to the given organization (otherwise only public packages will be displayed). All 'organization[]' params are mutually exclusive, only one can be provided.
   page: 56, # Integer | 
   per_page: 56 # Integer | 
 }
@@ -6622,8 +6553,8 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **organization_id** | **String** | All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **organization_sub_domain** | **String** | All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **organization_id** | **String** | Provide an organization to only show packages available to the given organization (otherwise only public packages will be displayed). All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **organization_sub_domain** | **String** | Provide an organization to only show packages available to the given organization (otherwise only public packages will be displayed). All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 | **page** | **Integer** |  | [optional] |
 | **per_page** | **Integer** |  | [optional] |
 
@@ -6710,6 +6641,75 @@ end
 - **Accept**: application/json
 
 
+## get_vmnivmni
+
+> <GetVMNIVMNI200Response> get_vmnivmni(opts)
+
+
+
+### Examples
+
+```ruby
+require 'time'
+require 'katapult-ruby'
+# setup authorization
+KatapultAPI.configure do |config|
+  # Configure Bearer authorization: Authenticator
+  config.access_token = 'YOUR_BEARER_TOKEN'
+end
+
+api_instance = KatapultAPI::CoreApi.new
+opts = {
+  virtual_machine_network_interface_id: 'virtual_machine_network_interface_id_example' # String | The network interface to show the information for. All 'virtual_machine_network_interface[]' params are mutually exclusive, only one can be provided.
+}
+
+begin
+  
+  result = api_instance.get_vmnivmni(opts)
+  p result
+rescue KatapultAPI::ApiError => e
+  puts "Error when calling CoreApi->get_vmnivmni: #{e}"
+end
+```
+
+#### Using the get_vmnivmni_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<GetVMNIVMNI200Response>, Integer, Hash)> get_vmnivmni_with_http_info(opts)
+
+```ruby
+begin
+  
+  data, status_code, headers = api_instance.get_vmnivmni_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <GetVMNIVMNI200Response>
+rescue KatapultAPI::ApiError => e
+  puts "Error when calling CoreApi->get_vmnivmni_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **virtual_machine_network_interface_id** | **String** | The network interface to show the information for. All &#39;virtual_machine_network_interface[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+
+### Return type
+
+[**GetVMNIVMNI200Response**](GetVMNIVMNI200Response.md)
+
+### Authorization
+
+[Authenticator](../README.md#Authenticator)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## get_zone
 
 > <GetZone200Response> get_zone(opts)
@@ -6729,8 +6729,8 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  zone_id: 'zone_id_example', # String | All 'zone[]' params are mutually exclusive, only one can be provided.
-  zone_permalink: 'zone_permalink_example' # String | All 'zone[]' params are mutually exclusive, only one can be provided.
+  zone_id: 'zone_id_example', # String | The zone to find. All 'zone[]' params are mutually exclusive, only one can be provided.
+  zone_permalink: 'zone_permalink_example' # String | The zone to find. All 'zone[]' params are mutually exclusive, only one can be provided.
 }
 
 begin
@@ -6764,8 +6764,8 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **zone_id** | **String** | All &#39;zone[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **zone_permalink** | **String** | All &#39;zone[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **zone_id** | **String** | The zone to find. All &#39;zone[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **zone_permalink** | **String** | The zone to find. All &#39;zone[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 
 ### Return type
 
@@ -6916,7 +6916,7 @@ end
 
 ## patch_dns_record
 
-> <PostDnsZoneRecords200Response> patch_dns_record(opts)
+> <PatchDnsRecord200Response> patch_dns_record(opts)
 
 
 
@@ -6949,7 +6949,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<PostDnsZoneRecords200Response>, Integer, Hash)> patch_dns_record_with_http_info(opts)
+> <Array(<PatchDnsRecord200Response>, Integer, Hash)> patch_dns_record_with_http_info(opts)
 
 ```ruby
 begin
@@ -6957,7 +6957,7 @@ begin
   data, status_code, headers = api_instance.patch_dns_record_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <PostDnsZoneRecords200Response>
+  p data # => <PatchDnsRecord200Response>
 rescue KatapultAPI::ApiError => e
   puts "Error when calling CoreApi->patch_dns_record_with_http_info: #{e}"
 end
@@ -6971,7 +6971,7 @@ end
 
 ### Return type
 
-[**PostDnsZoneRecords200Response**](PostDnsZoneRecords200Response.md)
+[**PatchDnsRecord200Response**](PatchDnsRecord200Response.md)
 
 ### Authorization
 
@@ -7054,7 +7054,7 @@ end
 
 ## patch_dns_zone
 
-> <GetDnsZonesDnsZone200Response> patch_dns_zone(opts)
+> <GetDnsZone200Response> patch_dns_zone(opts)
 
 
 
@@ -7087,7 +7087,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetDnsZonesDnsZone200Response>, Integer, Hash)> patch_dns_zone_with_http_info(opts)
+> <Array(<GetDnsZone200Response>, Integer, Hash)> patch_dns_zone_with_http_info(opts)
 
 ```ruby
 begin
@@ -7095,7 +7095,7 @@ begin
   data, status_code, headers = api_instance.patch_dns_zone_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <GetDnsZonesDnsZone200Response>
+  p data # => <GetDnsZone200Response>
 rescue KatapultAPI::ApiError => e
   puts "Error when calling CoreApi->patch_dns_zone_with_http_info: #{e}"
 end
@@ -7109,7 +7109,7 @@ end
 
 ### Return type
 
-[**GetDnsZonesDnsZone200Response**](GetDnsZonesDnsZone200Response.md)
+[**GetDnsZone200Response**](GetDnsZone200Response.md)
 
 ### Authorization
 
@@ -7192,7 +7192,7 @@ end
 
 ## patch_ip_address
 
-> <PostVirtualMachineAllocateIp200Response> patch_ip_address(opts)
+> <PatchIpAddress200Response> patch_ip_address(opts)
 
 
 
@@ -7225,7 +7225,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<PostVirtualMachineAllocateIp200Response>, Integer, Hash)> patch_ip_address_with_http_info(opts)
+> <Array(<PatchIpAddress200Response>, Integer, Hash)> patch_ip_address_with_http_info(opts)
 
 ```ruby
 begin
@@ -7233,7 +7233,7 @@ begin
   data, status_code, headers = api_instance.patch_ip_address_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <PostVirtualMachineAllocateIp200Response>
+  p data # => <PatchIpAddress200Response>
 rescue KatapultAPI::ApiError => e
   puts "Error when calling CoreApi->patch_ip_address_with_http_info: #{e}"
 end
@@ -7247,7 +7247,7 @@ end
 
 ### Return type
 
-[**PostVirtualMachineAllocateIp200Response**](PostVirtualMachineAllocateIp200Response.md)
+[**PatchIpAddress200Response**](PatchIpAddress200Response.md)
 
 ### Authorization
 
@@ -7399,7 +7399,7 @@ end
 
 ## patch_security_group
 
-> <PostOrganizationSecurityGroups200Response> patch_security_group(opts)
+> <PatchSecurityGroup200Response> patch_security_group(opts)
 
 
 
@@ -7432,7 +7432,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<PostOrganizationSecurityGroups200Response>, Integer, Hash)> patch_security_group_with_http_info(opts)
+> <Array(<PatchSecurityGroup200Response>, Integer, Hash)> patch_security_group_with_http_info(opts)
 
 ```ruby
 begin
@@ -7440,7 +7440,7 @@ begin
   data, status_code, headers = api_instance.patch_security_group_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <PostOrganizationSecurityGroups200Response>
+  p data # => <PatchSecurityGroup200Response>
 rescue KatapultAPI::ApiError => e
   puts "Error when calling CoreApi->patch_security_group_with_http_info: #{e}"
 end
@@ -7454,7 +7454,7 @@ end
 
 ### Return type
 
-[**PostOrganizationSecurityGroups200Response**](PostOrganizationSecurityGroups200Response.md)
+[**PatchSecurityGroup200Response**](PatchSecurityGroup200Response.md)
 
 ### Authorization
 
@@ -7537,7 +7537,7 @@ end
 
 ## patch_tag
 
-> <PostOrganizationTags200Response> patch_tag(opts)
+> <PatchTag200Response> patch_tag(opts)
 
 
 
@@ -7570,7 +7570,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<PostOrganizationTags200Response>, Integer, Hash)> patch_tag_with_http_info(opts)
+> <Array(<PatchTag200Response>, Integer, Hash)> patch_tag_with_http_info(opts)
 
 ```ruby
 begin
@@ -7578,7 +7578,7 @@ begin
   data, status_code, headers = api_instance.patch_tag_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <PostOrganizationTags200Response>
+  p data # => <PatchTag200Response>
 rescue KatapultAPI::ApiError => e
   puts "Error when calling CoreApi->patch_tag_with_http_info: #{e}"
 end
@@ -7592,7 +7592,7 @@ end
 
 ### Return type
 
-[**PostOrganizationTags200Response**](PostOrganizationTags200Response.md)
+[**PatchTag200Response**](PatchTag200Response.md)
 
 ### Authorization
 
@@ -7675,7 +7675,7 @@ end
 
 ## patch_virtual_machine_group
 
-> <PostOrganizationVirtualMachineGroups200Response> patch_virtual_machine_group(opts)
+> <PatchVirtualMachineGroup200Response> patch_virtual_machine_group(opts)
 
 
 
@@ -7708,7 +7708,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<PostOrganizationVirtualMachineGroups200Response>, Integer, Hash)> patch_virtual_machine_group_with_http_info(opts)
+> <Array(<PatchVirtualMachineGroup200Response>, Integer, Hash)> patch_virtual_machine_group_with_http_info(opts)
 
 ```ruby
 begin
@@ -7716,7 +7716,7 @@ begin
   data, status_code, headers = api_instance.patch_virtual_machine_group_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <PostOrganizationVirtualMachineGroups200Response>
+  p data # => <PatchVirtualMachineGroup200Response>
 rescue KatapultAPI::ApiError => e
   puts "Error when calling CoreApi->patch_virtual_machine_group_with_http_info: #{e}"
 end
@@ -7730,7 +7730,7 @@ end
 
 ### Return type
 
-[**PostOrganizationVirtualMachineGroups200Response**](PostOrganizationVirtualMachineGroups200Response.md)
+[**PatchVirtualMachineGroup200Response**](PatchVirtualMachineGroup200Response.md)
 
 ### Authorization
 
@@ -7744,7 +7744,7 @@ end
 
 ## patch_virtual_machine_network_interface_update_speed_profile
 
-> <PutVirtualMachinePackage200Response> patch_virtual_machine_network_interface_update_speed_profile(opts)
+> <PatchVirtualMachineNetworkInterfaceUpdateSpeedProfile200Response> patch_virtual_machine_network_interface_update_speed_profile(opts)
 
 
 
@@ -7777,7 +7777,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<PutVirtualMachinePackage200Response>, Integer, Hash)> patch_virtual_machine_network_interface_update_speed_profile_with_http_info(opts)
+> <Array(<PatchVirtualMachineNetworkInterfaceUpdateSpeedProfile200Response>, Integer, Hash)> patch_virtual_machine_network_interface_update_speed_profile_with_http_info(opts)
 
 ```ruby
 begin
@@ -7785,7 +7785,7 @@ begin
   data, status_code, headers = api_instance.patch_virtual_machine_network_interface_update_speed_profile_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <PutVirtualMachinePackage200Response>
+  p data # => <PatchVirtualMachineNetworkInterfaceUpdateSpeedProfile200Response>
 rescue KatapultAPI::ApiError => e
   puts "Error when calling CoreApi->patch_virtual_machine_network_interface_update_speed_profile_with_http_info: #{e}"
 end
@@ -7799,7 +7799,7 @@ end
 
 ### Return type
 
-[**PutVirtualMachinePackage200Response**](PutVirtualMachinePackage200Response.md)
+[**PatchVirtualMachineNetworkInterfaceUpdateSpeedProfile200Response**](PatchVirtualMachineNetworkInterfaceUpdateSpeedProfile200Response.md)
 
 ### Authorization
 
@@ -7951,7 +7951,7 @@ end
 
 ## post_dns_zone_verify
 
-> <GetDnsZonesDnsZone200Response> post_dns_zone_verify(opts)
+> <GetDnsZone200Response> post_dns_zone_verify(opts)
 
 
 
@@ -7984,7 +7984,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetDnsZonesDnsZone200Response>, Integer, Hash)> post_dns_zone_verify_with_http_info(opts)
+> <Array(<GetDnsZone200Response>, Integer, Hash)> post_dns_zone_verify_with_http_info(opts)
 
 ```ruby
 begin
@@ -7992,7 +7992,7 @@ begin
   data, status_code, headers = api_instance.post_dns_zone_verify_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <GetDnsZonesDnsZone200Response>
+  p data # => <GetDnsZone200Response>
 rescue KatapultAPI::ApiError => e
   puts "Error when calling CoreApi->post_dns_zone_verify_with_http_info: #{e}"
 end
@@ -8006,7 +8006,7 @@ end
 
 ### Return type
 
-[**GetDnsZonesDnsZone200Response**](GetDnsZonesDnsZone200Response.md)
+[**GetDnsZone200Response**](GetDnsZone200Response.md)
 
 ### Authorization
 
@@ -8158,7 +8158,7 @@ end
 
 ## post_dns_zones_dns_zone_verify
 
-> <GetDnsZonesDnsZone200Response> post_dns_zones_dns_zone_verify(opts)
+> <PostDnsZonesDnsZoneVerify200Response> post_dns_zones_dns_zone_verify(opts)
 
 
 
@@ -8191,7 +8191,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetDnsZonesDnsZone200Response>, Integer, Hash)> post_dns_zones_dns_zone_verify_with_http_info(opts)
+> <Array(<PostDnsZonesDnsZoneVerify200Response>, Integer, Hash)> post_dns_zones_dns_zone_verify_with_http_info(opts)
 
 ```ruby
 begin
@@ -8199,7 +8199,7 @@ begin
   data, status_code, headers = api_instance.post_dns_zones_dns_zone_verify_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <GetDnsZonesDnsZone200Response>
+  p data # => <PostDnsZonesDnsZoneVerify200Response>
 rescue KatapultAPI::ApiError => e
   puts "Error when calling CoreApi->post_dns_zones_dns_zone_verify_with_http_info: #{e}"
 end
@@ -8213,7 +8213,7 @@ end
 
 ### Return type
 
-[**GetDnsZonesDnsZone200Response**](GetDnsZonesDnsZone200Response.md)
+[**PostDnsZonesDnsZoneVerify200Response**](PostDnsZonesDnsZoneVerify200Response.md)
 
 ### Authorization
 

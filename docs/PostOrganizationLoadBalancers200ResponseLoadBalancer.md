@@ -10,13 +10,13 @@
 | **resource_type** | [**LoadBalancerResourceTypesEnum**](LoadBalancerResourceTypesEnum.md) |  | [optional] |
 | **resources** | [**Array&lt;LoadBalancerResource&gt;**](LoadBalancerResource.md) |  | [optional] |
 | **resource_ids** | **Array&lt;String&gt;** |  | [optional] |
-| **ip_address** | [**Array&lt;PostOrganizationLoadBalancers200ResponseLoadBalancerIPAddress&gt;**](PostOrganizationLoadBalancers200ResponseLoadBalancerIPAddress.md) |  | [optional] |
+| **ip_address** | [**Array&lt;PostOrganizationLoadBalancersPartIPAddress&gt;**](PostOrganizationLoadBalancersPartIPAddress.md) |  | [optional] |
 | **https_redirect** | **Boolean** |  | [optional] |
 | **backend_certificate** | **String** |  | [optional] |
 | **backend_certificate_key** | **String** |  | [optional] |
-| **data_center** | [**PostOrganizationLoadBalancers200ResponseLoadBalancerDataCenter**](PostOrganizationLoadBalancers200ResponseLoadBalancerDataCenter.md) |  | [optional] |
+| **data_center** | [**PostOrganizationLoadBalancersPartDataCenter**](PostOrganizationLoadBalancersPartDataCenter.md) |  | [optional] |
 | **enable_weighting** | **Boolean** |  | [optional] |
-| **weights** | [**Array&lt;PostOrganizationLoadBalancers200ResponseLoadBalancerWeights&gt;**](PostOrganizationLoadBalancers200ResponseLoadBalancerWeights.md) |  | [optional] |
+| **weights** | [**Array&lt;PostOrganizationLoadBalancersPartWeights&gt;**](PostOrganizationLoadBalancersPartWeights.md) |  | [optional] |
 | **standby_vms** | **Array&lt;String&gt;** |  | [optional] |
 
 ## Example

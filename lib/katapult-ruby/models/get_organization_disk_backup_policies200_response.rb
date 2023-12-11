@@ -17,6 +17,7 @@ module KatapultAPI
   class GetOrganizationDiskBackupPolicies200Response
     attr_accessor :pagination
 
+    # The disk backup policies for the provided organization
     attr_accessor :disk_backup_policies
 
     # Attribute mapping from ruby-style variable name to JSON key.
