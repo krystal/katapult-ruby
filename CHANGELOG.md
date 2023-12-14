@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.5](https://github.com/krystal/katapult-ruby/compare/v0.0.4...v0.0.5) (2023-12-14)
+
+
+### Features
+
+* use explicitly named enums for error response codes ([#8](https://github.com/krystal/katapult-ruby/issues/8)) ([f2a87f9](https://github.com/krystal/katapult-ruby/commit/f2a87f95788bcefc09537d034e9ccb488bf5f9a7))
+
 ## [0.0.4](https://github.com/krystal/katapult-ruby/compare/v0.0.3...v0.0.4) (2023-12-11)
 
 
