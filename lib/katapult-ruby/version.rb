@@ -11,5 +11,5 @@ OpenAPI Generator version: 7.1.0
 =end
 
 module KatapultAPI
-  VERSION = '0.0.4'
+  VERSION = '0.0.5'
 end
