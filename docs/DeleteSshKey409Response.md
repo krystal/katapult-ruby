@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **code** | **String** |  | [optional] |
+| **code** | [**DeletionRestrictedEnum**](DeletionRestrictedEnum.md) |  | [optional] |
 | **description** | **String** |  | [optional] |
 | **detail** | [**DeletionRestricted**](DeletionRestricted.md) |  | [optional] |
 

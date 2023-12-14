@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **code** | **String** |  | [optional] |
+| **code** | [**LoadBalancerRuleNotFoundEnum**](LoadBalancerRuleNotFoundEnum.md) |  | [optional] |
 | **description** | **String** |  | [optional] |
 | **detail** | **Object** |  | [optional] |
 

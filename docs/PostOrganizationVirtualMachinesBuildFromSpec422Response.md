@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **code** | **String** |  | [optional] |
+| **code** | [**ValidationErrorEnum**](ValidationErrorEnum.md) |  | [optional] |
 | **description** | **String** |  | [optional] |
 | **detail** | [**ValidationError**](ValidationError.md) |  | [optional] |
 

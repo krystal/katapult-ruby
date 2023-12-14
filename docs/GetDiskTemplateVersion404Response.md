@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **code** | **String** |  | [optional] |
+| **code** | [**DiskTemplateVersionNotFoundEnum**](DiskTemplateVersionNotFoundEnum.md) |  | [optional] |
 | **description** | **String** |  | [optional] |
 | **detail** | **Object** |  | [optional] |
 

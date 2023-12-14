@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **code** | **String** |  | [optional] |
+| **code** | [**DNSZoneNotVerifiedEnum**](DNSZoneNotVerifiedEnum.md) |  | [optional] |
 | **description** | **String** |  | [optional] |
 | **detail** | [**DNSZoneNotVerified**](DNSZoneNotVerified.md) |  | [optional] |
 
