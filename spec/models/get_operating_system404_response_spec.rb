@@ -30,10 +30,6 @@ describe KatapultAPI::GetOperatingSystem404Response do
   describe 'test attribute "code"' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
-      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["operating_system_not_found"])
-      # validator.allowable_values.each do |value|
-      #   expect { instance.code = value }.not_to raise_error
-      # end
     end
   end
 

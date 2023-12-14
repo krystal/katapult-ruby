@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **code** | **String** |  | [optional] |
+| **code** | [**ObjectInTrashEnum**](ObjectInTrashEnum.md) |  | [optional] |
 | **description** | **String** |  | [optional] |
 | **detail** | [**ObjectInTrash**](ObjectInTrash.md) |  | [optional] |
 

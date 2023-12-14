@@ -14,9 +14,9 @@ require 'katapult-ruby'
 KatapultAPI::OneOfAPIAuthenticator403Response.openapi_one_of
 # =>
 # [
-#   :'InvalidAPITokenResponse',
-#   :'ScopeNotGrantedErrorResponse',
-#   :'UnauthorizedNetworkForAPITokenResponse'
+#   :'InvalidAPITokenSchema',
+#   :'ScopeNotGrantedErrorSchema',
+#   :'UnauthorizedNetworkForAPITokenSchema'
 # ]
 ```
 
@@ -30,7 +30,7 @@ Find the appropriate object from the `openapi_one_of` list and casts the data in
 require 'katapult-ruby'
 
 KatapultAPI::OneOfAPIAuthenticator403Response.build(data)
-# => #<InvalidAPITokenResponse:0x00007fdd4aab02a0>
+# => #<InvalidAPITokenSchema:0x00007fdd4aab02a0>
 
 KatapultAPI::OneOfAPIAuthenticator403Response.build(data_that_doesnt_match)
 # => nil
@@ -44,8 +44,8 @@ KatapultAPI::OneOfAPIAuthenticator403Response.build(data_that_doesnt_match)
 
 #### Return type
 
-- `InvalidAPITokenResponse`
-- `ScopeNotGrantedErrorResponse`
-- `UnauthorizedNetworkForAPITokenResponse`
+- `InvalidAPITokenSchema`
+- `ScopeNotGrantedErrorSchema`
+- `UnauthorizedNetworkForAPITokenSchema`
 - `nil` (if no type matches)
 

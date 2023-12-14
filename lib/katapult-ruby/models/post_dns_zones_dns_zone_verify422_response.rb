@@ -60,7 +60,7 @@ module KatapultAPI
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'code' => :'String',
+        :'code' => :'DNSZoneNotVerifiedEnum',
         :'description' => :'String',
         :'detail' => :'DNSZoneNotVerified'
       }
@@ -112,19 +112,7 @@ module KatapultAPI
     # @return true if the model is valid
     def valid?
       warn '[DEPRECATED] the `valid?` method is obsolete'
-      code_validator = EnumAttributeValidator.new('String', ["dns_zone_not_verified"])
-      return false unless code_validator.valid?(@code)
       true
-    end
-
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] code Object to be assigned
-    def code=(code)
-      validator = EnumAttributeValidator.new('String', ["dns_zone_not_verified"])
-      unless validator.valid?(code)
-        fail ArgumentError, "invalid value for \"code\", must be one of #{validator.allowable_values}."
-      end
-      @code = code
     end
 
     # Checks equality by comparing each attribute.

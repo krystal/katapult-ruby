@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **code** | **String** |  | [optional] |
+| **code** | [**TaskQueueingErrorEnum**](TaskQueueingErrorEnum.md) |  | [optional] |
 | **description** | **String** |  | [optional] |
 | **detail** | [**TaskQueueingError**](TaskQueueingError.md) |  | [optional] |
 

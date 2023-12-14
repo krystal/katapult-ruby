@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **code** | **String** |  | [optional] |
+| **code** | [**RateLimitReachedEnum**](RateLimitReachedEnum.md) |  | [optional] |
 | **description** | **String** |  | [optional] |
 | **detail** | [**RateLimitReached**](RateLimitReached.md) |  | [optional] |
 
