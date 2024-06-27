@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.6](https://github.com/krystal/katapult-ruby/compare/v0.0.5...v0.0.6) (2024-06-27)
+
+
+### Features
+
+* use Katapult schema 2.43.1 ([#10](https://github.com/krystal/katapult-ruby/issues/10)) ([934b516](https://github.com/krystal/katapult-ruby/commit/934b516150aeb44083cf3ef400406e53e4b2657d))
+
 ## [0.0.5](https://github.com/krystal/katapult-ruby/compare/v0.0.4...v0.0.5) (2023-12-14)
 
 
