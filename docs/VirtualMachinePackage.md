@@ -14,6 +14,7 @@
 | **monthly_bandwidth_allowance_in_gb** | **Integer** |  | [optional] |
 | **privacy** | [**PrivacyTypesEnum**](PrivacyTypesEnum.md) |  | [optional] |
 | **icon** | [**Attachment**](Attachment.md) |  | [optional] |
+| **use_dedicated_cpus** | **Boolean** |  | [optional] |
 
 ## Example
 
@@ -30,7 +31,8 @@ instance = KatapultAPI::VirtualMachinePackage.new(
   storage_in_gb: null,
   monthly_bandwidth_allowance_in_gb: null,
   privacy: null,
-  icon: null
+  icon: null,
+  use_dedicated_cpus: null
 )
 ```
 

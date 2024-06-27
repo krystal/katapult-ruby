@@ -6,6 +6,7 @@
 | ---- | ---- | ----------- | ----- |
 | **cpu_cores** | **Integer** |  |  |
 | **memory_in_gb** | **Integer** |  |  |
+| **use_dedicated_cpus** | **Boolean** |  | [optional] |
 
 ## Example
 
@@ -14,7 +15,8 @@ require 'katapult-ruby'
 
 instance = KatapultAPI::VirtualMachineFlexibleResources.new(
   cpu_cores: null,
-  memory_in_gb: null
+  memory_in_gb: null,
+  use_dedicated_cpus: null
 )
 ```
 

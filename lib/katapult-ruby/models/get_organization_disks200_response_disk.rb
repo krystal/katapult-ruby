@@ -81,6 +81,7 @@ module KatapultAPI
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'virtual_machine_disk'
       ])
     end
 

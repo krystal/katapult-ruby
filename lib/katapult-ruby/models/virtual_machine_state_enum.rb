@@ -25,10 +25,11 @@ module KatapultAPI
     MIGRATING = "migrating".freeze
     STOPPING = "stopping".freeze
     SHUTTING_DOWN = "shutting_down".freeze
+    TRANSFERRING = "transferring".freeze
     ORPHANED = "orphaned".freeze
 
     def self.all_vars
-      @all_vars ||= [STOPPED, FAILED, STARTED, STARTING, ALLOCATED, ALLOCATING, RESETTING, MIGRATING, STOPPING, SHUTTING_DOWN, ORPHANED].freeze
+      @all_vars ||= [STOPPED, FAILED, STARTED, STARTING, ALLOCATED, ALLOCATING, RESETTING, MIGRATING, STOPPING, SHUTTING_DOWN, TRANSFERRING, ORPHANED].freeze
     end
 
     # Builds the enum from string

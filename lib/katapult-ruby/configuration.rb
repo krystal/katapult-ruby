@@ -149,8 +149,8 @@ module KatapultAPI
     attr_accessor :force_ending_format
 
     def initialize
-      @scheme = 'http'
-      @host = 'katapult-api.localhost'
+      @scheme = 'https'
+      @host = 'api.katapult.io'
       @base_path = '/core/v1'
       @server_index = nil
       @server_operation_index = {}
@@ -248,7 +248,7 @@ module KatapultAPI
     def server_settings
       [
         {
-          url: "http://katapult-api.localhost/core/v1",
+          url: "https://api.katapult.io/core/v1",
           description: "No description provided",
         }
       ]

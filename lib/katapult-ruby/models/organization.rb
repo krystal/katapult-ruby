@@ -107,6 +107,16 @@ module KatapultAPI
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'billing_name',
+        :'address1',
+        :'address2',
+        :'address3',
+        :'address4',
+        :'postcode',
+        :'vat_number',
+        :'phone_number',
+        :'country',
+        :'country_state'
       ])
     end
 

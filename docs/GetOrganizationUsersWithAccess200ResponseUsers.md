@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **user** | [**GetOrganizationUsersWithAccessPartUser**](GetOrganizationUsersWithAccessPartUser.md) |  | [optional] |
+| **user** | [**User**](User.md) |  | [optional] |
 
 ## Example
 

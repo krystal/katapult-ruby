@@ -81,7 +81,7 @@ module KatapultAPI
         :'resource_type' => :'LoadBalancerResourceTypesEnum',
         :'resources' => :'Array<LoadBalancerResource>',
         :'resource_ids' => :'Array<String>',
-        :'ip_address' => :'Array<GetOrganizationLoadBalancersPartIPAddress>',
+        :'ip_address' => :'GetOrganizationLoadBalancersPartIPAddress',
         :'data_center' => :'GetOrganizationLoadBalancersPartDataCenter'
       }
     end
@@ -89,6 +89,7 @@ module KatapultAPI
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'api_reference',
       ])
     end
 
@@ -136,9 +137,7 @@ module KatapultAPI
       end
 
       if attributes.key?(:'ip_address')
-        if (value = attributes[:'ip_address']).is_a?(Array)
-          self.ip_address = value
-        end
+        self.ip_address = attributes[:'ip_address']
       end
 
       if attributes.key?(:'data_center')

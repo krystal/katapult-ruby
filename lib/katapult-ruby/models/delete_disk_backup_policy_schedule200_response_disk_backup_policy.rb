@@ -47,6 +47,7 @@ module KatapultAPI
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'auto_move_to_trash_at'
       ])
     end
 

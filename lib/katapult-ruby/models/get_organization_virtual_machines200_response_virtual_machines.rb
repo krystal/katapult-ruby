@@ -61,7 +61,7 @@ module KatapultAPI
         :'hostname' => :'String',
         :'fqdn' => :'String',
         :'created_at' => :'Integer',
-        :'zone' => :'GetOrganizationVirtualMachinesPartZone',
+        :'zone' => :'Zone',
         :'package' => :'GetOrganizationVirtualMachinesPartPackage',
         :'gpu_type' => :'GetOrganizationVirtualMachinesPartGPUType',
         :'ip_addresses' => :'Array<GetOrganizationVirtualMachinesPartIPAddresses>'
@@ -71,6 +71,8 @@ module KatapultAPI
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'package',
+        :'gpu_type',
       ])
     end
 

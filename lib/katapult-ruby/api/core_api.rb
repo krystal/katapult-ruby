@@ -20,6 +20,126 @@ module KatapultAPI
       @api_client = api_client
     end
     # @param [Hash] opts the optional parameters
+    # @option opts [DeleteAddressListRequest] :delete_address_list_request 
+    # @return [DeleteAddressList200Response]
+    def delete_address_list(opts = {})
+      data, _status_code, _headers = delete_address_list_with_http_info(opts)
+      data
+    end
+
+    # @param [Hash] opts the optional parameters
+    # @option opts [DeleteAddressListRequest] :delete_address_list_request 
+    # @return [Array<(DeleteAddressList200Response, Integer, Hash)>] DeleteAddressList200Response data, response status code and response headers
+    def delete_address_list_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CoreApi.delete_address_list ...'
+      end
+      # resource path
+      local_var_path = '/address_lists/:address_list'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      content_type = @api_client.select_header_content_type(['application/json'])
+      if !content_type.nil?
+          header_params['Content-Type'] = content_type
+      end
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'delete_address_list_request'])
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'DeleteAddressList200Response'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || ['Authenticator']
+
+      new_options = opts.merge(
+        :operation => :"CoreApi.delete_address_list",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CoreApi#delete_address_list\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # @param [Hash] opts the optional parameters
+    # @option opts [DeleteAddressListEntryRequest] :delete_address_list_entry_request 
+    # @return [DeleteAddressListEntry200Response]
+    def delete_address_list_entry(opts = {})
+      data, _status_code, _headers = delete_address_list_entry_with_http_info(opts)
+      data
+    end
+
+    # @param [Hash] opts the optional parameters
+    # @option opts [DeleteAddressListEntryRequest] :delete_address_list_entry_request 
+    # @return [Array<(DeleteAddressListEntry200Response, Integer, Hash)>] DeleteAddressListEntry200Response data, response status code and response headers
+    def delete_address_list_entry_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CoreApi.delete_address_list_entry ...'
+      end
+      # resource path
+      local_var_path = '/address_list_entries/:address_list_entry'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      content_type = @api_client.select_header_content_type(['application/json'])
+      if !content_type.nil?
+          header_params['Content-Type'] = content_type
+      end
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'delete_address_list_entry_request'])
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'DeleteAddressListEntry200Response'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || ['Authenticator']
+
+      new_options = opts.merge(
+        :operation => :"CoreApi.delete_address_list_entry",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CoreApi#delete_address_list_entry\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # @param [Hash] opts the optional parameters
     # @option opts [DeleteDiskBackupPolicyRequest] :delete_disk_backup_policy_request 
     # @return [DeleteDiskBackupPolicy200Response]
     def delete_disk_backup_policy(opts = {})
@@ -140,7 +260,7 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [DeleteDnsRecordsDnsRecordRequest] :delete_dns_records_dns_record_request 
+    # @option opts [DeleteDnsRecordRequest] :delete_dns_record_request 
     # @return [DeleteDnsZone200Response]
     def delete_dns_record(opts = {})
       data, _status_code, _headers = delete_dns_record_with_http_info(opts)
@@ -148,7 +268,7 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [DeleteDnsRecordsDnsRecordRequest] :delete_dns_records_dns_record_request 
+    # @option opts [DeleteDnsRecordRequest] :delete_dns_record_request 
     # @return [Array<(DeleteDnsZone200Response, Integer, Hash)>] DeleteDnsZone200Response data, response status code and response headers
     def delete_dns_record_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -174,7 +294,7 @@ module KatapultAPI
       form_params = opts[:form_params] || {}
 
       # http body (model)
-      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'delete_dns_records_dns_record_request'])
+      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'delete_dns_record_request'])
 
       # return_type
       return_type = opts[:debug_return_type] || 'DeleteDnsZone200Response'
@@ -200,67 +320,7 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [DeleteDnsRecordsDnsRecordRequest] :delete_dns_records_dns_record_request 
-    # @return [DeleteDnsRecordsDnsRecord200Response]
-    def delete_dns_records_dns_record(opts = {})
-      data, _status_code, _headers = delete_dns_records_dns_record_with_http_info(opts)
-      data
-    end
-
-    # @param [Hash] opts the optional parameters
-    # @option opts [DeleteDnsRecordsDnsRecordRequest] :delete_dns_records_dns_record_request 
-    # @return [Array<(DeleteDnsRecordsDnsRecord200Response, Integer, Hash)>] DeleteDnsRecordsDnsRecord200Response data, response status code and response headers
-    def delete_dns_records_dns_record_with_http_info(opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: CoreApi.delete_dns_records_dns_record ...'
-      end
-      # resource path
-      local_var_path = '/dns/records/:dns_record'
-
-      # query parameters
-      query_params = opts[:query_params] || {}
-
-      # header parameters
-      header_params = opts[:header_params] || {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      content_type = @api_client.select_header_content_type(['application/json'])
-      if !content_type.nil?
-          header_params['Content-Type'] = content_type
-      end
-
-      # form parameters
-      form_params = opts[:form_params] || {}
-
-      # http body (model)
-      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'delete_dns_records_dns_record_request'])
-
-      # return_type
-      return_type = opts[:debug_return_type] || 'DeleteDnsRecordsDnsRecord200Response'
-
-      # auth_names
-      auth_names = opts[:debug_auth_names] || ['Authenticator']
-
-      new_options = opts.merge(
-        :operation => :"CoreApi.delete_dns_records_dns_record",
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => return_type
-      )
-
-      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path, new_options)
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CoreApi#delete_dns_records_dns_record\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # @param [Hash] opts the optional parameters
-    # @option opts [DeleteDnsZonesDnsZoneRequest] :delete_dns_zones_dns_zone_request 
+    # @option opts [DeleteDnsZoneRequest] :delete_dns_zone_request 
     # @return [DeleteDnsZone200Response]
     def delete_dns_zone(opts = {})
       data, _status_code, _headers = delete_dns_zone_with_http_info(opts)
@@ -268,7 +328,7 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [DeleteDnsZonesDnsZoneRequest] :delete_dns_zones_dns_zone_request 
+    # @option opts [DeleteDnsZoneRequest] :delete_dns_zone_request 
     # @return [Array<(DeleteDnsZone200Response, Integer, Hash)>] DeleteDnsZone200Response data, response status code and response headers
     def delete_dns_zone_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -294,7 +354,7 @@ module KatapultAPI
       form_params = opts[:form_params] || {}
 
       # http body (model)
-      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'delete_dns_zones_dns_zone_request'])
+      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'delete_dns_zone_request'])
 
       # return_type
       return_type = opts[:debug_return_type] || 'DeleteDnsZone200Response'
@@ -315,66 +375,6 @@ module KatapultAPI
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path, new_options)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CoreApi#delete_dns_zone\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # @param [Hash] opts the optional parameters
-    # @option opts [DeleteDnsZonesDnsZoneRequest] :delete_dns_zones_dns_zone_request 
-    # @return [DeleteDnsZonesDnsZone200Response]
-    def delete_dns_zones_dns_zone(opts = {})
-      data, _status_code, _headers = delete_dns_zones_dns_zone_with_http_info(opts)
-      data
-    end
-
-    # @param [Hash] opts the optional parameters
-    # @option opts [DeleteDnsZonesDnsZoneRequest] :delete_dns_zones_dns_zone_request 
-    # @return [Array<(DeleteDnsZonesDnsZone200Response, Integer, Hash)>] DeleteDnsZonesDnsZone200Response data, response status code and response headers
-    def delete_dns_zones_dns_zone_with_http_info(opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: CoreApi.delete_dns_zones_dns_zone ...'
-      end
-      # resource path
-      local_var_path = '/dns/zones/:dns_zone'
-
-      # query parameters
-      query_params = opts[:query_params] || {}
-
-      # header parameters
-      header_params = opts[:header_params] || {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      content_type = @api_client.select_header_content_type(['application/json'])
-      if !content_type.nil?
-          header_params['Content-Type'] = content_type
-      end
-
-      # form parameters
-      form_params = opts[:form_params] || {}
-
-      # http body (model)
-      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'delete_dns_zones_dns_zone_request'])
-
-      # return_type
-      return_type = opts[:debug_return_type] || 'DeleteDnsZonesDnsZone200Response'
-
-      # auth_names
-      auth_names = opts[:debug_auth_names] || ['Authenticator']
-
-      new_options = opts.merge(
-        :operation => :"CoreApi.delete_dns_zones_dns_zone",
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => return_type
-      )
-
-      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path, new_options)
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CoreApi#delete_dns_zones_dns_zone\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1035,6 +1035,239 @@ module KatapultAPI
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path, new_options)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CoreApi#delete_virtual_machine_group\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :address_list_id The address list to return. All &#39;address_list[]&#39; params are mutually exclusive, only one can be provided.
+    # @return [PostOrganizationAddressLists201Response]
+    def get_address_list(opts = {})
+      data, _status_code, _headers = get_address_list_with_http_info(opts)
+      data
+    end
+
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :address_list_id The address list to return. All &#39;address_list[]&#39; params are mutually exclusive, only one can be provided.
+    # @return [Array<(PostOrganizationAddressLists201Response, Integer, Hash)>] PostOrganizationAddressLists201Response data, response status code and response headers
+    def get_address_list_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CoreApi.get_address_list ...'
+      end
+      # resource path
+      local_var_path = '/address_lists/:address_list'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+      query_params[:'address_list[id]'] = opts[:'address_list_id'] if !opts[:'address_list_id'].nil?
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'PostOrganizationAddressLists201Response'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || ['Authenticator']
+
+      new_options = opts.merge(
+        :operation => :"CoreApi.get_address_list",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CoreApi#get_address_list\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :address_list_id The address list for which the entries should be returned. All &#39;address_list[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [Integer] :page 
+    # @option opts [Integer] :per_page 
+    # @return [GetAddressListEntries200Response]
+    def get_address_list_entries(opts = {})
+      data, _status_code, _headers = get_address_list_entries_with_http_info(opts)
+      data
+    end
+
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :address_list_id The address list for which the entries should be returned. All &#39;address_list[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [Integer] :page 
+    # @option opts [Integer] :per_page 
+    # @return [Array<(GetAddressListEntries200Response, Integer, Hash)>] GetAddressListEntries200Response data, response status code and response headers
+    def get_address_list_entries_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CoreApi.get_address_list_entries ...'
+      end
+      # resource path
+      local_var_path = '/address_lists/:address_list/entries'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+      query_params[:'address_list[id]'] = opts[:'address_list_id'] if !opts[:'address_list_id'].nil?
+      query_params[:'page'] = opts[:'page'] if !opts[:'page'].nil?
+      query_params[:'per_page'] = opts[:'per_page'] if !opts[:'per_page'].nil?
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'GetAddressListEntries200Response'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || ['Authenticator']
+
+      new_options = opts.merge(
+        :operation => :"CoreApi.get_address_list_entries",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CoreApi#get_address_list_entries\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :address_list_entry_id The address list entry to return. All &#39;address_list_entry[]&#39; params are mutually exclusive, only one can be provided.
+    # @return [PostAddressListEntries201Response]
+    def get_address_list_entry(opts = {})
+      data, _status_code, _headers = get_address_list_entry_with_http_info(opts)
+      data
+    end
+
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :address_list_entry_id The address list entry to return. All &#39;address_list_entry[]&#39; params are mutually exclusive, only one can be provided.
+    # @return [Array<(PostAddressListEntries201Response, Integer, Hash)>] PostAddressListEntries201Response data, response status code and response headers
+    def get_address_list_entry_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CoreApi.get_address_list_entry ...'
+      end
+      # resource path
+      local_var_path = '/address_list_entries/:address_list_entry'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+      query_params[:'address_list_entry[id]'] = opts[:'address_list_entry_id'] if !opts[:'address_list_entry_id'].nil?
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'PostAddressListEntries201Response'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || ['Authenticator']
+
+      new_options = opts.merge(
+        :operation => :"CoreApi.get_address_list_entry",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CoreApi#get_address_list_entry\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page 
+    # @option opts [Integer] :per_page 
+    # @return [GetAddressLists200Response]
+    def get_address_lists(opts = {})
+      data, _status_code, _headers = get_address_lists_with_http_info(opts)
+      data
+    end
+
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page 
+    # @option opts [Integer] :per_page 
+    # @return [Array<(GetAddressLists200Response, Integer, Hash)>] GetAddressLists200Response data, response status code and response headers
+    def get_address_lists_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CoreApi.get_address_lists ...'
+      end
+      # resource path
+      local_var_path = '/address_lists'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+      query_params[:'page'] = opts[:'page'] if !opts[:'page'].nil?
+      query_params[:'per_page'] = opts[:'per_page'] if !opts[:'per_page'].nil?
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'GetAddressLists200Response'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || ['Authenticator']
+
+      new_options = opts.merge(
+        :operation => :"CoreApi.get_address_lists",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CoreApi#get_address_lists\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2161,62 +2394,6 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :dns_record_id The DNS record to return information for. All &#39;dns_record[]&#39; params are mutually exclusive, only one can be provided.
-    # @return [GetDnsRecordsDnsRecord200Response]
-    def get_dns_records_dns_record(opts = {})
-      data, _status_code, _headers = get_dns_records_dns_record_with_http_info(opts)
-      data
-    end
-
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :dns_record_id The DNS record to return information for. All &#39;dns_record[]&#39; params are mutually exclusive, only one can be provided.
-    # @return [Array<(GetDnsRecordsDnsRecord200Response, Integer, Hash)>] GetDnsRecordsDnsRecord200Response data, response status code and response headers
-    def get_dns_records_dns_record_with_http_info(opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: CoreApi.get_dns_records_dns_record ...'
-      end
-      # resource path
-      local_var_path = '/dns/records/:dns_record'
-
-      # query parameters
-      query_params = opts[:query_params] || {}
-      query_params[:'dns_record[id]'] = opts[:'dns_record_id'] if !opts[:'dns_record_id'].nil?
-
-      # header parameters
-      header_params = opts[:header_params] || {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-
-      # form parameters
-      form_params = opts[:form_params] || {}
-
-      # http body (model)
-      post_body = opts[:debug_body]
-
-      # return_type
-      return_type = opts[:debug_return_type] || 'GetDnsRecordsDnsRecord200Response'
-
-      # auth_names
-      auth_names = opts[:debug_auth_names] || ['Authenticator']
-
-      new_options = opts.merge(
-        :operation => :"CoreApi.get_dns_records_dns_record",
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => return_type
-      )
-
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CoreApi#get_dns_records_dns_record\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # @param [Hash] opts the optional parameters
     # @option opts [String] :dns_zone_id All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [String] :dns_zone_name All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
     # @return [GetDnsZone200Response]
@@ -2330,183 +2507,6 @@ module KatapultAPI
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CoreApi#get_dns_zone_records\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :dns_zone_id The DNS zone to return information for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :dns_zone_name The DNS zone to return information for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
-    # @return [GetDnsZonesDnsZone200Response]
-    def get_dns_zones_dns_zone(opts = {})
-      data, _status_code, _headers = get_dns_zones_dns_zone_with_http_info(opts)
-      data
-    end
-
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :dns_zone_id The DNS zone to return information for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :dns_zone_name The DNS zone to return information for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
-    # @return [Array<(GetDnsZonesDnsZone200Response, Integer, Hash)>] GetDnsZonesDnsZone200Response data, response status code and response headers
-    def get_dns_zones_dns_zone_with_http_info(opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: CoreApi.get_dns_zones_dns_zone ...'
-      end
-      # resource path
-      local_var_path = '/dns/zones/:dns_zone'
-
-      # query parameters
-      query_params = opts[:query_params] || {}
-      query_params[:'dns_zone[id]'] = opts[:'dns_zone_id'] if !opts[:'dns_zone_id'].nil?
-      query_params[:'dns_zone[name]'] = opts[:'dns_zone_name'] if !opts[:'dns_zone_name'].nil?
-
-      # header parameters
-      header_params = opts[:header_params] || {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-
-      # form parameters
-      form_params = opts[:form_params] || {}
-
-      # http body (model)
-      post_body = opts[:debug_body]
-
-      # return_type
-      return_type = opts[:debug_return_type] || 'GetDnsZonesDnsZone200Response'
-
-      # auth_names
-      auth_names = opts[:debug_auth_names] || ['Authenticator']
-
-      new_options = opts.merge(
-        :operation => :"CoreApi.get_dns_zones_dns_zone",
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => return_type
-      )
-
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CoreApi#get_dns_zones_dns_zone\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :dns_zone_id The DNS zone to find all DNS records for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :dns_zone_name The DNS zone to find all DNS records for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
-    # @return [GetDnsZonesDnsZoneRecords200Response]
-    def get_dns_zones_dns_zone_records(opts = {})
-      data, _status_code, _headers = get_dns_zones_dns_zone_records_with_http_info(opts)
-      data
-    end
-
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :dns_zone_id The DNS zone to find all DNS records for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :dns_zone_name The DNS zone to find all DNS records for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
-    # @return [Array<(GetDnsZonesDnsZoneRecords200Response, Integer, Hash)>] GetDnsZonesDnsZoneRecords200Response data, response status code and response headers
-    def get_dns_zones_dns_zone_records_with_http_info(opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: CoreApi.get_dns_zones_dns_zone_records ...'
-      end
-      # resource path
-      local_var_path = '/dns/zones/:dns_zone/records'
-
-      # query parameters
-      query_params = opts[:query_params] || {}
-      query_params[:'dns_zone[id]'] = opts[:'dns_zone_id'] if !opts[:'dns_zone_id'].nil?
-      query_params[:'dns_zone[name]'] = opts[:'dns_zone_name'] if !opts[:'dns_zone_name'].nil?
-
-      # header parameters
-      header_params = opts[:header_params] || {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-
-      # form parameters
-      form_params = opts[:form_params] || {}
-
-      # http body (model)
-      post_body = opts[:debug_body]
-
-      # return_type
-      return_type = opts[:debug_return_type] || 'GetDnsZonesDnsZoneRecords200Response'
-
-      # auth_names
-      auth_names = opts[:debug_auth_names] || ['Authenticator']
-
-      new_options = opts.merge(
-        :operation => :"CoreApi.get_dns_zones_dns_zone_records",
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => return_type
-      )
-
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CoreApi#get_dns_zones_dns_zone_records\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :dns_zone_id The DNS zone to get verification details for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :dns_zone_name The DNS zone to get verification details for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
-    # @return [GetDnsZonesDnsZoneVerificationDetails200Response]
-    def get_dns_zones_dns_zone_verification_details(opts = {})
-      data, _status_code, _headers = get_dns_zones_dns_zone_verification_details_with_http_info(opts)
-      data
-    end
-
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :dns_zone_id The DNS zone to get verification details for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :dns_zone_name The DNS zone to get verification details for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
-    # @return [Array<(GetDnsZonesDnsZoneVerificationDetails200Response, Integer, Hash)>] GetDnsZonesDnsZoneVerificationDetails200Response data, response status code and response headers
-    def get_dns_zones_dns_zone_verification_details_with_http_info(opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: CoreApi.get_dns_zones_dns_zone_verification_details ...'
-      end
-      # resource path
-      local_var_path = '/dns/zones/:dns_zone/verification_details'
-
-      # query parameters
-      query_params = opts[:query_params] || {}
-      query_params[:'dns_zone[id]'] = opts[:'dns_zone_id'] if !opts[:'dns_zone_id'].nil?
-      query_params[:'dns_zone[name]'] = opts[:'dns_zone_name'] if !opts[:'dns_zone_name'].nil?
-
-      # header parameters
-      header_params = opts[:header_params] || {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-
-      # form parameters
-      form_params = opts[:form_params] || {}
-
-      # http body (model)
-      post_body = opts[:debug_body]
-
-      # return_type
-      return_type = opts[:debug_return_type] || 'GetDnsZonesDnsZoneVerificationDetails200Response'
-
-      # auth_names
-      auth_names = opts[:debug_auth_names] || ['Authenticator']
-
-      new_options = opts.merge(
-        :operation => :"CoreApi.get_dns_zones_dns_zone_verification_details",
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => return_type
-      )
-
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CoreApi#get_dns_zones_dns_zone_verification_details\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3158,6 +3158,71 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :organization_id The organization for which the address lists should be returned. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_sub_domain The organization for which the address lists should be returned. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [Integer] :page 
+    # @option opts [Integer] :per_page 
+    # @return [GetOrganizationAddressLists200Response]
+    def get_organization_address_lists(opts = {})
+      data, _status_code, _headers = get_organization_address_lists_with_http_info(opts)
+      data
+    end
+
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :organization_id The organization for which the address lists should be returned. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_sub_domain The organization for which the address lists should be returned. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [Integer] :page 
+    # @option opts [Integer] :per_page 
+    # @return [Array<(GetOrganizationAddressLists200Response, Integer, Hash)>] GetOrganizationAddressLists200Response data, response status code and response headers
+    def get_organization_address_lists_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CoreApi.get_organization_address_lists ...'
+      end
+      # resource path
+      local_var_path = '/organizations/:organization/address_lists'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+      query_params[:'organization[id]'] = opts[:'organization_id'] if !opts[:'organization_id'].nil?
+      query_params[:'organization[sub_domain]'] = opts[:'organization_sub_domain'] if !opts[:'organization_sub_domain'].nil?
+      query_params[:'page'] = opts[:'page'] if !opts[:'page'].nil?
+      query_params[:'per_page'] = opts[:'per_page'] if !opts[:'per_page'].nil?
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'GetOrganizationAddressLists200Response'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || ['Authenticator']
+
+      new_options = opts.merge(
+        :operation => :"CoreApi.get_organization_address_lists",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CoreApi#get_organization_address_lists\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # @param [Hash] opts the optional parameters
     # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
     # @return [GetOrganizationAvailableNetworks200Response]
@@ -3483,8 +3548,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :organization_id The organization to return DNS zones for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :organization_sub_domain The organization to return DNS zones for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [GetOrganizationDnsZones200Response]
@@ -3494,8 +3559,8 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :organization_id The organization to return DNS zones for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :organization_sub_domain The organization to return DNS zones for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
     # @option opts [Integer] :page 
     # @option opts [Integer] :per_page 
     # @return [Array<(GetOrganizationDnsZones200Response, Integer, Hash)>] GetOrganizationDnsZones200Response data, response status code and response headers
@@ -3504,7 +3569,7 @@ module KatapultAPI
         @api_client.config.logger.debug 'Calling API: CoreApi.get_organization_dns_zones ...'
       end
       # resource path
-      local_var_path = '/organizations/:organization/dns/zones'
+      local_var_path = '/organizations/:organization/dns_zones'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -3930,6 +3995,65 @@ module KatapultAPI
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CoreApi#get_organization_network_speed_profiles\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @return [GetOrganizationPolicyLimits200Response]
+    def get_organization_policy_limits(opts = {})
+      data, _status_code, _headers = get_organization_policy_limits_with_http_info(opts)
+      data
+    end
+
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+    # @return [Array<(GetOrganizationPolicyLimits200Response, Integer, Hash)>] GetOrganizationPolicyLimits200Response data, response status code and response headers
+    def get_organization_policy_limits_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CoreApi.get_organization_policy_limits ...'
+      end
+      # resource path
+      local_var_path = '/organizations/:organization/policy_limits'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+      query_params[:'organization[id]'] = opts[:'organization_id'] if !opts[:'organization_id'].nil?
+      query_params[:'organization[sub_domain]'] = opts[:'organization_sub_domain'] if !opts[:'organization_sub_domain'].nil?
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'GetOrganizationPolicyLimits200Response'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || ['Authenticator']
+
+      new_options = opts.merge(
+        :operation => :"CoreApi.get_organization_policy_limits",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CoreApi#get_organization_policy_limits\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -4437,71 +4561,6 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [Integer] :page 
-    # @option opts [Integer] :per_page 
-    # @return [GetOrganizationDnsZones200Response]
-    def get_organizations_organization_dns_zones(opts = {})
-      data, _status_code, _headers = get_organizations_organization_dns_zones_with_http_info(opts)
-      data
-    end
-
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-    # @option opts [Integer] :page 
-    # @option opts [Integer] :per_page 
-    # @return [Array<(GetOrganizationDnsZones200Response, Integer, Hash)>] GetOrganizationDnsZones200Response data, response status code and response headers
-    def get_organizations_organization_dns_zones_with_http_info(opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: CoreApi.get_organizations_organization_dns_zones ...'
-      end
-      # resource path
-      local_var_path = '/organizations/:organization/dns_zones'
-
-      # query parameters
-      query_params = opts[:query_params] || {}
-      query_params[:'organization[id]'] = opts[:'organization_id'] if !opts[:'organization_id'].nil?
-      query_params[:'organization[sub_domain]'] = opts[:'organization_sub_domain'] if !opts[:'organization_sub_domain'].nil?
-      query_params[:'page'] = opts[:'page'] if !opts[:'page'].nil?
-      query_params[:'per_page'] = opts[:'per_page'] if !opts[:'per_page'].nil?
-
-      # header parameters
-      header_params = opts[:header_params] || {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-
-      # form parameters
-      form_params = opts[:form_params] || {}
-
-      # http body (model)
-      post_body = opts[:debug_body]
-
-      # return_type
-      return_type = opts[:debug_return_type] || 'GetOrganizationDnsZones200Response'
-
-      # auth_names
-      auth_names = opts[:debug_auth_names] || ['Authenticator']
-
-      new_options = opts.merge(
-        :operation => :"CoreApi.get_organizations_organization_dns_zones",
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => return_type
-      )
-
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CoreApi#get_organizations_organization_dns_zones\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # @param [Hash] opts the optional parameters
     # @option opts [String] :security_group_id The security group to return the details for. All &#39;security_group[]&#39; params are mutually exclusive, only one can be provided.
     # @return [GetSecurityGroup200Response]
     def get_security_group(opts = {})
@@ -4954,6 +5013,59 @@ module KatapultAPI
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CoreApi#get_virtual_machine\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # @param [Hash] opts the optional parameters
+    # @return [String]
+    def get_virtual_machine_authorized_keys(opts = {})
+      data, _status_code, _headers = get_virtual_machine_authorized_keys_with_http_info(opts)
+      data
+    end
+
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(String, Integer, Hash)>] String data, response status code and response headers
+    def get_virtual_machine_authorized_keys_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CoreApi.get_virtual_machine_authorized_keys ...'
+      end
+      # resource path
+      local_var_path = '/virtual_machine/authorized_keys'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'String'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || ['Authenticator']
+
+      new_options = opts.merge(
+        :operation => :"CoreApi.get_virtual_machine_authorized_keys",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CoreApi#get_virtual_machine_authorized_keys\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -5689,6 +5801,126 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
+    # @option opts [PatchAddressListRequest] :patch_address_list_request 
+    # @return [PostOrganizationAddressLists201Response]
+    def patch_address_list(opts = {})
+      data, _status_code, _headers = patch_address_list_with_http_info(opts)
+      data
+    end
+
+    # @param [Hash] opts the optional parameters
+    # @option opts [PatchAddressListRequest] :patch_address_list_request 
+    # @return [Array<(PostOrganizationAddressLists201Response, Integer, Hash)>] PostOrganizationAddressLists201Response data, response status code and response headers
+    def patch_address_list_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CoreApi.patch_address_list ...'
+      end
+      # resource path
+      local_var_path = '/address_lists/:address_list'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      content_type = @api_client.select_header_content_type(['application/json'])
+      if !content_type.nil?
+          header_params['Content-Type'] = content_type
+      end
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'patch_address_list_request'])
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'PostOrganizationAddressLists201Response'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || ['Authenticator']
+
+      new_options = opts.merge(
+        :operation => :"CoreApi.patch_address_list",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:PATCH, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CoreApi#patch_address_list\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # @param [Hash] opts the optional parameters
+    # @option opts [PatchAddressListEntryRequest] :patch_address_list_entry_request 
+    # @return [PostAddressListEntries201Response]
+    def patch_address_list_entry(opts = {})
+      data, _status_code, _headers = patch_address_list_entry_with_http_info(opts)
+      data
+    end
+
+    # @param [Hash] opts the optional parameters
+    # @option opts [PatchAddressListEntryRequest] :patch_address_list_entry_request 
+    # @return [Array<(PostAddressListEntries201Response, Integer, Hash)>] PostAddressListEntries201Response data, response status code and response headers
+    def patch_address_list_entry_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CoreApi.patch_address_list_entry ...'
+      end
+      # resource path
+      local_var_path = '/address_list_entries/:address_list_entry'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      content_type = @api_client.select_header_content_type(['application/json'])
+      if !content_type.nil?
+          header_params['Content-Type'] = content_type
+      end
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'patch_address_list_entry_request'])
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'PostAddressListEntries201Response'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || ['Authenticator']
+
+      new_options = opts.merge(
+        :operation => :"CoreApi.patch_address_list_entry",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:PATCH, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CoreApi#patch_address_list_entry\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # @param [Hash] opts the optional parameters
     # @option opts [PatchDiskBackupPolicyRequest] :patch_disk_backup_policy_request 
     # @return [PatchDiskBackupPolicy200Response]
     def patch_disk_backup_policy(opts = {})
@@ -5804,66 +6036,6 @@ module KatapultAPI
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path, new_options)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CoreApi#patch_dns_record\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # @param [Hash] opts the optional parameters
-    # @option opts [PatchDnsRecordsDnsRecordRequest] :patch_dns_records_dns_record_request 
-    # @return [PatchDnsRecordsDnsRecord200Response]
-    def patch_dns_records_dns_record(opts = {})
-      data, _status_code, _headers = patch_dns_records_dns_record_with_http_info(opts)
-      data
-    end
-
-    # @param [Hash] opts the optional parameters
-    # @option opts [PatchDnsRecordsDnsRecordRequest] :patch_dns_records_dns_record_request 
-    # @return [Array<(PatchDnsRecordsDnsRecord200Response, Integer, Hash)>] PatchDnsRecordsDnsRecord200Response data, response status code and response headers
-    def patch_dns_records_dns_record_with_http_info(opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: CoreApi.patch_dns_records_dns_record ...'
-      end
-      # resource path
-      local_var_path = '/dns/records/:dns_record'
-
-      # query parameters
-      query_params = opts[:query_params] || {}
-
-      # header parameters
-      header_params = opts[:header_params] || {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      content_type = @api_client.select_header_content_type(['application/json'])
-      if !content_type.nil?
-          header_params['Content-Type'] = content_type
-      end
-
-      # form parameters
-      form_params = opts[:form_params] || {}
-
-      # http body (model)
-      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'patch_dns_records_dns_record_request'])
-
-      # return_type
-      return_type = opts[:debug_return_type] || 'PatchDnsRecordsDnsRecord200Response'
-
-      # auth_names
-      auth_names = opts[:debug_auth_names] || ['Authenticator']
-
-      new_options = opts.merge(
-        :operation => :"CoreApi.patch_dns_records_dns_record",
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => return_type
-      )
-
-      data, status_code, headers = @api_client.call_api(:PATCH, local_var_path, new_options)
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CoreApi#patch_dns_records_dns_record\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -6529,6 +6701,66 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
+    # @option opts [PostAddressListEntriesRequest] :post_address_list_entries_request 
+    # @return [PostAddressListEntries201Response]
+    def post_address_list_entries(opts = {})
+      data, _status_code, _headers = post_address_list_entries_with_http_info(opts)
+      data
+    end
+
+    # @param [Hash] opts the optional parameters
+    # @option opts [PostAddressListEntriesRequest] :post_address_list_entries_request 
+    # @return [Array<(PostAddressListEntries201Response, Integer, Hash)>] PostAddressListEntries201Response data, response status code and response headers
+    def post_address_list_entries_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CoreApi.post_address_list_entries ...'
+      end
+      # resource path
+      local_var_path = '/address_lists/:address_list/entries'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      content_type = @api_client.select_header_content_type(['application/json'])
+      if !content_type.nil?
+          header_params['Content-Type'] = content_type
+      end
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'post_address_list_entries_request'])
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'PostAddressListEntries201Response'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || ['Authenticator']
+
+      new_options = opts.merge(
+        :operation => :"CoreApi.post_address_list_entries",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CoreApi#post_address_list_entries\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # @param [Hash] opts the optional parameters
     # @option opts [PostDiskDiskBackupPoliciesRequest] :post_disk_disk_backup_policies_request 
     # @return [PostDiskDiskBackupPolicies200Response]
     def post_disk_disk_backup_policies(opts = {})
@@ -6649,7 +6881,7 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [DeleteDnsZonesDnsZoneRequest] :delete_dns_zones_dns_zone_request 
+    # @option opts [DeleteDnsZoneRequest] :delete_dns_zone_request 
     # @return [GetDnsZone200Response]
     def post_dns_zone_verify(opts = {})
       data, _status_code, _headers = post_dns_zone_verify_with_http_info(opts)
@@ -6657,7 +6889,7 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
-    # @option opts [DeleteDnsZonesDnsZoneRequest] :delete_dns_zones_dns_zone_request 
+    # @option opts [DeleteDnsZoneRequest] :delete_dns_zone_request 
     # @return [Array<(GetDnsZone200Response, Integer, Hash)>] GetDnsZone200Response data, response status code and response headers
     def post_dns_zone_verify_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -6683,7 +6915,7 @@ module KatapultAPI
       form_params = opts[:form_params] || {}
 
       # http body (model)
-      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'delete_dns_zones_dns_zone_request'])
+      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'delete_dns_zone_request'])
 
       # return_type
       return_type = opts[:debug_return_type] || 'GetDnsZone200Response'
@@ -6704,186 +6936,6 @@ module KatapultAPI
       data, status_code, headers = @api_client.call_api(:POST, local_var_path, new_options)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CoreApi#post_dns_zone_verify\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # @param [Hash] opts the optional parameters
-    # @option opts [PostDnsZonesDnsZoneRecordsRequest] :post_dns_zones_dns_zone_records_request 
-    # @return [PostDnsZonesDnsZoneRecords200Response]
-    def post_dns_zones_dns_zone_records(opts = {})
-      data, _status_code, _headers = post_dns_zones_dns_zone_records_with_http_info(opts)
-      data
-    end
-
-    # @param [Hash] opts the optional parameters
-    # @option opts [PostDnsZonesDnsZoneRecordsRequest] :post_dns_zones_dns_zone_records_request 
-    # @return [Array<(PostDnsZonesDnsZoneRecords200Response, Integer, Hash)>] PostDnsZonesDnsZoneRecords200Response data, response status code and response headers
-    def post_dns_zones_dns_zone_records_with_http_info(opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: CoreApi.post_dns_zones_dns_zone_records ...'
-      end
-      # resource path
-      local_var_path = '/dns/zones/:dns_zone/records'
-
-      # query parameters
-      query_params = opts[:query_params] || {}
-
-      # header parameters
-      header_params = opts[:header_params] || {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      content_type = @api_client.select_header_content_type(['application/json'])
-      if !content_type.nil?
-          header_params['Content-Type'] = content_type
-      end
-
-      # form parameters
-      form_params = opts[:form_params] || {}
-
-      # http body (model)
-      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'post_dns_zones_dns_zone_records_request'])
-
-      # return_type
-      return_type = opts[:debug_return_type] || 'PostDnsZonesDnsZoneRecords200Response'
-
-      # auth_names
-      auth_names = opts[:debug_auth_names] || ['Authenticator']
-
-      new_options = opts.merge(
-        :operation => :"CoreApi.post_dns_zones_dns_zone_records",
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => return_type
-      )
-
-      data, status_code, headers = @api_client.call_api(:POST, local_var_path, new_options)
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CoreApi#post_dns_zones_dns_zone_records\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # @param [Hash] opts the optional parameters
-    # @option opts [PostDnsZonesDnsZoneUpdateTtlRequest] :post_dns_zones_dns_zone_update_ttl_request 
-    # @return [PostDnsZonesDnsZoneUpdateTtl200Response]
-    def post_dns_zones_dns_zone_update_ttl(opts = {})
-      data, _status_code, _headers = post_dns_zones_dns_zone_update_ttl_with_http_info(opts)
-      data
-    end
-
-    # @param [Hash] opts the optional parameters
-    # @option opts [PostDnsZonesDnsZoneUpdateTtlRequest] :post_dns_zones_dns_zone_update_ttl_request 
-    # @return [Array<(PostDnsZonesDnsZoneUpdateTtl200Response, Integer, Hash)>] PostDnsZonesDnsZoneUpdateTtl200Response data, response status code and response headers
-    def post_dns_zones_dns_zone_update_ttl_with_http_info(opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: CoreApi.post_dns_zones_dns_zone_update_ttl ...'
-      end
-      # resource path
-      local_var_path = '/dns/zones/:dns_zone/update_ttl'
-
-      # query parameters
-      query_params = opts[:query_params] || {}
-
-      # header parameters
-      header_params = opts[:header_params] || {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      content_type = @api_client.select_header_content_type(['application/json'])
-      if !content_type.nil?
-          header_params['Content-Type'] = content_type
-      end
-
-      # form parameters
-      form_params = opts[:form_params] || {}
-
-      # http body (model)
-      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'post_dns_zones_dns_zone_update_ttl_request'])
-
-      # return_type
-      return_type = opts[:debug_return_type] || 'PostDnsZonesDnsZoneUpdateTtl200Response'
-
-      # auth_names
-      auth_names = opts[:debug_auth_names] || ['Authenticator']
-
-      new_options = opts.merge(
-        :operation => :"CoreApi.post_dns_zones_dns_zone_update_ttl",
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => return_type
-      )
-
-      data, status_code, headers = @api_client.call_api(:POST, local_var_path, new_options)
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CoreApi#post_dns_zones_dns_zone_update_ttl\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # @param [Hash] opts the optional parameters
-    # @option opts [DeleteDnsZonesDnsZoneRequest] :delete_dns_zones_dns_zone_request 
-    # @return [PostDnsZonesDnsZoneVerify200Response]
-    def post_dns_zones_dns_zone_verify(opts = {})
-      data, _status_code, _headers = post_dns_zones_dns_zone_verify_with_http_info(opts)
-      data
-    end
-
-    # @param [Hash] opts the optional parameters
-    # @option opts [DeleteDnsZonesDnsZoneRequest] :delete_dns_zones_dns_zone_request 
-    # @return [Array<(PostDnsZonesDnsZoneVerify200Response, Integer, Hash)>] PostDnsZonesDnsZoneVerify200Response data, response status code and response headers
-    def post_dns_zones_dns_zone_verify_with_http_info(opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: CoreApi.post_dns_zones_dns_zone_verify ...'
-      end
-      # resource path
-      local_var_path = '/dns/zones/:dns_zone/verify'
-
-      # query parameters
-      query_params = opts[:query_params] || {}
-
-      # header parameters
-      header_params = opts[:header_params] || {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      content_type = @api_client.select_header_content_type(['application/json'])
-      if !content_type.nil?
-          header_params['Content-Type'] = content_type
-      end
-
-      # form parameters
-      form_params = opts[:form_params] || {}
-
-      # http body (model)
-      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'delete_dns_zones_dns_zone_request'])
-
-      # return_type
-      return_type = opts[:debug_return_type] || 'PostDnsZonesDnsZoneVerify200Response'
-
-      # auth_names
-      auth_names = opts[:debug_auth_names] || ['Authenticator']
-
-      new_options = opts.merge(
-        :operation => :"CoreApi.post_dns_zones_dns_zone_verify",
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => return_type
-      )
-
-      data, status_code, headers = @api_client.call_api(:POST, local_var_path, new_options)
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CoreApi#post_dns_zones_dns_zone_verify\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -7069,6 +7121,66 @@ module KatapultAPI
     end
 
     # @param [Hash] opts the optional parameters
+    # @option opts [PostOrganizationAddressListsRequest] :post_organization_address_lists_request 
+    # @return [PostOrganizationAddressLists201Response]
+    def post_organization_address_lists(opts = {})
+      data, _status_code, _headers = post_organization_address_lists_with_http_info(opts)
+      data
+    end
+
+    # @param [Hash] opts the optional parameters
+    # @option opts [PostOrganizationAddressListsRequest] :post_organization_address_lists_request 
+    # @return [Array<(PostOrganizationAddressLists201Response, Integer, Hash)>] PostOrganizationAddressLists201Response data, response status code and response headers
+    def post_organization_address_lists_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CoreApi.post_organization_address_lists ...'
+      end
+      # resource path
+      local_var_path = '/organizations/:organization/address_lists'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      content_type = @api_client.select_header_content_type(['application/json'])
+      if !content_type.nil?
+          header_params['Content-Type'] = content_type
+      end
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'post_organization_address_lists_request'])
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'PostOrganizationAddressLists201Response'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || ['Authenticator']
+
+      new_options = opts.merge(
+        :operation => :"CoreApi.post_organization_address_lists",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CoreApi#post_organization_address_lists\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # @param [Hash] opts the optional parameters
     # @option opts [PostOrganizationDnsZonesRequest] :post_organization_dns_zones_request 
     # @return [PostOrganizationDnsZones201Response]
     def post_organization_dns_zones(opts = {})
@@ -7084,7 +7196,7 @@ module KatapultAPI
         @api_client.config.logger.debug 'Calling API: CoreApi.post_organization_dns_zones ...'
       end
       # resource path
-      local_var_path = '/organizations/:organization/dns/zones'
+      local_var_path = '/organizations/:organization/dns_zones'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -7250,7 +7362,7 @@ module KatapultAPI
 
     # @param [Hash] opts the optional parameters
     # @option opts [PostOrganizationLoadBalancersRequest] :post_organization_load_balancers_request 
-    # @return [PostOrganizationLoadBalancers200Response]
+    # @return [PostOrganizationLoadBalancers201Response]
     def post_organization_load_balancers(opts = {})
       data, _status_code, _headers = post_organization_load_balancers_with_http_info(opts)
       data
@@ -7258,7 +7370,7 @@ module KatapultAPI
 
     # @param [Hash] opts the optional parameters
     # @option opts [PostOrganizationLoadBalancersRequest] :post_organization_load_balancers_request 
-    # @return [Array<(PostOrganizationLoadBalancers200Response, Integer, Hash)>] PostOrganizationLoadBalancers200Response data, response status code and response headers
+    # @return [Array<(PostOrganizationLoadBalancers201Response, Integer, Hash)>] PostOrganizationLoadBalancers201Response data, response status code and response headers
     def post_organization_load_balancers_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: CoreApi.post_organization_load_balancers ...'
@@ -7286,7 +7398,7 @@ module KatapultAPI
       post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'post_organization_load_balancers_request'])
 
       # return_type
-      return_type = opts[:debug_return_type] || 'PostOrganizationLoadBalancers200Response'
+      return_type = opts[:debug_return_type] || 'PostOrganizationLoadBalancers201Response'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['Authenticator']
@@ -7310,7 +7422,7 @@ module KatapultAPI
 
     # @param [Hash] opts the optional parameters
     # @option opts [PostOrganizationManagedRequest] :post_organization_managed_request 
-    # @return [PostOrganizationManaged201Response]
+    # @return [GetOrganization200Response]
     def post_organization_managed(opts = {})
       data, _status_code, _headers = post_organization_managed_with_http_info(opts)
       data
@@ -7318,7 +7430,7 @@ module KatapultAPI
 
     # @param [Hash] opts the optional parameters
     # @option opts [PostOrganizationManagedRequest] :post_organization_managed_request 
-    # @return [Array<(PostOrganizationManaged201Response, Integer, Hash)>] PostOrganizationManaged201Response data, response status code and response headers
+    # @return [Array<(GetOrganization200Response, Integer, Hash)>] GetOrganization200Response data, response status code and response headers
     def post_organization_managed_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: CoreApi.post_organization_managed ...'
@@ -7346,7 +7458,7 @@ module KatapultAPI
       post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'post_organization_managed_request'])
 
       # return_type
-      return_type = opts[:debug_return_type] || 'PostOrganizationManaged201Response'
+      return_type = opts[:debug_return_type] || 'GetOrganization200Response'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['Authenticator']
@@ -7784,66 +7896,6 @@ module KatapultAPI
       data, status_code, headers = @api_client.call_api(:POST, local_var_path, new_options)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CoreApi#post_organization_virtual_machines_build_from_spec\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # @param [Hash] opts the optional parameters
-    # @option opts [PostOrganizationsOrganizationDnsZonesRequest] :post_organizations_organization_dns_zones_request 
-    # @return [PostOrganizationsOrganizationDnsZones201Response]
-    def post_organizations_organization_dns_zones(opts = {})
-      data, _status_code, _headers = post_organizations_organization_dns_zones_with_http_info(opts)
-      data
-    end
-
-    # @param [Hash] opts the optional parameters
-    # @option opts [PostOrganizationsOrganizationDnsZonesRequest] :post_organizations_organization_dns_zones_request 
-    # @return [Array<(PostOrganizationsOrganizationDnsZones201Response, Integer, Hash)>] PostOrganizationsOrganizationDnsZones201Response data, response status code and response headers
-    def post_organizations_organization_dns_zones_with_http_info(opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: CoreApi.post_organizations_organization_dns_zones ...'
-      end
-      # resource path
-      local_var_path = '/organizations/:organization/dns_zones'
-
-      # query parameters
-      query_params = opts[:query_params] || {}
-
-      # header parameters
-      header_params = opts[:header_params] || {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      content_type = @api_client.select_header_content_type(['application/json'])
-      if !content_type.nil?
-          header_params['Content-Type'] = content_type
-      end
-
-      # form parameters
-      form_params = opts[:form_params] || {}
-
-      # http body (model)
-      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'post_organizations_organization_dns_zones_request'])
-
-      # return_type
-      return_type = opts[:debug_return_type] || 'PostOrganizationsOrganizationDnsZones201Response'
-
-      # auth_names
-      auth_names = opts[:debug_auth_names] || ['Authenticator']
-
-      new_options = opts.merge(
-        :operation => :"CoreApi.post_organizations_organization_dns_zones",
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => return_type
-      )
-
-      data, status_code, headers = @api_client.call_api(:POST, local_var_path, new_options)
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CoreApi#post_organizations_organization_dns_zones\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

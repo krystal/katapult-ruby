@@ -39,19 +39,13 @@ describe KatapultAPI::DNSZone do
     end
   end
 
-  describe 'test attribute "ttl"' do
+  describe 'test attribute "default_ttl"' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
     end
   end
 
   describe 'test attribute "verified"' do
-    it 'should work' do
-      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
-    end
-  end
-
-  describe 'test attribute "infrastructure_zone"' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
     end

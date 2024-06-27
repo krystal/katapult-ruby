@@ -45,6 +45,8 @@ module KatapultAPI
 
     attr_accessor :cpu_cores
 
+    attr_accessor :use_dedicated_cpus
+
     attr_accessor :gpu_type
 
     attr_accessor :gpus
@@ -95,6 +97,7 @@ module KatapultAPI
         :'attached_iso' => :'attached_iso',
         :'memory_in_gb' => :'memory_in_gb',
         :'cpu_cores' => :'cpu_cores',
+        :'use_dedicated_cpus' => :'use_dedicated_cpus',
         :'gpu_type' => :'gpu_type',
         :'gpus' => :'gpus',
         :'tags' => :'tags',
@@ -119,24 +122,34 @@ module KatapultAPI
         :'created_at' => :'Integer',
         :'initial_root_password' => :'String',
         :'state' => :'VirtualMachineStateEnum',
-        :'zone' => :'PatchVirtualMachinePartZone',
-        :'organization' => :'PatchVirtualMachinePartOrganization',
-        :'group' => :'PatchVirtualMachinePartGroup',
-        :'package' => :'PatchVirtualMachinePartPackage',
-        :'attached_iso' => :'PatchVirtualMachinePartAttachedISO',
+        :'zone' => :'Zone',
+        :'organization' => :'Organization',
+        :'group' => :'VirtualMachineGroup',
+        :'package' => :'VirtualMachinePackage',
+        :'attached_iso' => :'ISO',
         :'memory_in_gb' => :'Integer',
         :'cpu_cores' => :'Integer',
+        :'use_dedicated_cpus' => :'Boolean',
         :'gpu_type' => :'PatchVirtualMachinePartGPUType',
-        :'gpus' => :'Array<PatchVirtualMachinePartGPUs>',
-        :'tags' => :'Array<PatchVirtualMachinePartTags>',
+        :'gpus' => :'Array<VirtualMachineGPU>',
+        :'tags' => :'Array<Tag>',
         :'tag_names' => :'Array<String>',
-        :'ip_addresses' => :'Array<PatchVirtualMachinePartIPAddresses>'
+        :'ip_addresses' => :'Array<IPAddress>'
       }
     end
 
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'description',
+        :'initial_root_password',
+        :'group',
+        :'package',
+        :'attached_iso',
+        :'memory_in_gb',
+        :'cpu_cores',
+        :'use_dedicated_cpus',
+        :'gpu_type',
       ])
     end
 
@@ -215,6 +228,10 @@ module KatapultAPI
         self.cpu_cores = attributes[:'cpu_cores']
       end
 
+      if attributes.key?(:'use_dedicated_cpus')
+        self.use_dedicated_cpus = attributes[:'use_dedicated_cpus']
+      end
+
       if attributes.key?(:'gpu_type')
         self.gpu_type = attributes[:'gpu_type']
       end
@@ -279,6 +296,7 @@ module KatapultAPI
           attached_iso == o.attached_iso &&
           memory_in_gb == o.memory_in_gb &&
           cpu_cores == o.cpu_cores &&
+          use_dedicated_cpus == o.use_dedicated_cpus &&
           gpu_type == o.gpu_type &&
           gpus == o.gpus &&
           tags == o.tags &&
@@ -295,7 +313,7 @@ module KatapultAPI
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [id, name, hostname, fqdn, description, created_at, initial_root_password, state, zone, organization, group, package, attached_iso, memory_in_gb, cpu_cores, gpu_type, gpus, tags, tag_names, ip_addresses].hash
+      [id, name, hostname, fqdn, description, created_at, initial_root_password, state, zone, organization, group, package, attached_iso, memory_in_gb, cpu_cores, use_dedicated_cpus, gpu_type, gpus, tags, tag_names, ip_addresses].hash
     end
 
     # Builds the object from hash

@@ -17,13 +17,13 @@ module KatapultAPI
   class PostOrganizationDnsZonesRequest
     attr_accessor :organization
 
-    attr_accessor :details
+    attr_accessor :properties
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'organization' => :'organization',
-        :'details' => :'details'
+        :'properties' => :'properties'
       }
     end
 
@@ -36,7 +36,7 @@ module KatapultAPI
     def self.openapi_types
       {
         :'organization' => :'OrganizationLookup',
-        :'details' => :'DNSZoneArguments'
+        :'properties' => :'DNSZoneArguments'
       }
     end
 
@@ -67,10 +67,10 @@ module KatapultAPI
         self.organization = nil
       end
 
-      if attributes.key?(:'details')
-        self.details = attributes[:'details']
+      if attributes.key?(:'properties')
+        self.properties = attributes[:'properties']
       else
-        self.details = nil
+        self.properties = nil
       end
     end
 
@@ -83,8 +83,8 @@ module KatapultAPI
         invalid_properties.push('invalid value for "organization", organization cannot be nil.')
       end
 
-      if @details.nil?
-        invalid_properties.push('invalid value for "details", details cannot be nil.')
+      if @properties.nil?
+        invalid_properties.push('invalid value for "properties", properties cannot be nil.')
       end
 
       invalid_properties
@@ -95,7 +95,7 @@ module KatapultAPI
     def valid?
       warn '[DEPRECATED] the `valid?` method is obsolete'
       return false if @organization.nil?
-      return false if @details.nil?
+      return false if @properties.nil?
       true
     end
 
@@ -105,7 +105,7 @@ module KatapultAPI
       return true if self.equal?(o)
       self.class == o.class &&
           organization == o.organization &&
-          details == o.details
+          properties == o.properties
     end
 
     # @see the `==` method
@@ -117,7 +117,7 @@ module KatapultAPI
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [organization, details].hash
+      [organization, properties].hash
     end
 
     # Builds the object from hash

@@ -19,20 +19,17 @@ module KatapultAPI
 
     attr_accessor :name
 
-    attr_accessor :ttl
+    attr_accessor :default_ttl
 
     attr_accessor :verified
-
-    attr_accessor :infrastructure_zone
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'id' => :'id',
         :'name' => :'name',
-        :'ttl' => :'ttl',
-        :'verified' => :'verified',
-        :'infrastructure_zone' => :'infrastructure_zone'
+        :'default_ttl' => :'default_ttl',
+        :'verified' => :'verified'
       }
     end
 
@@ -46,9 +43,8 @@ module KatapultAPI
       {
         :'id' => :'String',
         :'name' => :'String',
-        :'ttl' => :'Integer',
-        :'verified' => :'Boolean',
-        :'infrastructure_zone' => :'Boolean'
+        :'default_ttl' => :'Integer',
+        :'verified' => :'Boolean'
       }
     end
 
@@ -81,16 +77,12 @@ module KatapultAPI
         self.name = attributes[:'name']
       end
 
-      if attributes.key?(:'ttl')
-        self.ttl = attributes[:'ttl']
+      if attributes.key?(:'default_ttl')
+        self.default_ttl = attributes[:'default_ttl']
       end
 
       if attributes.key?(:'verified')
         self.verified = attributes[:'verified']
-      end
-
-      if attributes.key?(:'infrastructure_zone')
-        self.infrastructure_zone = attributes[:'infrastructure_zone']
       end
     end
 
@@ -116,9 +108,8 @@ module KatapultAPI
       self.class == o.class &&
           id == o.id &&
           name == o.name &&
-          ttl == o.ttl &&
-          verified == o.verified &&
-          infrastructure_zone == o.infrastructure_zone
+          default_ttl == o.default_ttl &&
+          verified == o.verified
     end
 
     # @see the `==` method
@@ -130,7 +121,7 @@ module KatapultAPI
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [id, name, ttl, verified, infrastructure_zone].hash
+      [id, name, default_ttl, verified].hash
     end
 
     # Builds the object from hash

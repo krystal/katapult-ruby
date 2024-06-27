@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **name** | **String** |  |  |
-| **ttl** | **Integer** |  | [optional] |
+| **name** | **String** | The name of the zone (only available for creation) | [optional] |
+| **default_ttl** | **Integer** |  | [optional] |
 
 ## Example
 
@@ -14,7 +14,7 @@ require 'katapult-ruby'
 
 instance = KatapultAPI::DNSZoneArguments.new(
   name: null,
-  ttl: null
+  default_ttl: null
 )
 ```
 

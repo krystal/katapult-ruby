@@ -6,9 +6,8 @@
 | ---- | ---- | ----------- | ----- |
 | **id** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
-| **ttl** | **Integer** |  | [optional] |
+| **default_ttl** | **Integer** |  | [optional] |
 | **verified** | **Boolean** |  | [optional] |
-| **infrastructure_zone** | **Boolean** |  | [optional] |
 
 ## Example
 
@@ -18,9 +17,8 @@ require 'katapult-ruby'
 instance = KatapultAPI::DNSZone.new(
   id: null,
   name: null,
-  ttl: null,
-  verified: null,
-  infrastructure_zone: null
+  default_ttl: null,
+  verified: null
 )
 ```
 

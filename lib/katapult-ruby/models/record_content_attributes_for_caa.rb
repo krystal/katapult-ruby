@@ -47,6 +47,9 @@ module KatapultAPI
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'flag',
+        :'tag',
+        :'value'
       ])
     end
 

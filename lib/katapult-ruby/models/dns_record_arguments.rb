@@ -14,15 +14,18 @@ require 'date'
 require 'time'
 
 module KatapultAPI
-  # All 'details[]' params are mutually exclusive, only one can be provided.
+  # All 'properties[]' params are mutually exclusive, only one can be provided.
   class DNSRecordArguments
+    # The name of the record
     attr_accessor :name
+
+    attr_accessor :type
 
     attr_accessor :ttl
 
-    attr_accessor :record_type
+    attr_accessor :priority
 
-    attr_accessor :properties
+    attr_accessor :content
 
     class EnumAttributeValidator
       attr_reader :datatype
@@ -50,9 +53,10 @@ module KatapultAPI
     def self.attribute_map
       {
         :'name' => :'name',
+        :'type' => :'type',
         :'ttl' => :'ttl',
-        :'record_type' => :'record_type',
-        :'properties' => :'properties'
+        :'priority' => :'priority',
+        :'content' => :'content'
       }
     end
 
@@ -65,9 +69,10 @@ module KatapultAPI
     def self.openapi_types
       {
         :'name' => :'String',
+        :'type' => :'DNSRecordTypesEnum',
         :'ttl' => :'Integer',
-        :'record_type' => :'DNSRecordTypeEnum',
-        :'properties' => :'DNSRecordPropertiesArguments'
+        :'priority' => :'Integer',
+        :'content' => :'DNSRecordContentArguments'
       }
     end
 
@@ -96,16 +101,20 @@ module KatapultAPI
         self.name = attributes[:'name']
       end
 
+      if attributes.key?(:'type')
+        self.type = attributes[:'type']
+      end
+
       if attributes.key?(:'ttl')
         self.ttl = attributes[:'ttl']
       end
 
-      if attributes.key?(:'record_type')
-        self.record_type = attributes[:'record_type']
+      if attributes.key?(:'priority')
+        self.priority = attributes[:'priority']
       end
 
-      if attributes.key?(:'properties')
-        self.properties = attributes[:'properties']
+      if attributes.key?(:'content')
+        self.content = attributes[:'content']
       end
     end
 
@@ -130,9 +139,10 @@ module KatapultAPI
       return true if self.equal?(o)
       self.class == o.class &&
           name == o.name &&
+          type == o.type &&
           ttl == o.ttl &&
-          record_type == o.record_type &&
-          properties == o.properties
+          priority == o.priority &&
+          content == o.content
     end
 
     # @see the `==` method
@@ -144,7 +154,7 @@ module KatapultAPI
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [name, ttl, record_type, properties].hash
+      [name, type, ttl, priority, content].hash
     end
 
     # Builds the object from hash

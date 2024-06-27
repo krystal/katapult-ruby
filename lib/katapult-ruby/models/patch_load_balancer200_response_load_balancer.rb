@@ -99,13 +99,13 @@ module KatapultAPI
         :'resource_type' => :'LoadBalancerResourceTypesEnum',
         :'resources' => :'Array<LoadBalancerResource>',
         :'resource_ids' => :'Array<String>',
-        :'ip_address' => :'Array<PatchLoadBalancerPartIPAddress>',
+        :'ip_address' => :'PatchLoadBalancerPartIPAddress',
         :'https_redirect' => :'Boolean',
         :'backend_certificate' => :'String',
         :'backend_certificate_key' => :'String',
         :'data_center' => :'PatchLoadBalancerPartDataCenter',
         :'enable_weighting' => :'Boolean',
-        :'weights' => :'Array<PatchLoadBalancerPartWeights>',
+        :'weights' => :'Array<LoadBalancerWeight>',
         :'standby_vms' => :'Array<String>'
       }
     end
@@ -113,6 +113,7 @@ module KatapultAPI
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'api_reference',
       ])
     end
 
@@ -160,9 +161,7 @@ module KatapultAPI
       end
 
       if attributes.key?(:'ip_address')
-        if (value = attributes[:'ip_address']).is_a?(Array)
-          self.ip_address = value
-        end
+        self.ip_address = attributes[:'ip_address']
       end
 
       if attributes.key?(:'https_redirect')

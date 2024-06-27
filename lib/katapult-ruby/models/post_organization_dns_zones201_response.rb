@@ -32,7 +32,7 @@ module KatapultAPI
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'dns_zone' => :'PostOrganizationDNSZones201ResponseDNSZone'
+        :'dns_zone' => :'DNSZone'
       }
     end
 

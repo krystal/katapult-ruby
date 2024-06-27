@@ -51,7 +51,7 @@ module KatapultAPI
         :'retention' => :'Integer',
         :'total_size' => :'Float',
         :'target' => :'DiskBackupPolicyTarget',
-        :'schedule' => :'GetDiskBackupPolicyPartSchedule',
+        :'schedule' => :'Schedule',
         :'auto_move_to_trash_at' => :'Integer'
       }
     end
@@ -59,6 +59,7 @@ module KatapultAPI
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'auto_move_to_trash_at'
       ])
     end
 

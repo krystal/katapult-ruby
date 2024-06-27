@@ -20,11 +20,14 @@ module KatapultAPI
 
     attr_accessor :memory_in_gb
 
+    attr_accessor :use_dedicated_cpus
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'cpu_cores' => :'cpu_cores',
-        :'memory_in_gb' => :'memory_in_gb'
+        :'memory_in_gb' => :'memory_in_gb',
+        :'use_dedicated_cpus' => :'use_dedicated_cpus'
       }
     end
 
@@ -37,7 +40,8 @@ module KatapultAPI
     def self.openapi_types
       {
         :'cpu_cores' => :'Integer',
-        :'memory_in_gb' => :'Integer'
+        :'memory_in_gb' => :'Integer',
+        :'use_dedicated_cpus' => :'Boolean'
       }
     end
 
@@ -73,6 +77,10 @@ module KatapultAPI
       else
         self.memory_in_gb = nil
       end
+
+      if attributes.key?(:'use_dedicated_cpus')
+        self.use_dedicated_cpus = attributes[:'use_dedicated_cpus']
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -106,7 +114,8 @@ module KatapultAPI
       return true if self.equal?(o)
       self.class == o.class &&
           cpu_cores == o.cpu_cores &&
-          memory_in_gb == o.memory_in_gb
+          memory_in_gb == o.memory_in_gb &&
+          use_dedicated_cpus == o.use_dedicated_cpus
     end
 
     # @see the `==` method
@@ -118,7 +127,7 @@ module KatapultAPI
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [cpu_cores, memory_in_gb].hash
+      [cpu_cores, memory_in_gb, use_dedicated_cpus].hash
     end
 
     # Builds the object from hash

@@ -5,7 +5,7 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **organization** | [**OrganizationLookup**](OrganizationLookup.md) |  |  |
-| **details** | [**DNSZoneArguments**](DNSZoneArguments.md) |  |  |
+| **properties** | [**DNSZoneArguments**](DNSZoneArguments.md) |  |  |
 
 ## Example
 
@@ -14,7 +14,7 @@ require 'katapult-ruby'
 
 instance = KatapultAPI::PostOrganizationDnsZonesRequest.new(
   organization: null,
-  details: null
+  properties: null
 )
 ```
 

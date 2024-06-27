@@ -32,6 +32,26 @@ describe 'CoreApi' do
     end
   end
 
+  # unit tests for delete_address_list
+  # @param [Hash] opts the optional parameters
+  # @option opts [DeleteAddressListRequest] :delete_address_list_request 
+  # @return [DeleteAddressList200Response]
+  describe 'delete_address_list test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for delete_address_list_entry
+  # @param [Hash] opts the optional parameters
+  # @option opts [DeleteAddressListEntryRequest] :delete_address_list_entry_request 
+  # @return [DeleteAddressListEntry200Response]
+  describe 'delete_address_list_entry test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
   # unit tests for delete_disk_backup_policy
   # @param [Hash] opts the optional parameters
   # @option opts [DeleteDiskBackupPolicyRequest] :delete_disk_backup_policy_request 
@@ -54,7 +74,7 @@ describe 'CoreApi' do
 
   # unit tests for delete_dns_record
   # @param [Hash] opts the optional parameters
-  # @option opts [DeleteDnsRecordsDnsRecordRequest] :delete_dns_records_dns_record_request 
+  # @option opts [DeleteDnsRecordRequest] :delete_dns_record_request 
   # @return [DeleteDnsZone200Response]
   describe 'delete_dns_record test' do
     it 'should work' do
@@ -62,31 +82,11 @@ describe 'CoreApi' do
     end
   end
 
-  # unit tests for delete_dns_records_dns_record
-  # @param [Hash] opts the optional parameters
-  # @option opts [DeleteDnsRecordsDnsRecordRequest] :delete_dns_records_dns_record_request 
-  # @return [DeleteDnsRecordsDnsRecord200Response]
-  describe 'delete_dns_records_dns_record test' do
-    it 'should work' do
-      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
-    end
-  end
-
   # unit tests for delete_dns_zone
   # @param [Hash] opts the optional parameters
-  # @option opts [DeleteDnsZonesDnsZoneRequest] :delete_dns_zones_dns_zone_request 
+  # @option opts [DeleteDnsZoneRequest] :delete_dns_zone_request 
   # @return [DeleteDnsZone200Response]
   describe 'delete_dns_zone test' do
-    it 'should work' do
-      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
-    end
-  end
-
-  # unit tests for delete_dns_zones_dns_zone
-  # @param [Hash] opts the optional parameters
-  # @option opts [DeleteDnsZonesDnsZoneRequest] :delete_dns_zones_dns_zone_request 
-  # @return [DeleteDnsZonesDnsZone200Response]
-  describe 'delete_dns_zones_dns_zone test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
     end
@@ -197,6 +197,49 @@ describe 'CoreApi' do
   # @option opts [DeleteVirtualMachineGroupRequest] :delete_virtual_machine_group_request 
   # @return [DeleteVirtualMachineGroup200Response]
   describe 'delete_virtual_machine_group test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for get_address_list
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :address_list_id The address list to return. All &#39;address_list[]&#39; params are mutually exclusive, only one can be provided.
+  # @return [PostOrganizationAddressLists201Response]
+  describe 'get_address_list test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for get_address_list_entries
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :address_list_id The address list for which the entries should be returned. All &#39;address_list[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [Integer] :page 
+  # @option opts [Integer] :per_page 
+  # @return [GetAddressListEntries200Response]
+  describe 'get_address_list_entries test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for get_address_list_entry
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :address_list_entry_id The address list entry to return. All &#39;address_list_entry[]&#39; params are mutually exclusive, only one can be provided.
+  # @return [PostAddressListEntries201Response]
+  describe 'get_address_list_entry test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for get_address_lists
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :page 
+  # @option opts [Integer] :per_page 
+  # @return [GetAddressLists200Response]
+  describe 'get_address_lists test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
     end
@@ -411,16 +454,6 @@ describe 'CoreApi' do
     end
   end
 
-  # unit tests for get_dns_records_dns_record
-  # @param [Hash] opts the optional parameters
-  # @option opts [String] :dns_record_id The DNS record to return information for. All &#39;dns_record[]&#39; params are mutually exclusive, only one can be provided.
-  # @return [GetDnsRecordsDnsRecord200Response]
-  describe 'get_dns_records_dns_record test' do
-    it 'should work' do
-      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
-    end
-  end
-
   # unit tests for get_dns_zone
   # @param [Hash] opts the optional parameters
   # @option opts [String] :dns_zone_id All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
@@ -438,39 +471,6 @@ describe 'CoreApi' do
   # @option opts [String] :dns_zone_name All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
   # @return [GetDnsZoneRecords200Response]
   describe 'get_dns_zone_records test' do
-    it 'should work' do
-      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
-    end
-  end
-
-  # unit tests for get_dns_zones_dns_zone
-  # @param [Hash] opts the optional parameters
-  # @option opts [String] :dns_zone_id The DNS zone to return information for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [String] :dns_zone_name The DNS zone to return information for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
-  # @return [GetDnsZonesDnsZone200Response]
-  describe 'get_dns_zones_dns_zone test' do
-    it 'should work' do
-      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
-    end
-  end
-
-  # unit tests for get_dns_zones_dns_zone_records
-  # @param [Hash] opts the optional parameters
-  # @option opts [String] :dns_zone_id The DNS zone to find all DNS records for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [String] :dns_zone_name The DNS zone to find all DNS records for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
-  # @return [GetDnsZonesDnsZoneRecords200Response]
-  describe 'get_dns_zones_dns_zone_records test' do
-    it 'should work' do
-      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
-    end
-  end
-
-  # unit tests for get_dns_zones_dns_zone_verification_details
-  # @param [Hash] opts the optional parameters
-  # @option opts [String] :dns_zone_id The DNS zone to get verification details for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [String] :dns_zone_name The DNS zone to get verification details for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided.
-  # @return [GetDnsZonesDnsZoneVerificationDetails200Response]
-  describe 'get_dns_zones_dns_zone_verification_details test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
     end
@@ -596,6 +596,19 @@ describe 'CoreApi' do
     end
   end
 
+  # unit tests for get_organization_address_lists
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :organization_id The organization for which the address lists should be returned. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :organization_sub_domain The organization for which the address lists should be returned. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [Integer] :page 
+  # @option opts [Integer] :per_page 
+  # @return [GetOrganizationAddressLists200Response]
+  describe 'get_organization_address_lists test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
   # unit tests for get_organization_available_networks
   # @param [Hash] opts the optional parameters
   # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
@@ -663,8 +676,8 @@ describe 'CoreApi' do
 
   # unit tests for get_organization_dns_zones
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :organization_id The organization to return DNS zones for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [String] :organization_sub_domain The organization to return DNS zones for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
   # @option opts [Integer] :page 
   # @option opts [Integer] :per_page 
   # @return [GetOrganizationDnsZones200Response]
@@ -746,6 +759,17 @@ describe 'CoreApi' do
   # @option opts [Integer] :per_page 
   # @return [GetOrganizationNetworkSpeedProfiles200Response]
   describe 'get_organization_network_speed_profiles test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for get_organization_policy_limits
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+  # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
+  # @return [GetOrganizationPolicyLimits200Response]
+  describe 'get_organization_policy_limits test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
     end
@@ -849,19 +873,6 @@ describe 'CoreApi' do
     end
   end
 
-  # unit tests for get_organizations_organization_dns_zones
-  # @param [Hash] opts the optional parameters
-  # @option opts [String] :organization_id All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [String] :organization_sub_domain All &#39;organization[]&#39; params are mutually exclusive, only one can be provided.
-  # @option opts [Integer] :page 
-  # @option opts [Integer] :per_page 
-  # @return [GetOrganizationDnsZones200Response]
-  describe 'get_organizations_organization_dns_zones test' do
-    it 'should work' do
-      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
-    end
-  end
-
   # unit tests for get_security_group
   # @param [Hash] opts the optional parameters
   # @option opts [String] :security_group_id The security group to return the details for. All &#39;security_group[]&#39; params are mutually exclusive, only one can be provided.
@@ -940,6 +951,15 @@ describe 'CoreApi' do
   # @option opts [String] :virtual_machine_fqdn All &#39;virtual_machine[]&#39; params are mutually exclusive, only one can be provided.
   # @return [GetVirtualMachine200Response]
   describe 'get_virtual_machine test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for get_virtual_machine_authorized_keys
+  # @param [Hash] opts the optional parameters
+  # @return [String]
+  describe 'get_virtual_machine_authorized_keys test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
     end
@@ -1083,6 +1103,26 @@ describe 'CoreApi' do
     end
   end
 
+  # unit tests for patch_address_list
+  # @param [Hash] opts the optional parameters
+  # @option opts [PatchAddressListRequest] :patch_address_list_request 
+  # @return [PostOrganizationAddressLists201Response]
+  describe 'patch_address_list test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for patch_address_list_entry
+  # @param [Hash] opts the optional parameters
+  # @option opts [PatchAddressListEntryRequest] :patch_address_list_entry_request 
+  # @return [PostAddressListEntries201Response]
+  describe 'patch_address_list_entry test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
   # unit tests for patch_disk_backup_policy
   # @param [Hash] opts the optional parameters
   # @option opts [PatchDiskBackupPolicyRequest] :patch_disk_backup_policy_request 
@@ -1098,16 +1138,6 @@ describe 'CoreApi' do
   # @option opts [PatchDnsRecordRequest] :patch_dns_record_request 
   # @return [PatchDnsRecord200Response]
   describe 'patch_dns_record test' do
-    it 'should work' do
-      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
-    end
-  end
-
-  # unit tests for patch_dns_records_dns_record
-  # @param [Hash] opts the optional parameters
-  # @option opts [PatchDnsRecordsDnsRecordRequest] :patch_dns_records_dns_record_request 
-  # @return [PatchDnsRecordsDnsRecord200Response]
-  describe 'patch_dns_records_dns_record test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
     end
@@ -1223,6 +1253,16 @@ describe 'CoreApi' do
     end
   end
 
+  # unit tests for post_address_list_entries
+  # @param [Hash] opts the optional parameters
+  # @option opts [PostAddressListEntriesRequest] :post_address_list_entries_request 
+  # @return [PostAddressListEntries201Response]
+  describe 'post_address_list_entries test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
   # unit tests for post_disk_disk_backup_policies
   # @param [Hash] opts the optional parameters
   # @option opts [PostDiskDiskBackupPoliciesRequest] :post_disk_disk_backup_policies_request 
@@ -1245,39 +1285,9 @@ describe 'CoreApi' do
 
   # unit tests for post_dns_zone_verify
   # @param [Hash] opts the optional parameters
-  # @option opts [DeleteDnsZonesDnsZoneRequest] :delete_dns_zones_dns_zone_request 
+  # @option opts [DeleteDnsZoneRequest] :delete_dns_zone_request 
   # @return [GetDnsZone200Response]
   describe 'post_dns_zone_verify test' do
-    it 'should work' do
-      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
-    end
-  end
-
-  # unit tests for post_dns_zones_dns_zone_records
-  # @param [Hash] opts the optional parameters
-  # @option opts [PostDnsZonesDnsZoneRecordsRequest] :post_dns_zones_dns_zone_records_request 
-  # @return [PostDnsZonesDnsZoneRecords200Response]
-  describe 'post_dns_zones_dns_zone_records test' do
-    it 'should work' do
-      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
-    end
-  end
-
-  # unit tests for post_dns_zones_dns_zone_update_ttl
-  # @param [Hash] opts the optional parameters
-  # @option opts [PostDnsZonesDnsZoneUpdateTtlRequest] :post_dns_zones_dns_zone_update_ttl_request 
-  # @return [PostDnsZonesDnsZoneUpdateTtl200Response]
-  describe 'post_dns_zones_dns_zone_update_ttl test' do
-    it 'should work' do
-      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
-    end
-  end
-
-  # unit tests for post_dns_zones_dns_zone_verify
-  # @param [Hash] opts the optional parameters
-  # @option opts [DeleteDnsZonesDnsZoneRequest] :delete_dns_zones_dns_zone_request 
-  # @return [PostDnsZonesDnsZoneVerify200Response]
-  describe 'post_dns_zones_dns_zone_verify test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
     end
@@ -1308,6 +1318,16 @@ describe 'CoreApi' do
   # @option opts [PostLoadBalancerRulesRequest] :post_load_balancer_rules_request 
   # @return [PostLoadBalancerRules200Response]
   describe 'post_load_balancer_rules test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for post_organization_address_lists
+  # @param [Hash] opts the optional parameters
+  # @option opts [PostOrganizationAddressListsRequest] :post_organization_address_lists_request 
+  # @return [PostOrganizationAddressLists201Response]
+  describe 'post_organization_address_lists test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
     end
@@ -1346,7 +1366,7 @@ describe 'CoreApi' do
   # unit tests for post_organization_load_balancers
   # @param [Hash] opts the optional parameters
   # @option opts [PostOrganizationLoadBalancersRequest] :post_organization_load_balancers_request 
-  # @return [PostOrganizationLoadBalancers200Response]
+  # @return [PostOrganizationLoadBalancers201Response]
   describe 'post_organization_load_balancers test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
@@ -1356,7 +1376,7 @@ describe 'CoreApi' do
   # unit tests for post_organization_managed
   # @param [Hash] opts the optional parameters
   # @option opts [PostOrganizationManagedRequest] :post_organization_managed_request 
-  # @return [PostOrganizationManaged201Response]
+  # @return [GetOrganization200Response]
   describe 'post_organization_managed test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
@@ -1428,16 +1448,6 @@ describe 'CoreApi' do
   # @option opts [PostOrganizationVirtualMachinesBuildFromSpecRequest] :post_organization_virtual_machines_build_from_spec_request 
   # @return [PostOrganizationVirtualMachinesBuildFromSpec201Response]
   describe 'post_organization_virtual_machines_build_from_spec test' do
-    it 'should work' do
-      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
-    end
-  end
-
-  # unit tests for post_organizations_organization_dns_zones
-  # @param [Hash] opts the optional parameters
-  # @option opts [PostOrganizationsOrganizationDnsZonesRequest] :post_organizations_organization_dns_zones_request 
-  # @return [PostOrganizationsOrganizationDnsZones201Response]
-  describe 'post_organizations_organization_dns_zones test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
     end

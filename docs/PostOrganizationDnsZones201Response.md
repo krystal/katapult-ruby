@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **dns_zone** | [**PostOrganizationDNSZones201ResponseDNSZone**](PostOrganizationDNSZones201ResponseDNSZone.md) |  |  |
+| **dns_zone** | [**DNSZone**](DNSZone.md) |  |  |
 
 ## Example
 

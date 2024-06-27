@@ -85,6 +85,9 @@ module KatapultAPI
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'description',
+        :'placeholder',
+        :'prefill'
       ])
     end
 

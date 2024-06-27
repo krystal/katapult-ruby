@@ -1,15 +1,15 @@
 # KatapultAPI::CoreApi
 
-All URIs are relative to *http://katapult-api.localhost/core/v1*
+All URIs are relative to *https://api.katapult.io/core/v1*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
+| [**delete_address_list**](CoreApi.md#delete_address_list) | **DELETE** /address_lists/:address_list |  |
+| [**delete_address_list_entry**](CoreApi.md#delete_address_list_entry) | **DELETE** /address_list_entries/:address_list_entry |  |
 | [**delete_disk_backup_policy**](CoreApi.md#delete_disk_backup_policy) | **DELETE** /disk_backup_policies/:disk_backup_policy |  |
 | [**delete_disk_backup_policy_schedule**](CoreApi.md#delete_disk_backup_policy_schedule) | **DELETE** /disk_backup_policies/:disk_backup_policy/schedule |  |
 | [**delete_dns_record**](CoreApi.md#delete_dns_record) | **DELETE** /dns_records/:dns_record |  |
-| [**delete_dns_records_dns_record**](CoreApi.md#delete_dns_records_dns_record) | **DELETE** /dns/records/:dns_record |  |
 | [**delete_dns_zone**](CoreApi.md#delete_dns_zone) | **DELETE** /dns_zones/:dns_zone |  |
-| [**delete_dns_zones_dns_zone**](CoreApi.md#delete_dns_zones_dns_zone) | **DELETE** /dns/zones/:dns_zone |  |
 | [**delete_file_storage_volume**](CoreApi.md#delete_file_storage_volume) | **DELETE** /file_storage_volumes/:file_storage_volume |  |
 | [**delete_ip_address**](CoreApi.md#delete_ip_address) | **DELETE** /ip_addresses/:ip_address |  |
 | [**delete_load_balancer**](CoreApi.md#delete_load_balancer) | **DELETE** /load_balancers/:load_balancer |  |
@@ -21,6 +21,10 @@ All URIs are relative to *http://katapult-api.localhost/core/v1*
 | [**delete_trash_object**](CoreApi.md#delete_trash_object) | **DELETE** /trash_objects/:trash_object |  |
 | [**delete_virtual_machine**](CoreApi.md#delete_virtual_machine) | **DELETE** /virtual_machines/:virtual_machine |  |
 | [**delete_virtual_machine_group**](CoreApi.md#delete_virtual_machine_group) | **DELETE** /virtual_machine_groups/:virtual_machine_group |  |
+| [**get_address_list**](CoreApi.md#get_address_list) | **GET** /address_lists/:address_list |  |
+| [**get_address_list_entries**](CoreApi.md#get_address_list_entries) | **GET** /address_lists/:address_list/entries |  |
+| [**get_address_list_entry**](CoreApi.md#get_address_list_entry) | **GET** /address_list_entries/:address_list_entry |  |
+| [**get_address_lists**](CoreApi.md#get_address_lists) | **GET** /address_lists |  |
 | [**get_certificate**](CoreApi.md#get_certificate) | **GET** /certificates/:certificate |  |
 | [**get_countries**](CoreApi.md#get_countries) | **GET** /countries |  |
 | [**get_country**](CoreApi.md#get_country) | **GET** /countries/:country |  |
@@ -40,12 +44,8 @@ All URIs are relative to *http://katapult-api.localhost/core/v1*
 | [**get_disk_template_version_spec**](CoreApi.md#get_disk_template_version_spec) | **GET** /disk_template_versions/:disk_template_version/spec |  |
 | [**get_disk_template_versions**](CoreApi.md#get_disk_template_versions) | **GET** /disk_templates/:disk_template/versions |  |
 | [**get_dns_record**](CoreApi.md#get_dns_record) | **GET** /dns_records/:dns_record |  |
-| [**get_dns_records_dns_record**](CoreApi.md#get_dns_records_dns_record) | **GET** /dns/records/:dns_record |  |
 | [**get_dns_zone**](CoreApi.md#get_dns_zone) | **GET** /dns_zones/:dns_zone |  |
 | [**get_dns_zone_records**](CoreApi.md#get_dns_zone_records) | **GET** /dns_zones/:dns_zone/records |  |
-| [**get_dns_zones_dns_zone**](CoreApi.md#get_dns_zones_dns_zone) | **GET** /dns/zones/:dns_zone |  |
-| [**get_dns_zones_dns_zone_records**](CoreApi.md#get_dns_zones_dns_zone_records) | **GET** /dns/zones/:dns_zone/records |  |
-| [**get_dns_zones_dns_zone_verification_details**](CoreApi.md#get_dns_zones_dns_zone_verification_details) | **GET** /dns/zones/:dns_zone/verification_details |  |
 | [**get_file_storage_volume**](CoreApi.md#get_file_storage_volume) | **GET** /file_storage_volumes/:file_storage_volume |  |
 | [**get_gpu_type**](CoreApi.md#get_gpu_type) | **GET** /gpu_types/:gpu_type |  |
 | [**get_gpu_types**](CoreApi.md#get_gpu_types) | **GET** /gpu_types |  |
@@ -57,18 +57,20 @@ All URIs are relative to *http://katapult-api.localhost/core/v1*
 | [**get_operating_system**](CoreApi.md#get_operating_system) | **GET** /operating_systems/:operating_system |  |
 | [**get_operating_systems**](CoreApi.md#get_operating_systems) | **GET** /operating_systems |  |
 | [**get_organization**](CoreApi.md#get_organization) | **GET** /organizations/:organization |  |
+| [**get_organization_address_lists**](CoreApi.md#get_organization_address_lists) | **GET** /organizations/:organization/address_lists |  |
 | [**get_organization_available_networks**](CoreApi.md#get_organization_available_networks) | **GET** /organizations/:organization/available_networks |  |
 | [**get_organization_certificates**](CoreApi.md#get_organization_certificates) | **GET** /organizations/:organization/certificates |  |
 | [**get_organization_disk_backup_policies**](CoreApi.md#get_organization_disk_backup_policies) | **GET** /organizations/:organization/disk_backup_policies |  |
 | [**get_organization_disk_templates**](CoreApi.md#get_organization_disk_templates) | **GET** /organizations/:organization/disk_templates |  |
 | [**get_organization_disks**](CoreApi.md#get_organization_disks) | **GET** /organizations/:organization/disks |  |
-| [**get_organization_dns_zones**](CoreApi.md#get_organization_dns_zones) | **GET** /organizations/:organization/dns/zones |  |
+| [**get_organization_dns_zones**](CoreApi.md#get_organization_dns_zones) | **GET** /organizations/:organization/dns_zones |  |
 | [**get_organization_dns_zones_nameservers**](CoreApi.md#get_organization_dns_zones_nameservers) | **GET** /organizations/:organization/dns_zones/nameservers |  |
 | [**get_organization_file_storage_volumes**](CoreApi.md#get_organization_file_storage_volumes) | **GET** /organizations/:organization/file_storage_volumes |  |
 | [**get_organization_ip_addresses**](CoreApi.md#get_organization_ip_addresses) | **GET** /organizations/:organization/ip_addresses |  |
 | [**get_organization_load_balancers**](CoreApi.md#get_organization_load_balancers) | **GET** /organizations/:organization/load_balancers |  |
 | [**get_organization_managed**](CoreApi.md#get_organization_managed) | **GET** /organizations/:organization/managed |  |
 | [**get_organization_network_speed_profiles**](CoreApi.md#get_organization_network_speed_profiles) | **GET** /organizations/:organization/network_speed_profiles |  |
+| [**get_organization_policy_limits**](CoreApi.md#get_organization_policy_limits) | **GET** /organizations/:organization/policy_limits |  |
 | [**get_organization_security_groups**](CoreApi.md#get_organization_security_groups) | **GET** /organizations/:organization/security_groups |  |
 | [**get_organization_ssh_keys**](CoreApi.md#get_organization_ssh_keys) | **GET** /organizations/:organization/ssh_keys |  |
 | [**get_organization_tags**](CoreApi.md#get_organization_tags) | **GET** /organizations/:organization/tags |  |
@@ -77,7 +79,6 @@ All URIs are relative to *http://katapult-api.localhost/core/v1*
 | [**get_organization_virtual_machine_groups**](CoreApi.md#get_organization_virtual_machine_groups) | **GET** /organizations/:organization/virtual_machine_groups |  |
 | [**get_organization_virtual_machines**](CoreApi.md#get_organization_virtual_machines) | **GET** /organizations/:organization/virtual_machines |  |
 | [**get_organizations**](CoreApi.md#get_organizations) | **GET** /organizations |  |
-| [**get_organizations_organization_dns_zones**](CoreApi.md#get_organizations_organization_dns_zones) | **GET** /organizations/:organization/dns_zones |  |
 | [**get_security_group**](CoreApi.md#get_security_group) | **GET** /security_groups/:security_group |  |
 | [**get_security_group_rules**](CoreApi.md#get_security_group_rules) | **GET** /security_groups/:security_group/rules |  |
 | [**get_security_groups_rules_security_group_rule**](CoreApi.md#get_security_groups_rules_security_group_rule) | **GET** /security_groups/rules/:security_group_rule |  |
@@ -86,6 +87,7 @@ All URIs are relative to *http://katapult-api.localhost/core/v1*
 | [**get_trash_object**](CoreApi.md#get_trash_object) | **GET** /trash_objects/:trash_object |  |
 | [**get_users_current**](CoreApi.md#get_users_current) | **GET** /users/current |  |
 | [**get_virtual_machine**](CoreApi.md#get_virtual_machine) | **GET** /virtual_machines/:virtual_machine |  |
+| [**get_virtual_machine_authorized_keys**](CoreApi.md#get_virtual_machine_authorized_keys) | **GET** /virtual_machine/authorized_keys |  |
 | [**get_virtual_machine_disk_backup_policies**](CoreApi.md#get_virtual_machine_disk_backup_policies) | **GET** /virtual_machines/:virtual_machine/disk_backup_policies |  |
 | [**get_virtual_machine_disks**](CoreApi.md#get_virtual_machine_disks) | **GET** /virtual_machines/:virtual_machine/disks |  |
 | [**get_virtual_machine_group**](CoreApi.md#get_virtual_machine_group) | **GET** /virtual_machine_groups/:virtual_machine_group |  |
@@ -98,9 +100,10 @@ All URIs are relative to *http://katapult-api.localhost/core/v1*
 | [**get_vmnivmni**](CoreApi.md#get_vmnivmni) | **GET** /virtual_machine_network_interfaces/:virtual_machine_network_interface |  |
 | [**get_zone**](CoreApi.md#get_zone) | **GET** /zones/:zone |  |
 | [**get_zones**](CoreApi.md#get_zones) | **GET** /zones |  |
+| [**patch_address_list**](CoreApi.md#patch_address_list) | **PATCH** /address_lists/:address_list |  |
+| [**patch_address_list_entry**](CoreApi.md#patch_address_list_entry) | **PATCH** /address_list_entries/:address_list_entry |  |
 | [**patch_disk_backup_policy**](CoreApi.md#patch_disk_backup_policy) | **PATCH** /disk_backup_policies/:disk_backup_policy |  |
 | [**patch_dns_record**](CoreApi.md#patch_dns_record) | **PATCH** /dns_records/:dns_record |  |
-| [**patch_dns_records_dns_record**](CoreApi.md#patch_dns_records_dns_record) | **PATCH** /dns/records/:dns_record |  |
 | [**patch_dns_zone**](CoreApi.md#patch_dns_zone) | **PATCH** /dns_zones/:dns_zone |  |
 | [**patch_file_storage_volume**](CoreApi.md#patch_file_storage_volume) | **PATCH** /file_storage_volumes/:file_storage_volume |  |
 | [**patch_ip_address**](CoreApi.md#patch_ip_address) | **PATCH** /ip_addresses/:ip_address |  |
@@ -112,16 +115,15 @@ All URIs are relative to *http://katapult-api.localhost/core/v1*
 | [**patch_virtual_machine**](CoreApi.md#patch_virtual_machine) | **PATCH** /virtual_machines/:virtual_machine |  |
 | [**patch_virtual_machine_group**](CoreApi.md#patch_virtual_machine_group) | **PATCH** /virtual_machine_groups/:virtual_machine_group |  |
 | [**patch_virtual_machine_network_interface_update_speed_profile**](CoreApi.md#patch_virtual_machine_network_interface_update_speed_profile) | **PATCH** /virtual_machine_network_interfaces/:virtual_machine_network_interface/update_speed_profile |  |
+| [**post_address_list_entries**](CoreApi.md#post_address_list_entries) | **POST** /address_lists/:address_list/entries |  |
 | [**post_disk_disk_backup_policies**](CoreApi.md#post_disk_disk_backup_policies) | **POST** /disks/:disk/disk_backup_policies |  |
 | [**post_dns_zone_records**](CoreApi.md#post_dns_zone_records) | **POST** /dns_zones/:dns_zone/records |  |
 | [**post_dns_zone_verify**](CoreApi.md#post_dns_zone_verify) | **POST** /dns_zones/:dns_zone/verify |  |
-| [**post_dns_zones_dns_zone_records**](CoreApi.md#post_dns_zones_dns_zone_records) | **POST** /dns/zones/:dns_zone/records |  |
-| [**post_dns_zones_dns_zone_update_ttl**](CoreApi.md#post_dns_zones_dns_zone_update_ttl) | **POST** /dns/zones/:dns_zone/update_ttl |  |
-| [**post_dns_zones_dns_zone_verify**](CoreApi.md#post_dns_zones_dns_zone_verify) | **POST** /dns/zones/:dns_zone/verify |  |
 | [**post_invalidate_linked_web_session**](CoreApi.md#post_invalidate_linked_web_session) | **POST** /invalidate_linked_web_session |  |
 | [**post_ip_address_unallocate**](CoreApi.md#post_ip_address_unallocate) | **POST** /ip_addresses/:ip_address/unallocate |  |
 | [**post_load_balancer_rules**](CoreApi.md#post_load_balancer_rules) | **POST** /load_balancers/:load_balancer/rules |  |
-| [**post_organization_dns_zones**](CoreApi.md#post_organization_dns_zones) | **POST** /organizations/:organization/dns/zones |  |
+| [**post_organization_address_lists**](CoreApi.md#post_organization_address_lists) | **POST** /organizations/:organization/address_lists |  |
+| [**post_organization_dns_zones**](CoreApi.md#post_organization_dns_zones) | **POST** /organizations/:organization/dns_zones |  |
 | [**post_organization_file_storage_volumes**](CoreApi.md#post_organization_file_storage_volumes) | **POST** /organizations/:organization/file_storage_volumes |  |
 | [**post_organization_ip_addresses**](CoreApi.md#post_organization_ip_addresses) | **POST** /organizations/:organization/ip_addresses |  |
 | [**post_organization_load_balancers**](CoreApi.md#post_organization_load_balancers) | **POST** /organizations/:organization/load_balancers |  |
@@ -133,7 +135,6 @@ All URIs are relative to *http://katapult-api.localhost/core/v1*
 | [**post_organization_virtual_machine_groups**](CoreApi.md#post_organization_virtual_machine_groups) | **POST** /organizations/:organization/virtual_machine_groups |  |
 | [**post_organization_virtual_machines_build**](CoreApi.md#post_organization_virtual_machines_build) | **POST** /organizations/:organization/virtual_machines/build |  |
 | [**post_organization_virtual_machines_build_from_spec**](CoreApi.md#post_organization_virtual_machines_build_from_spec) | **POST** /organizations/:organization/virtual_machines/build_from_spec |  |
-| [**post_organizations_organization_dns_zones**](CoreApi.md#post_organizations_organization_dns_zones) | **POST** /organizations/:organization/dns_zones |  |
 | [**post_security_group_rules**](CoreApi.md#post_security_group_rules) | **POST** /security_groups/:security_group/rules |  |
 | [**post_trash_object_restore**](CoreApi.md#post_trash_object_restore) | **POST** /trash_objects/:trash_object/restore |  |
 | [**post_virtual_machine_allocate_ip**](CoreApi.md#post_virtual_machine_allocate_ip) | **POST** /virtual_machines/:virtual_machine/allocate_ip |  |
@@ -147,6 +148,144 @@ All URIs are relative to *http://katapult-api.localhost/core/v1*
 | [**post_virtual_machine_stop**](CoreApi.md#post_virtual_machine_stop) | **POST** /virtual_machines/:virtual_machine/stop |  |
 | [**put_virtual_machine_flexible_resources**](CoreApi.md#put_virtual_machine_flexible_resources) | **PUT** /virtual_machines/:virtual_machine/flexible_resources |  |
 | [**put_virtual_machine_package**](CoreApi.md#put_virtual_machine_package) | **PUT** /virtual_machines/:virtual_machine/package |  |
+
+
+## delete_address_list
+
+> <DeleteAddressList200Response> delete_address_list(opts)
+
+
+
+### Examples
+
+```ruby
+require 'time'
+require 'katapult-ruby'
+# setup authorization
+KatapultAPI.configure do |config|
+  # Configure Bearer authorization: Authenticator
+  config.access_token = 'YOUR_BEARER_TOKEN'
+end
+
+api_instance = KatapultAPI::CoreApi.new
+opts = {
+  delete_address_list_request: KatapultAPI::DeleteAddressListRequest.new({address_list: KatapultAPI::AddressListLookup.new}) # DeleteAddressListRequest | 
+}
+
+begin
+  
+  result = api_instance.delete_address_list(opts)
+  p result
+rescue KatapultAPI::ApiError => e
+  puts "Error when calling CoreApi->delete_address_list: #{e}"
+end
+```
+
+#### Using the delete_address_list_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<DeleteAddressList200Response>, Integer, Hash)> delete_address_list_with_http_info(opts)
+
+```ruby
+begin
+  
+  data, status_code, headers = api_instance.delete_address_list_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <DeleteAddressList200Response>
+rescue KatapultAPI::ApiError => e
+  puts "Error when calling CoreApi->delete_address_list_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **delete_address_list_request** | [**DeleteAddressListRequest**](DeleteAddressListRequest.md) |  | [optional] |
+
+### Return type
+
+[**DeleteAddressList200Response**](DeleteAddressList200Response.md)
+
+### Authorization
+
+[Authenticator](../README.md#Authenticator)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## delete_address_list_entry
+
+> <DeleteAddressListEntry200Response> delete_address_list_entry(opts)
+
+
+
+### Examples
+
+```ruby
+require 'time'
+require 'katapult-ruby'
+# setup authorization
+KatapultAPI.configure do |config|
+  # Configure Bearer authorization: Authenticator
+  config.access_token = 'YOUR_BEARER_TOKEN'
+end
+
+api_instance = KatapultAPI::CoreApi.new
+opts = {
+  delete_address_list_entry_request: KatapultAPI::DeleteAddressListEntryRequest.new({address_list_entry: KatapultAPI::AddressListEntryLookup.new}) # DeleteAddressListEntryRequest | 
+}
+
+begin
+  
+  result = api_instance.delete_address_list_entry(opts)
+  p result
+rescue KatapultAPI::ApiError => e
+  puts "Error when calling CoreApi->delete_address_list_entry: #{e}"
+end
+```
+
+#### Using the delete_address_list_entry_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<DeleteAddressListEntry200Response>, Integer, Hash)> delete_address_list_entry_with_http_info(opts)
+
+```ruby
+begin
+  
+  data, status_code, headers = api_instance.delete_address_list_entry_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <DeleteAddressListEntry200Response>
+rescue KatapultAPI::ApiError => e
+  puts "Error when calling CoreApi->delete_address_list_entry_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **delete_address_list_entry_request** | [**DeleteAddressListEntryRequest**](DeleteAddressListEntryRequest.md) |  | [optional] |
+
+### Return type
+
+[**DeleteAddressListEntry200Response**](DeleteAddressListEntry200Response.md)
+
+### Authorization
+
+[Authenticator](../README.md#Authenticator)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 
 ## delete_disk_backup_policy
@@ -306,7 +445,7 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  delete_dns_records_dns_record_request: KatapultAPI::DeleteDnsRecordsDnsRecordRequest.new({dns_record: KatapultAPI::DNSRecordLookup.new}) # DeleteDnsRecordsDnsRecordRequest | 
+  delete_dns_record_request: KatapultAPI::DeleteDnsRecordRequest.new({dns_record: KatapultAPI::DNSRecordLookup.new}) # DeleteDnsRecordRequest | 
 }
 
 begin
@@ -340,80 +479,11 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **delete_dns_records_dns_record_request** | [**DeleteDnsRecordsDnsRecordRequest**](DeleteDnsRecordsDnsRecordRequest.md) |  | [optional] |
+| **delete_dns_record_request** | [**DeleteDnsRecordRequest**](DeleteDnsRecordRequest.md) |  | [optional] |
 
 ### Return type
 
 [**DeleteDnsZone200Response**](DeleteDnsZone200Response.md)
-
-### Authorization
-
-[Authenticator](../README.md#Authenticator)
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## delete_dns_records_dns_record
-
-> <DeleteDnsRecordsDnsRecord200Response> delete_dns_records_dns_record(opts)
-
-
-
-### Examples
-
-```ruby
-require 'time'
-require 'katapult-ruby'
-# setup authorization
-KatapultAPI.configure do |config|
-  # Configure Bearer authorization: Authenticator
-  config.access_token = 'YOUR_BEARER_TOKEN'
-end
-
-api_instance = KatapultAPI::CoreApi.new
-opts = {
-  delete_dns_records_dns_record_request: KatapultAPI::DeleteDnsRecordsDnsRecordRequest.new({dns_record: KatapultAPI::DNSRecordLookup.new}) # DeleteDnsRecordsDnsRecordRequest | 
-}
-
-begin
-  
-  result = api_instance.delete_dns_records_dns_record(opts)
-  p result
-rescue KatapultAPI::ApiError => e
-  puts "Error when calling CoreApi->delete_dns_records_dns_record: #{e}"
-end
-```
-
-#### Using the delete_dns_records_dns_record_with_http_info variant
-
-This returns an Array which contains the response data, status code and headers.
-
-> <Array(<DeleteDnsRecordsDnsRecord200Response>, Integer, Hash)> delete_dns_records_dns_record_with_http_info(opts)
-
-```ruby
-begin
-  
-  data, status_code, headers = api_instance.delete_dns_records_dns_record_with_http_info(opts)
-  p status_code # => 2xx
-  p headers # => { ... }
-  p data # => <DeleteDnsRecordsDnsRecord200Response>
-rescue KatapultAPI::ApiError => e
-  puts "Error when calling CoreApi->delete_dns_records_dns_record_with_http_info: #{e}"
-end
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **delete_dns_records_dns_record_request** | [**DeleteDnsRecordsDnsRecordRequest**](DeleteDnsRecordsDnsRecordRequest.md) |  | [optional] |
-
-### Return type
-
-[**DeleteDnsRecordsDnsRecord200Response**](DeleteDnsRecordsDnsRecord200Response.md)
 
 ### Authorization
 
@@ -444,7 +514,7 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  delete_dns_zones_dns_zone_request: KatapultAPI::DeleteDnsZonesDnsZoneRequest.new({dns_zone: KatapultAPI::DNSZoneLookup.new}) # DeleteDnsZonesDnsZoneRequest | 
+  delete_dns_zone_request: KatapultAPI::DeleteDnsZoneRequest.new({dns_zone: KatapultAPI::DNSZoneLookup.new}) # DeleteDnsZoneRequest | 
 }
 
 begin
@@ -478,80 +548,11 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **delete_dns_zones_dns_zone_request** | [**DeleteDnsZonesDnsZoneRequest**](DeleteDnsZonesDnsZoneRequest.md) |  | [optional] |
+| **delete_dns_zone_request** | [**DeleteDnsZoneRequest**](DeleteDnsZoneRequest.md) |  | [optional] |
 
 ### Return type
 
 [**DeleteDnsZone200Response**](DeleteDnsZone200Response.md)
-
-### Authorization
-
-[Authenticator](../README.md#Authenticator)
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## delete_dns_zones_dns_zone
-
-> <DeleteDnsZonesDnsZone200Response> delete_dns_zones_dns_zone(opts)
-
-
-
-### Examples
-
-```ruby
-require 'time'
-require 'katapult-ruby'
-# setup authorization
-KatapultAPI.configure do |config|
-  # Configure Bearer authorization: Authenticator
-  config.access_token = 'YOUR_BEARER_TOKEN'
-end
-
-api_instance = KatapultAPI::CoreApi.new
-opts = {
-  delete_dns_zones_dns_zone_request: KatapultAPI::DeleteDnsZonesDnsZoneRequest.new({dns_zone: KatapultAPI::DNSZoneLookup.new}) # DeleteDnsZonesDnsZoneRequest | 
-}
-
-begin
-  
-  result = api_instance.delete_dns_zones_dns_zone(opts)
-  p result
-rescue KatapultAPI::ApiError => e
-  puts "Error when calling CoreApi->delete_dns_zones_dns_zone: #{e}"
-end
-```
-
-#### Using the delete_dns_zones_dns_zone_with_http_info variant
-
-This returns an Array which contains the response data, status code and headers.
-
-> <Array(<DeleteDnsZonesDnsZone200Response>, Integer, Hash)> delete_dns_zones_dns_zone_with_http_info(opts)
-
-```ruby
-begin
-  
-  data, status_code, headers = api_instance.delete_dns_zones_dns_zone_with_http_info(opts)
-  p status_code # => 2xx
-  p headers # => { ... }
-  p data # => <DeleteDnsZonesDnsZone200Response>
-rescue KatapultAPI::ApiError => e
-  puts "Error when calling CoreApi->delete_dns_zones_dns_zone_with_http_info: #{e}"
-end
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **delete_dns_zones_dns_zone_request** | [**DeleteDnsZonesDnsZoneRequest**](DeleteDnsZonesDnsZoneRequest.md) |  | [optional] |
-
-### Return type
-
-[**DeleteDnsZonesDnsZone200Response**](DeleteDnsZonesDnsZone200Response.md)
 
 ### Authorization
 
@@ -1319,6 +1320,288 @@ end
 ### HTTP request headers
 
 - **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## get_address_list
+
+> <PostOrganizationAddressLists201Response> get_address_list(opts)
+
+
+
+### Examples
+
+```ruby
+require 'time'
+require 'katapult-ruby'
+# setup authorization
+KatapultAPI.configure do |config|
+  # Configure Bearer authorization: Authenticator
+  config.access_token = 'YOUR_BEARER_TOKEN'
+end
+
+api_instance = KatapultAPI::CoreApi.new
+opts = {
+  address_list_id: 'address_list_id_example' # String | The address list to return. All 'address_list[]' params are mutually exclusive, only one can be provided.
+}
+
+begin
+  
+  result = api_instance.get_address_list(opts)
+  p result
+rescue KatapultAPI::ApiError => e
+  puts "Error when calling CoreApi->get_address_list: #{e}"
+end
+```
+
+#### Using the get_address_list_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<PostOrganizationAddressLists201Response>, Integer, Hash)> get_address_list_with_http_info(opts)
+
+```ruby
+begin
+  
+  data, status_code, headers = api_instance.get_address_list_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <PostOrganizationAddressLists201Response>
+rescue KatapultAPI::ApiError => e
+  puts "Error when calling CoreApi->get_address_list_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **address_list_id** | **String** | The address list to return. All &#39;address_list[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+
+### Return type
+
+[**PostOrganizationAddressLists201Response**](PostOrganizationAddressLists201Response.md)
+
+### Authorization
+
+[Authenticator](../README.md#Authenticator)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## get_address_list_entries
+
+> <GetAddressListEntries200Response> get_address_list_entries(opts)
+
+
+
+### Examples
+
+```ruby
+require 'time'
+require 'katapult-ruby'
+# setup authorization
+KatapultAPI.configure do |config|
+  # Configure Bearer authorization: Authenticator
+  config.access_token = 'YOUR_BEARER_TOKEN'
+end
+
+api_instance = KatapultAPI::CoreApi.new
+opts = {
+  address_list_id: 'address_list_id_example', # String | The address list for which the entries should be returned. All 'address_list[]' params are mutually exclusive, only one can be provided.
+  page: 56, # Integer | 
+  per_page: 56 # Integer | 
+}
+
+begin
+  
+  result = api_instance.get_address_list_entries(opts)
+  p result
+rescue KatapultAPI::ApiError => e
+  puts "Error when calling CoreApi->get_address_list_entries: #{e}"
+end
+```
+
+#### Using the get_address_list_entries_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<GetAddressListEntries200Response>, Integer, Hash)> get_address_list_entries_with_http_info(opts)
+
+```ruby
+begin
+  
+  data, status_code, headers = api_instance.get_address_list_entries_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <GetAddressListEntries200Response>
+rescue KatapultAPI::ApiError => e
+  puts "Error when calling CoreApi->get_address_list_entries_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **address_list_id** | **String** | The address list for which the entries should be returned. All &#39;address_list[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **page** | **Integer** |  | [optional] |
+| **per_page** | **Integer** |  | [optional] |
+
+### Return type
+
+[**GetAddressListEntries200Response**](GetAddressListEntries200Response.md)
+
+### Authorization
+
+[Authenticator](../README.md#Authenticator)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## get_address_list_entry
+
+> <PostAddressListEntries201Response> get_address_list_entry(opts)
+
+
+
+### Examples
+
+```ruby
+require 'time'
+require 'katapult-ruby'
+# setup authorization
+KatapultAPI.configure do |config|
+  # Configure Bearer authorization: Authenticator
+  config.access_token = 'YOUR_BEARER_TOKEN'
+end
+
+api_instance = KatapultAPI::CoreApi.new
+opts = {
+  address_list_entry_id: 'address_list_entry_id_example' # String | The address list entry to return. All 'address_list_entry[]' params are mutually exclusive, only one can be provided.
+}
+
+begin
+  
+  result = api_instance.get_address_list_entry(opts)
+  p result
+rescue KatapultAPI::ApiError => e
+  puts "Error when calling CoreApi->get_address_list_entry: #{e}"
+end
+```
+
+#### Using the get_address_list_entry_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<PostAddressListEntries201Response>, Integer, Hash)> get_address_list_entry_with_http_info(opts)
+
+```ruby
+begin
+  
+  data, status_code, headers = api_instance.get_address_list_entry_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <PostAddressListEntries201Response>
+rescue KatapultAPI::ApiError => e
+  puts "Error when calling CoreApi->get_address_list_entry_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **address_list_entry_id** | **String** | The address list entry to return. All &#39;address_list_entry[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+
+### Return type
+
+[**PostAddressListEntries201Response**](PostAddressListEntries201Response.md)
+
+### Authorization
+
+[Authenticator](../README.md#Authenticator)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## get_address_lists
+
+> <GetAddressLists200Response> get_address_lists(opts)
+
+
+
+### Examples
+
+```ruby
+require 'time'
+require 'katapult-ruby'
+# setup authorization
+KatapultAPI.configure do |config|
+  # Configure Bearer authorization: Authenticator
+  config.access_token = 'YOUR_BEARER_TOKEN'
+end
+
+api_instance = KatapultAPI::CoreApi.new
+opts = {
+  page: 56, # Integer | 
+  per_page: 56 # Integer | 
+}
+
+begin
+  
+  result = api_instance.get_address_lists(opts)
+  p result
+rescue KatapultAPI::ApiError => e
+  puts "Error when calling CoreApi->get_address_lists: #{e}"
+end
+```
+
+#### Using the get_address_lists_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<GetAddressLists200Response>, Integer, Hash)> get_address_lists_with_http_info(opts)
+
+```ruby
+begin
+  
+  data, status_code, headers = api_instance.get_address_lists_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <GetAddressLists200Response>
+rescue KatapultAPI::ApiError => e
+  puts "Error when calling CoreApi->get_address_lists_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **page** | **Integer** |  | [optional] |
+| **per_page** | **Integer** |  | [optional] |
+
+### Return type
+
+[**GetAddressLists200Response**](GetAddressLists200Response.md)
+
+### Authorization
+
+[Authenticator](../README.md#Authenticator)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: application/json
 
 
@@ -2668,75 +2951,6 @@ end
 - **Accept**: application/json
 
 
-## get_dns_records_dns_record
-
-> <GetDnsRecordsDnsRecord200Response> get_dns_records_dns_record(opts)
-
-
-
-### Examples
-
-```ruby
-require 'time'
-require 'katapult-ruby'
-# setup authorization
-KatapultAPI.configure do |config|
-  # Configure Bearer authorization: Authenticator
-  config.access_token = 'YOUR_BEARER_TOKEN'
-end
-
-api_instance = KatapultAPI::CoreApi.new
-opts = {
-  dns_record_id: 'dns_record_id_example' # String | The DNS record to return information for. All 'dns_record[]' params are mutually exclusive, only one can be provided.
-}
-
-begin
-  
-  result = api_instance.get_dns_records_dns_record(opts)
-  p result
-rescue KatapultAPI::ApiError => e
-  puts "Error when calling CoreApi->get_dns_records_dns_record: #{e}"
-end
-```
-
-#### Using the get_dns_records_dns_record_with_http_info variant
-
-This returns an Array which contains the response data, status code and headers.
-
-> <Array(<GetDnsRecordsDnsRecord200Response>, Integer, Hash)> get_dns_records_dns_record_with_http_info(opts)
-
-```ruby
-begin
-  
-  data, status_code, headers = api_instance.get_dns_records_dns_record_with_http_info(opts)
-  p status_code # => 2xx
-  p headers # => { ... }
-  p data # => <GetDnsRecordsDnsRecord200Response>
-rescue KatapultAPI::ApiError => e
-  puts "Error when calling CoreApi->get_dns_records_dns_record_with_http_info: #{e}"
-end
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **dns_record_id** | **String** | The DNS record to return information for. All &#39;dns_record[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-
-### Return type
-
-[**GetDnsRecordsDnsRecord200Response**](GetDnsRecordsDnsRecord200Response.md)
-
-### Authorization
-
-[Authenticator](../README.md#Authenticator)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
 ## get_dns_zone
 
 > <GetDnsZone200Response> get_dns_zone(opts)
@@ -2868,219 +3082,6 @@ end
 ### Return type
 
 [**GetDnsZoneRecords200Response**](GetDnsZoneRecords200Response.md)
-
-### Authorization
-
-[Authenticator](../README.md#Authenticator)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## get_dns_zones_dns_zone
-
-> <GetDnsZonesDnsZone200Response> get_dns_zones_dns_zone(opts)
-
-
-
-### Examples
-
-```ruby
-require 'time'
-require 'katapult-ruby'
-# setup authorization
-KatapultAPI.configure do |config|
-  # Configure Bearer authorization: Authenticator
-  config.access_token = 'YOUR_BEARER_TOKEN'
-end
-
-api_instance = KatapultAPI::CoreApi.new
-opts = {
-  dns_zone_id: 'dns_zone_id_example', # String | The DNS zone to return information for. All 'dns_zone[]' params are mutually exclusive, only one can be provided.
-  dns_zone_name: 'dns_zone_name_example' # String | The DNS zone to return information for. All 'dns_zone[]' params are mutually exclusive, only one can be provided.
-}
-
-begin
-  
-  result = api_instance.get_dns_zones_dns_zone(opts)
-  p result
-rescue KatapultAPI::ApiError => e
-  puts "Error when calling CoreApi->get_dns_zones_dns_zone: #{e}"
-end
-```
-
-#### Using the get_dns_zones_dns_zone_with_http_info variant
-
-This returns an Array which contains the response data, status code and headers.
-
-> <Array(<GetDnsZonesDnsZone200Response>, Integer, Hash)> get_dns_zones_dns_zone_with_http_info(opts)
-
-```ruby
-begin
-  
-  data, status_code, headers = api_instance.get_dns_zones_dns_zone_with_http_info(opts)
-  p status_code # => 2xx
-  p headers # => { ... }
-  p data # => <GetDnsZonesDnsZone200Response>
-rescue KatapultAPI::ApiError => e
-  puts "Error when calling CoreApi->get_dns_zones_dns_zone_with_http_info: #{e}"
-end
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **dns_zone_id** | **String** | The DNS zone to return information for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **dns_zone_name** | **String** | The DNS zone to return information for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-
-### Return type
-
-[**GetDnsZonesDnsZone200Response**](GetDnsZonesDnsZone200Response.md)
-
-### Authorization
-
-[Authenticator](../README.md#Authenticator)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## get_dns_zones_dns_zone_records
-
-> <GetDnsZonesDnsZoneRecords200Response> get_dns_zones_dns_zone_records(opts)
-
-
-
-### Examples
-
-```ruby
-require 'time'
-require 'katapult-ruby'
-# setup authorization
-KatapultAPI.configure do |config|
-  # Configure Bearer authorization: Authenticator
-  config.access_token = 'YOUR_BEARER_TOKEN'
-end
-
-api_instance = KatapultAPI::CoreApi.new
-opts = {
-  dns_zone_id: 'dns_zone_id_example', # String | The DNS zone to find all DNS records for. All 'dns_zone[]' params are mutually exclusive, only one can be provided.
-  dns_zone_name: 'dns_zone_name_example' # String | The DNS zone to find all DNS records for. All 'dns_zone[]' params are mutually exclusive, only one can be provided.
-}
-
-begin
-  
-  result = api_instance.get_dns_zones_dns_zone_records(opts)
-  p result
-rescue KatapultAPI::ApiError => e
-  puts "Error when calling CoreApi->get_dns_zones_dns_zone_records: #{e}"
-end
-```
-
-#### Using the get_dns_zones_dns_zone_records_with_http_info variant
-
-This returns an Array which contains the response data, status code and headers.
-
-> <Array(<GetDnsZonesDnsZoneRecords200Response>, Integer, Hash)> get_dns_zones_dns_zone_records_with_http_info(opts)
-
-```ruby
-begin
-  
-  data, status_code, headers = api_instance.get_dns_zones_dns_zone_records_with_http_info(opts)
-  p status_code # => 2xx
-  p headers # => { ... }
-  p data # => <GetDnsZonesDnsZoneRecords200Response>
-rescue KatapultAPI::ApiError => e
-  puts "Error when calling CoreApi->get_dns_zones_dns_zone_records_with_http_info: #{e}"
-end
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **dns_zone_id** | **String** | The DNS zone to find all DNS records for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **dns_zone_name** | **String** | The DNS zone to find all DNS records for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-
-### Return type
-
-[**GetDnsZonesDnsZoneRecords200Response**](GetDnsZonesDnsZoneRecords200Response.md)
-
-### Authorization
-
-[Authenticator](../README.md#Authenticator)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## get_dns_zones_dns_zone_verification_details
-
-> <GetDnsZonesDnsZoneVerificationDetails200Response> get_dns_zones_dns_zone_verification_details(opts)
-
-
-
-### Examples
-
-```ruby
-require 'time'
-require 'katapult-ruby'
-# setup authorization
-KatapultAPI.configure do |config|
-  # Configure Bearer authorization: Authenticator
-  config.access_token = 'YOUR_BEARER_TOKEN'
-end
-
-api_instance = KatapultAPI::CoreApi.new
-opts = {
-  dns_zone_id: 'dns_zone_id_example', # String | The DNS zone to get verification details for. All 'dns_zone[]' params are mutually exclusive, only one can be provided.
-  dns_zone_name: 'dns_zone_name_example' # String | The DNS zone to get verification details for. All 'dns_zone[]' params are mutually exclusive, only one can be provided.
-}
-
-begin
-  
-  result = api_instance.get_dns_zones_dns_zone_verification_details(opts)
-  p result
-rescue KatapultAPI::ApiError => e
-  puts "Error when calling CoreApi->get_dns_zones_dns_zone_verification_details: #{e}"
-end
-```
-
-#### Using the get_dns_zones_dns_zone_verification_details_with_http_info variant
-
-This returns an Array which contains the response data, status code and headers.
-
-> <Array(<GetDnsZonesDnsZoneVerificationDetails200Response>, Integer, Hash)> get_dns_zones_dns_zone_verification_details_with_http_info(opts)
-
-```ruby
-begin
-  
-  data, status_code, headers = api_instance.get_dns_zones_dns_zone_verification_details_with_http_info(opts)
-  p status_code # => 2xx
-  p headers # => { ... }
-  p data # => <GetDnsZonesDnsZoneVerificationDetails200Response>
-rescue KatapultAPI::ApiError => e
-  puts "Error when calling CoreApi->get_dns_zones_dns_zone_verification_details_with_http_info: #{e}"
-end
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **dns_zone_id** | **String** | The DNS zone to get verification details for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **dns_zone_name** | **String** | The DNS zone to get verification details for. All &#39;dns_zone[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-
-### Return type
-
-[**GetDnsZonesDnsZoneVerificationDetails200Response**](GetDnsZonesDnsZoneVerificationDetails200Response.md)
 
 ### Authorization
 
@@ -3871,6 +3872,81 @@ end
 - **Accept**: application/json
 
 
+## get_organization_address_lists
+
+> <GetOrganizationAddressLists200Response> get_organization_address_lists(opts)
+
+
+
+### Examples
+
+```ruby
+require 'time'
+require 'katapult-ruby'
+# setup authorization
+KatapultAPI.configure do |config|
+  # Configure Bearer authorization: Authenticator
+  config.access_token = 'YOUR_BEARER_TOKEN'
+end
+
+api_instance = KatapultAPI::CoreApi.new
+opts = {
+  organization_id: 'organization_id_example', # String | The organization for which the address lists should be returned. All 'organization[]' params are mutually exclusive, only one can be provided.
+  organization_sub_domain: 'organization_sub_domain_example', # String | The organization for which the address lists should be returned. All 'organization[]' params are mutually exclusive, only one can be provided.
+  page: 56, # Integer | 
+  per_page: 56 # Integer | 
+}
+
+begin
+  
+  result = api_instance.get_organization_address_lists(opts)
+  p result
+rescue KatapultAPI::ApiError => e
+  puts "Error when calling CoreApi->get_organization_address_lists: #{e}"
+end
+```
+
+#### Using the get_organization_address_lists_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<GetOrganizationAddressLists200Response>, Integer, Hash)> get_organization_address_lists_with_http_info(opts)
+
+```ruby
+begin
+  
+  data, status_code, headers = api_instance.get_organization_address_lists_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <GetOrganizationAddressLists200Response>
+rescue KatapultAPI::ApiError => e
+  puts "Error when calling CoreApi->get_organization_address_lists_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **organization_id** | **String** | The organization for which the address lists should be returned. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **organization_sub_domain** | **String** | The organization for which the address lists should be returned. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **page** | **Integer** |  | [optional] |
+| **per_page** | **Integer** |  | [optional] |
+
+### Return type
+
+[**GetOrganizationAddressLists200Response**](GetOrganizationAddressLists200Response.md)
+
+### Authorization
+
+[Authenticator](../README.md#Authenticator)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## get_organization_available_networks
 
 > <GetOrganizationAvailableNetworks200Response> get_organization_available_networks(opts)
@@ -4265,8 +4341,8 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  organization_id: 'organization_id_example', # String | The organization to return DNS zones for. All 'organization[]' params are mutually exclusive, only one can be provided.
-  organization_sub_domain: 'organization_sub_domain_example', # String | The organization to return DNS zones for. All 'organization[]' params are mutually exclusive, only one can be provided.
+  organization_id: 'organization_id_example', # String | All 'organization[]' params are mutually exclusive, only one can be provided.
+  organization_sub_domain: 'organization_sub_domain_example', # String | All 'organization[]' params are mutually exclusive, only one can be provided.
   page: 56, # Integer | 
   per_page: 56 # Integer | 
 }
@@ -4302,8 +4378,8 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **organization_id** | **String** | The organization to return DNS zones for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **organization_sub_domain** | **String** | The organization to return DNS zones for. All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **organization_id** | **String** | All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **organization_sub_domain** | **String** | All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
 | **page** | **Integer** |  | [optional] |
 | **per_page** | **Integer** |  | [optional] |
 
@@ -4758,6 +4834,77 @@ end
 ### Return type
 
 [**GetOrganizationNetworkSpeedProfiles200Response**](GetOrganizationNetworkSpeedProfiles200Response.md)
+
+### Authorization
+
+[Authenticator](../README.md#Authenticator)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## get_organization_policy_limits
+
+> <GetOrganizationPolicyLimits200Response> get_organization_policy_limits(opts)
+
+
+
+### Examples
+
+```ruby
+require 'time'
+require 'katapult-ruby'
+# setup authorization
+KatapultAPI.configure do |config|
+  # Configure Bearer authorization: Authenticator
+  config.access_token = 'YOUR_BEARER_TOKEN'
+end
+
+api_instance = KatapultAPI::CoreApi.new
+opts = {
+  organization_id: 'organization_id_example', # String | All 'organization[]' params are mutually exclusive, only one can be provided.
+  organization_sub_domain: 'organization_sub_domain_example' # String | All 'organization[]' params are mutually exclusive, only one can be provided.
+}
+
+begin
+  
+  result = api_instance.get_organization_policy_limits(opts)
+  p result
+rescue KatapultAPI::ApiError => e
+  puts "Error when calling CoreApi->get_organization_policy_limits: #{e}"
+end
+```
+
+#### Using the get_organization_policy_limits_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<GetOrganizationPolicyLimits200Response>, Integer, Hash)> get_organization_policy_limits_with_http_info(opts)
+
+```ruby
+begin
+  
+  data, status_code, headers = api_instance.get_organization_policy_limits_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <GetOrganizationPolicyLimits200Response>
+rescue KatapultAPI::ApiError => e
+  puts "Error when calling CoreApi->get_organization_policy_limits_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **organization_id** | **String** | All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+| **organization_sub_domain** | **String** | All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
+
+### Return type
+
+[**GetOrganizationPolicyLimits200Response**](GetOrganizationPolicyLimits200Response.md)
 
 ### Authorization
 
@@ -5354,81 +5501,6 @@ This endpoint does not need any parameter.
 - **Accept**: application/json
 
 
-## get_organizations_organization_dns_zones
-
-> <GetOrganizationDnsZones200Response> get_organizations_organization_dns_zones(opts)
-
-
-
-### Examples
-
-```ruby
-require 'time'
-require 'katapult-ruby'
-# setup authorization
-KatapultAPI.configure do |config|
-  # Configure Bearer authorization: Authenticator
-  config.access_token = 'YOUR_BEARER_TOKEN'
-end
-
-api_instance = KatapultAPI::CoreApi.new
-opts = {
-  organization_id: 'organization_id_example', # String | All 'organization[]' params are mutually exclusive, only one can be provided.
-  organization_sub_domain: 'organization_sub_domain_example', # String | All 'organization[]' params are mutually exclusive, only one can be provided.
-  page: 56, # Integer | 
-  per_page: 56 # Integer | 
-}
-
-begin
-  
-  result = api_instance.get_organizations_organization_dns_zones(opts)
-  p result
-rescue KatapultAPI::ApiError => e
-  puts "Error when calling CoreApi->get_organizations_organization_dns_zones: #{e}"
-end
-```
-
-#### Using the get_organizations_organization_dns_zones_with_http_info variant
-
-This returns an Array which contains the response data, status code and headers.
-
-> <Array(<GetOrganizationDnsZones200Response>, Integer, Hash)> get_organizations_organization_dns_zones_with_http_info(opts)
-
-```ruby
-begin
-  
-  data, status_code, headers = api_instance.get_organizations_organization_dns_zones_with_http_info(opts)
-  p status_code # => 2xx
-  p headers # => { ... }
-  p data # => <GetOrganizationDnsZones200Response>
-rescue KatapultAPI::ApiError => e
-  puts "Error when calling CoreApi->get_organizations_organization_dns_zones_with_http_info: #{e}"
-end
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **organization_id** | **String** | All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **organization_sub_domain** | **String** | All &#39;organization[]&#39; params are mutually exclusive, only one can be provided. | [optional] |
-| **page** | **Integer** |  | [optional] |
-| **per_page** | **Integer** |  | [optional] |
-
-### Return type
-
-[**GetOrganizationDnsZones200Response**](GetOrganizationDnsZones200Response.md)
-
-### Authorization
-
-[Authenticator](../README.md#Authenticator)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
 ## get_security_group
 
 > <GetSecurityGroup200Response> get_security_group(opts)
@@ -5982,6 +6054,70 @@ end
 
 - **Content-Type**: Not defined
 - **Accept**: application/json
+
+
+## get_virtual_machine_authorized_keys
+
+> String get_virtual_machine_authorized_keys
+
+
+
+### Examples
+
+```ruby
+require 'time'
+require 'katapult-ruby'
+# setup authorization
+KatapultAPI.configure do |config|
+  # Configure Bearer authorization: Authenticator
+  config.access_token = 'YOUR_BEARER_TOKEN'
+end
+
+api_instance = KatapultAPI::CoreApi.new
+
+begin
+  
+  result = api_instance.get_virtual_machine_authorized_keys
+  p result
+rescue KatapultAPI::ApiError => e
+  puts "Error when calling CoreApi->get_virtual_machine_authorized_keys: #{e}"
+end
+```
+
+#### Using the get_virtual_machine_authorized_keys_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(String, Integer, Hash)> get_virtual_machine_authorized_keys_with_http_info
+
+```ruby
+begin
+  
+  data, status_code, headers = api_instance.get_virtual_machine_authorized_keys_with_http_info
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => String
+rescue KatapultAPI::ApiError => e
+  puts "Error when calling CoreApi->get_virtual_machine_authorized_keys_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+**String**
+
+### Authorization
+
+[Authenticator](../README.md#Authenticator)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json
 
 
 ## get_virtual_machine_disk_backup_policies
@@ -6845,6 +6981,144 @@ This endpoint does not need any parameter.
 - **Accept**: application/json
 
 
+## patch_address_list
+
+> <PostOrganizationAddressLists201Response> patch_address_list(opts)
+
+
+
+### Examples
+
+```ruby
+require 'time'
+require 'katapult-ruby'
+# setup authorization
+KatapultAPI.configure do |config|
+  # Configure Bearer authorization: Authenticator
+  config.access_token = 'YOUR_BEARER_TOKEN'
+end
+
+api_instance = KatapultAPI::CoreApi.new
+opts = {
+  patch_address_list_request: KatapultAPI::PatchAddressListRequest.new({address_list: KatapultAPI::AddressListLookup.new, properties: KatapultAPI::AddressListArguments.new}) # PatchAddressListRequest | 
+}
+
+begin
+  
+  result = api_instance.patch_address_list(opts)
+  p result
+rescue KatapultAPI::ApiError => e
+  puts "Error when calling CoreApi->patch_address_list: #{e}"
+end
+```
+
+#### Using the patch_address_list_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<PostOrganizationAddressLists201Response>, Integer, Hash)> patch_address_list_with_http_info(opts)
+
+```ruby
+begin
+  
+  data, status_code, headers = api_instance.patch_address_list_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <PostOrganizationAddressLists201Response>
+rescue KatapultAPI::ApiError => e
+  puts "Error when calling CoreApi->patch_address_list_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **patch_address_list_request** | [**PatchAddressListRequest**](PatchAddressListRequest.md) |  | [optional] |
+
+### Return type
+
+[**PostOrganizationAddressLists201Response**](PostOrganizationAddressLists201Response.md)
+
+### Authorization
+
+[Authenticator](../README.md#Authenticator)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## patch_address_list_entry
+
+> <PostAddressListEntries201Response> patch_address_list_entry(opts)
+
+
+
+### Examples
+
+```ruby
+require 'time'
+require 'katapult-ruby'
+# setup authorization
+KatapultAPI.configure do |config|
+  # Configure Bearer authorization: Authenticator
+  config.access_token = 'YOUR_BEARER_TOKEN'
+end
+
+api_instance = KatapultAPI::CoreApi.new
+opts = {
+  patch_address_list_entry_request: KatapultAPI::PatchAddressListEntryRequest.new({address_list_entry: KatapultAPI::AddressListEntryLookup.new, properties: KatapultAPI::AddressListEntryArguments.new}) # PatchAddressListEntryRequest | 
+}
+
+begin
+  
+  result = api_instance.patch_address_list_entry(opts)
+  p result
+rescue KatapultAPI::ApiError => e
+  puts "Error when calling CoreApi->patch_address_list_entry: #{e}"
+end
+```
+
+#### Using the patch_address_list_entry_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<PostAddressListEntries201Response>, Integer, Hash)> patch_address_list_entry_with_http_info(opts)
+
+```ruby
+begin
+  
+  data, status_code, headers = api_instance.patch_address_list_entry_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <PostAddressListEntries201Response>
+rescue KatapultAPI::ApiError => e
+  puts "Error when calling CoreApi->patch_address_list_entry_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **patch_address_list_entry_request** | [**PatchAddressListEntryRequest**](PatchAddressListEntryRequest.md) |  | [optional] |
+
+### Return type
+
+[**PostAddressListEntries201Response**](PostAddressListEntries201Response.md)
+
+### Authorization
+
+[Authenticator](../README.md#Authenticator)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
 ## patch_disk_backup_policy
 
 > <PatchDiskBackupPolicy200Response> patch_disk_backup_policy(opts)
@@ -6983,75 +7257,6 @@ end
 - **Accept**: application/json
 
 
-## patch_dns_records_dns_record
-
-> <PatchDnsRecordsDnsRecord200Response> patch_dns_records_dns_record(opts)
-
-
-
-### Examples
-
-```ruby
-require 'time'
-require 'katapult-ruby'
-# setup authorization
-KatapultAPI.configure do |config|
-  # Configure Bearer authorization: Authenticator
-  config.access_token = 'YOUR_BEARER_TOKEN'
-end
-
-api_instance = KatapultAPI::CoreApi.new
-opts = {
-  patch_dns_records_dns_record_request: KatapultAPI::PatchDnsRecordsDnsRecordRequest.new({dns_record: KatapultAPI::DNSRecordLookup.new, details: KatapultAPI::DNSRecordArguments.new}) # PatchDnsRecordsDnsRecordRequest | 
-}
-
-begin
-  
-  result = api_instance.patch_dns_records_dns_record(opts)
-  p result
-rescue KatapultAPI::ApiError => e
-  puts "Error when calling CoreApi->patch_dns_records_dns_record: #{e}"
-end
-```
-
-#### Using the patch_dns_records_dns_record_with_http_info variant
-
-This returns an Array which contains the response data, status code and headers.
-
-> <Array(<PatchDnsRecordsDnsRecord200Response>, Integer, Hash)> patch_dns_records_dns_record_with_http_info(opts)
-
-```ruby
-begin
-  
-  data, status_code, headers = api_instance.patch_dns_records_dns_record_with_http_info(opts)
-  p status_code # => 2xx
-  p headers # => { ... }
-  p data # => <PatchDnsRecordsDnsRecord200Response>
-rescue KatapultAPI::ApiError => e
-  puts "Error when calling CoreApi->patch_dns_records_dns_record_with_http_info: #{e}"
-end
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **patch_dns_records_dns_record_request** | [**PatchDnsRecordsDnsRecordRequest**](PatchDnsRecordsDnsRecordRequest.md) |  | [optional] |
-
-### Return type
-
-[**PatchDnsRecordsDnsRecord200Response**](PatchDnsRecordsDnsRecord200Response.md)
-
-### Authorization
-
-[Authenticator](../README.md#Authenticator)
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
 ## patch_dns_zone
 
 > <GetDnsZone200Response> patch_dns_zone(opts)
@@ -7071,7 +7276,7 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  patch_dns_zone_request: KatapultAPI::PatchDnsZoneRequest.new({dns_zone: KatapultAPI::DNSZoneLookup.new, properties: KatapultAPI::DNSZoneArguments.new({name: 'name_example'})}) # PatchDnsZoneRequest | 
+  patch_dns_zone_request: KatapultAPI::PatchDnsZoneRequest.new({dns_zone: KatapultAPI::DNSZoneLookup.new, properties: KatapultAPI::DNSZoneArguments.new}) # PatchDnsZoneRequest | 
 }
 
 begin
@@ -7811,6 +8016,75 @@ end
 - **Accept**: application/json
 
 
+## post_address_list_entries
+
+> <PostAddressListEntries201Response> post_address_list_entries(opts)
+
+
+
+### Examples
+
+```ruby
+require 'time'
+require 'katapult-ruby'
+# setup authorization
+KatapultAPI.configure do |config|
+  # Configure Bearer authorization: Authenticator
+  config.access_token = 'YOUR_BEARER_TOKEN'
+end
+
+api_instance = KatapultAPI::CoreApi.new
+opts = {
+  post_address_list_entries_request: KatapultAPI::PostAddressListEntriesRequest.new({address_list: KatapultAPI::AddressListLookup.new, properties: KatapultAPI::AddressListEntryArguments.new}) # PostAddressListEntriesRequest | 
+}
+
+begin
+  
+  result = api_instance.post_address_list_entries(opts)
+  p result
+rescue KatapultAPI::ApiError => e
+  puts "Error when calling CoreApi->post_address_list_entries: #{e}"
+end
+```
+
+#### Using the post_address_list_entries_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<PostAddressListEntries201Response>, Integer, Hash)> post_address_list_entries_with_http_info(opts)
+
+```ruby
+begin
+  
+  data, status_code, headers = api_instance.post_address_list_entries_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <PostAddressListEntries201Response>
+rescue KatapultAPI::ApiError => e
+  puts "Error when calling CoreApi->post_address_list_entries_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **post_address_list_entries_request** | [**PostAddressListEntriesRequest**](PostAddressListEntriesRequest.md) |  | [optional] |
+
+### Return type
+
+[**PostAddressListEntries201Response**](PostAddressListEntries201Response.md)
+
+### Authorization
+
+[Authenticator](../README.md#Authenticator)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
 ## post_disk_disk_backup_policies
 
 > <PostDiskDiskBackupPolicies200Response> post_disk_disk_backup_policies(opts)
@@ -7968,7 +8242,7 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  delete_dns_zones_dns_zone_request: KatapultAPI::DeleteDnsZonesDnsZoneRequest.new({dns_zone: KatapultAPI::DNSZoneLookup.new}) # DeleteDnsZonesDnsZoneRequest | 
+  delete_dns_zone_request: KatapultAPI::DeleteDnsZoneRequest.new({dns_zone: KatapultAPI::DNSZoneLookup.new}) # DeleteDnsZoneRequest | 
 }
 
 begin
@@ -8002,218 +8276,11 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **delete_dns_zones_dns_zone_request** | [**DeleteDnsZonesDnsZoneRequest**](DeleteDnsZonesDnsZoneRequest.md) |  | [optional] |
+| **delete_dns_zone_request** | [**DeleteDnsZoneRequest**](DeleteDnsZoneRequest.md) |  | [optional] |
 
 ### Return type
 
 [**GetDnsZone200Response**](GetDnsZone200Response.md)
-
-### Authorization
-
-[Authenticator](../README.md#Authenticator)
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## post_dns_zones_dns_zone_records
-
-> <PostDnsZonesDnsZoneRecords200Response> post_dns_zones_dns_zone_records(opts)
-
-
-
-### Examples
-
-```ruby
-require 'time'
-require 'katapult-ruby'
-# setup authorization
-KatapultAPI.configure do |config|
-  # Configure Bearer authorization: Authenticator
-  config.access_token = 'YOUR_BEARER_TOKEN'
-end
-
-api_instance = KatapultAPI::CoreApi.new
-opts = {
-  post_dns_zones_dns_zone_records_request: KatapultAPI::PostDnsZonesDnsZoneRecordsRequest.new({dns_zone: KatapultAPI::DNSZoneLookup.new, details: KatapultAPI::DNSRecordArguments.new}) # PostDnsZonesDnsZoneRecordsRequest | 
-}
-
-begin
-  
-  result = api_instance.post_dns_zones_dns_zone_records(opts)
-  p result
-rescue KatapultAPI::ApiError => e
-  puts "Error when calling CoreApi->post_dns_zones_dns_zone_records: #{e}"
-end
-```
-
-#### Using the post_dns_zones_dns_zone_records_with_http_info variant
-
-This returns an Array which contains the response data, status code and headers.
-
-> <Array(<PostDnsZonesDnsZoneRecords200Response>, Integer, Hash)> post_dns_zones_dns_zone_records_with_http_info(opts)
-
-```ruby
-begin
-  
-  data, status_code, headers = api_instance.post_dns_zones_dns_zone_records_with_http_info(opts)
-  p status_code # => 2xx
-  p headers # => { ... }
-  p data # => <PostDnsZonesDnsZoneRecords200Response>
-rescue KatapultAPI::ApiError => e
-  puts "Error when calling CoreApi->post_dns_zones_dns_zone_records_with_http_info: #{e}"
-end
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **post_dns_zones_dns_zone_records_request** | [**PostDnsZonesDnsZoneRecordsRequest**](PostDnsZonesDnsZoneRecordsRequest.md) |  | [optional] |
-
-### Return type
-
-[**PostDnsZonesDnsZoneRecords200Response**](PostDnsZonesDnsZoneRecords200Response.md)
-
-### Authorization
-
-[Authenticator](../README.md#Authenticator)
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## post_dns_zones_dns_zone_update_ttl
-
-> <PostDnsZonesDnsZoneUpdateTtl200Response> post_dns_zones_dns_zone_update_ttl(opts)
-
-
-
-### Examples
-
-```ruby
-require 'time'
-require 'katapult-ruby'
-# setup authorization
-KatapultAPI.configure do |config|
-  # Configure Bearer authorization: Authenticator
-  config.access_token = 'YOUR_BEARER_TOKEN'
-end
-
-api_instance = KatapultAPI::CoreApi.new
-opts = {
-  post_dns_zones_dns_zone_update_ttl_request: KatapultAPI::PostDnsZonesDnsZoneUpdateTtlRequest.new({dns_zone: KatapultAPI::DNSZoneLookup.new, ttl: 37}) # PostDnsZonesDnsZoneUpdateTtlRequest | 
-}
-
-begin
-  
-  result = api_instance.post_dns_zones_dns_zone_update_ttl(opts)
-  p result
-rescue KatapultAPI::ApiError => e
-  puts "Error when calling CoreApi->post_dns_zones_dns_zone_update_ttl: #{e}"
-end
-```
-
-#### Using the post_dns_zones_dns_zone_update_ttl_with_http_info variant
-
-This returns an Array which contains the response data, status code and headers.
-
-> <Array(<PostDnsZonesDnsZoneUpdateTtl200Response>, Integer, Hash)> post_dns_zones_dns_zone_update_ttl_with_http_info(opts)
-
-```ruby
-begin
-  
-  data, status_code, headers = api_instance.post_dns_zones_dns_zone_update_ttl_with_http_info(opts)
-  p status_code # => 2xx
-  p headers # => { ... }
-  p data # => <PostDnsZonesDnsZoneUpdateTtl200Response>
-rescue KatapultAPI::ApiError => e
-  puts "Error when calling CoreApi->post_dns_zones_dns_zone_update_ttl_with_http_info: #{e}"
-end
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **post_dns_zones_dns_zone_update_ttl_request** | [**PostDnsZonesDnsZoneUpdateTtlRequest**](PostDnsZonesDnsZoneUpdateTtlRequest.md) |  | [optional] |
-
-### Return type
-
-[**PostDnsZonesDnsZoneUpdateTtl200Response**](PostDnsZonesDnsZoneUpdateTtl200Response.md)
-
-### Authorization
-
-[Authenticator](../README.md#Authenticator)
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## post_dns_zones_dns_zone_verify
-
-> <PostDnsZonesDnsZoneVerify200Response> post_dns_zones_dns_zone_verify(opts)
-
-
-
-### Examples
-
-```ruby
-require 'time'
-require 'katapult-ruby'
-# setup authorization
-KatapultAPI.configure do |config|
-  # Configure Bearer authorization: Authenticator
-  config.access_token = 'YOUR_BEARER_TOKEN'
-end
-
-api_instance = KatapultAPI::CoreApi.new
-opts = {
-  delete_dns_zones_dns_zone_request: KatapultAPI::DeleteDnsZonesDnsZoneRequest.new({dns_zone: KatapultAPI::DNSZoneLookup.new}) # DeleteDnsZonesDnsZoneRequest | 
-}
-
-begin
-  
-  result = api_instance.post_dns_zones_dns_zone_verify(opts)
-  p result
-rescue KatapultAPI::ApiError => e
-  puts "Error when calling CoreApi->post_dns_zones_dns_zone_verify: #{e}"
-end
-```
-
-#### Using the post_dns_zones_dns_zone_verify_with_http_info variant
-
-This returns an Array which contains the response data, status code and headers.
-
-> <Array(<PostDnsZonesDnsZoneVerify200Response>, Integer, Hash)> post_dns_zones_dns_zone_verify_with_http_info(opts)
-
-```ruby
-begin
-  
-  data, status_code, headers = api_instance.post_dns_zones_dns_zone_verify_with_http_info(opts)
-  p status_code # => 2xx
-  p headers # => { ... }
-  p data # => <PostDnsZonesDnsZoneVerify200Response>
-rescue KatapultAPI::ApiError => e
-  puts "Error when calling CoreApi->post_dns_zones_dns_zone_verify_with_http_info: #{e}"
-end
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **delete_dns_zones_dns_zone_request** | [**DeleteDnsZonesDnsZoneRequest**](DeleteDnsZonesDnsZoneRequest.md) |  | [optional] |
-
-### Return type
-
-[**PostDnsZonesDnsZoneVerify200Response**](PostDnsZonesDnsZoneVerify200Response.md)
 
 ### Authorization
 
@@ -8432,6 +8499,75 @@ end
 - **Accept**: application/json
 
 
+## post_organization_address_lists
+
+> <PostOrganizationAddressLists201Response> post_organization_address_lists(opts)
+
+
+
+### Examples
+
+```ruby
+require 'time'
+require 'katapult-ruby'
+# setup authorization
+KatapultAPI.configure do |config|
+  # Configure Bearer authorization: Authenticator
+  config.access_token = 'YOUR_BEARER_TOKEN'
+end
+
+api_instance = KatapultAPI::CoreApi.new
+opts = {
+  post_organization_address_lists_request: KatapultAPI::PostOrganizationAddressListsRequest.new({organization: KatapultAPI::OrganizationLookup.new, properties: KatapultAPI::AddressListArguments.new}) # PostOrganizationAddressListsRequest | 
+}
+
+begin
+  
+  result = api_instance.post_organization_address_lists(opts)
+  p result
+rescue KatapultAPI::ApiError => e
+  puts "Error when calling CoreApi->post_organization_address_lists: #{e}"
+end
+```
+
+#### Using the post_organization_address_lists_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<PostOrganizationAddressLists201Response>, Integer, Hash)> post_organization_address_lists_with_http_info(opts)
+
+```ruby
+begin
+  
+  data, status_code, headers = api_instance.post_organization_address_lists_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <PostOrganizationAddressLists201Response>
+rescue KatapultAPI::ApiError => e
+  puts "Error when calling CoreApi->post_organization_address_lists_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **post_organization_address_lists_request** | [**PostOrganizationAddressListsRequest**](PostOrganizationAddressListsRequest.md) |  | [optional] |
+
+### Return type
+
+[**PostOrganizationAddressLists201Response**](PostOrganizationAddressLists201Response.md)
+
+### Authorization
+
+[Authenticator](../README.md#Authenticator)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
 ## post_organization_dns_zones
 
 > <PostOrganizationDnsZones201Response> post_organization_dns_zones(opts)
@@ -8451,7 +8587,7 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  post_organization_dns_zones_request: KatapultAPI::PostOrganizationDnsZonesRequest.new({organization: KatapultAPI::OrganizationLookup.new, details: KatapultAPI::DNSZoneArguments.new({name: 'name_example'})}) # PostOrganizationDnsZonesRequest | 
+  post_organization_dns_zones_request: KatapultAPI::PostOrganizationDnsZonesRequest.new({organization: KatapultAPI::OrganizationLookup.new, properties: KatapultAPI::DNSZoneArguments.new}) # PostOrganizationDnsZonesRequest | 
 }
 
 begin
@@ -8641,7 +8777,7 @@ end
 
 ## post_organization_load_balancers
 
-> <PostOrganizationLoadBalancers200Response> post_organization_load_balancers(opts)
+> <PostOrganizationLoadBalancers201Response> post_organization_load_balancers(opts)
 
 
 
@@ -8674,7 +8810,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<PostOrganizationLoadBalancers200Response>, Integer, Hash)> post_organization_load_balancers_with_http_info(opts)
+> <Array(<PostOrganizationLoadBalancers201Response>, Integer, Hash)> post_organization_load_balancers_with_http_info(opts)
 
 ```ruby
 begin
@@ -8682,7 +8818,7 @@ begin
   data, status_code, headers = api_instance.post_organization_load_balancers_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <PostOrganizationLoadBalancers200Response>
+  p data # => <PostOrganizationLoadBalancers201Response>
 rescue KatapultAPI::ApiError => e
   puts "Error when calling CoreApi->post_organization_load_balancers_with_http_info: #{e}"
 end
@@ -8696,7 +8832,7 @@ end
 
 ### Return type
 
-[**PostOrganizationLoadBalancers200Response**](PostOrganizationLoadBalancers200Response.md)
+[**PostOrganizationLoadBalancers201Response**](PostOrganizationLoadBalancers201Response.md)
 
 ### Authorization
 
@@ -8710,7 +8846,7 @@ end
 
 ## post_organization_managed
 
-> <PostOrganizationManaged201Response> post_organization_managed(opts)
+> <GetOrganization200Response> post_organization_managed(opts)
 
 
 
@@ -8743,7 +8879,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<PostOrganizationManaged201Response>, Integer, Hash)> post_organization_managed_with_http_info(opts)
+> <Array(<GetOrganization200Response>, Integer, Hash)> post_organization_managed_with_http_info(opts)
 
 ```ruby
 begin
@@ -8751,7 +8887,7 @@ begin
   data, status_code, headers = api_instance.post_organization_managed_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <PostOrganizationManaged201Response>
+  p data # => <GetOrganization200Response>
 rescue KatapultAPI::ApiError => e
   puts "Error when calling CoreApi->post_organization_managed_with_http_info: #{e}"
 end
@@ -8765,7 +8901,7 @@ end
 
 ### Return type
 
-[**PostOrganizationManaged201Response**](PostOrganizationManaged201Response.md)
+[**GetOrganization200Response**](GetOrganization200Response.md)
 
 ### Authorization
 
@@ -9249,75 +9385,6 @@ end
 ### Return type
 
 [**PostOrganizationVirtualMachinesBuildFromSpec201Response**](PostOrganizationVirtualMachinesBuildFromSpec201Response.md)
-
-### Authorization
-
-[Authenticator](../README.md#Authenticator)
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## post_organizations_organization_dns_zones
-
-> <PostOrganizationsOrganizationDnsZones201Response> post_organizations_organization_dns_zones(opts)
-
-
-
-### Examples
-
-```ruby
-require 'time'
-require 'katapult-ruby'
-# setup authorization
-KatapultAPI.configure do |config|
-  # Configure Bearer authorization: Authenticator
-  config.access_token = 'YOUR_BEARER_TOKEN'
-end
-
-api_instance = KatapultAPI::CoreApi.new
-opts = {
-  post_organizations_organization_dns_zones_request: KatapultAPI::PostOrganizationsOrganizationDnsZonesRequest.new({organization: KatapultAPI::OrganizationLookup.new, properties: KatapultAPI::DNSZoneArguments.new({name: 'name_example'})}) # PostOrganizationsOrganizationDnsZonesRequest | 
-}
-
-begin
-  
-  result = api_instance.post_organizations_organization_dns_zones(opts)
-  p result
-rescue KatapultAPI::ApiError => e
-  puts "Error when calling CoreApi->post_organizations_organization_dns_zones: #{e}"
-end
-```
-
-#### Using the post_organizations_organization_dns_zones_with_http_info variant
-
-This returns an Array which contains the response data, status code and headers.
-
-> <Array(<PostOrganizationsOrganizationDnsZones201Response>, Integer, Hash)> post_organizations_organization_dns_zones_with_http_info(opts)
-
-```ruby
-begin
-  
-  data, status_code, headers = api_instance.post_organizations_organization_dns_zones_with_http_info(opts)
-  p status_code # => 2xx
-  p headers # => { ... }
-  p data # => <PostOrganizationsOrganizationDnsZones201Response>
-rescue KatapultAPI::ApiError => e
-  puts "Error when calling CoreApi->post_organizations_organization_dns_zones_with_http_info: #{e}"
-end
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **post_organizations_organization_dns_zones_request** | [**PostOrganizationsOrganizationDnsZonesRequest**](PostOrganizationsOrganizationDnsZonesRequest.md) |  | [optional] |
-
-### Return type
-
-[**PostOrganizationsOrganizationDnsZones201Response**](PostOrganizationsOrganizationDnsZones201Response.md)
 
 ### Authorization
 

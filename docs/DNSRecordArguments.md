@@ -4,10 +4,11 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **name** | **String** |  | [optional] |
+| **name** | **String** | The name of the record | [optional] |
+| **type** | [**DNSRecordTypesEnum**](DNSRecordTypesEnum.md) |  | [optional] |
 | **ttl** | **Integer** |  | [optional] |
-| **record_type** | [**DNSRecordTypeEnum**](DNSRecordTypeEnum.md) |  | [optional] |
-| **properties** | [**DNSRecordPropertiesArguments**](DNSRecordPropertiesArguments.md) |  | [optional] |
+| **priority** | **Integer** |  | [optional] |
+| **content** | [**DNSRecordContentArguments**](DNSRecordContentArguments.md) |  | [optional] |
 
 ## Example
 
@@ -16,9 +17,10 @@ require 'katapult-ruby'
 
 instance = KatapultAPI::DNSRecordArguments.new(
   name: null,
+  type: null,
   ttl: null,
-  record_type: null,
-  properties: null
+  priority: null,
+  content: null
 )
 ```
 
