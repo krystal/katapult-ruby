@@ -8,7 +8,7 @@
 | **retention** | **Integer** |  | [optional] |
 | **total_size** | **Float** |  | [optional] |
 | **target** | [**DiskBackupPolicyTarget**](DiskBackupPolicyTarget.md) |  | [optional] |
-| **schedule** | [**GetDiskBackupPolicyPartSchedule**](GetDiskBackupPolicyPartSchedule.md) |  | [optional] |
+| **schedule** | [**Schedule**](Schedule.md) |  | [optional] |
 | **auto_move_to_trash_at** | **Integer** |  | [optional] |
 
 ## Example

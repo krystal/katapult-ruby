@@ -71,6 +71,9 @@ module KatapultAPI
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'label',
+        :'allocation_id',
+        :'allocation_type'
       ])
     end
 

@@ -12,18 +12,19 @@
 | **created_at** | **Integer** |  | [optional] |
 | **initial_root_password** | **String** |  | [optional] |
 | **state** | [**VirtualMachineStateEnum**](VirtualMachineStateEnum.md) |  | [optional] |
-| **zone** | [**DeleteVirtualMachinePartZone**](DeleteVirtualMachinePartZone.md) |  | [optional] |
-| **organization** | [**DeleteVirtualMachinePartOrganization**](DeleteVirtualMachinePartOrganization.md) |  | [optional] |
-| **group** | [**DeleteVirtualMachinePartGroup**](DeleteVirtualMachinePartGroup.md) |  | [optional] |
-| **package** | [**DeleteVirtualMachinePartPackage**](DeleteVirtualMachinePartPackage.md) |  | [optional] |
-| **attached_iso** | [**DeleteVirtualMachinePartAttachedISO**](DeleteVirtualMachinePartAttachedISO.md) |  | [optional] |
+| **zone** | [**Zone**](Zone.md) |  | [optional] |
+| **organization** | [**Organization**](Organization.md) |  | [optional] |
+| **group** | [**VirtualMachineGroup**](VirtualMachineGroup.md) |  | [optional] |
+| **package** | [**VirtualMachinePackage**](VirtualMachinePackage.md) |  | [optional] |
+| **attached_iso** | [**ISO**](ISO.md) |  | [optional] |
 | **memory_in_gb** | **Integer** |  | [optional] |
 | **cpu_cores** | **Integer** |  | [optional] |
+| **use_dedicated_cpus** | **Boolean** |  | [optional] |
 | **gpu_type** | [**DeleteVirtualMachinePartGPUType**](DeleteVirtualMachinePartGPUType.md) |  | [optional] |
-| **gpus** | [**Array&lt;DeleteVirtualMachinePartGPUs&gt;**](DeleteVirtualMachinePartGPUs.md) |  | [optional] |
-| **tags** | [**Array&lt;DeleteVirtualMachinePartTags&gt;**](DeleteVirtualMachinePartTags.md) |  | [optional] |
+| **gpus** | [**Array&lt;VirtualMachineGPU&gt;**](VirtualMachineGPU.md) |  | [optional] |
+| **tags** | [**Array&lt;Tag&gt;**](Tag.md) |  | [optional] |
 | **tag_names** | **Array&lt;String&gt;** |  | [optional] |
-| **ip_addresses** | [**Array&lt;DeleteVirtualMachinePartIPAddresses&gt;**](DeleteVirtualMachinePartIPAddresses.md) |  | [optional] |
+| **ip_addresses** | [**Array&lt;IPAddress&gt;**](IPAddress.md) |  | [optional] |
 
 ## Example
 
@@ -46,6 +47,7 @@ instance = KatapultAPI::DeleteVirtualMachine200ResponseVirtualMachine.new(
   attached_iso: null,
   memory_in_gb: null,
   cpu_cores: null,
+  use_dedicated_cpus: null,
   gpu_type: null,
   gpus: null,
   tags: null,

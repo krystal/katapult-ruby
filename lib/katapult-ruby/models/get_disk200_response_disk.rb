@@ -88,15 +88,18 @@ module KatapultAPI
         :'state' => :'DiskStateEnum',
         :'created_at' => :'Integer',
         :'storage_speed' => :'StorageSpeedEnum',
-        :'io_profile' => :'GetDiskPartIOProfile',
+        :'io_profile' => :'DiskIOProfile',
         :'virtual_machine_disk' => :'GetDiskPartVirtualMachineDisk',
-        :'installation' => :'GetDiskPartInstallation'
+        :'installation' => :'DiskInstallation'
       }
     end
 
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'io_profile',
+        :'virtual_machine_disk',
+        :'installation'
       ])
     end
 

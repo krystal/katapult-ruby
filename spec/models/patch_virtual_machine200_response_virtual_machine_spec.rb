@@ -117,6 +117,12 @@ describe KatapultAPI::PatchVirtualMachine200ResponseVirtualMachine do
     end
   end
 
+  describe 'test attribute "use_dedicated_cpus"' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
   describe 'test attribute "gpu_type"' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/

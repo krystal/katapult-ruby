@@ -55,6 +55,8 @@ module KatapultAPI
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'speed_in_mb',
+        :'iops'
       ])
     end
 

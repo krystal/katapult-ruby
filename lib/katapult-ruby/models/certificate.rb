@@ -114,6 +114,14 @@ module KatapultAPI
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'expires_at',
+        :'last_issued_at',
+        :'issue_error',
+        :'authorization_method',
+        :'certificate_api_url',
+        :'certificate',
+        :'chain',
+        :'private_key'
       ])
     end
 

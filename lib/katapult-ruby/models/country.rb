@@ -59,6 +59,7 @@ module KatapultAPI
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'time_zone',
       ])
     end
 

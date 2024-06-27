@@ -10,7 +10,7 @@
 | **permalink** | **String** |  | [optional] |
 | **universal** | **Boolean** |  | [optional] |
 | **latest_version** | [**GetDiskTemplatePartLatestVersion**](GetDiskTemplatePartLatestVersion.md) |  | [optional] |
-| **operating_system** | [**GetDiskTemplatePartOperatingSystem**](GetDiskTemplatePartOperatingSystem.md) |  | [optional] |
+| **operating_system** | [**OperatingSystem**](OperatingSystem.md) |  | [optional] |
 
 ## Example
 

@@ -9,7 +9,7 @@
 | **hostname** | **String** |  | [optional] |
 | **fqdn** | **String** |  | [optional] |
 | **created_at** | **Integer** |  | [optional] |
-| **zone** | [**GetOrganizationVirtualMachinesPartZone**](GetOrganizationVirtualMachinesPartZone.md) |  | [optional] |
+| **zone** | [**Zone**](Zone.md) |  | [optional] |
 | **package** | [**GetOrganizationVirtualMachinesPartPackage**](GetOrganizationVirtualMachinesPartPackage.md) |  | [optional] |
 | **gpu_type** | [**GetOrganizationVirtualMachinesPartGPUType**](GetOrganizationVirtualMachinesPartGPUType.md) |  | [optional] |
 | **ip_addresses** | [**Array&lt;GetOrganizationVirtualMachinesPartIPAddresses&gt;**](GetOrganizationVirtualMachinesPartIPAddresses.md) |  | [optional] |

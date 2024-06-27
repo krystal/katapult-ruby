@@ -129,6 +129,8 @@ module KatapultAPI
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'check_protocol',
+        :'check_http_statuses',
       ])
     end
 

@@ -91,6 +91,20 @@ module KatapultAPI
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'a',
+        :'aaaa',
+        :'_alias',
+        :'caa',
+        :'cname',
+        :'ips',
+        :'mx',
+        :'ns',
+        :'ptr',
+        :'soa',
+        :'srv',
+        :'sshfp',
+        :'txt',
+        :'virtual_machine'
       ])
     end
 

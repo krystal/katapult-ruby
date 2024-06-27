@@ -31,30 +31,30 @@ end
 
 api_instance = KatapultAPI::CoreApi.new
 opts = {
-  delete_disk_backup_policy_request: KatapultAPI::DeleteDiskBackupPolicyRequest.new({disk_backup_policy: KatapultAPI::DiskBackupPolicyLookup.new}) # DeleteDiskBackupPolicyRequest | 
+  delete_address_list_request: KatapultAPI::DeleteAddressListRequest.new({address_list: KatapultAPI::AddressListLookup.new}) # DeleteAddressListRequest | 
 }
 
 begin
-  result = api_instance.delete_disk_backup_policy(opts)
+  result = api_instance.delete_address_list(opts)
   p result
 rescue KatapultAPI::ApiError => e
-  puts "Exception when calling CoreApi->delete_disk_backup_policy: #{e}"
+  puts "Exception when calling CoreApi->delete_address_list: #{e}"
 end
 
 ```
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://katapult-api.localhost/core/v1*
+All URIs are relative to *https://api.katapult.io/core/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*KatapultAPI::CoreApi* | [**delete_address_list**](docs/CoreApi.md#delete_address_list) | **DELETE** /address_lists/:address_list | 
+*KatapultAPI::CoreApi* | [**delete_address_list_entry**](docs/CoreApi.md#delete_address_list_entry) | **DELETE** /address_list_entries/:address_list_entry | 
 *KatapultAPI::CoreApi* | [**delete_disk_backup_policy**](docs/CoreApi.md#delete_disk_backup_policy) | **DELETE** /disk_backup_policies/:disk_backup_policy | 
 *KatapultAPI::CoreApi* | [**delete_disk_backup_policy_schedule**](docs/CoreApi.md#delete_disk_backup_policy_schedule) | **DELETE** /disk_backup_policies/:disk_backup_policy/schedule | 
 *KatapultAPI::CoreApi* | [**delete_dns_record**](docs/CoreApi.md#delete_dns_record) | **DELETE** /dns_records/:dns_record | 
-*KatapultAPI::CoreApi* | [**delete_dns_records_dns_record**](docs/CoreApi.md#delete_dns_records_dns_record) | **DELETE** /dns/records/:dns_record | 
 *KatapultAPI::CoreApi* | [**delete_dns_zone**](docs/CoreApi.md#delete_dns_zone) | **DELETE** /dns_zones/:dns_zone | 
-*KatapultAPI::CoreApi* | [**delete_dns_zones_dns_zone**](docs/CoreApi.md#delete_dns_zones_dns_zone) | **DELETE** /dns/zones/:dns_zone | 
 *KatapultAPI::CoreApi* | [**delete_file_storage_volume**](docs/CoreApi.md#delete_file_storage_volume) | **DELETE** /file_storage_volumes/:file_storage_volume | 
 *KatapultAPI::CoreApi* | [**delete_ip_address**](docs/CoreApi.md#delete_ip_address) | **DELETE** /ip_addresses/:ip_address | 
 *KatapultAPI::CoreApi* | [**delete_load_balancer**](docs/CoreApi.md#delete_load_balancer) | **DELETE** /load_balancers/:load_balancer | 
@@ -66,6 +66,10 @@ Class | Method | HTTP request | Description
 *KatapultAPI::CoreApi* | [**delete_trash_object**](docs/CoreApi.md#delete_trash_object) | **DELETE** /trash_objects/:trash_object | 
 *KatapultAPI::CoreApi* | [**delete_virtual_machine**](docs/CoreApi.md#delete_virtual_machine) | **DELETE** /virtual_machines/:virtual_machine | 
 *KatapultAPI::CoreApi* | [**delete_virtual_machine_group**](docs/CoreApi.md#delete_virtual_machine_group) | **DELETE** /virtual_machine_groups/:virtual_machine_group | 
+*KatapultAPI::CoreApi* | [**get_address_list**](docs/CoreApi.md#get_address_list) | **GET** /address_lists/:address_list | 
+*KatapultAPI::CoreApi* | [**get_address_list_entries**](docs/CoreApi.md#get_address_list_entries) | **GET** /address_lists/:address_list/entries | 
+*KatapultAPI::CoreApi* | [**get_address_list_entry**](docs/CoreApi.md#get_address_list_entry) | **GET** /address_list_entries/:address_list_entry | 
+*KatapultAPI::CoreApi* | [**get_address_lists**](docs/CoreApi.md#get_address_lists) | **GET** /address_lists | 
 *KatapultAPI::CoreApi* | [**get_certificate**](docs/CoreApi.md#get_certificate) | **GET** /certificates/:certificate | 
 *KatapultAPI::CoreApi* | [**get_countries**](docs/CoreApi.md#get_countries) | **GET** /countries | 
 *KatapultAPI::CoreApi* | [**get_country**](docs/CoreApi.md#get_country) | **GET** /countries/:country | 
@@ -85,12 +89,8 @@ Class | Method | HTTP request | Description
 *KatapultAPI::CoreApi* | [**get_disk_template_version_spec**](docs/CoreApi.md#get_disk_template_version_spec) | **GET** /disk_template_versions/:disk_template_version/spec | 
 *KatapultAPI::CoreApi* | [**get_disk_template_versions**](docs/CoreApi.md#get_disk_template_versions) | **GET** /disk_templates/:disk_template/versions | 
 *KatapultAPI::CoreApi* | [**get_dns_record**](docs/CoreApi.md#get_dns_record) | **GET** /dns_records/:dns_record | 
-*KatapultAPI::CoreApi* | [**get_dns_records_dns_record**](docs/CoreApi.md#get_dns_records_dns_record) | **GET** /dns/records/:dns_record | 
 *KatapultAPI::CoreApi* | [**get_dns_zone**](docs/CoreApi.md#get_dns_zone) | **GET** /dns_zones/:dns_zone | 
 *KatapultAPI::CoreApi* | [**get_dns_zone_records**](docs/CoreApi.md#get_dns_zone_records) | **GET** /dns_zones/:dns_zone/records | 
-*KatapultAPI::CoreApi* | [**get_dns_zones_dns_zone**](docs/CoreApi.md#get_dns_zones_dns_zone) | **GET** /dns/zones/:dns_zone | 
-*KatapultAPI::CoreApi* | [**get_dns_zones_dns_zone_records**](docs/CoreApi.md#get_dns_zones_dns_zone_records) | **GET** /dns/zones/:dns_zone/records | 
-*KatapultAPI::CoreApi* | [**get_dns_zones_dns_zone_verification_details**](docs/CoreApi.md#get_dns_zones_dns_zone_verification_details) | **GET** /dns/zones/:dns_zone/verification_details | 
 *KatapultAPI::CoreApi* | [**get_file_storage_volume**](docs/CoreApi.md#get_file_storage_volume) | **GET** /file_storage_volumes/:file_storage_volume | 
 *KatapultAPI::CoreApi* | [**get_gpu_type**](docs/CoreApi.md#get_gpu_type) | **GET** /gpu_types/:gpu_type | 
 *KatapultAPI::CoreApi* | [**get_gpu_types**](docs/CoreApi.md#get_gpu_types) | **GET** /gpu_types | 
@@ -102,18 +102,20 @@ Class | Method | HTTP request | Description
 *KatapultAPI::CoreApi* | [**get_operating_system**](docs/CoreApi.md#get_operating_system) | **GET** /operating_systems/:operating_system | 
 *KatapultAPI::CoreApi* | [**get_operating_systems**](docs/CoreApi.md#get_operating_systems) | **GET** /operating_systems | 
 *KatapultAPI::CoreApi* | [**get_organization**](docs/CoreApi.md#get_organization) | **GET** /organizations/:organization | 
+*KatapultAPI::CoreApi* | [**get_organization_address_lists**](docs/CoreApi.md#get_organization_address_lists) | **GET** /organizations/:organization/address_lists | 
 *KatapultAPI::CoreApi* | [**get_organization_available_networks**](docs/CoreApi.md#get_organization_available_networks) | **GET** /organizations/:organization/available_networks | 
 *KatapultAPI::CoreApi* | [**get_organization_certificates**](docs/CoreApi.md#get_organization_certificates) | **GET** /organizations/:organization/certificates | 
 *KatapultAPI::CoreApi* | [**get_organization_disk_backup_policies**](docs/CoreApi.md#get_organization_disk_backup_policies) | **GET** /organizations/:organization/disk_backup_policies | 
 *KatapultAPI::CoreApi* | [**get_organization_disk_templates**](docs/CoreApi.md#get_organization_disk_templates) | **GET** /organizations/:organization/disk_templates | 
 *KatapultAPI::CoreApi* | [**get_organization_disks**](docs/CoreApi.md#get_organization_disks) | **GET** /organizations/:organization/disks | 
-*KatapultAPI::CoreApi* | [**get_organization_dns_zones**](docs/CoreApi.md#get_organization_dns_zones) | **GET** /organizations/:organization/dns/zones | 
+*KatapultAPI::CoreApi* | [**get_organization_dns_zones**](docs/CoreApi.md#get_organization_dns_zones) | **GET** /organizations/:organization/dns_zones | 
 *KatapultAPI::CoreApi* | [**get_organization_dns_zones_nameservers**](docs/CoreApi.md#get_organization_dns_zones_nameservers) | **GET** /organizations/:organization/dns_zones/nameservers | 
 *KatapultAPI::CoreApi* | [**get_organization_file_storage_volumes**](docs/CoreApi.md#get_organization_file_storage_volumes) | **GET** /organizations/:organization/file_storage_volumes | 
 *KatapultAPI::CoreApi* | [**get_organization_ip_addresses**](docs/CoreApi.md#get_organization_ip_addresses) | **GET** /organizations/:organization/ip_addresses | 
 *KatapultAPI::CoreApi* | [**get_organization_load_balancers**](docs/CoreApi.md#get_organization_load_balancers) | **GET** /organizations/:organization/load_balancers | 
 *KatapultAPI::CoreApi* | [**get_organization_managed**](docs/CoreApi.md#get_organization_managed) | **GET** /organizations/:organization/managed | 
 *KatapultAPI::CoreApi* | [**get_organization_network_speed_profiles**](docs/CoreApi.md#get_organization_network_speed_profiles) | **GET** /organizations/:organization/network_speed_profiles | 
+*KatapultAPI::CoreApi* | [**get_organization_policy_limits**](docs/CoreApi.md#get_organization_policy_limits) | **GET** /organizations/:organization/policy_limits | 
 *KatapultAPI::CoreApi* | [**get_organization_security_groups**](docs/CoreApi.md#get_organization_security_groups) | **GET** /organizations/:organization/security_groups | 
 *KatapultAPI::CoreApi* | [**get_organization_ssh_keys**](docs/CoreApi.md#get_organization_ssh_keys) | **GET** /organizations/:organization/ssh_keys | 
 *KatapultAPI::CoreApi* | [**get_organization_tags**](docs/CoreApi.md#get_organization_tags) | **GET** /organizations/:organization/tags | 
@@ -122,7 +124,6 @@ Class | Method | HTTP request | Description
 *KatapultAPI::CoreApi* | [**get_organization_virtual_machine_groups**](docs/CoreApi.md#get_organization_virtual_machine_groups) | **GET** /organizations/:organization/virtual_machine_groups | 
 *KatapultAPI::CoreApi* | [**get_organization_virtual_machines**](docs/CoreApi.md#get_organization_virtual_machines) | **GET** /organizations/:organization/virtual_machines | 
 *KatapultAPI::CoreApi* | [**get_organizations**](docs/CoreApi.md#get_organizations) | **GET** /organizations | 
-*KatapultAPI::CoreApi* | [**get_organizations_organization_dns_zones**](docs/CoreApi.md#get_organizations_organization_dns_zones) | **GET** /organizations/:organization/dns_zones | 
 *KatapultAPI::CoreApi* | [**get_security_group**](docs/CoreApi.md#get_security_group) | **GET** /security_groups/:security_group | 
 *KatapultAPI::CoreApi* | [**get_security_group_rules**](docs/CoreApi.md#get_security_group_rules) | **GET** /security_groups/:security_group/rules | 
 *KatapultAPI::CoreApi* | [**get_security_groups_rules_security_group_rule**](docs/CoreApi.md#get_security_groups_rules_security_group_rule) | **GET** /security_groups/rules/:security_group_rule | 
@@ -131,6 +132,7 @@ Class | Method | HTTP request | Description
 *KatapultAPI::CoreApi* | [**get_trash_object**](docs/CoreApi.md#get_trash_object) | **GET** /trash_objects/:trash_object | 
 *KatapultAPI::CoreApi* | [**get_users_current**](docs/CoreApi.md#get_users_current) | **GET** /users/current | 
 *KatapultAPI::CoreApi* | [**get_virtual_machine**](docs/CoreApi.md#get_virtual_machine) | **GET** /virtual_machines/:virtual_machine | 
+*KatapultAPI::CoreApi* | [**get_virtual_machine_authorized_keys**](docs/CoreApi.md#get_virtual_machine_authorized_keys) | **GET** /virtual_machine/authorized_keys | 
 *KatapultAPI::CoreApi* | [**get_virtual_machine_disk_backup_policies**](docs/CoreApi.md#get_virtual_machine_disk_backup_policies) | **GET** /virtual_machines/:virtual_machine/disk_backup_policies | 
 *KatapultAPI::CoreApi* | [**get_virtual_machine_disks**](docs/CoreApi.md#get_virtual_machine_disks) | **GET** /virtual_machines/:virtual_machine/disks | 
 *KatapultAPI::CoreApi* | [**get_virtual_machine_group**](docs/CoreApi.md#get_virtual_machine_group) | **GET** /virtual_machine_groups/:virtual_machine_group | 
@@ -143,9 +145,10 @@ Class | Method | HTTP request | Description
 *KatapultAPI::CoreApi* | [**get_vmnivmni**](docs/CoreApi.md#get_vmnivmni) | **GET** /virtual_machine_network_interfaces/:virtual_machine_network_interface | 
 *KatapultAPI::CoreApi* | [**get_zone**](docs/CoreApi.md#get_zone) | **GET** /zones/:zone | 
 *KatapultAPI::CoreApi* | [**get_zones**](docs/CoreApi.md#get_zones) | **GET** /zones | 
+*KatapultAPI::CoreApi* | [**patch_address_list**](docs/CoreApi.md#patch_address_list) | **PATCH** /address_lists/:address_list | 
+*KatapultAPI::CoreApi* | [**patch_address_list_entry**](docs/CoreApi.md#patch_address_list_entry) | **PATCH** /address_list_entries/:address_list_entry | 
 *KatapultAPI::CoreApi* | [**patch_disk_backup_policy**](docs/CoreApi.md#patch_disk_backup_policy) | **PATCH** /disk_backup_policies/:disk_backup_policy | 
 *KatapultAPI::CoreApi* | [**patch_dns_record**](docs/CoreApi.md#patch_dns_record) | **PATCH** /dns_records/:dns_record | 
-*KatapultAPI::CoreApi* | [**patch_dns_records_dns_record**](docs/CoreApi.md#patch_dns_records_dns_record) | **PATCH** /dns/records/:dns_record | 
 *KatapultAPI::CoreApi* | [**patch_dns_zone**](docs/CoreApi.md#patch_dns_zone) | **PATCH** /dns_zones/:dns_zone | 
 *KatapultAPI::CoreApi* | [**patch_file_storage_volume**](docs/CoreApi.md#patch_file_storage_volume) | **PATCH** /file_storage_volumes/:file_storage_volume | 
 *KatapultAPI::CoreApi* | [**patch_ip_address**](docs/CoreApi.md#patch_ip_address) | **PATCH** /ip_addresses/:ip_address | 
@@ -157,16 +160,15 @@ Class | Method | HTTP request | Description
 *KatapultAPI::CoreApi* | [**patch_virtual_machine**](docs/CoreApi.md#patch_virtual_machine) | **PATCH** /virtual_machines/:virtual_machine | 
 *KatapultAPI::CoreApi* | [**patch_virtual_machine_group**](docs/CoreApi.md#patch_virtual_machine_group) | **PATCH** /virtual_machine_groups/:virtual_machine_group | 
 *KatapultAPI::CoreApi* | [**patch_virtual_machine_network_interface_update_speed_profile**](docs/CoreApi.md#patch_virtual_machine_network_interface_update_speed_profile) | **PATCH** /virtual_machine_network_interfaces/:virtual_machine_network_interface/update_speed_profile | 
+*KatapultAPI::CoreApi* | [**post_address_list_entries**](docs/CoreApi.md#post_address_list_entries) | **POST** /address_lists/:address_list/entries | 
 *KatapultAPI::CoreApi* | [**post_disk_disk_backup_policies**](docs/CoreApi.md#post_disk_disk_backup_policies) | **POST** /disks/:disk/disk_backup_policies | 
 *KatapultAPI::CoreApi* | [**post_dns_zone_records**](docs/CoreApi.md#post_dns_zone_records) | **POST** /dns_zones/:dns_zone/records | 
 *KatapultAPI::CoreApi* | [**post_dns_zone_verify**](docs/CoreApi.md#post_dns_zone_verify) | **POST** /dns_zones/:dns_zone/verify | 
-*KatapultAPI::CoreApi* | [**post_dns_zones_dns_zone_records**](docs/CoreApi.md#post_dns_zones_dns_zone_records) | **POST** /dns/zones/:dns_zone/records | 
-*KatapultAPI::CoreApi* | [**post_dns_zones_dns_zone_update_ttl**](docs/CoreApi.md#post_dns_zones_dns_zone_update_ttl) | **POST** /dns/zones/:dns_zone/update_ttl | 
-*KatapultAPI::CoreApi* | [**post_dns_zones_dns_zone_verify**](docs/CoreApi.md#post_dns_zones_dns_zone_verify) | **POST** /dns/zones/:dns_zone/verify | 
 *KatapultAPI::CoreApi* | [**post_invalidate_linked_web_session**](docs/CoreApi.md#post_invalidate_linked_web_session) | **POST** /invalidate_linked_web_session | 
 *KatapultAPI::CoreApi* | [**post_ip_address_unallocate**](docs/CoreApi.md#post_ip_address_unallocate) | **POST** /ip_addresses/:ip_address/unallocate | 
 *KatapultAPI::CoreApi* | [**post_load_balancer_rules**](docs/CoreApi.md#post_load_balancer_rules) | **POST** /load_balancers/:load_balancer/rules | 
-*KatapultAPI::CoreApi* | [**post_organization_dns_zones**](docs/CoreApi.md#post_organization_dns_zones) | **POST** /organizations/:organization/dns/zones | 
+*KatapultAPI::CoreApi* | [**post_organization_address_lists**](docs/CoreApi.md#post_organization_address_lists) | **POST** /organizations/:organization/address_lists | 
+*KatapultAPI::CoreApi* | [**post_organization_dns_zones**](docs/CoreApi.md#post_organization_dns_zones) | **POST** /organizations/:organization/dns_zones | 
 *KatapultAPI::CoreApi* | [**post_organization_file_storage_volumes**](docs/CoreApi.md#post_organization_file_storage_volumes) | **POST** /organizations/:organization/file_storage_volumes | 
 *KatapultAPI::CoreApi* | [**post_organization_ip_addresses**](docs/CoreApi.md#post_organization_ip_addresses) | **POST** /organizations/:organization/ip_addresses | 
 *KatapultAPI::CoreApi* | [**post_organization_load_balancers**](docs/CoreApi.md#post_organization_load_balancers) | **POST** /organizations/:organization/load_balancers | 
@@ -178,7 +180,6 @@ Class | Method | HTTP request | Description
 *KatapultAPI::CoreApi* | [**post_organization_virtual_machine_groups**](docs/CoreApi.md#post_organization_virtual_machine_groups) | **POST** /organizations/:organization/virtual_machine_groups | 
 *KatapultAPI::CoreApi* | [**post_organization_virtual_machines_build**](docs/CoreApi.md#post_organization_virtual_machines_build) | **POST** /organizations/:organization/virtual_machines/build | 
 *KatapultAPI::CoreApi* | [**post_organization_virtual_machines_build_from_spec**](docs/CoreApi.md#post_organization_virtual_machines_build_from_spec) | **POST** /organizations/:organization/virtual_machines/build_from_spec | 
-*KatapultAPI::CoreApi* | [**post_organizations_organization_dns_zones**](docs/CoreApi.md#post_organizations_organization_dns_zones) | **POST** /organizations/:organization/dns_zones | 
 *KatapultAPI::CoreApi* | [**post_security_group_rules**](docs/CoreApi.md#post_security_group_rules) | **POST** /security_groups/:security_group/rules | 
 *KatapultAPI::CoreApi* | [**post_trash_object_restore**](docs/CoreApi.md#post_trash_object_restore) | **POST** /trash_objects/:trash_object/restore | 
 *KatapultAPI::CoreApi* | [**post_virtual_machine_allocate_ip**](docs/CoreApi.md#post_virtual_machine_allocate_ip) | **POST** /virtual_machines/:virtual_machine/allocate_ip | 
@@ -196,15 +197,19 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [KatapultAPI::A](docs/A.md)
- - [KatapultAPI::AAAA](docs/AAAA.md)
  - [KatapultAPI::APIAuthenticator400Schema](docs/APIAuthenticator400Schema.md)
+ - [KatapultAPI::AddressList](docs/AddressList.md)
+ - [KatapultAPI::AddressListArguments](docs/AddressListArguments.md)
+ - [KatapultAPI::AddressListEntry](docs/AddressListEntry.md)
+ - [KatapultAPI::AddressListEntryArguments](docs/AddressListEntryArguments.md)
+ - [KatapultAPI::AddressListEntryLookup](docs/AddressListEntryLookup.md)
+ - [KatapultAPI::AddressListEntryNotFoundEnum](docs/AddressListEntryNotFoundEnum.md)
+ - [KatapultAPI::AddressListLookup](docs/AddressListLookup.md)
+ - [KatapultAPI::AddressListNotFoundEnum](docs/AddressListNotFoundEnum.md)
  - [KatapultAPI::Attachment](docs/Attachment.md)
  - [KatapultAPI::AuthSSHKey](docs/AuthSSHKey.md)
  - [KatapultAPI::AuthSSHKeyLookup](docs/AuthSSHKeyLookup.md)
  - [KatapultAPI::AuthSSHKeyProperties](docs/AuthSSHKeyProperties.md)
- - [KatapultAPI::CAA](docs/CAA.md)
- - [KatapultAPI::CNAME](docs/CNAME.md)
  - [KatapultAPI::Certificate](docs/Certificate.md)
  - [KatapultAPI::CertificateLookup](docs/CertificateLookup.md)
  - [KatapultAPI::CertificateNotFoundEnum](docs/CertificateNotFoundEnum.md)
@@ -217,38 +222,47 @@ Class | Method | HTTP request | Description
  - [KatapultAPI::CurrencyNotFoundEnum](docs/CurrencyNotFoundEnum.md)
  - [KatapultAPI::DNSRecord](docs/DNSRecord.md)
  - [KatapultAPI::DNSRecordArguments](docs/DNSRecordArguments.md)
+ - [KatapultAPI::DNSRecordContentArguments](docs/DNSRecordContentArguments.md)
+ - [KatapultAPI::DNSRecordContentArgumentsForA](docs/DNSRecordContentArgumentsForA.md)
+ - [KatapultAPI::DNSRecordContentArgumentsForAAAA](docs/DNSRecordContentArgumentsForAAAA.md)
+ - [KatapultAPI::DNSRecordContentArgumentsForALIAS](docs/DNSRecordContentArgumentsForALIAS.md)
+ - [KatapultAPI::DNSRecordContentArgumentsForCAA](docs/DNSRecordContentArgumentsForCAA.md)
+ - [KatapultAPI::DNSRecordContentArgumentsForCNAME](docs/DNSRecordContentArgumentsForCNAME.md)
+ - [KatapultAPI::DNSRecordContentArgumentsForIPS](docs/DNSRecordContentArgumentsForIPS.md)
+ - [KatapultAPI::DNSRecordContentArgumentsForMX](docs/DNSRecordContentArgumentsForMX.md)
+ - [KatapultAPI::DNSRecordContentArgumentsForNS](docs/DNSRecordContentArgumentsForNS.md)
+ - [KatapultAPI::DNSRecordContentArgumentsForPTR](docs/DNSRecordContentArgumentsForPTR.md)
+ - [KatapultAPI::DNSRecordContentArgumentsForSRV](docs/DNSRecordContentArgumentsForSRV.md)
+ - [KatapultAPI::DNSRecordContentArgumentsForSSHFP](docs/DNSRecordContentArgumentsForSSHFP.md)
+ - [KatapultAPI::DNSRecordContentArgumentsForTXT](docs/DNSRecordContentArgumentsForTXT.md)
+ - [KatapultAPI::DNSRecordContentArgumentsForVirtualMachine](docs/DNSRecordContentArgumentsForVirtualMachine.md)
  - [KatapultAPI::DNSRecordContentAttributes](docs/DNSRecordContentAttributes.md)
  - [KatapultAPI::DNSRecordLookup](docs/DNSRecordLookup.md)
  - [KatapultAPI::DNSRecordNotFoundEnum](docs/DNSRecordNotFoundEnum.md)
- - [KatapultAPI::DNSRecordProperties](docs/DNSRecordProperties.md)
- - [KatapultAPI::DNSRecordPropertiesArguments](docs/DNSRecordPropertiesArguments.md)
- - [KatapultAPI::DNSRecordPropertiesProperties](docs/DNSRecordPropertiesProperties.md)
- - [KatapultAPI::DNSRecordTypeEnum](docs/DNSRecordTypeEnum.md)
  - [KatapultAPI::DNSRecordTypesEnum](docs/DNSRecordTypesEnum.md)
  - [KatapultAPI::DNSZone](docs/DNSZone.md)
- - [KatapultAPI::DNSZoneAlreadyVerifiedEnum](docs/DNSZoneAlreadyVerifiedEnum.md)
  - [KatapultAPI::DNSZoneArguments](docs/DNSZoneArguments.md)
  - [KatapultAPI::DNSZoneLookup](docs/DNSZoneLookup.md)
  - [KatapultAPI::DNSZoneNotFoundEnum](docs/DNSZoneNotFoundEnum.md)
- - [KatapultAPI::DNSZoneNotVerified](docs/DNSZoneNotVerified.md)
  - [KatapultAPI::DNSZoneNotVerifiedEnum](docs/DNSZoneNotVerifiedEnum.md)
- - [KatapultAPI::DNSZoneVerificationDetails](docs/DNSZoneVerificationDetails.md)
  - [KatapultAPI::DataCenter](docs/DataCenter.md)
  - [KatapultAPI::DataCenterLookup](docs/DataCenterLookup.md)
  - [KatapultAPI::DataCenterNotFoundEnum](docs/DataCenterNotFoundEnum.md)
  - [KatapultAPI::DataCenterNotFoundSchema](docs/DataCenterNotFoundSchema.md)
- - [KatapultAPI::DeleteDNSZonesDNSZone200ResponseDNSZone](docs/DeleteDNSZonesDNSZone200ResponseDNSZone.md)
+ - [KatapultAPI::DecimalOrUnlimited](docs/DecimalOrUnlimited.md)
+ - [KatapultAPI::DeleteAddressList200Response](docs/DeleteAddressList200Response.md)
+ - [KatapultAPI::DeleteAddressListEntry200Response](docs/DeleteAddressListEntry200Response.md)
+ - [KatapultAPI::DeleteAddressListEntryRequest](docs/DeleteAddressListEntryRequest.md)
+ - [KatapultAPI::DeleteAddressListRequest](docs/DeleteAddressListRequest.md)
  - [KatapultAPI::DeleteDiskBackupPolicy200Response](docs/DeleteDiskBackupPolicy200Response.md)
  - [KatapultAPI::DeleteDiskBackupPolicy200ResponseDiskBackupPolicy](docs/DeleteDiskBackupPolicy200ResponseDiskBackupPolicy.md)
  - [KatapultAPI::DeleteDiskBackupPolicyRequest](docs/DeleteDiskBackupPolicyRequest.md)
  - [KatapultAPI::DeleteDiskBackupPolicySchedule200Response](docs/DeleteDiskBackupPolicySchedule200Response.md)
  - [KatapultAPI::DeleteDiskBackupPolicySchedule200ResponseDiskBackupPolicy](docs/DeleteDiskBackupPolicySchedule200ResponseDiskBackupPolicy.md)
  - [KatapultAPI::DeleteDiskBackupPolicyScheduleRequest](docs/DeleteDiskBackupPolicyScheduleRequest.md)
- - [KatapultAPI::DeleteDnsRecordsDnsRecord200Response](docs/DeleteDnsRecordsDnsRecord200Response.md)
- - [KatapultAPI::DeleteDnsRecordsDnsRecordRequest](docs/DeleteDnsRecordsDnsRecordRequest.md)
+ - [KatapultAPI::DeleteDnsRecordRequest](docs/DeleteDnsRecordRequest.md)
  - [KatapultAPI::DeleteDnsZone200Response](docs/DeleteDnsZone200Response.md)
- - [KatapultAPI::DeleteDnsZonesDnsZone200Response](docs/DeleteDnsZonesDnsZone200Response.md)
- - [KatapultAPI::DeleteDnsZonesDnsZoneRequest](docs/DeleteDnsZonesDnsZoneRequest.md)
+ - [KatapultAPI::DeleteDnsZoneRequest](docs/DeleteDnsZoneRequest.md)
  - [KatapultAPI::DeleteFileStorageVolume200Response](docs/DeleteFileStorageVolume200Response.md)
  - [KatapultAPI::DeleteFileStorageVolume200ResponseFileStorageVolume](docs/DeleteFileStorageVolume200ResponseFileStorageVolume.md)
  - [KatapultAPI::DeleteFileStorageVolumePartDataCenter](docs/DeleteFileStorageVolumePartDataCenter.md)
@@ -277,24 +291,7 @@ Class | Method | HTTP request | Description
  - [KatapultAPI::DeleteVirtualMachine200ResponseVirtualMachine](docs/DeleteVirtualMachine200ResponseVirtualMachine.md)
  - [KatapultAPI::DeleteVirtualMachineGroup200Response](docs/DeleteVirtualMachineGroup200Response.md)
  - [KatapultAPI::DeleteVirtualMachineGroupRequest](docs/DeleteVirtualMachineGroupRequest.md)
- - [KatapultAPI::DeleteVirtualMachinePartAttachedISO](docs/DeleteVirtualMachinePartAttachedISO.md)
- - [KatapultAPI::DeleteVirtualMachinePartBadge](docs/DeleteVirtualMachinePartBadge.md)
- - [KatapultAPI::DeleteVirtualMachinePartCountry](docs/DeleteVirtualMachinePartCountry.md)
- - [KatapultAPI::DeleteVirtualMachinePartCountryState](docs/DeleteVirtualMachinePartCountryState.md)
- - [KatapultAPI::DeleteVirtualMachinePartCurrency](docs/DeleteVirtualMachinePartCurrency.md)
- - [KatapultAPI::DeleteVirtualMachinePartDataCenter](docs/DeleteVirtualMachinePartDataCenter.md)
  - [KatapultAPI::DeleteVirtualMachinePartGPUType](docs/DeleteVirtualMachinePartGPUType.md)
- - [KatapultAPI::DeleteVirtualMachinePartGPUs](docs/DeleteVirtualMachinePartGPUs.md)
- - [KatapultAPI::DeleteVirtualMachinePartGroup](docs/DeleteVirtualMachinePartGroup.md)
- - [KatapultAPI::DeleteVirtualMachinePartIPAddresses](docs/DeleteVirtualMachinePartIPAddresses.md)
- - [KatapultAPI::DeleteVirtualMachinePartIcon](docs/DeleteVirtualMachinePartIcon.md)
- - [KatapultAPI::DeleteVirtualMachinePartNetwork](docs/DeleteVirtualMachinePartNetwork.md)
- - [KatapultAPI::DeleteVirtualMachinePartOperatingSystem](docs/DeleteVirtualMachinePartOperatingSystem.md)
- - [KatapultAPI::DeleteVirtualMachinePartOrganization](docs/DeleteVirtualMachinePartOrganization.md)
- - [KatapultAPI::DeleteVirtualMachinePartPackage](docs/DeleteVirtualMachinePartPackage.md)
- - [KatapultAPI::DeleteVirtualMachinePartTags](docs/DeleteVirtualMachinePartTags.md)
- - [KatapultAPI::DeleteVirtualMachinePartType](docs/DeleteVirtualMachinePartType.md)
- - [KatapultAPI::DeleteVirtualMachinePartZone](docs/DeleteVirtualMachinePartZone.md)
  - [KatapultAPI::DeleteVirtualMachineRequest](docs/DeleteVirtualMachineRequest.md)
  - [KatapultAPI::DeletionRestricted](docs/DeletionRestricted.md)
  - [KatapultAPI::DeletionRestrictedEnum](docs/DeletionRestrictedEnum.md)
@@ -325,6 +322,11 @@ Class | Method | HTTP request | Description
  - [KatapultAPI::GPUType](docs/GPUType.md)
  - [KatapultAPI::GPUTypeLookup](docs/GPUTypeLookup.md)
  - [KatapultAPI::GPUTypeNotFoundEnum](docs/GPUTypeNotFoundEnum.md)
+ - [KatapultAPI::GetAddressList404Response](docs/GetAddressList404Response.md)
+ - [KatapultAPI::GetAddressListEntries200Response](docs/GetAddressListEntries200Response.md)
+ - [KatapultAPI::GetAddressListEntry404Response](docs/GetAddressListEntry404Response.md)
+ - [KatapultAPI::GetAddressLists200Response](docs/GetAddressLists200Response.md)
+ - [KatapultAPI::GetAddressLists200ResponseAddressLists](docs/GetAddressLists200ResponseAddressLists.md)
  - [KatapultAPI::GetCertificate200Response](docs/GetCertificate200Response.md)
  - [KatapultAPI::GetCertificate404Response](docs/GetCertificate404Response.md)
  - [KatapultAPI::GetCountries200Response](docs/GetCountries200Response.md)
@@ -339,8 +341,6 @@ Class | Method | HTTP request | Description
  - [KatapultAPI::GetCurrencies200ResponseCurrencies](docs/GetCurrencies200ResponseCurrencies.md)
  - [KatapultAPI::GetCurrency200Response](docs/GetCurrency200Response.md)
  - [KatapultAPI::GetCurrency404Response](docs/GetCurrency404Response.md)
- - [KatapultAPI::GetDNSRecordsDNSRecord200ResponseDNSRecord](docs/GetDNSRecordsDNSRecord200ResponseDNSRecord.md)
- - [KatapultAPI::GetDNSZonesDNSZoneRecords200ResponseDNSRecords](docs/GetDNSZonesDNSZoneRecords200ResponseDNSRecords.md)
  - [KatapultAPI::GetDataCenter200Response](docs/GetDataCenter200Response.md)
  - [KatapultAPI::GetDataCenter200ResponseDataCenter](docs/GetDataCenter200ResponseDataCenter.md)
  - [KatapultAPI::GetDataCenter404Response](docs/GetDataCenter404Response.md)
@@ -361,24 +361,15 @@ Class | Method | HTTP request | Description
  - [KatapultAPI::GetDiskBackupPolicy200Response](docs/GetDiskBackupPolicy200Response.md)
  - [KatapultAPI::GetDiskBackupPolicy200ResponseDiskBackupPolicy](docs/GetDiskBackupPolicy200ResponseDiskBackupPolicy.md)
  - [KatapultAPI::GetDiskBackupPolicy404Response](docs/GetDiskBackupPolicy404Response.md)
- - [KatapultAPI::GetDiskBackupPolicyPartSchedule](docs/GetDiskBackupPolicyPartSchedule.md)
  - [KatapultAPI::GetDiskDiskBackupPolicies200Response](docs/GetDiskDiskBackupPolicies200Response.md)
  - [KatapultAPI::GetDiskDiskBackupPolicies200ResponseDiskBackupPolicies](docs/GetDiskDiskBackupPolicies200ResponseDiskBackupPolicies.md)
  - [KatapultAPI::GetDiskDiskBackupPoliciesPartSchedule](docs/GetDiskDiskBackupPoliciesPartSchedule.md)
- - [KatapultAPI::GetDiskPartAttributes](docs/GetDiskPartAttributes.md)
- - [KatapultAPI::GetDiskPartDiskTemplate](docs/GetDiskPartDiskTemplate.md)
- - [KatapultAPI::GetDiskPartDiskTemplateVersion](docs/GetDiskPartDiskTemplateVersion.md)
- - [KatapultAPI::GetDiskPartIOProfile](docs/GetDiskPartIOProfile.md)
- - [KatapultAPI::GetDiskPartInstallation](docs/GetDiskPartInstallation.md)
- - [KatapultAPI::GetDiskPartOperatingSystem](docs/GetDiskPartOperatingSystem.md)
  - [KatapultAPI::GetDiskPartVirtualMachine](docs/GetDiskPartVirtualMachine.md)
  - [KatapultAPI::GetDiskPartVirtualMachineDisk](docs/GetDiskPartVirtualMachineDisk.md)
  - [KatapultAPI::GetDiskTemplate200Response](docs/GetDiskTemplate200Response.md)
  - [KatapultAPI::GetDiskTemplate200ResponseDiskTemplate](docs/GetDiskTemplate200ResponseDiskTemplate.md)
  - [KatapultAPI::GetDiskTemplate404Response](docs/GetDiskTemplate404Response.md)
- - [KatapultAPI::GetDiskTemplatePartBadge](docs/GetDiskTemplatePartBadge.md)
  - [KatapultAPI::GetDiskTemplatePartLatestVersion](docs/GetDiskTemplatePartLatestVersion.md)
- - [KatapultAPI::GetDiskTemplatePartOperatingSystem](docs/GetDiskTemplatePartOperatingSystem.md)
  - [KatapultAPI::GetDiskTemplateVersion200Response](docs/GetDiskTemplateVersion200Response.md)
  - [KatapultAPI::GetDiskTemplateVersion200ResponseDiskTemplateVersion](docs/GetDiskTemplateVersion200ResponseDiskTemplateVersion.md)
  - [KatapultAPI::GetDiskTemplateVersion404Response](docs/GetDiskTemplateVersion404Response.md)
@@ -390,15 +381,10 @@ Class | Method | HTTP request | Description
  - [KatapultAPI::GetDiskTemplateVersions200ResponseDiskTemplate](docs/GetDiskTemplateVersions200ResponseDiskTemplate.md)
  - [KatapultAPI::GetDiskTemplateVersions200ResponseDiskTemplateVersions](docs/GetDiskTemplateVersions200ResponseDiskTemplateVersions.md)
  - [KatapultAPI::GetDnsRecord200Response](docs/GetDnsRecord200Response.md)
- - [KatapultAPI::GetDnsRecordsDnsRecord200Response](docs/GetDnsRecordsDnsRecord200Response.md)
- - [KatapultAPI::GetDnsRecordsDnsRecord404Response](docs/GetDnsRecordsDnsRecord404Response.md)
+ - [KatapultAPI::GetDnsRecord404Response](docs/GetDnsRecord404Response.md)
  - [KatapultAPI::GetDnsZone200Response](docs/GetDnsZone200Response.md)
+ - [KatapultAPI::GetDnsZone404Response](docs/GetDnsZone404Response.md)
  - [KatapultAPI::GetDnsZoneRecords200Response](docs/GetDnsZoneRecords200Response.md)
- - [KatapultAPI::GetDnsZonesDnsZone200Response](docs/GetDnsZonesDnsZone200Response.md)
- - [KatapultAPI::GetDnsZonesDnsZone404Response](docs/GetDnsZonesDnsZone404Response.md)
- - [KatapultAPI::GetDnsZonesDnsZoneRecords200Response](docs/GetDnsZonesDnsZoneRecords200Response.md)
- - [KatapultAPI::GetDnsZonesDnsZoneVerificationDetails200Response](docs/GetDnsZonesDnsZoneVerificationDetails200Response.md)
- - [KatapultAPI::GetDnsZonesDnsZoneVerificationDetails422Response](docs/GetDnsZonesDnsZoneVerificationDetails422Response.md)
  - [KatapultAPI::GetFileStorageVolume200Response](docs/GetFileStorageVolume200Response.md)
  - [KatapultAPI::GetFileStorageVolume200ResponseFileStorageVolume](docs/GetFileStorageVolume200ResponseFileStorageVolume.md)
  - [KatapultAPI::GetFileStorageVolume404Response](docs/GetFileStorageVolume404Response.md)
@@ -419,7 +405,6 @@ Class | Method | HTTP request | Description
  - [KatapultAPI::GetLoadBalancer404Response](docs/GetLoadBalancer404Response.md)
  - [KatapultAPI::GetLoadBalancerPartDataCenter](docs/GetLoadBalancerPartDataCenter.md)
  - [KatapultAPI::GetLoadBalancerPartIPAddress](docs/GetLoadBalancerPartIPAddress.md)
- - [KatapultAPI::GetLoadBalancerPartWeights](docs/GetLoadBalancerPartWeights.md)
  - [KatapultAPI::GetLoadBalancerRules200Response](docs/GetLoadBalancerRules200Response.md)
  - [KatapultAPI::GetLoadBalancerRules200ResponseLoadBalancerRules](docs/GetLoadBalancerRules200ResponseLoadBalancerRules.md)
  - [KatapultAPI::GetLoadBalancerRulesPartCertificates](docs/GetLoadBalancerRulesPartCertificates.md)
@@ -436,6 +421,8 @@ Class | Method | HTTP request | Description
  - [KatapultAPI::GetOperatingSystems200ResponseOperatingSystems](docs/GetOperatingSystems200ResponseOperatingSystems.md)
  - [KatapultAPI::GetOrganization200Response](docs/GetOrganization200Response.md)
  - [KatapultAPI::GetOrganization404Response](docs/GetOrganization404Response.md)
+ - [KatapultAPI::GetOrganizationAddressLists200Response](docs/GetOrganizationAddressLists200Response.md)
+ - [KatapultAPI::GetOrganizationAddressLists200ResponseAddressLists](docs/GetOrganizationAddressLists200ResponseAddressLists.md)
  - [KatapultAPI::GetOrganizationAvailableNetworks200Response](docs/GetOrganizationAvailableNetworks200Response.md)
  - [KatapultAPI::GetOrganizationAvailableNetworks200ResponseNetworks](docs/GetOrganizationAvailableNetworks200ResponseNetworks.md)
  - [KatapultAPI::GetOrganizationAvailableNetworks200ResponseVirtualNetworks](docs/GetOrganizationAvailableNetworks200ResponseVirtualNetworks.md)
@@ -467,6 +454,7 @@ Class | Method | HTTP request | Description
  - [KatapultAPI::GetOrganizationManaged200Response](docs/GetOrganizationManaged200Response.md)
  - [KatapultAPI::GetOrganizationManaged200ResponseOrganizations](docs/GetOrganizationManaged200ResponseOrganizations.md)
  - [KatapultAPI::GetOrganizationNetworkSpeedProfiles200Response](docs/GetOrganizationNetworkSpeedProfiles200Response.md)
+ - [KatapultAPI::GetOrganizationPolicyLimits200Response](docs/GetOrganizationPolicyLimits200Response.md)
  - [KatapultAPI::GetOrganizationSecurityGroups200Response](docs/GetOrganizationSecurityGroups200Response.md)
  - [KatapultAPI::GetOrganizationSshKeys200Response](docs/GetOrganizationSshKeys200Response.md)
  - [KatapultAPI::GetOrganizationTags200Response](docs/GetOrganizationTags200Response.md)
@@ -474,15 +462,12 @@ Class | Method | HTTP request | Description
  - [KatapultAPI::GetOrganizationTrashObjects200Response](docs/GetOrganizationTrashObjects200Response.md)
  - [KatapultAPI::GetOrganizationUsersWithAccess200Response](docs/GetOrganizationUsersWithAccess200Response.md)
  - [KatapultAPI::GetOrganizationUsersWithAccess200ResponseUsers](docs/GetOrganizationUsersWithAccess200ResponseUsers.md)
- - [KatapultAPI::GetOrganizationUsersWithAccessPartUser](docs/GetOrganizationUsersWithAccessPartUser.md)
  - [KatapultAPI::GetOrganizationVirtualMachineGroups200Response](docs/GetOrganizationVirtualMachineGroups200Response.md)
  - [KatapultAPI::GetOrganizationVirtualMachines200Response](docs/GetOrganizationVirtualMachines200Response.md)
  - [KatapultAPI::GetOrganizationVirtualMachines200ResponseVirtualMachines](docs/GetOrganizationVirtualMachines200ResponseVirtualMachines.md)
- - [KatapultAPI::GetOrganizationVirtualMachinesPartDataCenter](docs/GetOrganizationVirtualMachinesPartDataCenter.md)
  - [KatapultAPI::GetOrganizationVirtualMachinesPartGPUType](docs/GetOrganizationVirtualMachinesPartGPUType.md)
  - [KatapultAPI::GetOrganizationVirtualMachinesPartIPAddresses](docs/GetOrganizationVirtualMachinesPartIPAddresses.md)
  - [KatapultAPI::GetOrganizationVirtualMachinesPartPackage](docs/GetOrganizationVirtualMachinesPartPackage.md)
- - [KatapultAPI::GetOrganizationVirtualMachinesPartZone](docs/GetOrganizationVirtualMachinesPartZone.md)
  - [KatapultAPI::GetOrganizations200Response](docs/GetOrganizations200Response.md)
  - [KatapultAPI::GetOrganizations200ResponseOrganizations](docs/GetOrganizations200ResponseOrganizations.md)
  - [KatapultAPI::GetSecurityGroup200Response](docs/GetSecurityGroup200Response.md)
@@ -510,6 +495,7 @@ Class | Method | HTTP request | Description
  - [KatapultAPI::GetVMNIVMNIPartVirtualMachine](docs/GetVMNIVMNIPartVirtualMachine.md)
  - [KatapultAPI::GetVirtualMachine200Response](docs/GetVirtualMachine200Response.md)
  - [KatapultAPI::GetVirtualMachine200ResponseVirtualMachine](docs/GetVirtualMachine200ResponseVirtualMachine.md)
+ - [KatapultAPI::GetVirtualMachineAuthorizedKeys404Response](docs/GetVirtualMachineAuthorizedKeys404Response.md)
  - [KatapultAPI::GetVirtualMachineDiskBackupPolicies200Response](docs/GetVirtualMachineDiskBackupPolicies200Response.md)
  - [KatapultAPI::GetVirtualMachineDiskBackupPolicies200ResponseDiskBackupPolicies](docs/GetVirtualMachineDiskBackupPolicies200ResponseDiskBackupPolicies.md)
  - [KatapultAPI::GetVirtualMachineDiskBackupPoliciesPartSchedule](docs/GetVirtualMachineDiskBackupPoliciesPartSchedule.md)
@@ -535,24 +521,7 @@ Class | Method | HTTP request | Description
  - [KatapultAPI::GetVirtualMachinePackages200Response](docs/GetVirtualMachinePackages200Response.md)
  - [KatapultAPI::GetVirtualMachinePackages200ResponseVirtualMachinePackages](docs/GetVirtualMachinePackages200ResponseVirtualMachinePackages.md)
  - [KatapultAPI::GetVirtualMachinePackagesPartIcon](docs/GetVirtualMachinePackagesPartIcon.md)
- - [KatapultAPI::GetVirtualMachinePartAttachedISO](docs/GetVirtualMachinePartAttachedISO.md)
- - [KatapultAPI::GetVirtualMachinePartBadge](docs/GetVirtualMachinePartBadge.md)
- - [KatapultAPI::GetVirtualMachinePartCountry](docs/GetVirtualMachinePartCountry.md)
- - [KatapultAPI::GetVirtualMachinePartCountryState](docs/GetVirtualMachinePartCountryState.md)
- - [KatapultAPI::GetVirtualMachinePartCurrency](docs/GetVirtualMachinePartCurrency.md)
- - [KatapultAPI::GetVirtualMachinePartDataCenter](docs/GetVirtualMachinePartDataCenter.md)
  - [KatapultAPI::GetVirtualMachinePartGPUType](docs/GetVirtualMachinePartGPUType.md)
- - [KatapultAPI::GetVirtualMachinePartGPUs](docs/GetVirtualMachinePartGPUs.md)
- - [KatapultAPI::GetVirtualMachinePartGroup](docs/GetVirtualMachinePartGroup.md)
- - [KatapultAPI::GetVirtualMachinePartIPAddresses](docs/GetVirtualMachinePartIPAddresses.md)
- - [KatapultAPI::GetVirtualMachinePartIcon](docs/GetVirtualMachinePartIcon.md)
- - [KatapultAPI::GetVirtualMachinePartNetwork](docs/GetVirtualMachinePartNetwork.md)
- - [KatapultAPI::GetVirtualMachinePartOperatingSystem](docs/GetVirtualMachinePartOperatingSystem.md)
- - [KatapultAPI::GetVirtualMachinePartOrganization](docs/GetVirtualMachinePartOrganization.md)
- - [KatapultAPI::GetVirtualMachinePartPackage](docs/GetVirtualMachinePartPackage.md)
- - [KatapultAPI::GetVirtualMachinePartTags](docs/GetVirtualMachinePartTags.md)
- - [KatapultAPI::GetVirtualMachinePartType](docs/GetVirtualMachinePartType.md)
- - [KatapultAPI::GetVirtualMachinePartZone](docs/GetVirtualMachinePartZone.md)
  - [KatapultAPI::GetVirtualMachinesBuildsVirtualMachineBuild200Response](docs/GetVirtualMachinesBuildsVirtualMachineBuild200Response.md)
  - [KatapultAPI::GetVirtualMachinesBuildsVirtualMachineBuild200ResponseVirtualMachineBuild](docs/GetVirtualMachinesBuildsVirtualMachineBuild200ResponseVirtualMachineBuild.md)
  - [KatapultAPI::GetVirtualMachinesBuildsVirtualMachineBuild404Response](docs/GetVirtualMachinesBuildsVirtualMachineBuild404Response.md)
@@ -572,8 +541,7 @@ Class | Method | HTTP request | Description
  - [KatapultAPI::ISO](docs/ISO.md)
  - [KatapultAPI::IdentityNotLinkedToWebSessionEnum](docs/IdentityNotLinkedToWebSessionEnum.md)
  - [KatapultAPI::IdentityNotLinkedToWebSessionSchema](docs/IdentityNotLinkedToWebSessionSchema.md)
- - [KatapultAPI::InfrastructureDNSZoneCannotBeEditedEnum](docs/InfrastructureDNSZoneCannotBeEditedEnum.md)
- - [KatapultAPI::InfrastructureDNSZoneCannotBeEditedSchema](docs/InfrastructureDNSZoneCannotBeEditedSchema.md)
+ - [KatapultAPI::IntegerOrUnlimited](docs/IntegerOrUnlimited.md)
  - [KatapultAPI::InterfaceNotFoundEnum](docs/InterfaceNotFoundEnum.md)
  - [KatapultAPI::InterfaceNotFoundSchema](docs/InterfaceNotFoundSchema.md)
  - [KatapultAPI::InvalidAPIToken](docs/InvalidAPIToken.md)
@@ -601,13 +569,11 @@ Class | Method | HTTP request | Description
  - [KatapultAPI::LoadBalancerRuleLookup](docs/LoadBalancerRuleLookup.md)
  - [KatapultAPI::LoadBalancerRuleNotFoundEnum](docs/LoadBalancerRuleNotFoundEnum.md)
  - [KatapultAPI::LoadBalancerRuleProtocolEnum](docs/LoadBalancerRuleProtocolEnum.md)
+ - [KatapultAPI::LoadBalancerWeight](docs/LoadBalancerWeight.md)
  - [KatapultAPI::LoadBalancerWeightsArguments](docs/LoadBalancerWeightsArguments.md)
  - [KatapultAPI::LocationRequiredEnum](docs/LocationRequiredEnum.md)
  - [KatapultAPI::LocationRequiredSchema](docs/LocationRequiredSchema.md)
- - [KatapultAPI::MX](docs/MX.md)
  - [KatapultAPI::MissingAPITokenEnum](docs/MissingAPITokenEnum.md)
- - [KatapultAPI::ModelALIAS](docs/ModelALIAS.md)
- - [KatapultAPI::NS](docs/NS.md)
  - [KatapultAPI::Network](docs/Network.md)
  - [KatapultAPI::NetworkLookup](docs/NetworkLookup.md)
  - [KatapultAPI::NetworkNotFoundEnum](docs/NetworkNotFoundEnum.md)
@@ -621,6 +587,7 @@ Class | Method | HTTP request | Description
  - [KatapultAPI::NoInterfaceAvailableEnum](docs/NoInterfaceAvailableEnum.md)
  - [KatapultAPI::NoInterfaceAvailableSchema](docs/NoInterfaceAvailableSchema.md)
  - [KatapultAPI::NoUserAssociatedWithIdentityEnum](docs/NoUserAssociatedWithIdentityEnum.md)
+ - [KatapultAPI::NoVirtualMachineForAPITokenEnum](docs/NoVirtualMachineForAPITokenEnum.md)
  - [KatapultAPI::ObjectInTrash](docs/ObjectInTrash.md)
  - [KatapultAPI::ObjectInTrashEnum](docs/ObjectInTrashEnum.md)
  - [KatapultAPI::ObjectInTrashSchema](docs/ObjectInTrashSchema.md)
@@ -632,7 +599,6 @@ Class | Method | HTTP request | Description
  - [KatapultAPI::OneOfIPAlreadyAllocatedInvalidIP422Res](docs/OneOfIPAlreadyAllocatedInvalidIP422Res.md)
  - [KatapultAPI::OneOfIPAlreadyAllocatedNoInterfaceAvailable422Res](docs/OneOfIPAlreadyAllocatedNoInterfaceAvailable422Res.md)
  - [KatapultAPI::OneOfIdentityNotLinkedToWebSession400Res](docs/OneOfIdentityNotLinkedToWebSession400Res.md)
- - [KatapultAPI::OneOfInfrastructureDNSZoneCannotBeEdited403Res](docs/OneOfInfrastructureDNSZoneCannotBeEdited403Res.md)
  - [KatapultAPI::OneOfInterfaceNotFoundNetworkNotFoundVirtualMachineNotFound404Res](docs/OneOfInterfaceNotFoundNetworkNotFoundVirtualMachineNotFound404Res.md)
  - [KatapultAPI::OneOfInvalidSpecXML400Res](docs/OneOfInvalidSpecXML400Res.md)
  - [KatapultAPI::OneOfInvalidTimestamp400Res](docs/OneOfInvalidTimestamp400Res.md)
@@ -659,17 +625,17 @@ Class | Method | HTTP request | Description
  - [KatapultAPI::OrganizationNotActivatedSchema](docs/OrganizationNotActivatedSchema.md)
  - [KatapultAPI::OrganizationNotFoundEnum](docs/OrganizationNotFoundEnum.md)
  - [KatapultAPI::OrganizationNotFoundSchema](docs/OrganizationNotFoundSchema.md)
+ - [KatapultAPI::OrganizationPolicy](docs/OrganizationPolicy.md)
  - [KatapultAPI::OrganizationSuspendedEnum](docs/OrganizationSuspendedEnum.md)
  - [KatapultAPI::OrganizationSuspendedSchema](docs/OrganizationSuspendedSchema.md)
  - [KatapultAPI::PaginationObject](docs/PaginationObject.md)
- - [KatapultAPI::PatchDNSRecordsDNSRecord200ResponseDNSRecord](docs/PatchDNSRecordsDNSRecord200ResponseDNSRecord.md)
+ - [KatapultAPI::PatchAddressListEntryRequest](docs/PatchAddressListEntryRequest.md)
+ - [KatapultAPI::PatchAddressListRequest](docs/PatchAddressListRequest.md)
  - [KatapultAPI::PatchDiskBackupPolicy200Response](docs/PatchDiskBackupPolicy200Response.md)
  - [KatapultAPI::PatchDiskBackupPolicy200ResponseDiskBackupPolicy](docs/PatchDiskBackupPolicy200ResponseDiskBackupPolicy.md)
  - [KatapultAPI::PatchDiskBackupPolicyRequest](docs/PatchDiskBackupPolicyRequest.md)
  - [KatapultAPI::PatchDnsRecord200Response](docs/PatchDnsRecord200Response.md)
  - [KatapultAPI::PatchDnsRecordRequest](docs/PatchDnsRecordRequest.md)
- - [KatapultAPI::PatchDnsRecordsDnsRecord200Response](docs/PatchDnsRecordsDnsRecord200Response.md)
- - [KatapultAPI::PatchDnsRecordsDnsRecordRequest](docs/PatchDnsRecordsDnsRecordRequest.md)
  - [KatapultAPI::PatchDnsZoneRequest](docs/PatchDnsZoneRequest.md)
  - [KatapultAPI::PatchFileStorageVolume200Response](docs/PatchFileStorageVolume200Response.md)
  - [KatapultAPI::PatchFileStorageVolume200ResponseFileStorageVolume](docs/PatchFileStorageVolume200ResponseFileStorageVolume.md)
@@ -681,7 +647,6 @@ Class | Method | HTTP request | Description
  - [KatapultAPI::PatchLoadBalancer200ResponseLoadBalancer](docs/PatchLoadBalancer200ResponseLoadBalancer.md)
  - [KatapultAPI::PatchLoadBalancerPartDataCenter](docs/PatchLoadBalancerPartDataCenter.md)
  - [KatapultAPI::PatchLoadBalancerPartIPAddress](docs/PatchLoadBalancerPartIPAddress.md)
- - [KatapultAPI::PatchLoadBalancerPartWeights](docs/PatchLoadBalancerPartWeights.md)
  - [KatapultAPI::PatchLoadBalancerRequest](docs/PatchLoadBalancerRequest.md)
  - [KatapultAPI::PatchLoadBalancersRulesLoadBalancerRule200Response](docs/PatchLoadBalancersRulesLoadBalancerRule200Response.md)
  - [KatapultAPI::PatchLoadBalancersRulesLoadBalancerRule200ResponseLoadBalancerRule](docs/PatchLoadBalancersRulesLoadBalancerRule200ResponseLoadBalancerRule.md)
@@ -704,42 +669,19 @@ Class | Method | HTTP request | Description
  - [KatapultAPI::PatchVirtualMachineNetworkInterfaceUpdateSpeedProfile406Response](docs/PatchVirtualMachineNetworkInterfaceUpdateSpeedProfile406Response.md)
  - [KatapultAPI::PatchVirtualMachineNetworkInterfaceUpdateSpeedProfile422Response](docs/PatchVirtualMachineNetworkInterfaceUpdateSpeedProfile422Response.md)
  - [KatapultAPI::PatchVirtualMachineNetworkInterfaceUpdateSpeedProfileRequest](docs/PatchVirtualMachineNetworkInterfaceUpdateSpeedProfileRequest.md)
- - [KatapultAPI::PatchVirtualMachinePartAttachedISO](docs/PatchVirtualMachinePartAttachedISO.md)
- - [KatapultAPI::PatchVirtualMachinePartBadge](docs/PatchVirtualMachinePartBadge.md)
- - [KatapultAPI::PatchVirtualMachinePartCountry](docs/PatchVirtualMachinePartCountry.md)
- - [KatapultAPI::PatchVirtualMachinePartCountryState](docs/PatchVirtualMachinePartCountryState.md)
- - [KatapultAPI::PatchVirtualMachinePartCurrency](docs/PatchVirtualMachinePartCurrency.md)
- - [KatapultAPI::PatchVirtualMachinePartDataCenter](docs/PatchVirtualMachinePartDataCenter.md)
  - [KatapultAPI::PatchVirtualMachinePartGPUType](docs/PatchVirtualMachinePartGPUType.md)
- - [KatapultAPI::PatchVirtualMachinePartGPUs](docs/PatchVirtualMachinePartGPUs.md)
- - [KatapultAPI::PatchVirtualMachinePartGroup](docs/PatchVirtualMachinePartGroup.md)
- - [KatapultAPI::PatchVirtualMachinePartIPAddresses](docs/PatchVirtualMachinePartIPAddresses.md)
- - [KatapultAPI::PatchVirtualMachinePartIcon](docs/PatchVirtualMachinePartIcon.md)
- - [KatapultAPI::PatchVirtualMachinePartNetwork](docs/PatchVirtualMachinePartNetwork.md)
- - [KatapultAPI::PatchVirtualMachinePartOperatingSystem](docs/PatchVirtualMachinePartOperatingSystem.md)
- - [KatapultAPI::PatchVirtualMachinePartOrganization](docs/PatchVirtualMachinePartOrganization.md)
- - [KatapultAPI::PatchVirtualMachinePartPackage](docs/PatchVirtualMachinePartPackage.md)
- - [KatapultAPI::PatchVirtualMachinePartTags](docs/PatchVirtualMachinePartTags.md)
- - [KatapultAPI::PatchVirtualMachinePartType](docs/PatchVirtualMachinePartType.md)
- - [KatapultAPI::PatchVirtualMachinePartZone](docs/PatchVirtualMachinePartZone.md)
  - [KatapultAPI::PatchVirtualMachineRequest](docs/PatchVirtualMachineRequest.md)
  - [KatapultAPI::PermissionDenied](docs/PermissionDenied.md)
  - [KatapultAPI::PermissionDeniedEnum](docs/PermissionDeniedEnum.md)
  - [KatapultAPI::PermissionDeniedSchema](docs/PermissionDeniedSchema.md)
- - [KatapultAPI::PostDNSZonesDNSZoneRecords200ResponseDNSRecord](docs/PostDNSZonesDNSZoneRecords200ResponseDNSRecord.md)
- - [KatapultAPI::PostDNSZonesDNSZoneUpdateTTL200ResponseDNSZone](docs/PostDNSZonesDNSZoneUpdateTTL200ResponseDNSZone.md)
+ - [KatapultAPI::PostAddressListEntries201Response](docs/PostAddressListEntries201Response.md)
+ - [KatapultAPI::PostAddressListEntriesRequest](docs/PostAddressListEntriesRequest.md)
  - [KatapultAPI::PostDiskDiskBackupPolicies200Response](docs/PostDiskDiskBackupPolicies200Response.md)
  - [KatapultAPI::PostDiskDiskBackupPolicies200ResponseDiskBackupPolicy](docs/PostDiskDiskBackupPolicies200ResponseDiskBackupPolicy.md)
- - [KatapultAPI::PostDiskDiskBackupPoliciesPartSchedule](docs/PostDiskDiskBackupPoliciesPartSchedule.md)
  - [KatapultAPI::PostDiskDiskBackupPoliciesRequest](docs/PostDiskDiskBackupPoliciesRequest.md)
  - [KatapultAPI::PostDnsZoneRecords200Response](docs/PostDnsZoneRecords200Response.md)
  - [KatapultAPI::PostDnsZoneRecordsRequest](docs/PostDnsZoneRecordsRequest.md)
- - [KatapultAPI::PostDnsZonesDnsZoneRecords200Response](docs/PostDnsZonesDnsZoneRecords200Response.md)
- - [KatapultAPI::PostDnsZonesDnsZoneRecordsRequest](docs/PostDnsZonesDnsZoneRecordsRequest.md)
- - [KatapultAPI::PostDnsZonesDnsZoneUpdateTtl200Response](docs/PostDnsZonesDnsZoneUpdateTtl200Response.md)
- - [KatapultAPI::PostDnsZonesDnsZoneUpdateTtlRequest](docs/PostDnsZonesDnsZoneUpdateTtlRequest.md)
- - [KatapultAPI::PostDnsZonesDnsZoneVerify200Response](docs/PostDnsZonesDnsZoneVerify200Response.md)
- - [KatapultAPI::PostDnsZonesDnsZoneVerify422Response](docs/PostDnsZonesDnsZoneVerify422Response.md)
+ - [KatapultAPI::PostDnsZoneVerify422Response](docs/PostDnsZoneVerify422Response.md)
  - [KatapultAPI::PostInvalidateLinkedWebSession200Response](docs/PostInvalidateLinkedWebSession200Response.md)
  - [KatapultAPI::PostIpAddressUnallocate422Response](docs/PostIpAddressUnallocate422Response.md)
  - [KatapultAPI::PostLoadBalancerRules200Response](docs/PostLoadBalancerRules200Response.md)
@@ -747,7 +689,8 @@ Class | Method | HTTP request | Description
  - [KatapultAPI::PostLoadBalancerRulesPartCertificates](docs/PostLoadBalancerRulesPartCertificates.md)
  - [KatapultAPI::PostLoadBalancerRulesPartLoadBalancer](docs/PostLoadBalancerRulesPartLoadBalancer.md)
  - [KatapultAPI::PostLoadBalancerRulesRequest](docs/PostLoadBalancerRulesRequest.md)
- - [KatapultAPI::PostOrganizationDNSZones201ResponseDNSZone](docs/PostOrganizationDNSZones201ResponseDNSZone.md)
+ - [KatapultAPI::PostOrganizationAddressLists201Response](docs/PostOrganizationAddressLists201Response.md)
+ - [KatapultAPI::PostOrganizationAddressListsRequest](docs/PostOrganizationAddressListsRequest.md)
  - [KatapultAPI::PostOrganizationDnsZones201Response](docs/PostOrganizationDnsZones201Response.md)
  - [KatapultAPI::PostOrganizationDnsZonesRequest](docs/PostOrganizationDnsZonesRequest.md)
  - [KatapultAPI::PostOrganizationFileStorageVolumes201Response](docs/PostOrganizationFileStorageVolumes201Response.md)
@@ -756,17 +699,11 @@ Class | Method | HTTP request | Description
  - [KatapultAPI::PostOrganizationFileStorageVolumesRequest](docs/PostOrganizationFileStorageVolumesRequest.md)
  - [KatapultAPI::PostOrganizationIpAddresses503Response](docs/PostOrganizationIpAddresses503Response.md)
  - [KatapultAPI::PostOrganizationIpAddressesRequest](docs/PostOrganizationIpAddressesRequest.md)
- - [KatapultAPI::PostOrganizationLoadBalancers200Response](docs/PostOrganizationLoadBalancers200Response.md)
- - [KatapultAPI::PostOrganizationLoadBalancers200ResponseLoadBalancer](docs/PostOrganizationLoadBalancers200ResponseLoadBalancer.md)
+ - [KatapultAPI::PostOrganizationLoadBalancers201Response](docs/PostOrganizationLoadBalancers201Response.md)
+ - [KatapultAPI::PostOrganizationLoadBalancers201ResponseLoadBalancer](docs/PostOrganizationLoadBalancers201ResponseLoadBalancer.md)
  - [KatapultAPI::PostOrganizationLoadBalancersPartDataCenter](docs/PostOrganizationLoadBalancersPartDataCenter.md)
  - [KatapultAPI::PostOrganizationLoadBalancersPartIPAddress](docs/PostOrganizationLoadBalancersPartIPAddress.md)
- - [KatapultAPI::PostOrganizationLoadBalancersPartWeights](docs/PostOrganizationLoadBalancersPartWeights.md)
  - [KatapultAPI::PostOrganizationLoadBalancersRequest](docs/PostOrganizationLoadBalancersRequest.md)
- - [KatapultAPI::PostOrganizationManaged201Response](docs/PostOrganizationManaged201Response.md)
- - [KatapultAPI::PostOrganizationManaged201ResponseOrganization](docs/PostOrganizationManaged201ResponseOrganization.md)
- - [KatapultAPI::PostOrganizationManagedPartCountry](docs/PostOrganizationManagedPartCountry.md)
- - [KatapultAPI::PostOrganizationManagedPartCountryState](docs/PostOrganizationManagedPartCountryState.md)
- - [KatapultAPI::PostOrganizationManagedPartCurrency](docs/PostOrganizationManagedPartCurrency.md)
  - [KatapultAPI::PostOrganizationManagedRequest](docs/PostOrganizationManagedRequest.md)
  - [KatapultAPI::PostOrganizationSecurityGroups200Response](docs/PostOrganizationSecurityGroups200Response.md)
  - [KatapultAPI::PostOrganizationSecurityGroupsRequest](docs/PostOrganizationSecurityGroupsRequest.md)
@@ -788,9 +725,6 @@ Class | Method | HTTP request | Description
  - [KatapultAPI::PostOrganizationVirtualMachinesBuildFromSpec422Response](docs/PostOrganizationVirtualMachinesBuildFromSpec422Response.md)
  - [KatapultAPI::PostOrganizationVirtualMachinesBuildFromSpecRequest](docs/PostOrganizationVirtualMachinesBuildFromSpecRequest.md)
  - [KatapultAPI::PostOrganizationVirtualMachinesBuildRequest](docs/PostOrganizationVirtualMachinesBuildRequest.md)
- - [KatapultAPI::PostOrganizationsOrganizationDNSZones201ResponseDNSZone](docs/PostOrganizationsOrganizationDNSZones201ResponseDNSZone.md)
- - [KatapultAPI::PostOrganizationsOrganizationDnsZones201Response](docs/PostOrganizationsOrganizationDnsZones201Response.md)
- - [KatapultAPI::PostOrganizationsOrganizationDnsZonesRequest](docs/PostOrganizationsOrganizationDnsZonesRequest.md)
  - [KatapultAPI::PostSecurityGroupRules200Response](docs/PostSecurityGroupRules200Response.md)
  - [KatapultAPI::PostSecurityGroupRules200ResponseSecurityGroupRule](docs/PostSecurityGroupRules200ResponseSecurityGroupRule.md)
  - [KatapultAPI::PostSecurityGroupRulesPartSecurityGroup](docs/PostSecurityGroupRulesPartSecurityGroup.md)
@@ -802,7 +736,6 @@ Class | Method | HTTP request | Description
  - [KatapultAPI::PostVirtualMachineConsoleSessionsPartVirtualMachine](docs/PostVirtualMachineConsoleSessionsPartVirtualMachine.md)
  - [KatapultAPI::PostVirtualMachineDiskBackupPolicies200Response](docs/PostVirtualMachineDiskBackupPolicies200Response.md)
  - [KatapultAPI::PostVirtualMachineDiskBackupPolicies200ResponseDiskBackupPolicy](docs/PostVirtualMachineDiskBackupPolicies200ResponseDiskBackupPolicy.md)
- - [KatapultAPI::PostVirtualMachineDiskBackupPoliciesPartSchedule](docs/PostVirtualMachineDiskBackupPoliciesPartSchedule.md)
  - [KatapultAPI::PostVirtualMachineDiskBackupPoliciesRequest](docs/PostVirtualMachineDiskBackupPoliciesRequest.md)
  - [KatapultAPI::PostVirtualMachineNetworkInterfaceAllocateIP200ResponseVirtualMachineNetworkInterface](docs/PostVirtualMachineNetworkInterfaceAllocateIP200ResponseVirtualMachineNetworkInterface.md)
  - [KatapultAPI::PostVirtualMachineNetworkInterfaceAllocateIPPartIPAddresses](docs/PostVirtualMachineNetworkInterfaceAllocateIPPartIPAddresses.md)
@@ -821,7 +754,6 @@ Class | Method | HTTP request | Description
  - [KatapultAPI::PostVirtualMachineStop200Response](docs/PostVirtualMachineStop200Response.md)
  - [KatapultAPI::PostVirtualMachineStop200ResponseTask](docs/PostVirtualMachineStop200ResponseTask.md)
  - [KatapultAPI::PrivacyTypesEnum](docs/PrivacyTypesEnum.md)
- - [KatapultAPI::PropertyTypeEnum](docs/PropertyTypeEnum.md)
  - [KatapultAPI::PutVirtualMachineFlexibleResourcesRequest](docs/PutVirtualMachineFlexibleResourcesRequest.md)
  - [KatapultAPI::PutVirtualMachinePackage200Response](docs/PutVirtualMachinePackage200Response.md)
  - [KatapultAPI::PutVirtualMachinePackageRequest](docs/PutVirtualMachinePackageRequest.md)
@@ -844,9 +776,8 @@ Class | Method | HTTP request | Description
  - [KatapultAPI::ResourceCreationRestrictedEnum](docs/ResourceCreationRestrictedEnum.md)
  - [KatapultAPI::ResourceCreationRestrictedSchema](docs/ResourceCreationRestrictedSchema.md)
  - [KatapultAPI::ResourceDoesNotSupportUnallocationEnum](docs/ResourceDoesNotSupportUnallocationEnum.md)
- - [KatapultAPI::SRV](docs/SRV.md)
- - [KatapultAPI::SSHFP](docs/SSHFP.md)
  - [KatapultAPI::SSHKeyNotFoundEnum](docs/SSHKeyNotFoundEnum.md)
+ - [KatapultAPI::Schedule](docs/Schedule.md)
  - [KatapultAPI::ScheduleArguments](docs/ScheduleArguments.md)
  - [KatapultAPI::ScheduleIntervalTypeEnum](docs/ScheduleIntervalTypeEnum.md)
  - [KatapultAPI::ScopeNotGrantedError](docs/ScopeNotGrantedError.md)
@@ -864,7 +795,6 @@ Class | Method | HTTP request | Description
  - [KatapultAPI::SecurityGroupRuleProtocolEnum](docs/SecurityGroupRuleProtocolEnum.md)
  - [KatapultAPI::SpeedProfileAlreadyAssignedEnum](docs/SpeedProfileAlreadyAssignedEnum.md)
  - [KatapultAPI::StorageSpeedEnum](docs/StorageSpeedEnum.md)
- - [KatapultAPI::TXT](docs/TXT.md)
  - [KatapultAPI::Tag](docs/Tag.md)
  - [KatapultAPI::TagArguments](docs/TagArguments.md)
  - [KatapultAPI::TagColorsEnum](docs/TagColorsEnum.md)

@@ -10,7 +10,7 @@
 | **resource_type** | [**LoadBalancerResourceTypesEnum**](LoadBalancerResourceTypesEnum.md) |  | [optional] |
 | **resources** | [**Array&lt;LoadBalancerResource&gt;**](LoadBalancerResource.md) |  | [optional] |
 | **resource_ids** | **Array&lt;String&gt;** |  | [optional] |
-| **ip_address** | [**Array&lt;GetOrganizationLoadBalancersPartIPAddress&gt;**](GetOrganizationLoadBalancersPartIPAddress.md) |  | [optional] |
+| **ip_address** | [**GetOrganizationLoadBalancersPartIPAddress**](GetOrganizationLoadBalancersPartIPAddress.md) |  | [optional] |
 | **data_center** | [**GetOrganizationLoadBalancersPartDataCenter**](GetOrganizationLoadBalancersPartDataCenter.md) |  | [optional] |
 
 ## Example

@@ -35,6 +35,8 @@ module KatapultAPI
 
     attr_accessor :icon
 
+    attr_accessor :use_dedicated_cpus
+
     class EnumAttributeValidator
       attr_reader :datatype
       attr_reader :allowable_values
@@ -69,7 +71,8 @@ module KatapultAPI
         :'storage_in_gb' => :'storage_in_gb',
         :'monthly_bandwidth_allowance_in_gb' => :'monthly_bandwidth_allowance_in_gb',
         :'privacy' => :'privacy',
-        :'icon' => :'icon'
+        :'icon' => :'icon',
+        :'use_dedicated_cpus' => :'use_dedicated_cpus'
       }
     end
 
@@ -90,13 +93,16 @@ module KatapultAPI
         :'storage_in_gb' => :'Integer',
         :'monthly_bandwidth_allowance_in_gb' => :'Integer',
         :'privacy' => :'PrivacyTypesEnum',
-        :'icon' => :'Attachment'
+        :'icon' => :'Attachment',
+        :'use_dedicated_cpus' => :'Boolean'
       }
     end
 
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'monthly_bandwidth_allowance_in_gb',
+        :'icon',
       ])
     end
 
@@ -154,6 +160,10 @@ module KatapultAPI
       if attributes.key?(:'icon')
         self.icon = attributes[:'icon']
       end
+
+      if attributes.key?(:'use_dedicated_cpus')
+        self.use_dedicated_cpus = attributes[:'use_dedicated_cpus']
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -185,7 +195,8 @@ module KatapultAPI
           storage_in_gb == o.storage_in_gb &&
           monthly_bandwidth_allowance_in_gb == o.monthly_bandwidth_allowance_in_gb &&
           privacy == o.privacy &&
-          icon == o.icon
+          icon == o.icon &&
+          use_dedicated_cpus == o.use_dedicated_cpus
     end
 
     # @see the `==` method
@@ -197,7 +208,7 @@ module KatapultAPI
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [id, name, permalink, cpu_cores, ipv4_addresses, memory_in_gb, storage_in_gb, monthly_bandwidth_allowance_in_gb, privacy, icon].hash
+      [id, name, permalink, cpu_cores, ipv4_addresses, memory_in_gb, storage_in_gb, monthly_bandwidth_allowance_in_gb, privacy, icon, use_dedicated_cpus].hash
     end
 
     # Builds the object from hash

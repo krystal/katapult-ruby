@@ -14,17 +14,18 @@ require 'date'
 require 'time'
 
 module KatapultAPI
-  # All 'details[]' params are mutually exclusive, only one can be provided.
+  # All 'properties[]' params are mutually exclusive, only one can be provided.
   class DNSZoneArguments
+    # The name of the zone (only available for creation)
     attr_accessor :name
 
-    attr_accessor :ttl
+    attr_accessor :default_ttl
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'name' => :'name',
-        :'ttl' => :'ttl'
+        :'default_ttl' => :'default_ttl'
       }
     end
 
@@ -37,7 +38,7 @@ module KatapultAPI
     def self.openapi_types
       {
         :'name' => :'String',
-        :'ttl' => :'Integer'
+        :'default_ttl' => :'Integer'
       }
     end
 
@@ -64,12 +65,10 @@ module KatapultAPI
 
       if attributes.key?(:'name')
         self.name = attributes[:'name']
-      else
-        self.name = nil
       end
 
-      if attributes.key?(:'ttl')
-        self.ttl = attributes[:'ttl']
+      if attributes.key?(:'default_ttl')
+        self.default_ttl = attributes[:'default_ttl']
       end
     end
 
@@ -78,10 +77,6 @@ module KatapultAPI
     def list_invalid_properties
       warn '[DEPRECATED] the `list_invalid_properties` method is obsolete'
       invalid_properties = Array.new
-      if @name.nil?
-        invalid_properties.push('invalid value for "name", name cannot be nil.')
-      end
-
       invalid_properties
     end
 
@@ -89,7 +84,6 @@ module KatapultAPI
     # @return true if the model is valid
     def valid?
       warn '[DEPRECATED] the `valid?` method is obsolete'
-      return false if @name.nil?
       true
     end
 
@@ -99,7 +93,7 @@ module KatapultAPI
       return true if self.equal?(o)
       self.class == o.class &&
           name == o.name &&
-          ttl == o.ttl
+          default_ttl == o.default_ttl
     end
 
     # @see the `==` method
@@ -111,7 +105,7 @@ module KatapultAPI
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [name, ttl].hash
+      [name, default_ttl].hash
     end
 
     # Builds the object from hash

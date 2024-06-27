@@ -10,13 +10,13 @@
 | **resource_type** | [**LoadBalancerResourceTypesEnum**](LoadBalancerResourceTypesEnum.md) |  | [optional] |
 | **resources** | [**Array&lt;LoadBalancerResource&gt;**](LoadBalancerResource.md) |  | [optional] |
 | **resource_ids** | **Array&lt;String&gt;** |  | [optional] |
-| **ip_address** | [**Array&lt;GetLoadBalancerPartIPAddress&gt;**](GetLoadBalancerPartIPAddress.md) |  | [optional] |
+| **ip_address** | [**GetLoadBalancerPartIPAddress**](GetLoadBalancerPartIPAddress.md) |  | [optional] |
 | **https_redirect** | **Boolean** |  | [optional] |
 | **backend_certificate** | **String** |  | [optional] |
 | **backend_certificate_key** | **String** |  | [optional] |
 | **data_center** | [**GetLoadBalancerPartDataCenter**](GetLoadBalancerPartDataCenter.md) |  | [optional] |
 | **enable_weighting** | **Boolean** |  | [optional] |
-| **weights** | [**Array&lt;GetLoadBalancerPartWeights&gt;**](GetLoadBalancerPartWeights.md) |  | [optional] |
+| **weights** | [**Array&lt;LoadBalancerWeight&gt;**](LoadBalancerWeight.md) |  | [optional] |
 | **standby_vms** | **Array&lt;String&gt;** |  | [optional] |
 
 ## Example

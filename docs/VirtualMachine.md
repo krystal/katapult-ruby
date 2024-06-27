@@ -19,6 +19,7 @@
 | **attached_iso** | [**ISO**](ISO.md) |  | [optional] |
 | **memory_in_gb** | **Integer** |  | [optional] |
 | **cpu_cores** | **Integer** |  | [optional] |
+| **use_dedicated_cpus** | **Boolean** |  | [optional] |
 | **gpu_type** | [**GPUType**](GPUType.md) |  | [optional] |
 | **gpus** | [**Array&lt;VirtualMachineGPU&gt;**](VirtualMachineGPU.md) |  | [optional] |
 | **tags** | [**Array&lt;Tag&gt;**](Tag.md) |  | [optional] |
@@ -46,6 +47,7 @@ instance = KatapultAPI::VirtualMachine.new(
   attached_iso: null,
   memory_in_gb: null,
   cpu_cores: null,
+  use_dedicated_cpus: null,
   gpu_type: null,
   gpus: null,
   tags: null,
